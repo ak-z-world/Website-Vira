@@ -1,0 +1,38 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import Header from './layouts/Header';
+import Footer from './layouts/Footer';
+
+export const metadata: Metadata = {
+  title: 'CodeMasters Institute | Python, DevOps & React Training',
+  description: 'Master in-demand tech skills with our comprehensive Python, DevOps, and React training programs. Industry-led courses with hands-on projects.',
+  keywords: ['Python training', 'DevOps course', 'React development', 'software training', 'coding bootcamp'],
+  openGraph: {
+    type: 'website',
+    url: 'https://codemasters.institute',
+    title: 'CodeMasters Institute | Python, DevOps & React Training',
+    description: 'Master in-demand tech skills with our comprehensive training programs.',
+    images: ['/og-image.png'],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50/30">
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
+
+
