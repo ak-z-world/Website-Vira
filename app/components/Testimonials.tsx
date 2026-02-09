@@ -216,9 +216,9 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100 backdrop-blur-sm px-6 py-3 rounded-2xl border border-orange-200/50 mb-6">
             <TrendingUp className="w-5 h-5 text-[#FF7A1E]" />
-            <span className="text-sm font-semibold text-gray-900">
+            {/* <span className="text-sm font-semibold text-gray-900">
               Career Transformations
-            </span>
+            </span> */}
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -451,62 +451,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              onClick={() => goToTestimonial(index)}
-              className={`group bg-white rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-2 cursor-pointer ${
-                index === activeIndex
-                  ? "border-2 border-[#FF7A1E] shadow-xl"
-                  : "border-gray-200 hover:border-[#FF7A1E] hover:shadow-lg"
-              }`}
-            >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="relative">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-14 h-14 rounded-xl border-2 border-white shadow"
-                  />
-                  {testimonial.videoUrl && (
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-[#FF7A1E] to-[#FF9A3E] rounded-full flex items-center justify-center">
-                      <PlayCircle className="w-4 h-4 text-white" />
-                    </div>
-                  )}
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-bold text-gray-900 group-hover:text-[#FF7A1E] transition-colors">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-[#FF7A1E] font-medium">
-                    {testimonial.role}
-                  </p>
-                  <p className="text-xs text-gray-600">{testimonial.company}</p>
-                </div>
-                <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-3 h-3 fill-[#FF9A3E] text-[#FF9A3E]"
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                "{testimonial.content}"
-              </p>
-
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <span className="font-medium">{testimonial.course}</span>
-                <span className="font-bold text-green-600">
-                  {testimonial.salaryIncrease} Hike
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+       
 
         {/* Trust Indicators */}
         <div className="mt-16 pt-12 border-t border-gray-200">
@@ -533,9 +478,9 @@ const Testimonials = () => {
             <div className="text-center p-6 bg-white rounded-2xl border border-gray-200">
               <Brain className="w-12 h-12 text-[#FF7A1E] mx-auto mb-4" />
               <div className="text-2xl font-bold text-gray-900">5,000+</div>
-              <div className="text-sm text-gray-600">
+              {/* <div className="text-sm text-gray-600">
                 Career Transformations
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -4,17 +4,17 @@ import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
 export const metadata: Metadata = {
-  title: 'CodeMasters Institute | Python, DevOps & React Training',
+  title: 'Vira Academy | Python, DevOps & React Training',
   description: 'Master in-demand tech skills with our comprehensive Python, DevOps, and React training programs. Industry-led courses with hands-on projects.',
   keywords: ['Python training', 'DevOps course', 'React development', 'software training', 'coding bootcamp'],
   openGraph: {
     type: 'website',
-    url: 'https://codemasters.institute',
-    title: 'CodeMasters Institute | Python, DevOps & React Training',
+    url: 'https://viraacademy.vercel.app',
+    title: 'Vira Academy | Python, DevOps & React Training',
     description: 'Master in-demand tech skills with our comprehensive training programs.',
     images: ['/og-image.png'],
   },
-};
+};  
 
 export default function RootLayout({
   children,

@@ -36,21 +36,6 @@ const Features = () => {
   const features: Feature[] = [
     {
       id: 1,
-      icon: <Brain className="w-8 h-8" />,
-      title: "Intelligent Learning System",
-      description:
-        "Adaptive learning platform that personalizes content based on your progress and learning style.",
-      color: "from-orange-500 to-amber-500",
-      gradient: "bg-gradient-to-br from-orange-50 to-amber-50",
-      benefits: [
-        "Personalized learning path",
-        "AI-powered assessments",
-        "Progress tracking dashboard",
-        "Adaptive difficulty levels",
-      ],
-    },
-    {
-      id: 2,
       icon: <Video className="w-8 h-8" />,
       title: "Live Interactive Sessions",
       description:
@@ -65,7 +50,7 @@ const Features = () => {
       ],
     },
     {
-      id: 3,
+      id: 2,
       icon: <Users className="w-8 h-8" />,
       title: "1:1 Expert Mentorship",
       description:
@@ -80,7 +65,7 @@ const Features = () => {
       ],
     },
     {
-      id: 4,
+      id: 3,
       icon: <FileCode className="w-8 h-8" />,
       title: "Real-world Projects",
       description:
@@ -95,7 +80,7 @@ const Features = () => {
       ],
     },
     {
-      id: 5,
+      id: 4,
       icon: <Briefcase className="w-8 h-8" />,
       title: "Career Acceleration",
       description:
@@ -110,7 +95,7 @@ const Features = () => {
       ],
     },
     {
-      id: 6,
+      id: 5,
       icon: <Award className="w-8 h-8" />,
       title: "Vira Certification",
       description:

@@ -668,7 +668,7 @@ const Courses = () => {
                   href="tel:+919677377316"
                   className="underline hover:text-white whitespace-nowrap"
                 >
-                  Call Vira Counselor: +91 96773 77316
+                  Whatsapp Vira Counselor: +91 96773 77316
                 </a>
               </div>
             </div>
@@ -676,7 +676,7 @@ const Courses = () => {
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-8 sm:mt-12 md:mt-16 pt-8 sm:pt-12 border-t border-gray-200">
+        {/* <div className="mt-8 sm:mt-12 md:mt-16 pt-8 sm:pt-12 border-t border-gray-200">
           <div className="text-center mb-6 sm:mb-8">
             <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
               Vira Academy Students Work At
@@ -696,7 +696,7 @@ const Courses = () => {
               ),
             )}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Add custom animation keyframes */}

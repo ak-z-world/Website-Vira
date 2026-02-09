@@ -29,6 +29,7 @@ export default function ContactPage() {
     phone: "",
     course: "",
     message: "",
+    website: "", // honeypot
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,28 +45,39 @@ export default function ContactPage() {
     "Other",
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after submission
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        course: "",
-        message: "",
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      setIsSubmitted(false);
-    }, 3000);
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          course: "",
+          message: "",
+          website: "",
+        });
+        setIsSubmitted(true);
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -82,7 +94,7 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Phone Support",
+      title: "Whatsapp Support",
       details: ["+91 96773 77316"],
       subtitle: "Available 9 AM - 7 PM",
       color: "from-blue-500 to-blue-600",
@@ -96,7 +108,7 @@ export default function ContactPage() {
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-gradient-to-br from-orange-50 to-orange-100/50",
     },
-    
+
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Office Hours",
@@ -108,23 +120,23 @@ export default function ContactPage() {
   ];
 
   const faqs = [
-     { 
-      question: 'What is Vira Academy?', 
+    {
+      question: 'What is Vira Academy?',
       answer: 'Vira Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
       category: 'general'
     },
-    { 
-      question: 'Are the courses online or offline?', 
+    {
+      question: 'Are the courses online or offline?',
       answer: 'All courses at Vira Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
       category: 'courses'
     },
-    { 
-      question: 'Who can enroll in your courses?', 
+    {
+      question: 'Who can enroll in your courses?',
       answer: 'Anyone interested in learning software skills can enroll, including students, fresh graduates, working professionals, and career changers.',
       category: 'enrollment'
     },
-    { 
-      question: 'Do you provide placement guarantees?', 
+    {
+      question: 'Do you provide placement guarantees?',
       answer: 'We do not guarantee job placements. However, we provide career assistance such as resume building, portfolio guidance, and mock interview preparation.',
       category: 'career'
     },
@@ -245,6 +257,15 @@ export default function ContactPage() {
                     <form onSubmit={handleSubmit} className="space-y-8">
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="group">
+                          <input
+                            type="text"
+                            name="website"
+                            value={formData.website}
+                            onChange={handleChange}
+                            autoComplete="off"
+                            tabIndex={-1}
+                            style={{ position: "absolute", left: "-9999px" }}
+                          />
                           <label className="block text-gray-700 mb-3 font-semibold">
                             Full Name *
                           </label>
@@ -255,8 +276,9 @@ export default function ContactPage() {
                             onChange={handleChange}
                             required
                             className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
-                            placeholder="John Smith"
+                            placeholder="Arun Kumar"
                           />
+
                         </div>
                         <div className="group">
                           <label className="block text-gray-700 mb-3 font-semibold">
@@ -269,7 +291,7 @@ export default function ContactPage() {
                             onChange={handleChange}
                             required
                             className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
-                            placeholder="john@example.com"
+                            placeholder="akzworld@ak.com"
                           />
                         </div>
                       </div>
@@ -422,7 +444,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-             
+
 
               {/* Support Info */}
               <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-6">
@@ -437,7 +459,7 @@ export default function ContactPage() {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900 mb-2">
-                  +91 96773 77316
+                    +91 96773 77316
                   </div>
                   <p className="text-sm text-gray-500">
                     Available 9 AM - 7 PM, Monday to Saturday
@@ -483,7 +505,7 @@ export default function ContactPage() {
                       <HelpCircle className="w-5 h-5 text-orange-500" />
                     </div>
                     <div>
-                      
+
                       <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                         {faq.question}
                       </h3>
@@ -509,7 +531,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      
+
 
       {/* Final CTA */}
       <section className="py-24 bg-gradient-to-br from-orange-50 via-white to-orange-50">
@@ -542,7 +564,7 @@ export default function ContactPage() {
                 Talk to Admissions
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-             
+
             </div>
           </div>
         </div>

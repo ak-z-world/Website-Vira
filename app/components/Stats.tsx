@@ -50,39 +50,39 @@ const Stats = () => {
     }
   }, [inView, countStarted]);
 
-  const statsData: StatItem[] = [
-    {
-      id: 1,
-      icon: <Users className="w-7 h-7" />,
-      value: 5000,
-      suffix: "+",
-      label: "Career Transformations",
-      description: "Students trained & placed",
-      color: "text-blue-600",
-      gradient: "from-blue-500 to-cyan-500",
-    },
+  // const statsData: StatItem[] = [
+  //   {
+  //     id: 1,
+  //     icon: <Users className="w-7 h-7" />,
+  //     value: 5000,
+  //     suffix: "+",
+  //     label: "Career Transformations",
+  //     description: "Students trained & placed",
+  //     color: "text-blue-600",
+  //     gradient: "from-blue-500 to-cyan-500",
+  //   },
    
-    {
-      id: 2,
-      icon: <Award className="w-7 h-7" />,
-      value: 1200,
-      suffix: "+",
-      label: "Projects Completed",
-      description: "Real-world applications built",
-      color: "text-orange-600",
-      gradient: "from-orange-500 to-amber-500",
-    },
-    {
-      id: 3,
-      icon: <Star className="w-7 h-7" />,
-      value: 50,
-      suffix: "+",
-      label: "Industry Mentors",
-      description: "Expert trainers",
-      color: "text-purple-600",
-      gradient: "from-purple-500 to-pink-500",
-    },
-  ];
+  //   {
+  //     id: 2,
+  //     icon: <Award className="w-7 h-7" />,
+  //     value: 1200,
+  //     suffix: "+",
+  //     label: "Projects Completed",
+  //     description: "Real-world applications built",
+  //     color: "text-orange-600",
+  //     gradient: "from-orange-500 to-amber-500",
+  //   },
+  //   {
+  //     id: 3,
+  //     icon: <Star className="w-7 h-7" />,
+  //     value: 50,
+  //     suffix: "+",
+  //     label: "Industry Mentors",
+  //     description: "Expert trainers",
+  //     color: "text-purple-600",
+  //     gradient: "from-purple-500 to-pink-500",
+  //   },
+  // ];
 
   const features: FeatureItem[] = [
     {
@@ -161,126 +161,7 @@ const Stats = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column - Features */}
-          <div className="space-y-8">
-            <div className="space-y-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group flex items-start gap-6 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 hover:border-[#FF7A1E]/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div
-                    className={`w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
-                  >
-                    <div className={feature.color}>{feature.icon}</div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF7A1E] transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                  <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-[#FF7A1E] transition-colors opacity-0 group-hover:opacity-100" />
-                </div>
-              ))}
-            </div>
-
-            {/* Success Story */}
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF7A1E] to-[#FF9A3E] flex items-center justify-center">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold mb-2">Success Guarantee</h4>
-                  <p className="text-gray-300">
-                    98% of our graduates land jobs within 3 months of course
-                    completion, with an average salary hike of 150%.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Stats */}
-          <div>
-            <div className="grid grid-cols-2 gap-6">
-              {statsData.map((stat) => (
-                <div
-                  key={stat.id}
-                  className="group relative bg-white rounded-2xl p-6 border border-gray-200/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                >
-                  {/* Gradient Border Effect */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#FF7A1E]/20 transition-colors duration-500 pointer-events-none"></div>
-
-                  {/* Icon with Gradient Background */}
-                  <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                  >
-                    <div className="text-white">{stat.icon}</div>
-                  </div>
-
-                  {/* Animated Counter */}
-                  <div className="mb-2">
-                    <div className="text-3xl md:text-4xl font-bold text-gray-900">
-                      {countStarted ? (
-                        <CountUp
-                          start={0}
-                          end={stat.value}
-                          duration={2.5}
-                          separator=","
-                          suffix={stat.suffix || ""}
-                          className={stat.color}
-                        />
-                      ) : (
-                        <span className={stat.color}>0{stat.suffix || ""}</span>
-                      )}
-                    </div>
-                    <div className="text-sm text-gray-500 mt-1">
-                      {stat.description}
-                    </div>
-                  </div>
-
-                  {/* Label */}
-                  <div className="text-lg font-semibold text-gray-900">
-                    {stat.label}
-                  </div>
-
-                  {/* Progress Bar */}
-                  <div className="mt-4">
-                    <div className="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                      <div
-                        className={`h-full bg-gradient-to-r ${stat.gradient} transition-all duration-1000 ease-out ${
-                          countStarted ? "w-full" : "w-0"
-                        }`}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Trust Badges */}
-            <div className="mt-8 grid grid-cols-3 gap-4">
-              
-              <div className="text-center p-4 bg-white rounded-xl border border-gray-200">
-                <Award className="w-8 h-8 text-[#FF7A1E] mx-auto mb-2" />
-                <div className="text-sm font-medium text-gray-900">
-                  5-Star Rating
-                </div>
-              </div>
-              <div className="text-center p-4 bg-white rounded-xl border border-gray-200">
-                <Globe className="w-8 h-8 text-blue-500 mx-auto mb-2" />
-                <div className="text-sm font-medium text-gray-900">
-                  Global Alumni
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* CTA Section */}
         <div className="mt-16 pt-12 border-t border-gray-200/50">

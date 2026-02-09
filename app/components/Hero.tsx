@@ -390,7 +390,7 @@ const Hero = () => {
           </div>
 
           {/* Trusted By */}
-          <div className="mt-24 pt-12 border-t border-gray-200/50">
+          {/* <div className="mt-24 pt-12 border-t border-gray-200/50">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 text-gray-500 text-sm font-medium">
                 <span className="w-20 h-px bg-gray-300"></span>
@@ -412,7 +412,7 @@ const Hero = () => {
                 ),
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
