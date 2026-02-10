@@ -177,7 +177,7 @@ const Hero = () => {
                 <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
                   Transform your career with industry-focused training at Vira
                   Academy. Master Python, DevOps, and React with hands-on
-                  projects, expert mentorship, and guaranteed placement support.
+                  projects, expert mentorship, and placement support.
                 </p>
               </div>
 
@@ -363,13 +363,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center text-white shadow-2xl animate-float-delay">
-                <div className="text-center p-4">
-                  <Zap className="w-8 h-8 mx-auto mb-1" />
-                  <div className="text-xs font-medium">5K+ Alumni</div>
-                </div>
-              </div>
-
               {/* Trust Badge */}
               <div className="absolute -bottom-8 right-8 bg-white px-4 py-3 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center gap-3">
@@ -379,9 +372,6 @@ const Hero = () => {
                   <div>
                     <div className="text-sm font-semibold text-gray-900">
                       Vira Academy
-                    </div>
-                    <div className="text-xs text-gray-600">
-                      ISO 9001 Certified
                     </div>
                   </div>
                 </div>

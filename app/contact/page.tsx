@@ -176,8 +176,8 @@ export default function ContactPage() {
 
       {/* Contact Grid */}
       <section className="py-16 bg-white">
-        <div className="section-padding">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="section-padding flex justify-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {contactInfo.map((info, index) => (
               <div
                 key={index}

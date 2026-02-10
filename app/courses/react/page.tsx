@@ -8,13 +8,11 @@ export default function ReactCoursePage() {
     description: 'Master React, Next.js, TypeScript, and modern frontend tools to build high-performance web applications.',
     duration: '12 Weeks',
     level: 'Beginner to Advanced',
-    students: '1,800+',
     fee: '₹42,000',
     originalFee: '₹52,000',
     nextBatch: 'March 28, 2024',
     seatsLeft: '10',
     rating: '4.9',
-    reviews: '568',
   };
 
   const modules = [
@@ -49,11 +47,10 @@ export default function ReactCoursePage() {
   ];
 
   const benefits = [
-    { icon: <Award className="w-5 h-5" />, text: 'Build 6+ production-ready projects' },
+    { icon: <Award className="w-5 h-5" />, text: 'Build production-ready projects' },
     { icon: <Layers className="w-5 h-5" />, text: 'Master modern React patterns' },
     { icon: <Monitor className="w-5 h-5" />, text: 'Full-stack application development' },
     { icon: <Users className="w-5 h-5" />, text: 'Industry expert mentorship' },
-    { icon: <Briefcase className="w-5 h-5" />, text: 'Career guidance & interviews' },
     { icon: <Database className="w-5 h-5" />, text: 'GitHub portfolio setup' },
   ];
 
@@ -83,17 +80,17 @@ export default function ReactCoursePage() {
     {
       title: 'E-Commerce Platform',
       description: 'Full-featured online store with cart, checkout, payment integration, and admin dashboard',
-      technologies: ['Next.js 14', 'Stripe', 'Tailwind', 'Redux']
+      technologies: ['Next.js 14', 'Tailwind', 'Redux']
     },
     {
       title: 'Social Media Dashboard',
       description: 'Real-time social platform with posts, comments, likes, and user authentication',
-      technologies: ['React', 'Firebase', 'Context API', 'Material-UI']
+      technologies: ['React', 'Context API', 'Material-UI']
     },
     {
       title: 'Analytics Dashboard',
       description: 'Interactive data visualization platform with charts, filters, and real-time updates',
-      technologies: ['Next.js', 'Recharts', 'TypeScript', 'API Integration']
+      technologies: ['Next.js', 'TypeScript', 'API Integration']
     },
   ];
 
@@ -132,7 +129,7 @@ export default function ReactCoursePage() {
                 </p>
                 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.duration}</div>
                     <div className="text-sm text-gray-600">Duration</div>
                   </div>
@@ -141,7 +138,7 @@ export default function ReactCoursePage() {
                     <div className="text-sm text-gray-600">Level</div>
                   </div>
                   
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.rating}/5</div>
                     <div className="text-sm text-gray-600">Rating</div>
                   </div>
@@ -416,10 +413,6 @@ export default function ReactCoursePage() {
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Job Growth Rate</span>
                       <span className="text-2xl font-bold text-purple-400">40% YoY</span>
-                    </div>
-                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
-                      <span className="text-gray-300">Placement Rate</span>
-                      <span className="text-2xl font-bold text-purple-400">96%</span>
                     </div>
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Industry Demand</span>

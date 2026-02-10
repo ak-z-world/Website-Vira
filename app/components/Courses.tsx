@@ -380,8 +380,6 @@ interface Course {
   icon: React.ReactNode;
   duration: string;
   level: string;
-  students: string;
-  placementRate: string;
   price: string;
   color: string;
   bgGradient: string;
@@ -399,8 +397,6 @@ const Courses = () => {
       icon: <Code2 className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       duration: "12 Weeks",
       level: "Beginner to Advanced",
-      students: "1,200+",
-      placementRate: "96%",
       price: "₹35,000",
       color: "from-orange-500 to-amber-500",
       bgGradient: "bg-gradient-to-br from-orange-50 to-amber-50",
@@ -422,8 +418,6 @@ const Courses = () => {
       icon: <CloudCog className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       duration: "16 Weeks",
       level: "Intermediate to Advanced",
-      students: "850+",
-      placementRate: "98%",
       price: "₹55,000",
       color: "from-blue-500 to-cyan-500",
       bgGradient: "bg-gradient-to-br from-blue-50 to-cyan-50",
@@ -445,8 +439,6 @@ const Courses = () => {
       icon: <Cpu className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       duration: "10 Weeks",
       level: "Beginner to Advanced",
-      students: "1,500+",
-      placementRate: "95%",
       price: "₹35,000",
       color: "from-purple-500 to-pink-500",
       bgGradient: "bg-gradient-to-br from-purple-50 to-pink-50",
@@ -507,7 +499,7 @@ const Courses = () => {
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
             Accelerate your tech career with Vira Academy's hands-on training
             programs. Learn from industry experts, work on real projects, and
-            get guaranteed placement support.
+            get placement support.
           </p>
         </div>
 
@@ -572,23 +564,7 @@ const Courses = () => {
                         {course.duration}
                       </div>
                     </div>
-                    <div>
-                      <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 mb-1">
-                        <Users className="w-3 h-3 sm:w-4 sm:h-4" />
-                        Students
-                      </div>
-                      <div className="font-bold text-gray-900 text-sm sm:text-base">
-                        {course.students}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs sm:text-sm text-gray-600 mb-1">
-                        Placement
-                      </div>
-                      <div className="font-bold text-green-600 text-sm sm:text-base">
-                        {course.placementRate}
-                      </div>
-                    </div>
+                    
                     <div>
                       <div className="text-xs sm:text-sm text-gray-600 mb-1">
                         Program Fee

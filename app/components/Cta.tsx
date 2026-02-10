@@ -98,7 +98,7 @@ const Cta = () => {
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-10">
                   Join thousands of successful graduates who transformed their
                   careers with industry-focused training, hands-on projects, and
-                  guaranteed placement support.
+                  placement support.
                 </p>
               </div>
 

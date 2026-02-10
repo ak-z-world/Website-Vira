@@ -113,7 +113,6 @@ const Features = () => {
 
   const learningMethods = [
     { icon: <Clock className="w-5 h-5" />, text: "Flexible Learning Schedule" },
-    { icon: <Globe className="w-5 h-5" />, text: "Lifetime Course Access" },
     {
       icon: <ShieldCheck className="w-5 h-5" />,
       text: "100% Pratical Learning ",
@@ -170,7 +169,7 @@ const Features = () => {
         </div>
 
         {/* Learning Methods */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16 justify-items-center max-w-4xl mx-auto">
           {learningMethods.map((method, index) => (
             <div
               key={index}

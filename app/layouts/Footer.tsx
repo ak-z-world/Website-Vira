@@ -10,7 +10,7 @@ const Footer = () => {
   ];
 
   const courses = [
-    { label: 'Python & Django', href: '/courses/python-django' },
+    { label: 'Python & Django', href: '/courses/python' },
     { label: 'DevOps Engineering', href: '/courses/devops' },
     { label: 'React Development', href: '/courses/react' },
    

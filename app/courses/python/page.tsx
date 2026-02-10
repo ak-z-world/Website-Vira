@@ -8,39 +8,37 @@ export default function PythonDjangoCoursePage() {
     description: 'Become an expert in Python programming and Django framework to build robust, scalable web applications and APIs.',
     duration: '10 Weeks',
     level: 'Beginner to Professional',
-    students: '1,800+',
     fee: '₹35,000',
     originalFee: '₹40,000',
     nextBatch: 'March 20, 2024',
     seatsLeft: '8',
     rating: '4.9',
-    reviews: '512',
   };
 
   const modules = [
-    { 
-      title: 'Python Fundamentals', 
+    {
+      title: 'Python Fundamentals',
       topics: ['Python Syntax & Data Types', 'Functions & Modules', 'OOP Principles', 'File Handling & Exceptions'],
       icon: <Code2 className="w-5 h-5" />,
       duration: '3 Weeks',
       projects: 2
     },
-    { 
-      title: 'Django Core', 
+    {
+      title: 'Django Core',
       topics: ['MVC Architecture', 'Models & Migrations', 'Views & Templates', 'URL Routing'],
       icon: <Layout className="w-5 h-5" />,
       duration: '3 Weeks',
       projects: 3
     },
-    { 
-      title: 'Database & ORM', 
+    {
+      title: 'Database & ORM',
       topics: ['PostgreSQL with Django', 'Django ORM Queries', 'Model Relationships', 'Database Optimization'],
       icon: <Database className="w-5 h-5" />,
       duration: '2 Weeks',
       projects: 2
     },
-    { 
-      title: 'Advanced Django', 
+    {
+      title: 'Advanced Django',
       topics: ['REST APIs with DRF', 'Authentication & Permissions', 'Testing Django Apps', 'Production Deployment'],
       icon: <Cpu className="w-5 h-5" />,
       duration: '2 Weeks',
@@ -53,8 +51,6 @@ export default function PythonDjangoCoursePage() {
     { icon: <Clock className="w-5 h-5" />, text: '100+ hours of live instruction' },
     { icon: <FileCode className="w-5 h-5" />, text: '10+ real Django projects' },
     { icon: <Users className="w-5 h-5" />, text: 'Personal mentorship sessions' },
-    { icon: <Briefcase className="w-5 h-5" />, text: 'Direct placement opportunities' },
-    { icon: <Database className="w-5 h-5" />, text: 'Lifetime course updates' },
   ];
 
   const outcomes = [
@@ -73,10 +69,6 @@ export default function PythonDjangoCoursePage() {
     { name: 'Django 4.2+', icon: <Layout className="w-4 h-4" /> },
     { name: 'PostgreSQL', icon: <Database className="w-4 h-4" /> },
     { name: 'Django REST Framework', icon: <Server className="w-4 h-4" /> },
-    { name: 'Git & GitHub', icon: <GitBranch className="w-4 h-4" /> },
-    { name: 'Docker', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Pytest', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Celery', icon: <Cpu className="w-4 h-4" /> },
   ];
 
   return (
@@ -86,7 +78,7 @@ export default function PythonDjangoCoursePage() {
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full blur-3xl opacity-60" />
-        
+
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
@@ -96,41 +88,39 @@ export default function PythonDjangoCoursePage() {
               <span>›</span>
               <span className="text-orange-600 font-semibold">Python & Django</span>
             </div> */}
-            
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
                   <TrendingUp className="w-4 h-4 text-orange-500" />
                   <span className="text-sm font-semibold text-orange-600">High-Demand Course</span>
                 </div>
-                
+
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
                   Python & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Django</span>
                 </h1>
-                
+
                 <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
                   Master backend development with Python's most powerful web framework. Build scalable, production-ready applications.
                 </p>
-                
+
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.duration}</div>
+                  <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      {courseDetails.duration}
+                    </div>
                     <div className="text-sm text-gray-600">Duration</div>
                   </div>
                   <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.level}</div>
                     <div className="text-sm text-gray-600">Level</div>
                   </div>
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.students}</div>
-                    <div className="text-sm text-gray-600">Alumni</div>
-                  </div>
-                  
+
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
-                    href="/contact" 
+                  <Link
+                    href="/contact"
                     className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105"
                   >
                     Enroll Now
@@ -145,7 +135,7 @@ export default function PythonDjangoCoursePage() {
                   </Link> */}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl">
@@ -158,7 +148,7 @@ export default function PythonDjangoCoursePage() {
                       20% OFF
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-6">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
@@ -169,7 +159,7 @@ export default function PythonDjangoCoursePage() {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-4 mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-semibold text-gray-900">Next Batch Starts</span>
@@ -182,8 +172,8 @@ export default function PythonDjangoCoursePage() {
                       <span className="font-semibold">{courseDetails.seatsLeft} seats left</span>
                     </div>
                   </div>
-                  
-                  <Link 
+
+                  <Link
                     href="/contact"
                     className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all duration-300"
                   >
@@ -211,11 +201,11 @@ export default function PythonDjangoCoursePage() {
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {tools.map((tool, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-4 hover:border-orange-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="p-2 bg-orange-50 rounded-lg">
@@ -225,7 +215,7 @@ export default function PythonDjangoCoursePage() {
                 </div>
               ))}
             </div>
-            
+
             <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-3xl p-8">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -264,11 +254,11 @@ export default function PythonDjangoCoursePage() {
                 Comprehensive curriculum designed by industry experts to make you job-ready
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {modules.map((module, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -277,9 +267,9 @@ export default function PythonDjangoCoursePage() {
                     </div>
                     <div className="text-sm font-medium text-gray-500">{module.duration}</div>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{module.title}</h3>
-                  
+
                   <ul className="space-y-2 mb-4">
                     {module.topics.map((topic, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-600">
@@ -288,11 +278,11 @@ export default function PythonDjangoCoursePage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <div className="text-sm text-gray-500">
                     Includes {module.projects} hands-on projects
                   </div>
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
@@ -311,13 +301,13 @@ export default function PythonDjangoCoursePage() {
                   <Target className="w-4 h-4 text-orange-500" />
                   <span className="text-sm font-semibold text-orange-600">What You'll Achieve</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                   Master <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
                     Django Development
                   </span>
                 </h2>
-                
+
                 <div className="space-y-4">
                   {outcomes.map((outcome, index) => (
                     <div key={index} className="flex items-start gap-3">
@@ -329,7 +319,7 @@ export default function PythonDjangoCoursePage() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 text-white">
@@ -338,19 +328,11 @@ export default function PythonDjangoCoursePage() {
                     <h3 className="text-2xl font-bold mb-2">Career Outcomes</h3>
                     <p className="text-gray-300">What graduates achieve</p>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Avg. Salary Hike</span>
                       <span className="text-2xl font-bold text-orange-400">65%</span>
-                    </div>
-                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
-                      <span className="text-gray-300">Placement Rate</span>
-                      <span className="text-2xl font-bold text-orange-400">96%</span>
-                    </div>
-                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
-                      <span className="text-gray-300">Hiring Partners</span>
-                      <span className="text-2xl font-bold text-orange-400">50+</span>
                     </div>
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Project Completion</span>
@@ -372,17 +354,17 @@ export default function PythonDjangoCoursePage() {
               <Rocket className="w-4 h-4 text-orange-500" />
               <span className="text-sm font-semibold text-orange-600">Limited Time Offer</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
               Start Your <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
                 Django Journey
               </span> Today
             </h2>
-            
+
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Join the next batch of aspiring Django developers and transform your career in 10 weeks.
             </p>
-            
+
             <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl max-w-2xl mx-auto mb-10">
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -394,10 +376,10 @@ export default function PythonDjangoCoursePage() {
                   <div className="text-lg font-bold text-orange-600">{courseDetails.nextBatch}</div>
                 </div>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center justify-center gap-2">
@@ -405,8 +387,8 @@ export default function PythonDjangoCoursePage() {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="group bg-white border border-gray-200 text-gray-700 font-semibold py-4 px-6 rounded-xl hover:border-orange-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
@@ -415,9 +397,9 @@ export default function PythonDjangoCoursePage() {
                   </div>
                 </Link>
               </div>
-              
+
               <div className="mt-6 text-sm text-gray-500 text-center">
-                Only {courseDetails.seatsLeft} seats available 
+                Only {courseDetails.seatsLeft} seats available
               </div>
             </div>
           </div>

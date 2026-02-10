@@ -8,13 +8,11 @@ export default function DevOpsCoursePage() {
     description: 'Become an expert in CI/CD pipelines, container orchestration, cloud infrastructure, and infrastructure automation.',
     duration: '16 Weeks',
     level: 'Intermediate to Advanced',
-    students: '950+',
     fee: '₹58,000',
     originalFee: '₹68,000',
     nextBatch: 'March 25, 2024',
     seatsLeft: '6',
     rating: '4.8',
-    reviews: '425',
   };
 
   const modules = [
@@ -60,19 +58,13 @@ export default function DevOpsCoursePage() {
     { icon: <Layers className="w-5 h-5" />, text: '15+ hands-on DevOps projects' },
     { icon: <Workflow className="w-5 h-5" />, text: 'Real-world production deployment' },
     { icon: <Users className="w-5 h-5" />, text: 'Industry expert mentorship' },
-    { icon: <Briefcase className="w-5 h-5" />, text: '100% placement assistance' },
-    { icon: <Database className="w-5 h-5" />, text: 'Lifetime tools & labs access' },
   ];
 
   const tools = [
-    { name: 'Docker', icon: <Codepen className="w-4 h-4" />, category: 'Containerization' },
     { name: 'Kubernetes', icon: <Cpu className="w-4 h-4" />, category: 'Orchestration' },
     { name: 'AWS', icon: <Cloud className="w-4 h-4" />, category: 'Cloud Platform' },
     { name: 'Jenkins', icon: <Settings className="w-4 h-4" />, category: 'CI/CD' },
     { name: 'Terraform', icon: <HardDrive className="w-4 h-4" />, category: 'Infrastructure as Code' },
-    { name: 'Ansible', icon: <Terminal className="w-4 h-4" />, category: 'Automation' },
-    { name: 'Prometheus', icon: <TrendingUp className="w-4 h-4" />, category: 'Monitoring' },
-    { name: 'Grafana', icon: <Globe className="w-4 h-4" />, category: 'Visualization' },
   ];
 
   const outcomes = [
@@ -90,17 +82,17 @@ export default function DevOpsCoursePage() {
     {
       title: 'End-to-End CI/CD Pipeline',
       description: 'Build automated deployment pipeline with Jenkins, Docker, and Kubernetes',
-      technologies: ['Jenkins', 'Docker', 'Kubernetes', 'Git']
+      technologies: ['Jenkins', 'Docker']
     },
     {
       title: 'Microservices Deployment',
       description: 'Deploy and manage microservices on production Kubernetes cluster',
-      technologies: ['Kubernetes', 'Helm', 'Prometheus', 'Grafana']
+      technologies: ['Kubernetes', 'Git' ]
     },
     {
       title: 'Cloud Infrastructure Automation',
       description: 'Automate AWS infrastructure using Terraform and Ansible',
-      technologies: ['Terraform', 'AWS', 'Ansible', 'CloudFormation']
+      technologies: ['Terraform', 'AWS', 'CloudFormation']
     },
   ];
 
@@ -139,7 +131,7 @@ export default function DevOpsCoursePage() {
                 </p>
                 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.duration}</div>
                     <div className="text-sm text-gray-600">Duration</div>
                   </div>
@@ -148,7 +140,7 @@ export default function DevOpsCoursePage() {
                     <div className="text-sm text-gray-600">Level</div>
                   </div>
                  
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                  <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.rating}/5</div>
                     <div className="text-sm text-gray-600">Rating</div>
                   </div>
@@ -288,7 +280,7 @@ export default function DevOpsCoursePage() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto justify-items-center">
               {modules.map((module, index) => (
                 <div 
                   key={index} 
@@ -417,10 +409,6 @@ export default function DevOpsCoursePage() {
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Job Growth Rate</span>
                       <span className="text-2xl font-bold text-blue-400">45% YoY</span>
-                    </div>
-                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
-                      <span className="text-gray-300">Placement Rate</span>
-                      <span className="text-2xl font-bold text-blue-400">94%</span>
                     </div>
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Industry Demand</span>
