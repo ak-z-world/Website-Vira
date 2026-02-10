@@ -319,7 +319,7 @@ const Features = () => {
                 <div className="flex flex-wrap gap-4">
                   <div className="px-4 py-2 bg-white/20 rounded-lg">
                     <div className="text-sm">Next Batch</div>
-                    <div className="font-bold">March 15, 2024</div>
+                    <div className="font-bold">March 15, 2026</div>
                   </div>
                   <div className="px-4 py-2 bg-white/20 rounded-lg">
                     <div className="text-sm">Scholarship</div>

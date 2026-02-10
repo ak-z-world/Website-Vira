@@ -34,11 +34,9 @@ export default function AboutPage() {
   ];
 
   const milestones = [
-    { year: '2020', title: 'Founded', description: 'Launched with Python courses', highlight: true },
-    { year: '2021', title: 'Expansion', description: 'Added DevOps & React programs' },
-    { year: '2022', title: 'Growth', description: '1000+ students trained globally' },
-    { year: '2023', title: 'Recognition', description: 'Awarded "Best Tech Institute"' },
-    { year: '2024', title: 'Global', description: 'International online batches launched', highlight: true }
+    { year: '2024', title: 'Founded', description: 'Launched with Python courses', highlight: true },
+    { year: '2025', title: 'Expansion', description: 'Added DevOps & React programs' },
+    { year: '2026', title: 'Global', description: 'International online batches launched', highlight: true }
   ];
 
 

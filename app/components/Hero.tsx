@@ -332,7 +332,7 @@ const Hero = () => {
                         </div>
                         <div className="text-right">
                           <div className="text-sm font-bold text-[#FF7A1E]">
-                            March 15, 2024
+                            March 15, 2026
                           </div>
                           <div className="text-xs text-gray-600">
                             Enroll before Mar 10

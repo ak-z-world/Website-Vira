@@ -10,7 +10,7 @@ export default function ReactCoursePage() {
     level: 'Beginner to Advanced',
     fee: '₹42,000',
     originalFee: '₹52,000',
-    nextBatch: 'March 28, 2024',
+    nextBatch: 'March 28, 2026',
     seatsLeft: '10',
     rating: '4.9',
   };

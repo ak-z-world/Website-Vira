@@ -10,7 +10,7 @@ export default function DevOpsCoursePage() {
     level: 'Intermediate to Advanced',
     fee: '₹58,000',
     originalFee: '₹68,000',
-    nextBatch: 'March 25, 2024',
+    nextBatch: 'March 25, 2026',
     seatsLeft: '6',
     rating: '4.8',
   };

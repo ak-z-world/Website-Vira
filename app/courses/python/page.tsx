@@ -10,7 +10,7 @@ export default function PythonDjangoCoursePage() {
     level: 'Beginner to Professional',
     fee: '₹35,000',
     originalFee: '₹40,000',
-    nextBatch: 'March 20, 2024',
+    nextBatch: 'March 20, 2026',
     seatsLeft: '8',
     rating: '4.9',
   };

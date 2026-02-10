@@ -282,7 +282,7 @@
 //               <div className="flex flex-wrap gap-3">
 //                 <div className="px-4 py-2 bg-white/20 rounded-lg">
 //                   <div className="text-sm">Next Batch</div>
-//                   <div className="font-bold">March 15, 2024</div>
+//                   <div className="font-bold">March 15, 2026</div>
 //                 </div>
 //                 <div className="px-4 py-2 bg-white/20 rounded-lg">
 //                   <div className="text-sm">Seats Available</div>
@@ -612,7 +612,7 @@ const Courses = () => {
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/20 rounded-lg">
                   <div className="text-xs sm:text-sm">Next Batch</div>
-                  <div className="font-bold text-sm sm:text-base">March 15, 2024</div>
+                  <div className="font-bold text-sm sm:text-base">March 15, 2026</div>
                 </div>
                 <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/20 rounded-lg">
                   <div className="text-xs sm:text-sm">Seats Available</div>
