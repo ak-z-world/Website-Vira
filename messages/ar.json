@@ -1,0 +1,194 @@
+{
+"common": {
+"enrollNow": "سجل الآن",
+"bookDemo": "احجز عرضًا تجريبيًا مجانيًا",
+"bookDemoClass": "احجز حصة تجريبية مجانية",
+"duration": "المدة",
+"level": "المستوى",
+"rating": "التقييم",
+"nextBatch": "بداية الدفعة القادمة",
+"seatsLeft": "مقاعد متبقية",
+"realProjects": "مشاريع حقيقية",
+"hoursOfLearning": "ساعات التعلم",
+"sendMessage": "إرسال رسالة",
+"sending": "جارٍ الإرسال...",
+"thankYou": "شكرًا لك!",
+"contactSupport": "اتصل بالدعم"
+},
+
+"courses": {
+"devops": {
+"title": "هندسة DevOps",
+"subtitle": "إتقان السحابة والأتمتة",
+"description": "كن خبيرًا في خطوط CI/CD وتنظيم الحاويات والبنية التحتية السحابية وأتمتة الأنظمة.",
+"tagline": "مسار مهني مطلوب بشدة",
+"heroText": "أتقن فن الأتمتة والبنية التحتية السحابية والنشر على نطاق واسع. كن خبير DevOps الذي تبحث عنه الشركات.",
+"ecosystemTitle": "نظام DevOps البيئي",
+"stackTitle": "إتقان الحزمة الكاملة",
+"curriculumTitle": "منهج منظم",
+"curriculumDesc": "من الأساسيات إلى المفاهيم المتقدمة — كن جاهزًا للعمل خلال 16 أسبوعًا",
+"projectsTitle": "مشاريع واقعية",
+"skillsTitle": "ما ستتقنه",
+"careerTitle": "آفاق مهنة DevOps",
+"careerSubtitle": "لماذا DevOps مطلوب بشدة",
+"averageSalary": "متوسط الراتب",
+"jobGrowth": "معدل نمو الوظائف",
+"industryDemand": "الطلب في السوق",
+"ctaTitle": "ابدأ مسيرتك في DevOps",
+"ctaDesc": "انضم إلى البرنامج الأشمل في DevOps وكن مهندس DevOps مطلوبًا خلال 16 أسبوعًا."
+},
+
+"python": {
+  "title": "تطوير Python و Django",
+  "subtitle": "أتقن تطوير الواجهات الخلفية باستخدام أقوى إطار عمل ويب في بايثون. ابنِ تطبيقات قابلة للتوسع وجاهزة للإنتاج.",
+  "description": "كن خبيرًا في برمجة Python وإطار Django لبناء تطبيقات ويب قوية وقابلة للتوسع.",
+  "tagline": "دورة مطلوبة بشدة",
+  "heroText": "أتقن تطوير الخوادم الخلفية باستخدام أقوى إطار ويب في Python. ابنِ تطبيقات جاهزة للإنتاج.",
+  "stackTitle": "التقنيات المستخدمة",
+  "stackSubtitle": "إتقان الحزمة الحديثة",
+  "curriculumTitle": "مسار تعلم منظم",
+  "curriculumDesc": "منهج شامل صممه خبراء الصناعة ليجعلك جاهزًا للعمل",
+  "achieveTitle": "ما الذي ستحققه",
+  "masterTitle": "إتقان تطوير Django",
+  "careerTitle": "النتائج المهنية",
+  "careerSubtitle": "ما يحققه الخريجون",
+  "ctaTitle": "ابدأ رحلتك مع Django اليوم",
+  "ctaDesc": "انضم إلى الدفعة القادمة من مطوري Django الطموحين وغير مسارك المهني خلال 10 أسابيع.",
+  "modules": {
+    "fundamentals": {
+      "title": "أساسيات بايثون",
+      "duration": "3 أسابيع",
+      "topics": {
+        "syntax": "بنية بايثون وأنواع البيانات",
+        "functions": "الدوال والوحدات",
+        "oop": "مبادئ البرمجة الكائنية",
+        "files": "التعامل مع الملفات والاستثناءات"
+      }
+    },
+    "django": {
+      "title": "أساسيات Django",
+      "duration": "3 أسابيع",
+      "topics": {
+        "mvc": "معمارية MVC",
+        "models": "النماذج والترحيلات",
+        "views": "العروض والقوالب",
+        "urls": "توجيه الروابط"
+      }
+    },
+    "database": {
+      "title": "قاعدة البيانات و ORM",
+      "duration": "2 أسبوع",
+      "topics": {
+        "postgres": "PostgreSQL مع Django",
+        "orm": "استعلامات Django ORM",
+        "relationships": "علاقات النماذج"
+      }
+    },
+    "advanced": {
+      "title": "Django المتقدم",
+      "duration": "2 أسبوع",
+      "topics": {
+        "api": "إنشاء REST APIs باستخدام DRF",
+        "auth": "المصادقة والصلاحيات",
+        "optimization": "تحسين قاعدة البيانات"
+      }
+    }
+  },
+  "benefits": {
+    "certification": "شهادة Django معترف بها في الصناعة",
+    "hours": "أكثر من 100 ساعة من التدريب المباشر",
+    "projects": "أكثر من 10 مشاريع Django حقيقية",
+    "mentorship": "جلسات إرشاد فردية"
+  },
+
+  "outcomes": {
+    "buildApps": "إنشاء تطبيقات Django جاهزة للإنتاج",
+    "createApis": "إنشاء واجهات REST باستخدام Django REST Framework",
+    "designDatabase": "تصميم هياكل قواعد بيانات فعالة باستخدام Django ORM",
+    "authentication": "تنفيذ أنظمة مصادقة آمنة",
+    "deploy": "نشر تطبيقات Django على منصات السحابة",
+    "testing": "كتابة اختبارات شاملة للتطبيق",
+    "optimization": "تحسين أداء تطبيقات Django",
+    "bestPractices": "اتباع أفضل ممارسات Django"
+  }
+},
+
+"react": {
+  "title": "تطوير React",
+  "subtitle": "إتقان تطوير الواجهات الحديثة",
+  "description": "أتقن React و Next.js و TypeScript لبناء تطبيقات ويب عالية الأداء.",
+  "tagline": "مهارة مطلوبة بشدة",
+  "heroText": "أتقن تطوير الواجهات الحديثة باستخدام React و Next.js. ابنِ تطبيقات سريعة وقابلة للتوسع.",
+  "stackTitle": "الحزمة التقنية الحديثة",
+  "stackSubtitle": "إتقان نظام React",
+  "curriculumTitle": "منهج منظم",
+  "curriculumDesc": "من الأساسيات إلى المفاهيم المتقدمة — كن خبير React خلال 12 أسبوعًا",
+  "projectsTitle": "ابنِ تطبيقات حقيقية",
+  "skillsTitle": "المهارات التي ستكتسبها",
+  "masterTitle": "إتقان تطوير الواجهات",
+  "careerTitle": "آفاق مهنة React",
+  "careerSubtitle": "لماذا مطورو React مطلوبون",
+  "ctaTitle": "ابدأ رحلتك مع React",
+  "ctaDesc": "انضم إلى آلاف المطورين الذين أطلقوا مسيرتهم المهنية من خلال برنامج React."
+},
+
+"list": {
+  "sectionTitle": "برامج تقنية موجهة للصناعة",
+  "sectionDesc": "سرّع مسيرتك التقنية من خلال برامج تدريب عملية ومشاريع حقيقية.",
+  "exploreProgram": "استكشف البرنامج",
+  "viewAll": "عرض جميع البرامج",
+  "consultation": "احجز استشارة مهنية مجانية",
+  "advantage": "ميزة الأكاديمية",
+  "startJourney": "ابدأ رحلتك التقنية",
+  "scholarship": "منحة دراسية",
+  "nextBatch": "الدفعة القادمة",
+  "availableSeats": "المقاعد المتاحة"
+}
+
+},
+
+"contact": {
+"heroTitle": "لنتواصل",
+"heroSubtitle": "تواصل معنا",
+"heroDesc": "هل أنت مستعد لتطوير مسارك التقني؟ فريق القبول هنا لمساعدتك.",
+"sendUsMessage": "أرسل لنا رسالة",
+"formDesc": "املأ النموذج وسنعود إليك في أقرب وقت ممكن.",
+"fullName": "الاسم الكامل",
+"email": "البريد الإلكتروني",
+"phone": "رقم الهاتف",
+"courseInterest": "الدورة المهتم بها",
+"message": "رسالتك",
+"selectInterest": "اختر اهتمامك",
+"successTitle": "تم إرسال الرسالة بنجاح!",
+"successDesc": "شكرًا لتواصلك معنا. سنرد خلال 24 ساعة.",
+"quickActions": "إجراءات سريعة",
+"bookDemo": "احجز عرضًا تجريبيًا",
+"viewCourses": "عرض الدورات",
+"admissionProcess": "عملية القبول",
+"immediateHelp": "هل تحتاج مساعدة فورية؟",
+"faqTitle": "الأسئلة الشائعة",
+"finalCta": "ابدأ تحولك التقني",
+"talkAdmissions": "تحدث مع فريق القبول"
+},
+
+"faq": {
+"heroTitle": "الأسئلة الشائعة",
+"heroDesc": "اعثر على إجابات سريعة للأسئلة الشائعة حول الدورات والتسجيل.",
+"categories": {
+"all": "جميع الأسئلة",
+"general": "عام",
+"courses": "الدورات",
+"enrollment": "التسجيل",
+"learning": "التعلم",
+"career": "المسار المهني",
+"payment": "الدفع",
+"technical": "تقني",
+"support": "الدعم"
+},
+"needHelp": "ما زالت لديك أسئلة؟",
+"contactSupport": "فريق الدعم هنا لمساعدتك.",
+"emailSupport": "دعم عبر البريد",
+"callSupport": "اتصل بالدعم"
+}
+
+}

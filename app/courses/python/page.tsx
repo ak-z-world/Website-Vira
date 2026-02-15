@@ -1,10 +1,15 @@
+"use client";
 import { Code2, Clock, Users, CheckCircle, ArrowRight, BookOpen, Briefcase, Zap, Sparkles, TrendingUp, Monitor, Database, Cpu, Globe, Rocket, Award, Star, Layers, Terminal, Shield, FileCode, Server, Layout, Key, TestTube, Cloud, GitBranch, Target } from 'lucide-react';
 import Link from 'next/link';
+import { useGlobal } from "@/app/providers";
+import { formatCurrency } from "@/lib/currency";
+
 
 export default function PythonDjangoCoursePage() {
+  const { t, price, originalPrice  } = useGlobal();
   const courseDetails = {
     title: 'Python & Django Development',
-    subtitle: 'Master Backend Development',
+    subtitle: "Master backend development with Python's most powerful web framework. Build scalable, production-ready applications.",
     description: 'Become an expert in Python programming and Django framework to build robust, scalable web applications and APIs.',
     duration: '10 Weeks',
     level: 'Beginner to Professional',
@@ -17,52 +22,72 @@ export default function PythonDjangoCoursePage() {
 
   const modules = [
     {
-      title: 'Python Fundamentals',
-      topics: ['Python Syntax & Data Types', 'Functions & Modules', 'OOP Principles', 'File Handling & Exceptions'],
+      title: "courses.python.modules.fundamentals.title",
+      topics: [
+        "courses.python.modules.fundamentals.topics.syntax",
+        "courses.python.modules.fundamentals.topics.functions",
+        "courses.python.modules.fundamentals.topics.oop",
+        "courses.python.modules.fundamentals.topics.files"
+      ],
       icon: <Code2 className="w-5 h-5" />,
-      duration: '3 Weeks',
+      duration: "courses.python.modules.fundamentals.duration",
       projects: 2
     },
     {
-      title: 'Django Core',
-      topics: ['MVC Architecture', 'Models & Migrations', 'Views & Templates', 'URL Routing'],
+      title: "courses.python.modules.django.title",
+      topics: [
+        "courses.python.modules.django.topics.mvc",
+        "courses.python.modules.django.topics.models",
+        "courses.python.modules.django.topics.views",
+        "courses.python.modules.django.topics.urls"
+      ],
       icon: <Layout className="w-5 h-5" />,
-      duration: '3 Weeks',
+      duration: "courses.python.modules.django.duration",
       projects: 3
     },
     {
-      title: 'Database & ORM',
-      topics: ['PostgreSQL with Django', 'Django ORM Queries', 'Model Relationships', 'Database Optimization'],
+      title: "courses.python.modules.database.title",
+      topics: [
+        "courses.python.modules.database.topics.postgres",
+        "courses.python.modules.database.topics.orm",
+        "courses.python.modules.database.topics.relationships"
+      ],
       icon: <Database className="w-5 h-5" />,
-      duration: '2 Weeks',
+      duration: "courses.python.modules.database.duration",
       projects: 2
     },
     {
-      title: 'Advanced Django',
-      topics: ['REST APIs with DRF', 'Authentication & Permissions', 'Testing Django Apps', 'Production Deployment'],
+      title: "courses.python.modules.advanced.title",
+      topics: [
+        "courses.python.modules.advanced.topics.api",
+        "courses.python.modules.advanced.topics.auth",
+        "courses.python.modules.advanced.topics.optimization",
+      ],
       icon: <Cpu className="w-5 h-5" />,
-      duration: '2 Weeks',
+      duration: "courses.python.modules.advanced.duration",
       projects: 3
-    },
+    }
   ];
 
+
   const benefits = [
-    { icon: <Award className="w-5 h-5" />, text: 'Industry-recognized Django certification' },
-    { icon: <Clock className="w-5 h-5" />, text: '100+ hours of live instruction' },
-    { icon: <FileCode className="w-5 h-5" />, text: '10+ real Django projects' },
-    { icon: <Users className="w-5 h-5" />, text: 'Personal mentorship sessions' },
+    { icon: <Award className="w-5 h-5" />, text: "courses.python.benefits.certification" },
+    { icon: <Clock className="w-5 h-5" />, text: "courses.python.benefits.hours" },
+    { icon: <FileCode className="w-5 h-5" />, text: "courses.python.benefits.projects" },
+    { icon: <Users className="w-5 h-5" />, text: "courses.python.benefits.mentorship" },
   ];
 
   const outcomes = [
-    'Build production-ready Django applications',
-    'Create RESTful APIs with Django REST Framework',
-    'Design efficient database schemas with Django ORM',
-    'Implement secure authentication systems',
-    'Deploy Django apps to cloud platforms',
-    'Write comprehensive test suites',
-    'Optimize Django application performance',
-    'Follow Django best practices',
+    t("courses.python.outcomes.buildApps"),
+    t("courses.python.outcomes.createApis"),
+    t("courses.python.outcomes.designDatabase"),
+    t("courses.python.outcomes.authentication"),
+    t("courses.python.outcomes.deploy"),
+    t("courses.python.outcomes.testing"),
+    t("courses.python.outcomes.optimization"),
+    t("courses.python.outcomes.bestPractices")
   ];
+
 
   const tools = [
     { name: 'Python 3.11+', icon: <Code2 className="w-4 h-4" /> },
@@ -101,7 +126,7 @@ export default function PythonDjangoCoursePage() {
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                  Master backend development with Python's most powerful web framework. Build scalable, production-ready applications.
+                  {t("courses.python.subtitle")}
                 </p>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
@@ -141,8 +166,8 @@ export default function PythonDjangoCoursePage() {
                 <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl">
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <div className="text-4xl font-bold text-gray-900">{courseDetails.fee}</div>
-                      <div className="text-sm text-gray-500 line-through">{courseDetails.originalFee}</div>
+                      <div className="text-4xl font-bold text-gray-900">{price}</div>
+                      <div className="text-sm text-gray-500 line-through">{originalPrice}</div>
                     </div>
                     <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold px-4 py-2 rounded-full">
                       20% OFF
@@ -155,7 +180,7 @@ export default function PythonDjangoCoursePage() {
                         <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
                           <div className="text-orange-500">{benefit.icon}</div>
                         </div>
-                        <span className="text-gray-700">{benefit.text}</span>
+                        <span className="text-gray-700">{t(benefit.text)}</span>
                       </div>
                     ))}
                   </div>
@@ -265,16 +290,16 @@ export default function PythonDjangoCoursePage() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
                       <div className="text-white">{module.icon}</div>
                     </div>
-                    <div className="text-sm font-medium text-gray-500">{module.duration}</div>
+                    <div className="text-sm font-medium text-gray-500">{t(module.duration)}</div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{module.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{t(module.title)}</h3>
 
                   <ul className="space-y-2 mb-4">
                     {module.topics.map((topic, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-600">
                         <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
-                        <span>{topic}</span>
+                        <span>{t(topic)}</span>
                       </li>
                     ))}
                   </ul>
@@ -338,6 +363,10 @@ export default function PythonDjangoCoursePage() {
                       <span className="text-gray-300">Project Completion</span>
                       <span className="text-2xl font-bold text-orange-400">98%</span>
                     </div>
+                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+                      <span className="text-gray-300">Industry Demand</span>
+                      <span className="text-2xl font-bold text-purple-400">Very High</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -368,8 +397,8 @@ export default function PythonDjangoCoursePage() {
             <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl max-w-2xl mx-auto mb-10">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="text-3xl font-bold text-gray-900">{courseDetails.fee}</div>
-                  <div className="text-gray-500 line-through">{courseDetails.originalFee}</div>
+                  <div className="text-3xl font-bold text-gray-900">{price}</div>
+                  <div className="text-gray-500 line-through">{originalPrice}</div>
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-gray-500">Next batch starts</div>

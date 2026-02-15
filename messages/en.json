@@ -1,0 +1,194 @@
+{
+  "common": {
+    "enrollNow": "Enroll Now",
+    "bookDemo": "Book Free Demo",
+    "bookDemoClass": "Book Free Demo Class",
+    "duration": "Duration",
+    "level": "Level",
+    "rating": "Rating",
+    "nextBatch": "Next Batch Starts",
+    "seatsLeft": "Seats Left",
+    "realProjects": "Real Projects",
+    "hoursOfLearning": "Hours of Learning",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "thankYou": "Thank You!",
+    "contactSupport": "Contact Support"
+  },
+
+  "courses": {
+    "devops": {
+      "title": "DevOps Engineering",
+      "subtitle": "Master Cloud and Automation",
+      "description": "Become an expert in CI/CD pipelines, container orchestration, cloud infrastructure, and system automation.",
+      "tagline": "Highly In-Demand Career Path",
+      "heroText": "Master automation, cloud infrastructure, and scalable deployments. Become the DevOps expert companies are hiring.",
+      "ecosystemTitle": "DevOps Ecosystem",
+      "stackTitle": "Master the Full Stack",
+      "curriculumTitle": "Structured Curriculum",
+      "curriculumDesc": "From fundamentals to advanced concepts — become job-ready in 16 weeks.",
+      "projectsTitle": "Real-World Projects",
+      "skillsTitle": "Skills You Will Master",
+      "careerTitle": "DevOps Career Opportunities",
+      "careerSubtitle": "Why DevOps is in High Demand",
+      "averageSalary": "Average Salary",
+      "jobGrowth": "Job Growth Rate",
+      "industryDemand": "Market Demand",
+      "ctaTitle": "Start Your DevOps Career",
+      "ctaDesc": "Join the most comprehensive DevOps program and become a job-ready DevOps engineer in 16 weeks."
+    },
+
+    "python": {
+      "title": "Python and Django Development",
+      "subtitle": "Master backend development using the most powerful Python web framework. Build scalable, production-ready applications.",
+      "description": "Become an expert in Python programming and the Django framework to build powerful and scalable web applications.",
+      "tagline": "Highly In-Demand Course",
+      "heroText": "Master backend development using Python's most powerful web framework. Build production-ready applications.",
+      "stackTitle": "Technologies Used",
+      "stackSubtitle": "Master the Modern Stack",
+      "curriculumTitle": "Structured Learning Path",
+      "curriculumDesc": "Comprehensive curriculum designed by industry experts to make you job-ready.",
+      "achieveTitle": "What You Will Achieve",
+      "masterTitle": "Master Django Development",
+      "careerTitle": "Career Outcomes",
+      "careerSubtitle": "What Graduates Achieve",
+      "ctaTitle": "Start Your Django Journey Today",
+      "ctaDesc": "Join the next batch of aspiring Django developers and transform your career in 10 weeks.",
+      "modules": {
+        "fundamentals": {
+          "title": "Python Fundamentals",
+          "duration": "3 Weeks",
+          "topics": {
+            "syntax": "Python Syntax & Data Types",
+            "functions": "Functions & Modules",
+            "oop": "OOP Principles",
+            "files": "File Handling & Exceptions"
+          }
+        },
+        "django": {
+          "title": "Django Core",
+          "duration": "3 Weeks",
+          "topics": {
+            "mvc": "MVC Architecture",
+            "models": "Models & Migrations",
+            "views": "Views & Templates",
+            "urls": "URL Routing"
+          }
+        },
+        "database": {
+          "title": "Database & ORM",
+          "duration": "2 Weeks",
+          "topics": {
+            "postgres": "PostgreSQL with Django",
+            "orm": "Django ORM Queries",
+            "relationships": "Model Relationships"
+          }
+        },
+        "advanced": {
+          "title": "Advanced Django",
+          "duration": "2 Weeks",
+          "topics": {
+            "api": "REST APIs with DRF",
+            "auth": "Authentication & Permissions",
+            "optimization": "Database Optimization"
+          }
+        }
+      },
+      "benefits": {
+        "certification": "Industry-recognized Django certification",
+        "hours": "100+ hours of live instruction",
+        "projects": "10+ real Django projects",
+        "mentorship": "Personal mentorship sessions"
+      },
+
+      "outcomes": {
+        "buildApps": "Build production-ready Django applications",
+        "createApis": "Create RESTful APIs with Django REST Framework",
+        "designDatabase": "Design efficient database schemas with Django ORM",
+        "authentication": "Implement secure authentication systems",
+        "deploy": "Deploy Django apps to cloud platforms",
+        "testing": "Write comprehensive test suites",
+        "optimization": "Optimize Django application performance",
+        "bestPractices": "Follow Django best practices"
+      }
+
+    },
+
+    "react": {
+      "title": "React Development",
+      "subtitle": "Master Modern Frontend Development",
+      "description": "Master React, Next.js, and TypeScript to build high-performance web applications.",
+      "tagline": "Highly In-Demand Skill",
+      "heroText": "Master modern frontend development using React and Next.js. Build fast and scalable applications.",
+      "stackTitle": "Modern Tech Stack",
+      "stackSubtitle": "Master the React Ecosystem",
+      "curriculumTitle": "Structured Curriculum",
+      "curriculumDesc": "From fundamentals to advanced concepts — become a React expert in 12 weeks.",
+      "projectsTitle": "Build Real Applications",
+      "skillsTitle": "Skills You Will Gain",
+      "masterTitle": "Master Frontend Development",
+      "careerTitle": "React Career Opportunities",
+      "careerSubtitle": "Why React Developers are in High Demand",
+      "ctaTitle": "Start Your React Journey",
+      "ctaDesc": "Join thousands of developers who launched their careers through our React program."
+    },
+
+    "list": {
+      "sectionTitle": "Industry-Focused Tech Programs",
+      "sectionDesc": "Accelerate your tech career through hands-on training and real-world projects.",
+      "exploreProgram": "Explore Program",
+      "viewAll": "View All Programs",
+      "consultation": "Book Free Career Consultation",
+      "advantage": "Academy Advantage",
+      "startJourney": "Start Your Tech Journey",
+      "scholarship": "Scholarship",
+      "nextBatch": "Next Batch",
+      "availableSeats": "Available Seats"
+    }
+  },
+
+  "contact": {
+    "heroTitle": "Get in Touch",
+    "heroSubtitle": "Contact Us",
+    "heroDesc": "Ready to advance your tech career? Our admissions team is here to help.",
+    "sendUsMessage": "Send Us a Message",
+    "formDesc": "Fill out the form and we will get back to you as soon as possible.",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "courseInterest": "Course Interest",
+    "message": "Your Message",
+    "selectInterest": "Select Your Interest",
+    "successTitle": "Message Sent Successfully!",
+    "successDesc": "Thank you for contacting us. We will respond within 24 hours.",
+    "quickActions": "Quick Actions",
+    "bookDemo": "Book Demo",
+    "viewCourses": "View Courses",
+    "admissionProcess": "Admission Process",
+    "immediateHelp": "Need Immediate Help?",
+    "faqTitle": "Frequently Asked Questions",
+    "finalCta": "Start Your Tech Transformation",
+    "talkAdmissions": "Talk to Admissions"
+  },
+
+  "faq": {
+    "heroTitle": "Frequently Asked Questions",
+    "heroDesc": "Find quick answers to common questions about courses and enrollment.",
+    "categories": {
+      "all": "All Questions",
+      "general": "General",
+      "courses": "Courses",
+      "enrollment": "Enrollment",
+      "learning": "Learning",
+      "career": "Career",
+      "payment": "Payment",
+      "technical": "Technical",
+      "support": "Support"
+    },
+    "needHelp": "Still have questions?",
+    "contactSupport": "Our support team is here to help.",
+    "emailSupport": "Email Support",
+    "callSupport": "Call Support"
+  }
+}
+

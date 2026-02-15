@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Target, Award, Globe, CheckCircle, Sparkles, ArrowRight, ChevronRight, Zap, Rocket } from 'lucide-react';
+import { Users, Target, Award, Globe, Crown, Cpu, CheckCircle, Sparkles, ArrowRight, ChevronRight, Zap, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 // import Testimonials from '../components/Testimonials';
@@ -42,6 +42,7 @@ export default function AboutPage() {
 
   const leadership = [
     {
+      icon: <Crown className="w-7 h-7" />,
       initials: 'S',
       name: 'Shiva Vignesh',
       role: 'Founder & CEO',
@@ -49,6 +50,7 @@ export default function AboutPage() {
       expertise: ['Cloud Architecture', 'DevOps']
     },
     {
+      icon: <Crown className="w-7 h-7" />,
       initials: 'S',
       name: 'Arun Kumar',
       role: 'Co-Founder & CTO',
@@ -102,6 +104,144 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Milestones + Leadership Section */}
+      <section className="py-24 bg-gray-50 overflow-hidden">
+        <div className="section-padding max-w-7xl mx-auto">
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Our <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                Journey & Leadership
+              </span>
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Milestones that shaped us and the people driving our vision
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16">
+
+            {/* Animated Timeline */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: { staggerChildren: 0.3 }
+                }
+              }}
+              className="relative"
+            >
+
+              {/* Vertical line */}
+              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-200 to-orange-500 rounded-full" />
+
+              {milestones.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, x: -40 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                  className="relative pl-16 mb-12"
+                >
+                  {/* Dot */}
+                  <div className={`absolute left-3 w-6 h-6 rounded-full ${item.highlight
+                    ? "bg-orange-500 shadow-lg shadow-orange-400/40"
+                    : "bg-gray-300"
+                    }`} />
+
+                  {/* Card */}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all"
+                  >
+                    <div className="text-orange-600 font-bold text-xl mb-2">
+                      {item.year}
+                    </div>
+                    <h3 className="font-semibold text-lg mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {item.description}
+                    </p>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Leadership Cards */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.25 } }
+              }}
+              className="grid gap-8"
+            >
+              {leadership.map((leader, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, y: 40 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  whileHover={{ scale: 1.04 }}
+                  className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent rounded-3xl opacity-40 pointer-events-none" />
+
+                  <div className="relative flex gap-6 items-start">
+
+                    <motion.div
+                      animate={{ rotate: [0, 6, -6, 0] }}
+                      transition={{ duration: 6, repeat: Infinity }}
+                      className="relative w-16 h-16 flex items-center justify-center"
+                    >
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 blur-md opacity-40" />
+
+                      <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white shadow-xl border border-white/20">
+                        {leader.icon}
+                      </div>
+                    </motion.div>
+
+                    <div>
+                      <h3 className="text-xl font-bold">{leader.name}</h3>
+                      <p className="text-orange-600 font-medium mb-2">{leader.role}</p>
+                      <p className="text-gray-600 mb-4">{leader.bio}</p>
+
+                      <div className="flex flex-wrap gap-2">
+                        {leader.expertise.map((skill, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+
       {/* Stats Grid */}
       {/* <section className="py-16 bg-white">
         <div className="section-padding">
@@ -143,7 +283,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600">
                 <p className="leading-relaxed">
-                  Founded in 2025 by industry veterans, Vira Academy emerged from a critical insight:
+                  Founded in 2024 by industry veterans, Vira Academy emerged from a critical insight:
                   traditional education fails to equip students with practical, industry-relevant skills.
                 </p>
                 <p className="leading-relaxed">
@@ -158,100 +298,73 @@ export default function AboutPage() {
               </div>
 
             </div>
-            <div className="relative flex justify-center">
 
-              {/* Glow background */}
-              <div className="absolute w-96 h-96 bg-gradient-to-br from-orange-200 to-orange-50 rounded-full blur-3xl opacity-60" />
+            <div className="relative flex justify-center items-center perspective-[1200px]">
 
-              {/* Main Certificate Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                whileHover={{ scale: 1.04, rotateY: 6, rotateX: 3 }}
-                className="relative bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden cursor-pointer"
-                style={{ perspective: 1200 }}
-              >
+  {/* Outer energy field */}
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+    className="absolute w-[600px] h-[600px] rounded-full border border-orange-400/20"
+  />
 
-                {/* Header bar */}
-                <div className="px-6 pt-6 flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  <span className="text-sm font-medium text-gray-500 ml-2">
-                    Vira Academy Certificate
-                  </span>
-                </div>
+  {/* Inner rotating ring */}
+  <motion.div
+    animate={{ rotate: -360 }}
+    transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+    className="absolute w-[480px] h-[480px] rounded-full border border-orange-500/30"
+  />
 
-                {/* Certificate Image */}
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                  className="p-6"
-                >
-                  <img
-                    src="/certificate.png"
-                    alt="Vira Academy Certificate"
-                    className="w-[420px] h-auto rounded-2xl shadow-lg object-cover"
-                  />
-                </motion.div>
+  {/* Glow core */}
+  <div className="absolute w-80 h-80 bg-orange-500/20 rounded-full blur-3xl" />
 
-                {/* Shine sweep */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none"
-                  animate={{
-                    background: [
-                      "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%)",
-                      "linear-gradient(120deg, transparent 80%, rgba(255,255,255,0.35) 100%, transparent 120%)",
-                    ],
-                  }}
-                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                />
+  {/* Main holographic console */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.85, rotateX: 10 }}
+    animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+    transition={{ duration: 1.2 }}
+    whileHover={{ scale: 1.05, rotateX: 4, rotateY: 4 }}
+    className="relative bg-black/70 backdrop-blur-xl border border-orange-500/40 rounded-3xl shadow-[0_0_60px_rgba(255,122,30,0.25)] overflow-hidden"
+  >
 
-              </motion.div>
+    {/* Animated grid background */}
+    <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,122,30,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,122,30,0.3)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-              {/* Floating Success Badge */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-6 -right-6 w-28 h-28 bg-gradient-to-br from-[#FF7A1E] to-[#FF9A3E] rounded-2xl flex items-center justify-center text-white shadow-2xl"
-              >
-                <div className="text-center p-4">
-                  <div className="text-2xl font-bold">Certified</div>
-                  <div className="text-xs font-medium">Industry Ready</div>
-                </div>
-              </motion.div>
+    {/* Scanner beam */}
+    <motion.div
+      animate={{ x: ["-100%", "100%"] }}
+      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+      className="absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-orange-400/30 to-transparent blur-md"
+    />
 
-              {/* Floating Alumni Badge */}
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3.5, repeat: Infinity }}
-                className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center text-white shadow-2xl"
-              >
-                <div className="text-center p-4">
-                  <Zap className="w-8 h-8 mx-auto mb-1" />
-                  <div className="text-xs font-medium">Verified</div>
-                </div>
-              </motion.div>
+    {/* Certificate hologram */}
+    <motion.div
+      animate={{ y: [0, -12, 0] }}
+      transition={{ duration: 6, repeat: Infinity }}
+      className="relative p-10"
+    >
+      <img
+        src="/certificate.png"
+        alt="Certificate"
+        className="w-[420px] rounded-2xl shadow-[0_0_40px_rgba(255,122,30,0.35)]"
+      />
+    </motion.div>
 
-              {/* Trust Badge */}
-              <div className="absolute -bottom-8 right-8 bg-white px-4 py-3 rounded-xl shadow-lg border border-gray-200">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900">
-                      Vira Academy
-                    </div>
-                    <div className="text-xs text-gray-600">
-                      Official Certificate
-                    </div>
-                  </div>
-                </div>
-              </div>
+  </motion.div>
 
-            </div>
+  {/* Floating particles */}
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+    className="absolute w-[700px] h-[700px] pointer-events-none"
+  >
+    <div className="absolute top-0 left-1/2 w-2 h-2 bg-orange-400 rounded-full blur-sm" />
+    <div className="absolute bottom-10 right-1/4 w-2 h-2 bg-orange-500 rounded-full blur-sm" />
+    <div className="absolute left-10 top-1/3 w-2 h-2 bg-orange-300 rounded-full blur-sm" />
+    <div className="absolute right-10 top-1/4 w-2 h-2 bg-orange-400 rounded-full blur-sm" />
+  </motion.div>
+
+</div>
 
 
             {/* <div className="relative">

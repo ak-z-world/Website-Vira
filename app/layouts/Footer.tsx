@@ -1,7 +1,11 @@
-import { Code2, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Sparkles, Globe, Shield, Award, MessageSquare, Calendar, BookOpen, Users, Zap } from 'lucide-react';
+"use client";
+
+import { Code2, Mail, Phone, ArrowRight, Shield, Award, MessageSquare, Calendar } from 'lucide-react';
 import Link from 'next/link';
+import { useGlobal } from "@/app/providers";
 
 const Footer = () => {
+  const { language, setLanguage, currency, setCurrency } = useGlobal();
   const quickLinks = [
     { label: 'Home', href: '/' },
     { label: 'Courses', href: '/courses' },
@@ -13,15 +17,15 @@ const Footer = () => {
     { label: 'Python & Django', href: '/courses/python' },
     { label: 'DevOps Engineering', href: '/courses/devops' },
     { label: 'React Development', href: '/courses/react' },
-   
+
   ];
 
- 
+
 
   return (
     <footer className="bg-gradient-to-b from-white to-gray-50 text-gray-800 pt-20 pb-12">
       <div className="section-padding">
-       
+
 
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
@@ -39,10 +43,10 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-gray-600 mb-8 max-w-md">
-              We're transforming tech education through industry-aligned programs, 
+              We're transforming tech education through industry-aligned programs,
               expert mentorship, and hands-on learning experiences that launch careers.
             </p>
-            
+
             {/* <div className="flex gap-4">
               <a href="#" className="group w-12 h-12 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 hover:border-orange-300">
                 <Facebook className="w-5 h-5 text-gray-600 group-hover:text-white group-hover:scale-110 transition-all" />
@@ -108,7 +112,7 @@ const Footer = () => {
               Get in Touch
             </h3>
             <div className="space-y-4 mb-6">
-             
+
               <div className="flex items-center gap-3 group">
                 <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-100 transition-colors">
                   <Phone className="w-4 h-4 text-orange-500" />
@@ -124,7 +128,7 @@ const Footer = () => {
             </div>
 
             <div className="mt-8">
-              <Link 
+              <Link
                 href="/contact-us"
                 className="inline-flex items-center justify-center gap-3 w-full bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-xl hover:border-orange-500 hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 group"
               >
@@ -166,41 +170,90 @@ const Footer = () => {
           </div>
         </div>
 
-        
+
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-              <p className="text-gray-600 text-center md:text-left">
-                © {new Date().getFullYear()} Vira Academy. All rights reserved.
-              </p>
+        <div className="border-t border-gray-200 pt-6">
+
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+
+            {/* LEFT — Language */}
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setLanguage("en")}
+                className={`hover:text-orange-600 ${language === "en" ? "font-semibold text-gray-900" : ""
+                  }`}
+              >
+                English
+              </button>
+
+              <button
+                onClick={() => setLanguage("ar")}
+                className={`hover:text-orange-600 ${language === "ar" ? "font-semibold text-gray-900" : ""
+                  }`}
+              >
+                Arabic
+              </button>
             </div>
-            
-            <div className="flex items-center gap-6">
-              <Link 
-                href="/privacy-policy" 
-                className="text-gray-600 hover:text-orange-600 transition-colors text-sm font-medium"
-              >
-                Privacy Policy
+
+
+            {/* CENTER — Currency */}
+            <div className="flex items-center gap-2 bg-gray-100 rounded-full p-1">
+
+              {[
+                { code: "INR", symbol: "₹" },
+                { code: "USD", symbol: "$" },
+                { code: "EUR", symbol: "€" },
+                { code: "GBP", symbol: "£" },
+                { code: "AED", symbol: "د.إ" },
+                { code: "KWD", symbol: "د.ك" },
+              ].map((cur) => (
+
+                <button
+                  key={cur.code}
+                  onClick={() => setCurrency(cur.code)}
+                  className={`
+            px-3 py-1 rounded-full text-xs font-semibold transition-all
+
+            ${currency === cur.code
+                      ? "bg-orange-500 text-white shadow"
+                      : "text-gray-600 hover:text-orange-600"
+                    }
+          `}
+                >
+                  {cur.symbol} {cur.code}
+                </button>
+
+              ))}
+
+            </div>
+
+
+            {/* RIGHT — Copyright + Links */}
+            <div className="flex items-center gap-4 flex-wrap justify-center lg:justify-end">
+
+              <span className="whitespace-nowrap">
+                © {new Date().getFullYear()} Vira Academy. All rights reserved.
+              </span>
+
+              <Link href="/privacy-policy" className="hover:text-orange-600">
+                Privacy
               </Link>
-              <Link 
-                href="/terms-and-conditions" 
-                className="text-gray-600 hover:text-orange-600 transition-colors text-sm font-medium"
-              >
-                Terms of Service
+
+              <Link href="/terms-and-conditions" className="hover:text-orange-600">
+                Terms
               </Link>
-              <Link 
-                href="/faq" 
-                className="text-gray-600 hover:text-orange-600 transition-colors text-sm font-medium"
-              >
+
+              <Link href="/faq" className="hover:text-orange-600">
                 FAQ
               </Link>
+
             </div>
-            
-           
+
           </div>
+
         </div>
+
       </div>
     </footer>
   );
