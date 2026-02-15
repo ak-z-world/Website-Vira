@@ -1125,8 +1125,8 @@ const Header = () => {
                         <Phone className="w-4 h-4 text-[#FF7A1E]" />
                       </div>
                       <div>
-                        <div className="text-xs text-gray-500">Call us at</div>
-                        <div className="font-semibold text-sm">+91 98765 43210</div>
+                        <div className="text-xs text-gray-500">Whatsapp us at</div>
+                        <div className="font-semibold text-sm">+91 9677377316</div>
                       </div>
                     </a>
                     <a 
@@ -1139,7 +1139,7 @@ const Header = () => {
                       </div>
                       <div>
                         <div className="text-xs text-gray-500">Email us at</div>
-                        <div className="font-semibold text-sm">admissions@viraacademy.com</div>
+                        <div className="font-semibold text-sm">viraacademy.info@gmail.com</div>
                       </div>
                     </a>
                   </div>
