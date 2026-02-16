@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-type CourseTab = "python" | "devops" | "react";
+type CourseTab = "python" | "devops" | "react" | "datascience";
 
 interface CourseStats {
   students: string;
@@ -58,80 +58,90 @@ const Hero = () => {
       color: "text-purple-600",
       bgColor: "bg-purple-100",
     },
+    {
+    id: "datascience",
+    label: "Data Science",
+    color: "text-green-600",
+    bgColor: "bg-green-100",
+  },
   ];
 
-  const courseStats: CourseStatsMap = {
-    python: { students: "1,200+", projects: "15+" },
-    devops: { students: "850+",  projects: "12+" },
-    react: { students: "1,500+", projects: "20+" },
-  };
-
-  const activeStats = courseStats[activeTab];
-
   const getCourseTitle = () => {
-    switch (activeTab) {
-      case "python":
-        return "Python Full Stack Development";
-      case "devops":
-        return "DevOps Engineering";
-      case "react":
-        return "React Development";
-      default:
-        return "Python Full Stack Development";
-    }
-  };
+  switch (activeTab) {
+    case "python":
+      return "Python Full Stack Development";
+    case "devops":
+      return "DevOps Engineering";
+    case "react":
+      return "React Development";
+    case "datascience":
+      return "Data Science & AI";
+    default:
+      return "Python Full Stack Development";
+  }
+};
 
   const getCourseDescription = () => {
-    switch (activeTab) {
-      case "python":
-        return "Master Django, FastAPI, AI/ML & real-world projects";
-      case "devops":
-        return "Docker, Kubernetes, AWS Cloud & automation";
-      case "react":
-        return "Modern React, Next.js, TypeScript & state management";
-      default:
-        return "Master Django, FastAPI, AI/ML & real-world projects";
-    }
-  };
+  switch (activeTab) {
+    case "python":
+      return "Master Django, FastAPI, AI/ML & real-world projects";
+    case "devops":
+      return "Docker, Kubernetes, AWS Cloud & automation";
+    case "react":
+      return "Modern React, Next.js, TypeScript & state management";
+    case "datascience":
+      return "Machine Learning, Deep Learning, NLP & Computer Vision";
+    default:
+      return "Master Django, FastAPI, AI/ML & real-world projects";
+  }
+};
 
   const getCoursePrice = () => {
-    switch (activeTab) {
-      case "python":
-        return "₹45,000";
-      case "devops":
-        return "₹55,000";
-      case "react":
-        return "₹35,000";
-      default:
-        return "₹45,000";
-    }
-  };
+  switch (activeTab) {
+    case "python":
+      return "₹35,000";
+    case "devops":
+      return "₹35,000";
+    case "react":
+      return "₹35,000";
+    case "datascience":
+      return "₹35,000";
+    default:
+      return "₹35,000";
+  }
+};
 
   const getCourseDuration = () => {
-    switch (activeTab) {
-      case "python":
-        return "12 Weeks";
-      case "devops":
-        return "16 Weeks";
-      case "react":
-        return "10 Weeks";
-      default:
-        return "12 Weeks";
-    }
-  };
+  switch (activeTab) {
+    case "python":
+      return "12 Weeks";
+    case "devops":
+      return "16 Weeks";
+    case "react":
+      return "10 Weeks";
+    case "datascience":
+      return "14 Weeks";
+    default:
+      return "12 Weeks";
+  }
+};
+
 
   const getCourseIcon = () => {
-    switch (activeTab) {
-      case "python":
-        return <Sparkles className="w-6 h-6 text-white" />;
-      case "devops":
-        return <TrendingUp className="w-6 h-6 text-white" />;
-      case "react":
-        return <Star className="w-6 h-6 text-white" />;
-      default:
-        return <Sparkles className="w-6 h-6 text-white" />;
-    }
-  };
+  switch (activeTab) {
+    case "python":
+      return <Sparkles className="w-6 h-6 text-white" />;
+    case "devops":
+      return <TrendingUp className="w-6 h-6 text-white" />;
+    case "react":
+      return <Star className="w-6 h-6 text-white" />;
+    case "datascience":
+      return <Brain className="w-6 h-6 text-white" />;
+    default:
+      return <Sparkles className="w-6 h-6 text-white" />;
+  }
+};
+
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-white to-orange-50/30 pt-32 pb-10 md:pt-40 ">
@@ -299,23 +309,6 @@ const Hero = () => {
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-3 gap-3">
-                      <div className="text-center p-3 bg-white rounded-xl border border-gray-100">
-                        <div className="text-xl font-bold text-gray-900">
-                          {activeStats.students}
-                        </div>
-                        <div className="text-xs text-gray-500">Students</div>
-                      </div>
-                    
-                      <div className="text-center p-3 bg-white rounded-xl border border-gray-100">
-                        <div className="text-xl font-bold text-gray-900">
-                          {activeStats.projects}
-                        </div>
-                        <div className="text-xs text-gray-500">Projects</div>
                       </div>
                     </div>
 
