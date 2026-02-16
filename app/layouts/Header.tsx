@@ -745,6 +745,7 @@ import { ChevronDown, Menu, X, BookOpen, Users, Calendar, Sparkles, ArrowRight, 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { label } from 'framer-motion/client';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -770,6 +771,7 @@ const Header = () => {
         { label: 'Python & Django', href: '/courses/python', badge: 'Popular',},
         { label: 'DevOps ', href: '/courses/devops', badge: 'High Demand'},
         { label: 'React Development', href: '/courses/react', badge: 'Trending'},
+        { label: 'Data Science', href: '/courses/datasci', badge:"Hot"}
       ]
     },
     { label: 'About', href: '/about', icon: <Users className="w-4 h-4" /> },
