@@ -391,13 +391,13 @@ const Courses = () => {
   const courses: Course[] = [
     {
       id: 1,
-      title: "Python Development",
+      title: "Python FullStack Development",
       description:
         "Master Python, Django, FastAPI, and build real-world applications with AI/ML integration.",
       icon: <Code2 className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       duration: "12 Weeks",
       level: "Beginner to Advanced",
-      price: "₹35,000",
+      price: "₹28,000",
       color: "from-orange-500 to-amber-500",
       bgGradient: "bg-gradient-to-br from-orange-50 to-amber-50",
       features: [
@@ -418,7 +418,7 @@ const Courses = () => {
       icon: <CloudCog className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       duration: "16 Weeks",
       level: "Intermediate to Advanced",
-      price: "₹55,000",
+      price: "₹30,000",
       color: "from-blue-500 to-cyan-500",
       bgGradient: "bg-gradient-to-br from-blue-50 to-cyan-50",
       features: [
@@ -439,7 +439,7 @@ const Courses = () => {
       icon: <Cpu className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       duration: "10 Weeks",
       level: "Beginner to Advanced",
-      price: "₹35,000",
+      price: "₹25,000",
       color: "from-purple-500 to-pink-500",
       bgGradient: "bg-gradient-to-br from-purple-50 to-pink-50",
       features: [

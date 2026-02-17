@@ -128,15 +128,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="mt-8">
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center justify-center gap-3 w-full bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-xl hover:border-orange-500 hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 group"
-              >
-                <Calendar className="w-5 h-5 group-hover:text-orange-500" />
-                Book Free Demo
-              </Link>
-            </div>
+            
           </div>
         </div>
 

@@ -35,7 +35,94 @@
       "jobGrowth": "Job Growth Rate",
       "industryDemand": "Market Demand",
       "ctaTitle": "Start Your DevOps Career",
-      "ctaDesc": "Join the most comprehensive DevOps program and become a job-ready DevOps engineer in 16 weeks."
+      "ctaDesc": "Join the most comprehensive DevOps program and become a job-ready DevOps engineer in 16 weeks.",
+      "modules": {
+        "fundamentals": {
+          "title": "DevOps Fundamentals",
+          "duration": "Week 1",
+          "topics": {
+            "intro": "Introduction to DevOps",
+            "problems": "Problems with Traditional Software Delivery",
+            "culture": "DevOps Culture and Mindset",
+            "lifecycle": "DevOps Lifecycle (Plan, Code, Build, Test, Deploy, Monitor)",
+            "agile": "Agile and SDLC Overview",
+            "roles": "DevOps Roles and Responsibilities",
+            "tools": "Overview of DevOps Tools Used in Industry"
+          }
+        },
+
+        "aws": {
+          "title": "AWS Cloud Fundamentals",
+          "duration": "Week 2",
+          "topics": {
+            "cloud": "Cloud Computing Concepts",
+            "infrastructure": "AWS Global Infrastructure",
+            "iam": "IAM (Users, Roles, Policies)",
+            "ec2": "EC2 Instances Launch and Management",
+            "security": "Security Groups and Key Pairs",
+            "networking": "AWS Networking Concepts",
+            "practice": "Hands-on AWS Practice"
+          }
+        },
+
+        "git": {
+          "title": "Git Version Control",
+          "duration": "Week 3",
+          "topics": {
+            "importance": "Importance of Version Control",
+            "architecture": "Git Architecture and Workflow",
+            "installation": "Git Installation and Configuration",
+            "commands": "Git Commands (Clone, Add, Commit, Push, Pull)",
+            "branching": "Branching and Merging",
+            "github": "GitHub Collaboration Workflow",
+            "practice": "Hands-on Git Practice"
+          }
+        },
+
+        "jenkins": {
+          "title": "CI/CD with Jenkins",
+          "duration": "Week 4",
+          "topics": {
+            "cicd": "Continuous Integration and Continuous Delivery Concepts",
+            "architecture": "Jenkins Architecture",
+            "installation": "Installing Jenkins on AWS",
+            "pipelines": "Jenkins Jobs and Pipelines",
+            "integration": "Git Integration with Jenkins",
+            "automation": "Automating Build and Deployment",
+            "practice": "Hands-on CI/CD Pipeline"
+          }
+        },
+
+        "terraform": {
+          "title": "Infrastructure as Code with Terraform",
+          "duration": "Week 5",
+          "topics": {
+            "iac": "Infrastructure as Code Concepts",
+            "architecture": "Terraform Architecture and Workflow",
+            "providers": "Providers, Resources, and State Files",
+            "configuration": "Writing Terraform Configuration Files",
+            "aws": "Creating AWS Infrastructure using Terraform",
+            "bestPractices": "Terraform Best Practices",
+            "practice": "Hands-on Terraform Labs"
+          }
+        },
+
+        "project": {
+          "title": "Final Project and Monitoring",
+          "duration": "Week 6",
+          "topics": {
+            "cloudwatch": "AWS CloudWatch Overview",
+            "monitoring": "Monitoring Logs and Alerts",
+            "bestPractices": "DevOps Best Practices",
+            "infrastructure": "AWS Infrastructure Setup",
+            "git": "Git Version Control Integration",
+            "jenkins": "CI/CD Pipeline using Jenkins",
+            "terraform": "Infrastructure Provisioning using Terraform",
+            "walkthrough": "Complete Project Walkthrough"
+          }
+        }
+
+      }
     },
 
     "python": {

@@ -8,7 +8,7 @@ export default function ReactCoursePage() {
     description: 'Master React, Next.js, TypeScript, and modern frontend tools to build high-performance web applications.',
     duration: '12 Weeks',
     level: 'Beginner to Advanced',
-    fee: '₹28,000',
+    fee: '₹25,000',
     originalFee: '₹35,000',
     nextBatch: 'March 28, 2026',
     seatsLeft: '10',
