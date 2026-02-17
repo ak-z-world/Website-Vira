@@ -5,15 +5,48 @@ import Footer from './layouts/Footer';
 import { GlobalProvider } from "./providers"; // FIXED PATH
 
 export const metadata: Metadata = {
-  title: 'Vira Academy | Python, DevOps & React Training',
-  description: 'Master in-demand tech skills with our comprehensive Python, DevOps, and React training programs. Industry-led courses with hands-on projects.',
-  keywords: ['Python training', 'DevOps course', 'React development', 'software training', 'coding bootcamp'],
+  metadataBase: new URL("https://viraacademy.vercel.app"),
+
+  title: "Vira Academy | Python, DevOps & React Training",
+
+  description:
+    "Master in-demand tech skills with our comprehensive Python, DevOps, and React training programs.",
+
+  keywords: [
+    "Python training",
+    "DevOps course",
+    "React development",
+    "software training",
+    "coding bootcamp",
+  ],
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
   openGraph: {
-    type: 'website',
-    url: 'https://viraacademy.vercel.app',
-    title: 'Vira Academy | Python, DevOps & React Training',
-    description: 'Master in-demand tech skills with our comprehensive training programs.',
-    images: ['./seo_pic.png'],
+    title: "Vira Academy | Python, DevOps & React Training",
+    description:
+      "Master in-demand tech skills with our comprehensive training programs.",
+    url: "https://viraacademy.vercel.app",
+    siteName: "Vira Academy",
+    images: [
+      {
+        url: "/og-image.png", // from public folder
+        width: 1200,
+        height: 630,
+        alt: "Vira Academy",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Vira Academy",
+    description: "Master in-demand tech skills.",
+    images: ["/og-image.png"],
   },
 };
 

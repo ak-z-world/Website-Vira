@@ -112,8 +112,8 @@ export default function ContactPage() {
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Office Hours",
-      details: ["Mon-Fri: 9 AM - 7 PM"],
-      subtitle: "Sunday: Closed",
+      details: ["Mon-Sun: 9 AM - 7 PM"],
+      subtitle: "Weekend: Classes and Support Available",
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-gradient-to-br from-purple-50 to-purple-100/50",
     },
@@ -276,7 +276,7 @@ export default function ContactPage() {
                             onChange={handleChange}
                             required
                             className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
-                            placeholder="Arun Kumar"
+                            placeholder="Your Name"
                           />
 
                         </div>
@@ -291,7 +291,7 @@ export default function ContactPage() {
                             onChange={handleChange}
                             required
                             className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
-                            placeholder="akzworld@ak.com"
+                            placeholder="siva@example.com"
                           />
                         </div>
                       </div>
@@ -416,26 +416,6 @@ export default function ContactPage() {
                         </div>
                         <div className="text-sm text-gray-500">
                           Explore programs
-                        </div>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
-                  </Link>
-
-                  <Link
-                    href="/contact"
-                    className="group flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-orange-300 hover:shadow-md transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-orange-50 rounded-lg">
-                        <Users className="w-5 h-5 text-orange-500" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-gray-900">
-                          Admission Process
-                        </div>
-                        <div className="text-sm text-gray-500">
-                          Step-by-step guide
                         </div>
                       </div>
                     </div>
