@@ -9,13 +9,13 @@ export default function FAQPage() {
 
   const faqs = [
     { 
-      question: 'What is Vira Academy?', 
-      answer: 'Vira Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
+      question: 'What is ArivOn Academy?', 
+      answer: 'ArivOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
       category: 'general'
     },
     { 
       question: 'Are the courses online or offline?', 
-      answer: 'All courses at Vira Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
+      answer: 'All courses at ArivOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
       category: 'courses'
     },
     { 
@@ -79,7 +79,7 @@ export default function FAQPage() {
       category: 'support'
     },
     { 
-      question: 'How can I contact Vira Academy for support?', 
+      question: 'How can I contact ArivOn Academy for support?', 
       answer: 'You can contact us through our official website, email, or designated communication channels for any academic or technical support.',
       category: 'support'
     },
@@ -113,24 +113,24 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full blur-3xl opacity-60" />
+      <section className="relative pt-10 pb-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
         
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                <HelpCircle className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">Quick Answers</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
+                <HelpCircle className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-blue-600">Quick Answers</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Frequently Asked <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Questions</span>
+                Frequently Asked <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Questions</span>
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                Find quick answers to common questions about courses, enrollment, and support at Vira Academy.
+                Find quick answers to common questions about courses, enrollment, and support at ArivOn Academy.
               </p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function FAQPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             {/* Categories Filter */}
@@ -150,11 +150,11 @@ export default function FAQPage() {
                     onClick={() => setActiveCategory(category.id)}
                     className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all duration-300 ${
                       activeCategory === category.id
-                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25'
-                        : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-300 hover:shadow-lg'
+                        ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/25'
+                        : 'bg-white border border-gray-200 text-gray-700 hover:border-blue-300 hover:shadow-lg'
                     }`}
                   >
-                    <span className="text-orange-500">{category.icon}</span>
+                    <span className="text-blue-500">{category.icon}</span>
                     <span>{category.name}</span>
                     <span className={`text-sm px-2 py-0.5 rounded-full ${
                       activeCategory === category.id
@@ -182,8 +182,8 @@ export default function FAQPage() {
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
-                            <div className="text-orange-500">
+                          <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <div className="text-blue-500">
                               {getCategoryIcon(faq.category)}
                             </div>
                           </div>
@@ -211,7 +211,7 @@ export default function FAQPage() {
                       
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                         openIndex === index 
-                          ? 'bg-gradient-to-br from-orange-500 to-orange-600 text-white rotate-180' 
+                          ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white rotate-180' 
                           : 'bg-gray-100 text-gray-500'
                       }`}>
                         <ChevronDown className="w-4 h-4" />
@@ -228,13 +228,13 @@ export default function FAQPage() {
             <div className="mt-16">
               <div className="bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-3xl p-8 md:p-12">
                 <div className="text-center">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                    <Sparkles className="w-4 h-4 text-orange-500" />
-                    <span className="text-sm font-semibold text-orange-600">Need More Help?</span>
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
+                    <Sparkles className="w-4 h-4 text-blue-500" />
+                    <span className="text-sm font-semibold text-blue-600">Need More Help?</span>
                   </div>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    Still Have <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Questions?</span>
+                    Still Have <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Questions?</span>
                   </h2>
                   
                   <p className="text-gray-600 max-w-2xl mx-auto mb-8">
@@ -243,15 +243,15 @@ export default function FAQPage() {
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
-                      href="mailto:viraacademy.info@gmail.com"
-                      className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300"
+                      href="mailto:arivonacademy.info@gmail.com"
+                      className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
                     >
                       <Mail className="w-5 h-5" />
                       Email Support
                     </a>
                     <a 
                       href="tel:+919677377316"
-                      className="inline-flex items-center justify-center gap-3 bg-white border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:border-orange-300 hover:shadow-lg transition-all duration-300"
+                      className="inline-flex items-center justify-center gap-3 bg-white border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                     >
                       <Phone className="w-5 h-5" />
                       Call Support

@@ -98,15 +98,15 @@ export default function ContactPage() {
       details: ["+91 96773 77316"],
       subtitle: "Available 9 AM - 7 PM",
       color: "from-blue-500 to-blue-600",
-      bgColor: "bg-gradient-to-br from-blue-50 to-blue-100/50",
+      bgColor: "bg-gradient-to-br from-blue-50 to-indigo-100/50",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["viraacademy.info@gmail.com"],
+      details: ["arivonacademy.info@gmail.com"],
       subtitle: "Response within 24 hours",
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-gradient-to-br from-orange-50 to-orange-100/50",
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-gradient-to-br from-blue-50 to-indigo-100/50",
     },
 
     {
@@ -115,19 +115,19 @@ export default function ContactPage() {
       details: ["Mon-Sun: 9 AM - 7 PM"],
       subtitle: "Weekend: Classes and Support Available",
       color: "from-purple-500 to-purple-600",
-      bgColor: "bg-gradient-to-br from-purple-50 to-purple-100/50",
+      bgColor: "bg-gradient-to-br from-indigo-50 to-indigo-100/50",
     },
   ];
 
   const faqs = [
     {
-      question: 'What is Vira Academy?',
-      answer: 'Vira Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
+      question: 'What is ArivOn Academy?',
+      answer: 'ArivOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
       category: 'general'
     },
     {
       question: 'Are the courses online or offline?',
-      answer: 'All courses at Vira Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
+      answer: 'All courses at ArivOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
       category: 'courses'
     },
     {
@@ -145,23 +145,23 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tr from-orange-50 to-transparent rounded-full blur-3xl opacity-50" />
+      <section className="relative pt-10 pb-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tr from-blue-50 to-transparent rounded-full blur-3xl opacity-50" />
 
         <div className="section-padding relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-              <MessageSquare className="w-4 h-4 text-orange-500" />
-              <span className="text-sm font-semibold text-orange-600">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
+              <MessageSquare className="w-4 h-4 text-blue-500" />
+              <span className="text-sm font-semibold text-blue-600">
                 Get in Touch
               </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight">
               Let's{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                 Connect
               </span>
             </h1>
@@ -175,13 +175,13 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="section-padding flex justify-center">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div
                   className={`w-12 h-12 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center mb-4`}
@@ -199,7 +199,7 @@ export default function ContactPage() {
                     </p>
                   ))}
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
           </div>
@@ -207,14 +207,14 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="section-padding">
           <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-xl">
                 <div className="absolute -top-4 left-8">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-4 py-2 rounded-full">
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-4 py-2 rounded-full">
                     <Send className="w-4 h-4" />
                     Quick Response
                   </div>
@@ -229,13 +229,13 @@ export default function ContactPage() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-600 mb-6 max-w-md mx-auto">
-                      Thank you for contacting Vira Academy. Our admissions team
+                      Thank you for contacting ArivOn Academy. Our admissions team
                       will reach out to you within 24 hours.
                     </p>
                     {/* <div className="flex gap-4 justify-center">
                       <Link
                         href="/courses"
-                        className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:gap-3 transition-all"
+                        className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
                       >
                         Browse Courses
                         <ChevronRight className="w-5 h-5" />
@@ -275,7 +275,7 @@ export default function ContactPage() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
+                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 group-hover:border-blue-300"
                             placeholder="Your Name"
                           />
 
@@ -290,7 +290,7 @@ export default function ContactPage() {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
+                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 group-hover:border-blue-300"
                             placeholder="siva@example.com"
                           />
                         </div>
@@ -306,7 +306,7 @@ export default function ContactPage() {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300"
+                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 group-hover:border-blue-300"
                             placeholder="+91 98765 43210"
                           />
                         </div>
@@ -318,7 +318,7 @@ export default function ContactPage() {
                             name="course"
                             value={formData.course}
                             onChange={handleChange}
-                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300 appearance-none"
+                            className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 group-hover:border-blue-300 appearance-none"
                           >
                             <option value="">Select your interest</option>
                             {courses.map((course) => (
@@ -340,7 +340,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           rows={4}
-                          className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 group-hover:border-orange-300 resize-none"
+                          className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 group-hover:border-blue-300 resize-none"
                           placeholder="Tell us about your career goals and how we can help..."
                         ></textarea>
                       </div>
@@ -348,7 +348,7 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="group w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold py-5 px-8 rounded-xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                        className="group w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-5 px-8 rounded-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center justify-center gap-3">
@@ -377,18 +377,18 @@ export default function ContactPage() {
             {/* Sidebar Info */}
             <div className="space-y-8">
               {/* Quick Action Cards */}
-              <div className="bg-gradient-to-br from-white to-orange-50 border border-gray-100 rounded-2xl p-6 shadow-lg">
+              <div className="bg-gradient-to-br from-white to-blue-50 border border-gray-100 rounded-2xl p-6 shadow-lg">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">
                   Quick Actions
                 </h3>
                 <div className="space-y-3">
                   <Link
                     href="/contact"
-                    className="group flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                    className="group flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all duration-300"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-orange-50 rounded-lg">
-                        <Calendar className="w-5 h-5 text-orange-500" />
+                      <div className="p-2 bg-blue-50 rounded-lg">
+                        <Calendar className="w-5 h-5 text-blue-500" />
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900">
@@ -399,16 +399,16 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 group-hover:translate-x-1 transition-all" />
                   </Link>
 
                   <Link
                     href="/courses"
-                    className="group flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                    className="group flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all duration-300"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-orange-50 rounded-lg">
-                        <Zap className="w-5 h-5 text-orange-500" />
+                      <div className="p-2 bg-blue-50 rounded-lg">
+                        <Zap className="w-5 h-5 text-blue-500" />
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900">
@@ -419,7 +419,7 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 group-hover:translate-x-1 transition-all" />
                   </Link>
                 </div>
               </div>
@@ -427,9 +427,9 @@ export default function ContactPage() {
 
 
               {/* Support Info */}
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <HelpCircle className="w-6 h-6 text-orange-600" />
+                  <HelpCircle className="w-6 h-6 text-blue-600" />
                   <h3 className="text-lg font-bold text-gray-900">
                     Need Immediate Help?
                   </h3>
@@ -452,19 +452,19 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
+      <section className="py-8 bg-white">
         <div className="section-padding">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-4">
-                <HelpCircle className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-4">
+                <HelpCircle className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-blue-600">
                   Common Questions
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
                 Frequently Asked{" "}
-                <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                   Questions
                 </span>
               </h2>
@@ -478,15 +478,15 @@ export default function ContactPage() {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all duration-300"
+                  className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-2 bg-orange-50 rounded-lg flex-shrink-0">
-                      <HelpCircle className="w-5 h-5 text-orange-500" />
+                    <div className="p-2 bg-blue-50 rounded-lg flex-shrink-0">
+                      <HelpCircle className="w-5 h-5 text-blue-500" />
                     </div>
                     <div>
 
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                      <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                         {faq.question}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
@@ -501,7 +501,7 @@ export default function ContactPage() {
             <div className="text-center mt-12">
               <Link
                 href="/faq"
-                className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
               >
                 View all FAQs
                 <ChevronRight className="w-5 h-5" />
@@ -514,19 +514,19 @@ export default function ContactPage() {
 
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-orange-50 via-white to-orange-50">
+      <section className="py-8 bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="section-padding">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-              <Sparkles className="w-4 h-4 text-orange-500" />
-              <span className="text-sm font-semibold text-orange-600">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
+              <Sparkles className="w-4 h-4 text-blue-500" />
+              <span className="text-sm font-semibold text-blue-600">
                 Ready to Start?
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
               Begin Your{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                 Tech Transformation
               </span>
             </h2>
@@ -539,7 +539,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-10 py-5 rounded-2xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
+                className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-10 py-5 rounded-2xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
               >
                 Talk to Admissions
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

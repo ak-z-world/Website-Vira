@@ -171,20 +171,20 @@ export default function DataScienceCoursePage() {
 
     return (
 
-        <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+        <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
 
 
 
 
             {/* HERO SECTION */}
-            <section className="relative pt-32 pb-24 overflow-hidden">
+            <section className="relative pt-8 pb-1 overflow-hidden">
 
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
 
-                <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full blur-3xl opacity-60" />
+                <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
 
 
-                <div className="section-padding relative z-10">
+                <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative z-10">
 
                     <div className="max-w-6xl mx-auto">
 
@@ -194,11 +194,11 @@ export default function DataScienceCoursePage() {
                             {/* LEFT */}
                             <div>
 
-                                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
+                                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
 
-                                    <TrendingUp className="w-4 h-4 text-orange-500" />
+                                    <TrendingUp className="w-4 h-4 text-blue-500" />
 
-                                    <span className="text-sm font-semibold text-orange-600">
+                                    <span className="text-sm font-semibold text-indigo-600">
                                         High-Demand Course
                                     </span>
 
@@ -209,7 +209,7 @@ export default function DataScienceCoursePage() {
 
                                     Data Science &
 
-                                    <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                                         {" "}AI
                                     </span>
 
@@ -260,7 +260,7 @@ export default function DataScienceCoursePage() {
                                 {/* BUTTON */}
                                 <Link
                                     href="/contact"
-                                    className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105"
+                                    className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105"
                                 >
 
                                     Enroll Now
@@ -278,7 +278,7 @@ export default function DataScienceCoursePage() {
                             {/* RIGHT PRICE CARD */}
                             <div className="relative">
 
-                                <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full blur-3xl opacity-20" />
+                                <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full blur-3xl opacity-20" />
 
                                 <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl">
 
@@ -298,7 +298,7 @@ export default function DataScienceCoursePage() {
                                         </div>
 
 
-                                        <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold px-4 py-2 rounded-full">
+                                        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold px-4 py-2 rounded-full">
                                             25% OFF
                                         </div>
 
@@ -314,9 +314,9 @@ export default function DataScienceCoursePage() {
 
                                             <div key={index} className="flex items-center gap-3">
 
-                                                <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
+                                                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
 
-                                                    <div className="text-orange-500">
+                                                    <div className="text-blue-500">
                                                         {benefit.icon}
                                                     </div>
 
@@ -335,7 +335,7 @@ export default function DataScienceCoursePage() {
 
 
                                     {/* BATCH */}
-                                    <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-4 mb-6">
+                                    <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-2xl p-4 mb-6">
 
                                         <div className="flex items-center justify-between mb-2">
 
@@ -343,7 +343,7 @@ export default function DataScienceCoursePage() {
                                                 Next Batch Starts
                                             </span>
 
-                                            <span className="font-bold text-orange-600">
+                                            <span className="font-bold text-indigo-600">
                                                 {courseDetails.nextBatch}
                                             </span>
 
@@ -355,7 +355,7 @@ export default function DataScienceCoursePage() {
                                             <div className="w-full bg-gray-200 rounded-full h-2">
 
                                                 <div
-                                                    className="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full"
+                                                    className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full"
                                                     style={{ width: "75%" }}
                                                 />
 
@@ -373,7 +373,7 @@ export default function DataScienceCoursePage() {
 
                                     <Link
                                         href="/contact"
-                                        className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all duration-300"
+                                        className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-orange-300 hover:bg-blue-50 transition-all duration-300"
                                     >
 
                                         Book Free Demo Class
@@ -388,22 +388,22 @@ export default function DataScienceCoursePage() {
 
                         </div>
                         {/* Tools & Technologies */}
-                        <section className="py-16 bg-white">
-                            <div className="section-padding">
+                        <section className="py-5 bg-white">
+                            <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
                                 <div className="max-w-6xl mx-auto">
 
                                     <div className="text-center mb-12">
 
-                                        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-4">
-                                            <Cpu className="w-4 h-4 text-orange-500" />
-                                            <span className="text-sm font-semibold text-orange-600">
+                                        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-blue-200 rounded-full px-4 py-2 mb-4">
+                                            <Cpu className="w-4 h-4 text-blue-500" />
+                                            <span className="text-sm font-semibold text-indigo-600">
                                                 Tech Stack
                                             </span>
                                         </div>
 
                                         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
                                             Master the{" "}
-                                            <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                                            <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                                                 Data Science Stack
                                             </span>
                                         </h2>
@@ -420,8 +420,8 @@ export default function DataScienceCoursePage() {
                                                 className="group flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-4 hover:border-orange-300 hover:shadow-lg transition-all duration-300"
                                             >
 
-                                                <div className="p-2 bg-orange-50 rounded-lg">
-                                                    <div className="text-orange-500">
+                                                <div className="p-2 bg-blue-50 rounded-lg">
+                                                    <div className="text-blue-500">
                                                         {tool.icon}
                                                     </div>
                                                 </div>
@@ -438,7 +438,7 @@ export default function DataScienceCoursePage() {
 
 
                                     {/* stats block */}
-                                    <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-3xl p-8">
+                                    <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-3xl p-3">
 
                                         <div className="grid md:grid-cols-3 gap-8">
 
@@ -479,9 +479,9 @@ export default function DataScienceCoursePage() {
                         </section>
 
                         {/* Learning Outcomes */}
-                        <section className="py-24 bg-white">
+                        <section className=" bg-white">
 
-                            <div className="section-padding">
+                            <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
 
                                 <div className="max-w-6xl mx-auto">
 
@@ -491,9 +491,9 @@ export default function DataScienceCoursePage() {
                                         {/* LEFT */}
                                         <div>
 
-                                            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                                                <Target className="w-4 h-4 text-orange-500" />
-                                                <span className="text-sm font-semibold text-orange-600">
+                                            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
+                                                <Target className="w-4 h-4 text-blue-500" />
+                                                <span className="text-sm font-semibold text-indigo-600">
                                                     What You'll Achieve
                                                 </span>
                                             </div>
@@ -502,7 +502,7 @@ export default function DataScienceCoursePage() {
                                             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
 
                                                 Become a{" "}
-                                                <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                                                <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                                                     Data Scientist
                                                 </span>
 
@@ -515,7 +515,7 @@ export default function DataScienceCoursePage() {
 
                                                     <div key={index} className="flex items-start gap-3">
 
-                                                        <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                        <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
 
                                                             <CheckCircle className="w-4 h-4 text-white" />
 
@@ -538,13 +538,13 @@ export default function DataScienceCoursePage() {
                                         {/* RIGHT CARD */}
                                         <div className="relative">
 
-                                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full blur-3xl opacity-20" />
+                                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full blur-3xl opacity-10" />
 
-                                            <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 text-white">
+                                            <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-2 text-white">
 
                                                 <div className="text-center mb-8">
 
-                                                    <Briefcase className="w-12 h-12 mx-auto mb-4 text-orange-400" />
+                                                    <Briefcase className="w-12 h-12 mx-auto mb-4 text-blue-400" />
 
                                                     <h3 className="text-2xl font-bold mb-2">
                                                         Career Outcomes
@@ -557,21 +557,21 @@ export default function DataScienceCoursePage() {
                                                 </div>
 
 
-                                                <div className="space-y-4">
+                                                <div className="space-y-1">
 
                                                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                                                         <span className="text-gray-300">Avg. Salary Hike</span>
-                                                        <span className="text-2xl font-bold text-orange-400">85%</span>
+                                                        <span className="text-2xl font-bold text-blue-400">85%</span>
                                                     </div>
 
                                                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                                                         <span className="text-gray-300">Project Completion</span>
-                                                        <span className="text-2xl font-bold text-orange-400">98%</span>
+                                                        <span className="text-2xl font-bold text-blue-400">98%</span>
                                                     </div>
 
                                                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                                                         <span className="text-gray-300">Industry Demand</span>
-                                                        <span className="text-2xl font-bold text-purple-400">Extremely High</span>
+                                                        <span className="text-2xl font-bold text-indigo-500">Extremely High</span>
                                                     </div>
 
                                                 </div>

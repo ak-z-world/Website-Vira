@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arivonacademy.vercel.app/sitemap.xml
