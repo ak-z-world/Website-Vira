@@ -27,7 +27,7 @@ export default function TermsPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full blur-3xl opacity-60" />
-        
+
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -35,11 +35,11 @@ export default function TermsPage() {
                 <Shield className="w-4 h-4 text-orange-500" />
                 <span className="text-sm font-semibold text-orange-600">Legal Policies</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
                 Terms & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Conditions</span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                 By enrolling in our courses, you agree to abide by the following terms and conditions.
               </p>
@@ -62,21 +62,19 @@ export default function TermsPage() {
                       Jump to specific sections
                     </p>
                   </div>
-                  
+
                   <div className="bg-white border border-gray-100 rounded-2xl p-2 shadow-sm">
                     {sections.map((section) => (
                       <button
                         key={section.id}
                         onClick={() => setActiveSection(section.id)}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-1 transition-all duration-300 ${
-                          activeSection === section.id
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-1 transition-all duration-300 ${activeSection === section.id
                             ? 'bg-gradient-to-r from-orange-50 to-orange-100 text-orange-600'
                             : 'text-gray-700 hover:bg-gray-50'
-                        }`}
+                          }`}
                       >
-                        <div className={`p-2 rounded-lg ${
-                          activeSection === section.id ? 'bg-orange-100' : 'bg-gray-100'
-                        }`}>
+                        <div className={`p-2 rounded-lg ${activeSection === section.id ? 'bg-orange-100' : 'bg-gray-100'
+                          }`}>
                           <div className={`${activeSection === section.id ? 'text-orange-600' : 'text-gray-500'}`}>
                             {section.icon}
                           </div>
@@ -96,10 +94,10 @@ export default function TermsPage() {
                     <div className="flex items-center justify-between">
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                          Vira Academy Terms & Conditions
+                          ArivOn Academy Terms & Conditions
                         </h2>
                         <p className="text-gray-600 mt-2">
-                          Welcome to Vira Academy! We thank you for choosing us as your learning partner for professional software training.
+                          Welcome to ArivOn Academy! We thank you for choosing us as your learning partner for professional software training.
                         </p>
                       </div>
                     </div>
@@ -113,7 +111,7 @@ export default function TermsPage() {
                         <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-orange-200">
                           <Shield className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" />
                           <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Welcome to Vira Academy</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Welcome to ArivOn Academy</h3>
                             <p className="text-gray-700 leading-relaxed">
                               We thank you for choosing us as your learning partner for professional software training. Our mission is to empower students worldwide with career-oriented training and practical skills to prepare them for the competitive global job market.
                             </p>
@@ -137,11 +135,11 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Placement Assistance</h3>
                             </div>
                           </div>
-                          
+
                           <div className="space-y-4">
                             <div className="p-4 bg-blue-50 rounded-xl">
                               <p className="text-gray-700">
-                                Vira Academy provides career guidance and placement assistance but does not guarantee job placement. Placement assistance includes resume building support, portfolio development, and mock interview preparation to improve employability.
+                                ArivOn Academy provides career guidance and placement assistance but does not guarantee job placement. Placement assistance includes resume building support, portfolio development, and mock interview preparation to improve employability.
                               </p>
                             </div>
                           </div>
@@ -161,7 +159,7 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Refund & Cancellation Policy</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-green-50 rounded-xl">
                             <p className="text-gray-700">
                               For detailed information, please refer to our refund policy. Refund requests must be submitted directly through official communication channels within the specified timeframe.
@@ -183,7 +181,7 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Student Behavior</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-red-50 rounded-xl">
                             <p className="text-gray-700">
                               Students are expected to maintain professional and respectful behavior in all online classes and communications. Disruptive behavior in virtual sessions may result in disciplinary action, including removal from the course without a refund.
@@ -205,7 +203,7 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Punctuality</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-yellow-50 rounded-xl">
                             <p className="text-gray-700">
                               Students must attend scheduled online sessions on time. Repeated lateness or absence may lead to warnings from the trainer.
@@ -227,7 +225,7 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Use of Online Facilities</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-purple-50 rounded-xl">
                             <p className="text-gray-700">
                               Students are encouraged to use the provided learning platforms responsibly. Unauthorized recording, sharing of course materials, or misuse of academy resources is strictly prohibited.
@@ -249,7 +247,7 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Course Attendance</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-blue-50 rounded-xl">
                             <p className="text-gray-700">
                               Regular participation in online sessions is required to successfully complete the course. In case of unavoidable circumstances such as technical issues or instructor availability, postponed sessions will be rescheduled.
@@ -271,10 +269,10 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Data Protection</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-green-50 rounded-xl">
                             <p className="text-gray-700">
-                              Vira Academy ensures the confidentiality of personal data. Information collected during enrollment will be used solely for educational, administrative, and promotional purposes in accordance with applicable international data protection standards.
+                              ArivOn Academy ensures the confidentiality of personal data. Information collected during enrollment will be used solely for educational, administrative, and promotional purposes in accordance with applicable international data protection standards.
                             </p>
                           </div>
                         </div>
@@ -293,10 +291,10 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Global Access & Payments</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-indigo-50 rounded-xl">
                             <p className="text-gray-700">
-                              Vira Academy offers fully online learning accessible from anywhere in the world. Course fees may be paid in accepted currencies based on the student's country and available payment options.
+                              ArivOn Academy offers fully online learning accessible from anywhere in the world. Course fees may be paid in accepted currencies based on the student's country and available payment options.
                             </p>
                           </div>
                         </div>
@@ -315,7 +313,7 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Public Holidays</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-orange-50 rounded-xl">
                             <p className="text-gray-700">
                               Online classes may not be conducted on major public holidays unless otherwise informed in advance for special sessions.
@@ -337,10 +335,10 @@ export default function TermsPage() {
                               <h3 className="text-2xl font-bold text-gray-900">Resume and Portfolio Building</h3>
                             </div>
                           </div>
-                          
+
                           <div className="p-4 bg-cyan-50 rounded-xl">
                             <p className="text-gray-700">
-                              Vira Academy assists students in developing professional resumes and portfolios to enhance career opportunities.
+                              ArivOn Academy assists students in developing professional resumes and portfolios to enhance career opportunities.
                             </p>
                           </div>
                         </div>
@@ -357,7 +355,7 @@ export default function TermsPage() {
                       <div>
                         <h3 className="text-lg font-bold text-gray-900 mb-2">Your Agreement</h3>
                         <p className="text-gray-700">
-                          By enrolling in Vira Academy, you acknowledge that you have read, understood, and agreed to these terms and conditions.
+                          By enrolling in ArivOn Academy, you acknowledge that you have read, understood, and agreed to these terms and conditions.
                         </p>
                       </div>
                     </div>

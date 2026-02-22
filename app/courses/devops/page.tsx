@@ -97,9 +97,21 @@ export default function DevOpsCoursePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="
+min-h-screen
+bg-gradient-to-b
+from-white
+via-blue-50/30
+to-white
+overflow-hidden
+">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="
+relative
+pt-8 sm:pt-10 md:pt-12 lg:pt-14
+pb-2 sm:pb-4 md:pb-6
+overflow-hidden
+">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
@@ -108,22 +120,22 @@ export default function DevOpsCoursePage() {
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-              <Link href="/" className="hover:text-orange-600 transition-colors">Home</Link>
+              <Link href="/" className="hover:text-indigo-600 transition-colors">Home</Link>
               <span>›</span>
-              <Link href="/courses" className="hover:text-orange-600 transition-colors">Courses</Link>
+              <Link href="/courses" className="hover:text-indigo-600 transition-colors">Courses</Link>
               <span>›</span>
-              <span className="text-orange-600 font-semibold">DevOps Engineering</span>
+              <span className="text-indigo-600 font-semibold">DevOps Engineering</span>
             </div> */}
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                  <TrendingUp className="w-4 h-4 text-orange-500" />
-                  <span className="text-sm font-semibold text-orange-600">High-Demand Career</span>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
+                  <TrendingUp className="w-4 h-4 text-blue-500" />
+                  <span className="text-sm font-semibold text-indigo-600">High-Demand Career</span>
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
-                  DevOps <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Engineering</span>
+                  DevOps <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Engineering</span>
                 </h1>
                 
                 <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
@@ -149,7 +161,23 @@ export default function DevOpsCoursePage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
                     href="/contact" 
-                    className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105"
+                    className="
+group inline-flex items-center justify-center gap-3
+
+bg-gradient-to-r from-blue-500 to-indigo-600
+
+text-white font-semibold
+
+px-6 sm:px-7 md:px-8
+py-3 sm:py-3.5 md:py-4
+
+rounded-xl
+
+hover:shadow-2xl hover:shadow-blue-500/30
+hover:scale-105 hover:-translate-y-0.5
+
+transition-all duration-300
+"
                   >
                     Enroll Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -159,14 +187,14 @@ export default function DevOpsCoursePage() {
               </div>
               
               <div className="relative">
-                <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full blur-3xl opacity-20" />
+                <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl">
                   <div className="flex items-center justify-between mb-6">
                     <div>
                       <div className="text-4xl font-bold text-gray-900">{courseDetails.fee}</div>
                       <div className="text-sm text-gray-500 line-through">{courseDetails.originalFee}</div>
                     </div>
-                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold px-4 py-2 rounded-full">
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold px-4 py-2 rounded-full">
                       15% OFF
                     </div>
                   </div>
@@ -174,22 +202,22 @@ export default function DevOpsCoursePage() {
                   <div className="space-y-4 mb-6">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
-                          <div className="text-orange-500">{benefit.icon}</div>
+                        <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
+                          <div className="text-blue-500">{benefit.icon}</div>
                         </div>
                         <span className="text-gray-700">{benefit.text}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-4 mb-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-2xl p-4 mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-semibold text-gray-900">Next Batch Starts</span>
-                      <span className="font-bold text-orange-600">{courseDetails.nextBatch}</span>
+                      <span className="font-bold text-indigo-600">{courseDetails.nextBatch}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full" style={{ width: '70%' }}></div>
+                        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style={{ width: '70%' }}></div>
                       </div>
                       <span className="font-semibold">{courseDetails.seatsLeft} seats left</span>
                     </div>
@@ -197,7 +225,7 @@ export default function DevOpsCoursePage() {
                   
                   <Link 
                     href="/contact"
-                    className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all duration-300"
+                    className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-300"
                   >
                     Book Free Demo Class
                   </Link>
@@ -213,12 +241,12 @@ export default function DevOpsCoursePage() {
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-4">
-                <CloudCog className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">DevOps Ecosystem</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-4">
+                <CloudCog className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-indigo-600">DevOps Ecosystem</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
-                Master the <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                Master the <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                   Complete Stack
                 </span>
               </h2>
@@ -228,10 +256,10 @@ export default function DevOpsCoursePage() {
               {tools.map((tool, index) => (
                 <div 
                   key={index} 
-                  className="group flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-4 hover:border-orange-300 hover:shadow-lg transition-all duration-300"
+                  className="group flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-4 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="p-2 bg-orange-50 rounded-lg">
-                    <div className="text-orange-500">{tool.icon}</div>
+                  <div className="p-2 bg-blue-50 rounded-lg">
+                    <div className="text-blue-500">{tool.icon}</div>
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">{tool.name}</div>
@@ -262,16 +290,16 @@ export default function DevOpsCoursePage() {
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-24 bg-gray-50">
+      <section id="curriculum" className="py-4 bg-gray-50">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-4">
-                <BookOpen className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">Comprehensive Learning</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-4">
+                <BookOpen className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-indigo-600">Comprehensive Learning</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
-                Structured <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                Structured <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                   Curriculum
                 </span>
               </h2>
@@ -284,7 +312,22 @@ export default function DevOpsCoursePage() {
               {modules.map((module, index) => (
                 <div 
                   key={index} 
-                  className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="
+group relative
+
+bg-white
+border border-gray-100
+
+rounded-xl sm:rounded-2xl
+
+p-5 sm:p-6
+
+hover:border-blue-400
+hover:shadow-xl
+hover:-translate-y-1
+
+transition-all duration-300
+"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
@@ -317,16 +360,16 @@ export default function DevOpsCoursePage() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-24 bg-white">
+      <section className="py-1 bg-white">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-4">
-                <Layers className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">Hands-on Experience</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-4">
+                <Layers className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-indigo-600">Hands-on Experience</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
-                Real-World <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                Real-World <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                   Projects
                 </span>
               </h2>
@@ -336,10 +379,10 @@ export default function DevOpsCoursePage() {
               {projects.map((project, index) => (
                 <div 
                   key={index} 
-                  className="group relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all duration-300"
+                  className="group relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="absolute -top-4 left-6">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold">
                       {index + 1}
                     </div>
                   </div>
@@ -364,18 +407,18 @@ export default function DevOpsCoursePage() {
       </section>
 
       {/* Learning Outcomes */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                  <Target className="w-4 h-4 text-orange-500" />
-                  <span className="text-sm font-semibold text-orange-600">Career Skills</span>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-1 py-2 mb-6">
+                  <Target className="w-4 h-4 text-blue-500" />
+                  <span className="text-sm font-semibold text-indigo-600">Career Skills</span>
                 </div>
                 
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
-                  What You'll <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                  What You'll <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                     Master
                   </span>
                 </h2>
@@ -423,16 +466,16 @@ export default function DevOpsCoursePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <section className="py-3 bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="section-padding">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-              <Rocket className="w-4 h-4 text-orange-500" />
-              <span className="text-sm font-semibold text-orange-600">Limited Seats Available</span>
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-blue-200 rounded-full px-1 py-2 mb-6">
+              <Rocket className="w-4 h-4 text-blue-500" />
+              <span className="text-sm font-semibold text-indigo-600">Limited Seats Available</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
-              Launch Your <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+              Launch Your <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                 DevOps Career
               </span>
             </h2>
@@ -449,14 +492,14 @@ export default function DevOpsCoursePage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-gray-500">Next batch starts</div>
-                  <div className="text-lg font-bold text-orange-600">{courseDetails.nextBatch}</div>
+                  <div className="text-lg font-bold text-indigo-600">{courseDetails.nextBatch}</div>
                 </div>
               </div>
               
               <div className="grid sm:grid-cols-2 gap-4">
                 <Link 
                   href="/contact" 
-                  className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
+                  className="group bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center justify-center gap-2">
                     Enroll Now
@@ -465,7 +508,7 @@ export default function DevOpsCoursePage() {
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="group bg-white border border-gray-200 text-gray-700 font-semibold py-4 px-6 rounded-xl hover:border-orange-300 hover:shadow-lg transition-all duration-300"
+                  className="group bg-white border border-gray-200 text-gray-700 font-semibold py-4 px-6 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
                     Book Free Demo
@@ -475,89 +518,12 @@ export default function DevOpsCoursePage() {
               </div>
               
               <div className="mt-6 text-sm text-gray-500 text-center">
-                Only {courseDetails.seatsLeft} seats available • AWS certification included
+                Only {courseDetails.seatsLeft} seats available
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Related Courses */}
-      {/* <section className="py-24 bg-white">
-        <div className="section-padding">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
-                Explore <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-                  More Courses
-                </span>
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Expand your tech skills with our specialized programs
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link 
-                href="/courses/python-django" 
-                className="group relative bg-white border border-gray-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                    <Code2 className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-orange-600 transition-colors">Python & Django</h3>
-                    <p className="text-gray-600 text-sm">Backend development mastery</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">10 Weeks</div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
-                </div>
-              </Link>
-              
-              <Link 
-                href="/courses/react" 
-                className="group relative bg-white border border-gray-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                    <Layout className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-orange-600 transition-colors">React Development</h3>
-                    <p className="text-gray-600 text-sm">Modern frontend development</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">12 Weeks</div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
-                </div>
-              </Link>
-              
-              <Link 
-                href="/courses/cloud" 
-                className="group relative bg-white border border-gray-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                    <Cloud className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-orange-600 transition-colors">Cloud Architecture</h3>
-                    <p className="text-gray-600 text-sm">AWS, Azure & GCP certification</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">14 Weeks</div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

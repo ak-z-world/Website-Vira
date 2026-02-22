@@ -40,7 +40,7 @@ export default function PrivacyPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                At Vira Academy, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.
+                At ArivOn Academy, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
                     <div className="flex items-center justify-between">
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                          Privacy Policy – Vira Academy
+                          Privacy Policy – ArivOn Academy
                         </h2>
                         <p className="text-gray-600 mt-2">
                           By using our website or enrolling in our programs, you agree to the practices described in this policy.
@@ -112,9 +112,9 @@ export default function PrivacyPage() {
                         <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-orange-200">
                           <Shield className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" />
                           <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Privacy Policy – Vira Academy</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Privacy Policy – ArivOn Academy</h3>
                             <p className="text-gray-700 leading-relaxed">
-                              At Vira Academy, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you access our website or use our online learning services. By using our website or enrolling in our programs, you agree to the practices described in this policy.
+                              At ArivOn Academy, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you access our website or use our online learning services. By using our website or enrolling in our programs, you agree to the practices described in this policy.
                             </p>
                           </div>
                         </div>
@@ -313,7 +313,7 @@ export default function PrivacyPage() {
                           <div className="space-y-4">
                             <div className="p-4 bg-orange-50 rounded-xl">
                               <p className="text-gray-700">
-                                All course content provided by Vira Academy is for personal educational use only.
+                                All course content provided by ArivOn Academy is for personal educational use only.
                               </p>
                             </div>
                             
@@ -414,7 +414,7 @@ export default function PrivacyPage() {
                           
                           <div className="p-4 bg-orange-50 rounded-xl">
                             <p className="text-gray-700">
-                              Vira Academy operates as a global online learning platform. By using our services from any location worldwide, you consent to the collection and processing of your information in accordance with this Privacy Policy and applicable international data protection regulations.
+                              ArivOn Academy operates as a global online learning platform. By using our services from any location worldwide, you consent to the collection and processing of your information in accordance with this Privacy Policy and applicable international data protection regulations.
                             </p>
                           </div>
                         </div>
@@ -458,7 +458,7 @@ export default function PrivacyPage() {
                           
                           <div className="p-4 bg-orange-50 rounded-xl">
                             <p className="text-gray-700">
-                              If you have any questions or concerns regarding this Privacy Policy or how your data is handled, please contact Vira Academy through our official communication channels.
+                              If you have any questions or concerns regarding this Privacy Policy or how your data is handled, please contact ArivOn Academy through our official communication channels.
                             </p>
                           </div>
                         </div>

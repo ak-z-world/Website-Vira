@@ -1,203 +1,304 @@
 "use client";
+import Image from "next/image";
+import {
+  Code2,
+  Mail,
+  Phone,
+  ArrowRight,
+  Shield,
+  Award,
+  MessageSquare,
+} from "lucide-react";
 
-import { Code2, Mail, Phone, ArrowRight, Shield, Award, MessageSquare, Calendar } from 'lucide-react';
-import Link from 'next/link';
+import Link from "next/link";
 import { useGlobal } from "@/app/providers";
 
 const Footer = () => {
   const { language, setLanguage, currency, setCurrency } = useGlobal();
+
   const quickLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Courses', href: '/courses' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact', href: '/contact' },
+    { label: "Home", href: "/" },
+    { label: "Courses", href: "/courses" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const courses = [
-    { label: 'Python & Django', href: '/courses/python' },
-    { label: 'DevOps Engineering', href: '/courses/devops' },
-    { label: 'React Development', href: '/courses/react' },
-    { label: 'Data Science', href: '/courses/datasci' },
-
+    { label: "Python & Django", href: "/courses/python" },
+    { label: "DevOps Engineering", href: "/courses/devops" },
+    { label: "React Development", href: "/courses/react" },
+    { label: "Data Science", href: "/courses/datasci" },
   ];
 
-
-
   return (
-    <footer className="bg-gradient-to-b from-white to-gray-50 text-gray-800 pt-20 pb-12">
-      <div className="section-padding">
+    <footer className="relative bg-white border-t border-blue-100 overflow-hidden">
 
+      {/* subtle nebula glow */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100/40 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-100/40 blur-3xl rounded-full"></div>
 
-        {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          {/* Company Info */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+
+        {/* MAIN GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
+
+          {/* BRAND */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-lg">
-                <Code2 className="w-6 h-6 text-white" />
-              </div>
+
+            <Link href="/" className="flex items-center gap-3 mb-5 group">
+
+              <div className="relative group flex items-center">
+
+  <div className="
+    absolute inset-0
+    bg-gradient-to-r from-blue-500/20 to-indigo-500/20
+    blur-lg
+    rounded-full
+    opacity-0
+    group-hover:opacity-100
+    transition duration-500
+  "></div>
+
+  <Image
+    src="/assets/icons/logo2.png"
+    alt="ArivOn Academy Logo"
+    width={200}
+    height={80}
+    priority
+    className="
+      relative
+      h-12 sm:h-14 md:h-16 lg:h-18
+      w-auto
+
+      transition-all duration-500
+
+      group-hover:scale-110
+      group-hover:-translate-y-1
+      hover:rotate-[2deg]
+    "
+  />
+
+</div>
+
               <div>
-                <div className="text-2xl font-bold text-gray-900">
-                  Vira <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Academy</span>
+                <div className="text-xl font-bold text-gray-900">
+                  ArivOn
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent ml-1">
+                    Academy
+                  </span>
                 </div>
-                <div className="text-sm text-gray-500">Premium Tech Education</div>
+
+                <div className="text-xs text-gray-500">
+                  Premium Tech Education
+                </div>
               </div>
+
             </Link>
-            <p className="text-gray-600 mb-8 max-w-md">
-              We're transforming tech education through industry-aligned programs,
-              expert mentorship, and hands-on learning experiences that launch careers.
+
+            <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+              Transform your career with industry-focused programs, expert mentorship,
+              real-world projects, and structured placement preparation.
             </p>
 
-            {/* <div className="flex gap-4">
-              <a href="#" className="group w-12 h-12 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 hover:border-orange-300">
-                <Facebook className="w-5 h-5 text-gray-600 group-hover:text-white group-hover:scale-110 transition-all" />
-              </a>
-              <a href="#" className="group w-12 h-12 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 hover:border-orange-300">
-                <Twitter className="w-5 h-5 text-gray-600 group-hover:text-white group-hover:scale-110 transition-all" />
-              </a>
-              <a href="#" className="group w-12 h-12 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 hover:border-orange-300">
-                <Linkedin className="w-5 h-5 text-gray-600 group-hover:text-white group-hover:scale-110 transition-all" />
-              </a>
-              <a href="#" className="group w-12 h-12 rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 transition-all duration-300 hover:border-orange-300">
-                <Instagram className="w-5 h-5 text-gray-600 group-hover:text-white group-hover:scale-110 transition-all" />
-              </a>
-            </div> */}
           </div>
 
-          {/* Quick Links */}
+
+          {/* QUICK LINKS */}
           <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <span className="w-2 h-6 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></span>
+
+            <h3 className="font-semibold text-gray-900 mb-4">
               Quick Links
             </h3>
+
             <ul className="space-y-3">
+
               {quickLinks.map((link) => (
+
                 <li key={link.label}>
+
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors"
+                    className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition group"
                   >
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:text-orange-500 transition-all" />
+
+                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
+
                     {link.label}
+
                   </Link>
+
                 </li>
+
               ))}
+
             </ul>
+
           </div>
 
-          {/* Courses */}
+
+          {/* COURSES */}
           <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <span className="w-2 h-6 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></span>
-              Our Programs
+
+            <h3 className="font-semibold text-gray-900 mb-4">
+              Programs
             </h3>
+
             <ul className="space-y-3">
+
               {courses.map((course) => (
+
                 <li key={course.label}>
+
                   <Link
                     href={course.href}
-                    className="group flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors"
+                    className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition group"
                   >
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:text-orange-500 transition-all" />
+
+                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
+
                     {course.label}
+
                   </Link>
+
                 </li>
+
               ))}
+
             </ul>
+
           </div>
 
-          {/* Contact & Resources */}
+
+          {/* CONTACT */}
           <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <span className="w-2 h-6 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></span>
-              Get in Touch
+
+            <h3 className="font-semibold text-gray-900 mb-4">
+              Contact
             </h3>
-            <div className="space-y-4 mb-6">
 
-              <div className="flex items-center gap-3 group">
-                <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-100 transition-colors">
-                  <Phone className="w-4 h-4 text-orange-500" />
+            <div className="space-y-4">
+
+              <div className="flex items-center gap-3">
+
+                <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-blue-600" />
                 </div>
-                <span className="text-gray-600 group-hover:text-gray-900 transition-colors">+91 96773 77316</span>
+
+                <span className="text-gray-600 text-sm">
+                  +91 96773 77316
+                </span>
+
               </div>
-              <div className="flex items-center gap-3 group">
-                <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-100 transition-colors">
-                  <Mail className="w-4 h-4 text-orange-500" />
+
+
+              <div className="flex items-center gap-3">
+
+                <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-blue-600" />
                 </div>
-                <span className="text-gray-600 group-hover:text-gray-900 transition-colors">viraacademy.info@gmail.com</span>
+
+                <span className="text-gray-600 text-sm">
+                  arivonacademy.info@gmail.com
+                </span>
+
               </div>
+
             </div>
 
-            
           </div>
-        </div>
 
-        {/* Trust Badges */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-2xl hover:border-orange-300 hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
-              <Shield className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <div className="font-bold text-gray-900">Secure Learning</div>
-              <div className="text-sm text-gray-600">Industry-standard security protocols</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-2xl hover:border-orange-300 hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
-              <Award className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <div className="font-bold text-gray-900">Certified Programs</div>
-              <div className="text-sm text-gray-600">Industry-recognized certifications</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-2xl hover:border-orange-300 hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
-              <MessageSquare className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <div className="font-bold text-gray-900">24/7 Support</div>
-              <div className="text-sm text-gray-600">Dedicated student support team</div>
-            </div>
-          </div>
         </div>
 
 
+        {/* TRUST BADGES */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-6">
+          {[
+            {
+              icon: <Shield className="w-5 h-5 text-white"/>,
+              title: "Secure Learning",
+              desc: "Safe & protected learning environment",
+            },
+            {
+              icon: <Award className="w-5 h-5 text-white"/>,
+              title: "Certified Programs",
+              desc: "Industry-recognized certifications",
+            },
+            {
+              icon: <MessageSquare className="w-5 h-5 text-white"/>,
+              title: "Dedicated Support",
+              desc: "Continuous mentor assistance",
+            },
+          ].map((item, i) => (
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div
+              key={i}
+              className="flex items-center gap-4 bg-white border border-blue-100 rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition"
+            >
 
-            {/* LEFT — Language */}
-            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                {item.icon}
+              </div>
+
+              <div>
+
+                <div className="font-semibold text-gray-900 text-sm">
+                  {item.title}
+                </div>
+
+                <div className="text-xs text-gray-600">
+                  {item.desc}
+                </div>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+
+        {/* BOTTOM BAR */}
+        <div className="border-t border-blue-100 pt-6">
+
+          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between text-sm">
+
+            {/* Language */}
+            <div className="flex gap-4">
+
               <button
                 onClick={() => setLanguage("en")}
-                className={`hover:text-orange-600 ${language === "en" ? "font-semibold text-gray-900" : ""
-                  }`}
+                className={`${
+                  language === "en"
+                    ? "text-blue-600 font-semibold"
+                    : "text-gray-600"
+                }`}
               >
                 English
               </button>
 
               <button
                 onClick={() => setLanguage("ar")}
-                className={`hover:text-orange-600 ${language === "ar" ? "font-semibold text-gray-900" : ""
-                  }`}
+                className={`${
+                  language === "ar"
+                    ? "text-blue-600 font-semibold"
+                    : "text-gray-600"
+                }`}
               >
                 Arabic
               </button>
+
             </div>
 
 
-            {/* CENTER — Currency */}
-            <div className="flex items-center gap-2 bg-gray-100 rounded-full p-1">
+            {/* Currency */}
+            <div className="flex flex-wrap gap-2">
 
               {[
                 { code: "INR", symbol: "₹" },
                 { code: "USD", symbol: "$" },
                 { code: "EUR", symbol: "€" },
-                { code: "GBP", symbol: "£" },
                 { code: "AED", symbol: "د.إ" },
                 { code: "KWD", symbol: "د.ك" },
               ].map((cur) => (
@@ -205,16 +306,16 @@ const Footer = () => {
                 <button
                   key={cur.code}
                   onClick={() => setCurrency(cur.code)}
-                  className={`
-            px-3 py-1 rounded-full text-xs font-semibold transition-all
-
-            ${currency === cur.code
-                      ? "bg-orange-500 text-white shadow"
-                      : "text-gray-600 hover:text-orange-600"
-                    }
-          `}
+                  className={`px-3 py-1 rounded-full text-xs font-semibold transition
+                  ${
+                    currency === cur.code
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-600 hover:text-blue-600"
+                  }`}
                 >
+
                   {cur.symbol} {cur.code}
+
                 </button>
 
               ))}
@@ -222,24 +323,10 @@ const Footer = () => {
             </div>
 
 
-            {/* RIGHT — Copyright + Links */}
-            <div className="flex items-center gap-4 flex-wrap justify-center lg:justify-end">
+            {/* copyright */}
+            <div className="text-gray-500 text-center lg:text-right">
 
-              <span className="whitespace-nowrap">
-                © {new Date().getFullYear()} Vira Academy. All rights reserved.
-              </span>
-
-              <Link href="/privacy-policy" className="hover:text-orange-600">
-                Privacy
-              </Link>
-
-              <Link href="/terms-and-conditions" className="hover:text-orange-600">
-                Terms
-              </Link>
-
-              <Link href="/faq" className="hover:text-orange-600">
-                FAQ
-              </Link>
+              © {new Date().getFullYear()} ArivOn Academy. All rights reserved.
 
             </div>
 
@@ -248,6 +335,7 @@ const Footer = () => {
         </div>
 
       </div>
+
     </footer>
   );
 };
