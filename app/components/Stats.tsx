@@ -33,7 +33,7 @@ const Stats = () => {
       icon: <Globe className="w-6 h-6" />,
       title: "Globally Recognized Certification",
       description:
-        "ArivOn certifications recognized by startups and global companies.",
+        "ArivuOn certifications recognized by startups and global companies.",
     },
   ];
 
@@ -53,7 +53,7 @@ const Stats = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 border border-blue-100 mb-4">
             <TrendingUp className="w-4 h-4 text-blue-600" />
             <span className="text-sm font-semibold text-blue-700">
-              ArivOn Academy Advantage
+              ArivuOn Academy Advantage
             </span>
           </div>
 
@@ -61,7 +61,7 @@ const Stats = () => {
 
             Why Choose{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              ArivOn Academy
+              ArivuOn Academy
             </span>
 
           </h2>
@@ -160,7 +160,7 @@ const Stats = () => {
                 </h3>
 
                 <p className="text-blue-100 text-sm sm:text-base">
-                  Limited seats available. Join the upcoming ArivOn batch.
+                  Limited seats available. Join the upcoming ArivuOn batch.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mt-4 text-sm">

@@ -5,9 +5,9 @@ import Footer from './layouts/Footer';
 import { GlobalProvider } from "./providers"; // FIXED PATH
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arivonacademy.vercel.app"),
+  metadataBase: new URL("https://arivuonacademy.vercel.app"),
 
-  title: "ArivOn Academy | Python, DevOps & React Training",
+  title: "ArivuOn Academy | Python, DevOps & React Training",
 
   description:
     "Master in-demand tech skills with our comprehensive Python, DevOps, and React training programs.",
@@ -25,17 +25,17 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "ArivOn Academy | Python, DevOps & React Training",
+    title: "ArivuOn Academy | Python, DevOps & React Training",
     description:
       "Master in-demand tech skills with our comprehensive training programs.",
-    url: "https://arivonacademy.vercel.app",
-    siteName: "ArivOn Academy",
+    url: "https://arivuonacademy.vercel.app",
+    siteName: "ArivuOn Academy",
     images: [
       {
         url: "/og-image.png", // from public folder
         width: 1200,
         height: 630,
-        alt: "ArivOn Academy",
+        alt: "ArivuOn Academy",
       },
     ],
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "ArivOn Academy",
+    title: "ArivuOn Academy",
     description: "Master in-demand tech skills.",
     images: ["/og-image.png"],
   },

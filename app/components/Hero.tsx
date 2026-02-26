@@ -250,7 +250,7 @@ const Hero = () => {
 
                 <div>
                   <div className="text-sm font-semibold text-[#0B1F3A] tracking-wide">
-                    ArivOn Quantum Excellence
+                    ArivuOn Quantum Excellence
                   </div>
                   <div className="text-xs text-gray-600">
                     98% Success Probability
@@ -326,7 +326,7 @@ const Hero = () => {
     md:text-xl
   ">
                   Transform your career with industry-focused training at
-                  <span className="font-semibold text-[#0E2A5A]"> ArivOn Academy</span>.
+                  <span className="font-semibold text-[#0E2A5A]"> ArivuOn Academy</span>.
                   Master Python, DevOps, and React with hands-on projects, expert mentorship, and placement support.
                 </p>
 
@@ -485,7 +485,7 @@ const Hero = () => {
     {
       icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E3A8A]" />,
       title: "Certification",
-      subtitle: "ArivOn Academy",
+      subtitle: "ArivuOn Academy",
     },
   ].map((feature, idx) => (
 
@@ -601,7 +601,7 @@ const Hero = () => {
           text-[#1E3A8A]
           tracking-wide
         ">
-                      ArivOn Academy Dashboard
+                      ArivuOn Academy Dashboard
                     </span>
 
                   </div>
@@ -802,7 +802,7 @@ const Hero = () => {
           transition-all duration-300
         "
                   >
-                    Start Learning at ArivOn
+                    Start Learning at ArivuOn
                     <ChevronRight className="w-4 h-4" />
                   </Link>
 
@@ -868,7 +868,7 @@ const Hero = () => {
                 </div>
 
                 <div className="text-xs sm:text-sm font-semibold text-[#0F172A]">
-                  ArivOn Academy
+                  ArivuOn Academy
                 </div>
 
               </div>

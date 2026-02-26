@@ -7,6 +7,7 @@ import { formatCurrency } from "@/lib/currency";
 
 export default function PythonDjangoCoursePage() {
   const { t, price, originalPrice } = useGlobal();
+
   const courseDetails = {
     title: 'Python & Django Development',
     subtitle: "Master backend development with Python's most powerful web framework. Build scalable, production-ready applications.",
@@ -69,7 +70,6 @@ export default function PythonDjangoCoursePage() {
     }
   ];
 
-
   const benefits = [
     { icon: <Award className="w-5 h-5" />, text: "courses.python.benefits.certification" },
     { icon: <Clock className="w-5 h-5" />, text: "courses.python.benefits.hours" },
@@ -87,7 +87,6 @@ export default function PythonDjangoCoursePage() {
     t("courses.python.outcomes.optimization"),
     t("courses.python.outcomes.bestPractices")
   ];
-
 
   const tools = [
     { name: 'Python 3.11+', icon: <Code2 className="w-4 h-4" /> },
@@ -112,8 +111,8 @@ export default function PythonDjangoCoursePage() {
 
             provider: {
               "@type": "Organization",
-              name: "ArivOn Academy",
-              url: "https://arivonacademy.vercel.app",
+              name: "ArivuOn Academy",
+              url: "https://arivuonacademy.vercel.app",
             },
 
             educationalLevel: "Beginner to Advanced",
@@ -145,13 +144,6 @@ export default function PythonDjangoCoursePage() {
 
           <div className="section-padding relative z-10">
             <div className="max-w-6xl mx-auto">
-              {/* <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-              <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-              <span>›</span>
-              <Link href="/courses" className="hover:text-blue-600 transition-colors">Courses</Link>
-              <span>›</span>
-              <span className="text-blue-600 font-semibold">Python & Django</span>
-            </div> */}
 
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>

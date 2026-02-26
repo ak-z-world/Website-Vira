@@ -23,15 +23,16 @@ const Header = () => {
 
   const navItems = [
     { label: 'Home', href: '/', icon: null },
-    { 
-      label: 'Courses', 
+    {
+      label: 'Courses',
       href: '/courses',
       icon: <BookOpen className="w-4 h-4" />,
       dropdown: [
-        { label: 'Python & Django', href: '/courses/python', badge: 'Popular',},
-        { label: 'DevOps ', href: '/courses/devops', badge: 'High Demand'},
-        { label: 'React Development', href: '/courses/react', badge: 'Trending'},
-        { label: 'Data Science', href: '/courses/datasci', badge:"Hot"}
+        { label: 'Python & Django', href: '/courses/python', badge: 'Popular', },
+        { label: 'DevOps ', href: '/courses/devops', badge: 'High Demand' },
+        { label: 'React Development', href: '/courses/react', badge: 'Trending' },
+        { label: 'Data Science', href: '/courses/datasci', badge: "Hot" },
+        { label: "Python + AWS DevOps Combo", href: "/courses/python-aws-devops-combo", badge: "New" },
       ]
     },
     { label: 'About', href: '/about', icon: <Users className="w-4 h-4" /> },
@@ -44,25 +45,13 @@ const Header = () => {
     return false;
   };
 
-  const handleCoursesMouseEnter = () => {
-    if (window.innerWidth > 1024) {
-      setIsCoursesOpen(true);
-    }
-  };
-
-  const handleCoursesMouseLeave = () => {
-    if (window.innerWidth > 1024) {
-      setIsCoursesOpen(false);
-    }
-  };
-
   const toggleCoursesDropdown = () => {
     setIsCoursesOpen(!isCoursesOpen);
   };
 
   return (
-  <header
-  className={`
+    <header
+      className={`
     sticky top-0 z-50
     transition-all duration-300
 
@@ -72,22 +61,22 @@ const Header = () => {
 
     ${isScrolled ? "shadow-sm" : ""}
   `}
->
+    >
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <nav className="flex items-center justify-between h-16 sm:h-28 lg:h-20">
+        <nav className="flex items-center justify-between h-16 sm:h-28 lg:h-20">
 
-      {/* LOGO */}
-      <Link href="/" className="flex items-center">
+          {/* LOGO */}
+          <Link href="/" className="flex items-center">
 
-        <Image
-          src="/assets/icons/logo2.png"
-          alt="ArivOn Academy Logo"
-          width={400}
-          height={120}
-          priority
-          className="
+            <Image
+              src="/assets/icons/logo2.png"
+              alt="ArivuOn Academy Logo"
+              width={400}
+              height={120}
+              priority
+              className="
             h-10
             sm:h-12
             lg:h-14
@@ -95,31 +84,29 @@ const Header = () => {
             w-auto
             object-contain
           "
-        />
+            />
 
-      </Link>
+          </Link>
 
 
-      {/* DESKTOP NAV */}
-      <div className="hidden xl:flex items-center gap-6">
+          {/* DESKTOP NAV */}
+          <div className="hidden xl:flex items-center gap-6">
 
-        <ul className="flex items-center gap-2">
+            <ul className="flex items-center gap-2">
 
-          {navItems.map((item) => (
+              {navItems.map((item) => (
 
-            <li
-              key={item.label}
-              className="relative"
-              onMouseEnter={item.dropdown ? handleCoursesMouseEnter : undefined}
-              onMouseLeave={item.dropdown ? handleCoursesMouseLeave : undefined}
-            >
+                <li
+                  key={item.label}
+                  className="relative group"
+                >
 
-              {item.dropdown ? (
+                  {item.dropdown ? (
 
-                <>
-                  <button
-                    onClick={toggleCoursesDropdown}
-                    className={`
+                    <>
+                      <button
+                        onClick={toggleCoursesDropdown}
+                        className={`
                       flex items-center gap-2
 
                       px-4 py-2
@@ -130,56 +117,56 @@ const Header = () => {
 
                       transition-all duration-200
 
-                      ${
-                        isActive(item.href)
-                          ? "text-[#1E3A8A]"
-                          : "text-gray-600 hover:text-[#1E3A8A]"
-                      }
+                      ${isActive(item.href)
+                            ? "text-[#1E3A8A]"
+                            : "text-gray-600 hover:text-[#1E3A8A]"
+                          }
                     `}
-                  >
+                      >
 
-                    {item.icon && (
-                      <span className="text-[#2563EB]">
-                        {item.icon}
-                      </span>
-                    )}
+                        {item.icon && (
+                          <span className="text-[#2563EB]">
+                            {item.icon}
+                          </span>
+                        )}
 
-                    {item.label}
+                        {item.label}
 
-                    <ChevronDown
-                      className={`
+                        <ChevronDown
+                          className={`
                         w-4 h-4 transition-transform
                         ${isCoursesOpen ? "rotate-180" : ""}
                       `}
-                    />
+                        />
 
-                  </button>
+                      </button>
 
 
-                  {/* DROPDOWN */}
-                  {isCoursesOpen && (
+                      {/* DROPDOWN */}
+                      {isCoursesOpen && (
 
-                    <div className="
-                      absolute left-0 top-full mt-3 w-72
+                        <div className="
+  absolute left-0 top-full w-72
+  opacity-0 invisible
+  group-hover:opacity-100 group-hover:visible
+  transition-all duration-200
+  pt-2
+">
+                          <div className="
+    bg-white
+    border border-[#E6ECFF]
+    rounded-xl
+    shadow-lg
+    py-2
+  ">
 
-                      bg-white
+                            {item.dropdown.map((dropdownItem) => (
 
-                      border border-[#E6ECFF]
-
-                      rounded-xl
-
-                      shadow-lg
-
-                      py-2
-                    ">
-
-                      {item.dropdown.map((dropdownItem) => (
-
-                        <Link
-                          key={dropdownItem.label}
-                          href={dropdownItem.href}
-                          onClick={() => setIsCoursesOpen(false)}
-                          className="
+                              <Link
+                                key={dropdownItem.label}
+                                href={dropdownItem.href}
+                                onClick={() => setIsCoursesOpen(false)}
+                                className="
                             flex items-center justify-between
 
                             px-4 py-3
@@ -193,12 +180,12 @@ const Header = () => {
 
                             transition
                           "
-                        >
+                              >
 
-                          {dropdownItem.label}
+                                {dropdownItem.label}
 
-                          {dropdownItem.badge && (
-                            <span className="
+                                {dropdownItem.badge && (
+                                  <span className="
                               text-xs
 
                               px-2 py-0.5
@@ -209,25 +196,26 @@ const Header = () => {
 
                               text-[#2563EB]
                             ">
-                              {dropdownItem.badge}
-                            </span>
-                          )}
+                                    {dropdownItem.badge}
+                                  </span>
+                                )}
 
-                        </Link>
+                              </Link>
 
-                      ))}
+                            ))}
 
-                    </div>
+                          </div>
+                        </div>
 
-                  )}
+                      )}
 
-                </>
+                    </>
 
-              ) : (
+                  ) : (
 
-                <Link
-                  href={item.href}
-                  className={`
+                    <Link
+                      href={item.href}
+                      className={`
                     px-4 py-2
 
                     text-sm font-medium
@@ -236,29 +224,28 @@ const Header = () => {
 
                     transition
 
-                    ${
-                      isActive(item.href)
-                        ? "text-[#1E3A8A]"
-                        : "text-gray-600 hover:text-[#1E3A8A]"
-                    }
+                    ${isActive(item.href)
+                          ? "text-[#1E3A8A]"
+                          : "text-gray-600 hover:text-[#1E3A8A]"
+                        }
                   `}
-                >
-                  {item.label}
-                </Link>
+                    >
+                      {item.label}
+                    </Link>
 
-              )}
+                  )}
 
-            </li>
+                </li>
 
-          ))}
+              ))}
 
-        </ul>
+            </ul>
 
 
-        {/* CTA BUTTON */}
-        <Link
-          href="/contact"
-          className="
+            {/* CTA BUTTON */}
+            <Link
+              href="/contact"
+              className="
             inline-flex items-center gap-2
 
             px-5 py-2.5
@@ -274,19 +261,19 @@ const Header = () => {
 
             transition
           "
-        >
-          Start Learning
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+            >
+              Start Learning
+              <ArrowRight className="w-4 h-4" />
+            </Link>
 
 
-      </div>
+          </div>
 
 
-      {/* MOBILE BUTTON */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="
+          {/* MOBILE BUTTON */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="
           xl:hidden
 
           p-2
@@ -297,20 +284,20 @@ const Header = () => {
 
           text-gray-700
         "
-      >
-        {isMenuOpen ? <X /> : <Menu />}
-      </button>
+          >
+            {isMenuOpen ? <X /> : <Menu />}
+          </button>
 
 
-    </nav>
+        </nav>
 
-  </div>
+      </div>
 
 
-  {/* MOBILE MENU */}
-  {isMenuOpen && (
+      {/* MOBILE MENU */}
+      {isMenuOpen && (
 
-    <div className="
+        <div className="
       xl:hidden
 
       bg-white
@@ -320,15 +307,15 @@ const Header = () => {
       shadow-lg
     ">
 
-      <div className="px-4 py-4 space-y-2">
+          <div className="px-4 py-4 space-y-2">
 
-        {navItems.map(item => (
+            {navItems.map(item => (
 
-          <Link
-            key={item.label}
-            href={item.href}
-            onClick={() => setIsMenuOpen(false)}
-            className="
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="
               block
 
               px-4 py-3
@@ -343,16 +330,16 @@ const Header = () => {
 
               transition
             "
-          >
-            {item.label}
-          </Link>
+              >
+                {item.label}
+              </Link>
 
-        ))}
+            ))}
 
-        <Link
-          href="/contact"
-          onClick={() => setIsMenuOpen(false)}
-          className="
+            <Link
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="
             block text-center
 
             mt-4
@@ -367,18 +354,18 @@ const Header = () => {
 
             font-semibold
           "
-        >
-          Start Learning
-        </Link>
+            >
+              Start Learning
+            </Link>
 
-      </div>
+          </div>
 
-    </div>
+        </div>
 
-  )}
+      )}
 
-</header>
-);
+    </header>
+  );
 };
 
 export default Header;

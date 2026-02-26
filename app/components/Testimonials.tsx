@@ -50,7 +50,7 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "ArivOn Academy transformed my career completely. The Python course was incredibly comprehensive - from Django to FastAPI to real ML projects. Within 3 months of completing the course, I received offers from 5 companies including Google.",
+        "ArivuOn Academy transformed my career completely. The Python course was incredibly comprehensive - from Django to FastAPI to real ML projects. Within 3 months of completing the course, I received offers from 5 companies including Google.",
       rating: 5,
       salaryIncrease: "180%",
       placementTime: "3 months",
@@ -69,7 +69,7 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "The DevOps program at ArivOn Academy is top-notch. The hands-on labs with Kubernetes, AWS, and CI/CD pipelines prepared me perfectly for real-world scenarios. My mentor helped me land my dream job at AWS with a massive salary hike.",
+        "The DevOps program at ArivuOn Academy is top-notch. The hands-on labs with Kubernetes, AWS, and CI/CD pipelines prepared me perfectly for real-world scenarios. My mentor helped me land my dream job at AWS with a massive salary hike.",
       rating: 5,
       salaryIncrease: "220%",
       placementTime: "2 months",
@@ -88,7 +88,7 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Anjali&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "I came from a non-tech background, but ArivOn Academy made the transition smooth. The React course covered everything from basics to advanced concepts. Today, I lead a team at Microsoft building cutting-edge React applications.",
+        "I came from a non-tech background, but ArivuOn Academy made the transition smooth. The React course covered everything from basics to advanced concepts. Today, I lead a team at Microsoft building cutting-edge React applications.",
       rating: 5,
       salaryIncrease: "250%",
       placementTime: "4 months",
@@ -108,7 +108,7 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "The 1:1 mentorship at ArivOn Academy was game-changing. My mentor helped me build a portfolio that stood out. I went from ₹6 LPA to ₹18 LPA in just 6 months. The placement team was incredibly supportive throughout.",
+        "The 1:1 mentorship at ArivuOn Academy was game-changing. My mentor helped me build a portfolio that stood out. I went from ₹6 LPA to ₹18 LPA in just 6 months. The placement team was incredibly supportive throughout.",
       rating: 5,
       salaryIncrease: "200%",
       placementTime: "6 months",
@@ -143,7 +143,7 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Arun&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "The React program helped me transition from a designer to a developer. The project-based learning approach gave me confidence to build real applications. ArivOn Academy truly cares about student success.",
+        "The React program helped me transition from a designer to a developer. The project-based learning approach gave me confidence to build real applications. ArivuOn Academy truly cares about student success.",
       rating: 5,
       salaryIncrease: "170%",
       placementTime: "3 months",
@@ -223,7 +223,7 @@ const Testimonials = () => {
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              ArivOn Academy
+              ArivuOn Academy
             </span>{" "}
             <span className="bg-gradient-to-r from-[#FF7A1E] to-[#FF9A3E] bg-clip-text text-transparent">
               Success Stories
@@ -232,7 +232,7 @@ const Testimonials = () => {
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Hear from our alumni who transformed their careers and achieved
-            their dream jobs through ArivOn Academy's industry-focused training
+            their dream jobs through ArivuOn Academy's industry-focused training
             programs.
           </p>
         </div>
@@ -283,7 +283,7 @@ const Testimonials = () => {
                     <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-50 to-orange-100 px-4 py-2 rounded-full mb-6">
                       <Brain className="w-4 h-4 text-[#FF7A1E]" />
                       <span className="text-sm font-semibold text-gray-900">
-                        ArivOn Academy Alumni
+                        ArivuOn Academy Alumni
                       </span>
                     </div>
 
@@ -379,7 +379,7 @@ const Testimonials = () => {
                               Course Enrollment
                             </div>
                             <div className="text-sm text-gray-600">
-                              Joined ArivOn Academy
+                              Joined ArivuOn Academy
                             </div>
                           </div>
                         </div>
@@ -408,7 +408,7 @@ const Testimonials = () => {
                         </h5>
                         <p className="text-sm text-gray-600 mb-4">
                           Join thousands of successful graduates who transformed
-                          their careers with ArivOn Academy.
+                          their careers with ArivuOn Academy.
                         </p>
                       </div>
 

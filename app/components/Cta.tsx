@@ -91,7 +91,7 @@ const Cta = () => {
                   </span>
                   <br />
                   <span className="bg-gradient-to-r from-[#FF7A1E] to-[#FF9A3E] bg-clip-text text-transparent animate-gradient">
-                    At ArivOn Academy
+                    At ArivuOn Academy
                   </span>
                 </h2>
 
@@ -267,7 +267,7 @@ const Cta = () => {
                           href="tel:+919677377316"
                           className="underline hover:text-white"
                         >
-                          Call ArivOn Counselor: +91 96773 77316
+                          Call ArivuOn Counselor: +91 96773 77316
                         </a>
                       </p>
                     </div>

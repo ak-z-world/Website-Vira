@@ -103,7 +103,7 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["arivonacademy.info@gmail.com"],
+      details: ["arivuonacademy.info@gmail.com"],
       subtitle: "Response within 24 hours",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-gradient-to-br from-blue-50 to-indigo-100/50",
@@ -121,13 +121,13 @@ export default function ContactPage() {
 
   const faqs = [
     {
-      question: 'What is ArivOn Academy?',
-      answer: 'ArivOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
+      question: 'What is ArivuOn Academy?',
+      answer: 'ArivuOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
       category: 'general'
     },
     {
       question: 'Are the courses online or offline?',
-      answer: 'All courses at ArivOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
+      answer: 'All courses at ArivuOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
       category: 'courses'
     },
     {
@@ -229,7 +229,7 @@ export default function ContactPage() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-600 mb-6 max-w-md mx-auto">
-                      Thank you for contacting ArivOn Academy. Our admissions team
+                      Thank you for contacting ArivuOn Academy. Our admissions team
                       will reach out to you within 24 hours.
                     </p>
                     {/* <div className="flex gap-4 justify-center">

@@ -15,7 +15,6 @@
     "thankYou": "Thank You!",
     "contactSupport": "Contact Support"
   },
-
   "courses": {
     "devops": {
       "title": "DevOps Engineering",
@@ -35,7 +34,47 @@
       "jobGrowth": "Job Growth Rate",
       "industryDemand": "Market Demand",
       "ctaTitle": "Start Your DevOps Career",
+      "projects": {
+        "cicd": {
+          "title": "End-to-End CI/CD Pipeline",
+          "description": "Build automated deployment pipeline using Jenkins integrated with AWS infrastructure.",
+          "technologies": {
+            "jenkins": "Jenkins",
+            "git": "Git",
+            "aws": "AWS"
+          }
+        },
+        "microservices": {
+          "title": "Production Deployment with CI/CD",
+          "description": "Deploy applications to AWS using Git, Jenkins, and Infrastructure as Code.",
+          "technologies": {
+            "git": "Git",
+            "jenkins": "Jenkins",
+            "terraform": "Terraform"
+          }
+        },
+        "infrastructure": {
+          "title": "Infrastructure Automation Project",
+          "description": "Provision AWS infrastructure using Terraform and implement monitoring with CloudWatch.",
+          "technologies": {
+            "terraform": "Terraform",
+            "aws": "AWS",
+            "cloudwatch": "CloudWatch"
+          }
+        }
+      },
       "ctaDesc": "Join the most comprehensive DevOps program and become a job-ready DevOps engineer in 16 weeks.",
+      "courseDetails": {
+        "duration": "6 Weeks",
+        "mode": "Live Online",
+        "batchSize": "Limited Seats (Max 10 Students)",
+        "morningBatch": "8:30 AM – 9:30 AM (AST – Kuwait Time)",
+        "eveningBatch": "8:30 PM – 9:30 PM (AST – Kuwait Time)",
+        "level": "Beginner to Intermediate",
+        "nextBatch": "Coming Soon",
+        "seatsLeft": "10",
+        "rating": "4.8"
+      },
       "modules": {
         "fundamentals": {
           "title": "DevOps Fundamentals",
@@ -50,7 +89,6 @@
             "tools": "Overview of DevOps Tools Used in Industry"
           }
         },
-
         "aws": {
           "title": "AWS Cloud Fundamentals",
           "duration": "Week 2",
@@ -60,13 +98,12 @@
             "iam": "IAM (Users, Roles, Policies)",
             "ec2": "EC2 Instances Launch and Management",
             "security": "Security Groups and Key Pairs",
-            "networking": "AWS Networking Concepts",
+            "networking": "Basic AWS Networking Concepts",
             "practice": "Hands-on AWS Practice"
           }
         },
-
         "git": {
-          "title": "Git Version Control",
+          "title": "Git – Version Control",
           "duration": "Week 3",
           "topics": {
             "importance": "Importance of Version Control",
@@ -78,7 +115,6 @@
             "practice": "Hands-on Git Practice"
           }
         },
-
         "jenkins": {
           "title": "CI/CD with Jenkins",
           "duration": "Week 4",
@@ -92,23 +128,21 @@
             "practice": "Hands-on CI/CD Pipeline"
           }
         },
-
         "terraform": {
-          "title": "Infrastructure as Code with Terraform",
+          "title": "Infrastructure as Code – Terraform",
           "duration": "Week 5",
           "topics": {
             "iac": "Infrastructure as Code Concepts",
             "architecture": "Terraform Architecture and Workflow",
-            "providers": "Providers, Resources, and State Files",
+            "providers": "Providers, Resources and State Files",
             "configuration": "Writing Terraform Configuration Files",
             "aws": "Creating AWS Infrastructure using Terraform",
             "bestPractices": "Terraform Best Practices",
             "practice": "Hands-on Terraform Labs"
           }
         },
-
-        "project": {
-          "title": "Final Project and Monitoring",
+        "finalProject": {
+          "title": "Final Project & Monitoring",
           "duration": "Week 6",
           "topics": {
             "cloudwatch": "AWS CloudWatch Overview",
@@ -121,10 +155,153 @@
             "walkthrough": "Complete Project Walkthrough"
           }
         }
-
+      },
+      "benefits": {
+        "liveTraining": "Live Instructor-Led Training",
+        "smallBatch": "Small Batch Size (Max 10 Students)",
+        "handsOn": "Real-Time Hands-on Labs",
+        "project": "End-to-End Real-World DevOps Project",
+        "awsFocus": "Strong Focus on AWS Cloud",
+        "mentorship": "Career Guidance and Mentorship"
+      },
+      "outcomes": {
+        "ciCd": "Design and Implement Complete CI/CD Pipelines",
+        "awsDeploy": "Deploy and Manage Applications on AWS",
+        "gitWorkflow": "Manage Version Control using Git and GitHub",
+        "jenkinsAutomation": "Automate Build and Deployment using Jenkins",
+        "terraformProvision": "Provision Infrastructure using Terraform",
+        "monitoring": "Implement Monitoring and Logging using CloudWatch",
+        "bestPractices": "Apply Industry-Level DevOps Best Practices",
+        "projectExperience": "Gain Real-World DevOps Project Experience"
       }
     },
-
+    "pythonDevopsCombo": {
+      "title": "Python Full Stack + AWS DevOps Engineering",
+      "subtitle": "Build Applications. Deploy to Cloud. Automate Everything.",
+      "description": "Master Python programming, Django backend development, REST APIs, AWS cloud infrastructure, CI/CD automation, and Infrastructure as Code.",
+      "tagline": "Complete Developer to DevOps Career Path",
+      "heroText": "Build scalable Django applications and deploy them to AWS using CI/CD pipelines and Terraform automation.",
+      "ecosystemTitle": "Full Stack + Cloud Ecosystem",
+      "stackTitle": "Master the Complete Modern Stack",
+      "curriculumTitle": "Structured Learning Path",
+      "curriculumDesc": "From Python fundamentals to full production cloud deployment in 16 weeks.",
+      "projectsTitle": "End-to-End Deployment Projects",
+      "skillsTitle": "Skills You Will Master",
+      "careerTitle": "Full Stack + DevOps Career Opportunities",
+      "careerSubtitle": "Why This Combo Is Highly In Demand",
+      "averageSalary": "Average Salary Range",
+      "jobGrowth": "Job Growth Rate",
+      "industryDemand": "Market Demand",
+      "ctaTitle": "Launch Your Full Stack + DevOps Career",
+      "ctaDesc": "Join the most comprehensive Python + AWS DevOps combo program and become job-ready in 16 weeks.",
+      "courseDetails": {
+        "title": "Python Full Stack + AWS DevOps Engineering (Combo Pack)",
+        "subtitle": "Build scalable Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
+        "description": "Master Python programming, Django backend development, APIs, databases, and complete DevOps automation using AWS, Git, Jenkins, and Terraform.",
+        "duration": "16 Weeks",
+        "level": "Beginner to Advanced",
+        "nextBatch": "March 30, 2026",
+        "seatsLeft": "10",
+        "rating": "4.9"
+      },
+      "modules": {
+        "pythonFundamentals": {
+          "title": "Python Programming Foundations",
+          "duration": "Weeks 1-3",
+          "topics": {
+            "syntax": "Python Syntax and Data Structures",
+            "functions": "Functions and OOP Concepts",
+            "files": "File Handling and Exception Handling",
+            "practice": "Hands-on Coding Projects"
+          }
+        },
+        "djangoDevelopment": {
+          "title": "Django Backend Development",
+          "duration": "Weeks 4-6",
+          "topics": {
+            "architecture": "MVC Architecture",
+            "models": "Models, Views and URL Routing",
+            "auth": "Authentication and Authorization",
+            "rest": "Django REST Framework APIs"
+          }
+        },
+        "databaseApi": {
+          "title": "Database and API Design",
+          "duration": "Weeks 7-8",
+          "topics": {
+            "postgres": "PostgreSQL Database Integration",
+            "orm": "Django ORM and Relationships",
+            "optimization": "API Optimization",
+            "deploymentPrep": "Production Deployment Preparation"
+          }
+        },
+        "devopsFundamentals": {
+          "title": "DevOps Fundamentals",
+          "duration": "Week 9",
+          "topics": {
+            "lifecycle": "DevOps Lifecycle",
+            "agile": "Agile and SDLC Overview",
+            "cicd": "CI/CD Concepts",
+            "roles": "DevOps Roles and Responsibilities"
+          }
+        },
+        "awsInfrastructure": {
+          "title": "AWS Cloud Infrastructure",
+          "duration": "Weeks 10-11",
+          "topics": {
+            "iam": "IAM (Users, Roles, Policies)",
+            "ec2": "EC2 and Security Groups",
+            "networking": "AWS Networking Basics",
+            "deployment": "Application Deployment on AWS"
+          }
+        },
+        "gitCicd": {
+          "title": "Git and CI/CD Automation",
+          "duration": "Weeks 12-13",
+          "topics": {
+            "git": "Git Workflow and Branching",
+            "github": "GitHub Collaboration",
+            "jenkins": "Jenkins Installation and Setup",
+            "pipelines": "CI/CD Pipeline Automation"
+          }
+        },
+        "terraformMonitoring": {
+          "title": "Infrastructure as Code and Monitoring",
+          "duration": "Weeks 14-16",
+          "topics": {
+            "terraform": "Terraform Configuration and Provisioning",
+            "awsInfra": "Provision AWS Infrastructure",
+            "cloudwatch": "CloudWatch Monitoring and Alerts",
+            "finalProject": "End-to-End Production Deployment"
+          }
+        }
+      },
+      "benefits": {
+        "certification": "Full Stack + DevOps Certification",
+        "hours": "150+ Hours of Live Training",
+        "projects": "10+ Real Industry Projects",
+        "mentorship": "1:1 Mentorship and Career Guidance"
+      },
+      "outcomes": {
+        "buildApps": "Build production-ready Django web applications",
+        "createApis": "Design secure REST APIs",
+        "deployAws": "Deploy applications on AWS EC2",
+        "cicd": "Automate CI/CD pipelines using Jenkins",
+        "terraform": "Provision infrastructure using Terraform",
+        "monitoring": "Monitor applications using CloudWatch",
+        "bestPractices": "Implement DevOps best practices",
+        "careerReady": "Become job-ready as a Full Stack + DevOps Engineer"
+      },
+      "tools": {
+        "python": "Python 3.11+",
+        "django": "Django 4.2+",
+        "postgres": "PostgreSQL",
+        "aws": "AWS Cloud",
+        "git": "Git and GitHub",
+        "jenkins": "Jenkins",
+        "terraform": "Terraform"
+      }
+    },
     "python": {
       "title": "Python and Django Development",
       "subtitle": "Master backend development using the most powerful Python web framework. Build scalable, production-ready applications.",
@@ -187,7 +364,6 @@
         "projects": "10+ real Django projects",
         "mentorship": "Personal mentorship sessions"
       },
-
       "outcomes": {
         "buildApps": "Build production-ready Django applications",
         "createApis": "Create RESTful APIs with Django REST Framework",
@@ -198,9 +374,7 @@
         "optimization": "Optimize Django application performance",
         "bestPractices": "Follow Django best practices"
       }
-
     },
-
     "react": {
       "title": "React Development",
       "subtitle": "Master Modern Frontend Development",
@@ -217,9 +391,109 @@
       "careerTitle": "React Career Opportunities",
       "careerSubtitle": "Why React Developers are in High Demand",
       "ctaTitle": "Start Your React Journey",
-      "ctaDesc": "Join thousands of developers who launched their careers through our React program."
+      "includesProjects": "Includes",
+      "project": "hands-on projects",
+      "ctaDesc": "Join thousands of developers who launched their careers through our React program.",
+      "courseDetails": {
+        "duration": "12 Weeks",
+        "level": "Beginner to Advanced",
+        "nextBatch": "March 28, 2026",
+        "seatsLeft": "10",
+        "rating": "4.9"
+      },
+      "modules": {
+        "fundamentals": {
+          "title": "React Fundamentals",
+          "duration": "3 Weeks",
+          "topics": {
+            "jsx": "JSX and Components",
+            "props": "Props and State Management",
+            "hooks": "Hooks Ecosystem",
+            "events": "Event Handling",
+            "lifecycle": "Component Lifecycle"
+          }
+        },
+        "advanced": {
+          "title": "Advanced React Patterns",
+          "duration": "3 Weeks",
+          "topics": {
+            "context": "Context API and Redux",
+            "customHooks": "Custom Hooks",
+            "performance": "Performance Optimization",
+            "error": "Error Boundaries",
+            "splitting": "Code Splitting"
+          }
+        },
+        "nextjs": {
+          "title": "Next.js Mastery",
+          "duration": "3 Weeks",
+          "topics": {
+            "router": "App Router Architecture",
+            "serverClient": "Server and Client Components",
+            "api": "API Routes",
+            "rendering": "SSR / SSG / ISR",
+            "middleware": "Middleware and Authentication"
+          }
+        },
+        "modern": {
+          "title": "Modern Frontend Development",
+          "duration": "3 Weeks",
+          "topics": {
+            "typescript": "TypeScript Integration",
+            "testing": "Testing with Jest and RTL",
+            "state": "Advanced State Management",
+            "ui": "UI Libraries Integration",
+            "animations": "Frontend Animations"
+          }
+        }
+      },
+      "benefits": {
+        "projects": "Build Production-Ready Projects",
+        "patterns": "Master Modern React Patterns",
+        "fullstack": "Full-Stack Application Development",
+        "mentorship": "Industry Expert Mentorship",
+        "portfolio": "GitHub Portfolio Setup"
+      },
+      "outcomes": {
+        "scalable": "Build scalable React applications with modern architecture",
+        "nextjs": "Master Next.js for production-ready applications",
+        "typescript": "Implement TypeScript for type-safe development",
+        "ui": "Create responsive UIs using Tailwind CSS",
+        "testing": "Set up comprehensive testing with Jest and React Testing Library",
+        "redux": "Implement state management using Redux Toolkit",
+        "performance": "Optimize application performance",
+        "deployment": "Deploy applications to production environments"
+      },
+      "projects": {
+        "ecommerce": {
+          "title": "E-Commerce Platform",
+          "description": "Full-featured online store with cart, checkout, payment integration, and admin dashboard",
+          "technologies": {
+            "next": "Next.js 14",
+            "tailwind": "Tailwind CSS",
+            "redux": "Redux Toolkit"
+          }
+        },
+        "social": {
+          "title": "Social Media Dashboard",
+          "description": "Real-time social platform with posts, comments, likes, and user authentication",
+          "technologies": {
+            "react": "React",
+            "context": "Context API",
+            "mui": "Material UI"
+          }
+        },
+        "analytics": {
+          "title": "Analytics Dashboard",
+          "description": "Interactive data visualization platform with charts, filters, and real-time updates",
+          "technologies": {
+            "next": "Next.js",
+            "typescript": "TypeScript",
+            "api": "API Integration"
+          }
+        }
+      }
     },
-
     "list": {
       "sectionTitle": "Industry-Focused Tech Programs",
       "sectionDesc": "Accelerate your tech career through hands-on training and real-world projects.",
@@ -233,7 +507,6 @@
       "availableSeats": "Available Seats"
     }
   },
-
   "contact": {
     "heroTitle": "Get in Touch",
     "heroSubtitle": "Contact Us",
@@ -257,7 +530,6 @@
     "finalCta": "Start Your Tech Transformation",
     "talkAdmissions": "Talk to Admissions"
   },
-
   "faq": {
     "heroTitle": "Frequently Asked Questions",
     "heroDesc": "Find quick answers to common questions about courses and enrollment.",
@@ -278,4 +550,3 @@
     "callSupport": "Call Support"
   }
 }
-

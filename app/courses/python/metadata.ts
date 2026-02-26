@@ -1,28 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arivonacademy.vercel.app"),
+  metadataBase: new URL("https://arivuonacademy.vercel.app"),
 
   title:
-    "Python Course Online | Professional Python Programming, Django, APIs & Backend Development | ArivOn Academy",
+    "Python Course Online | Professional Python Programming, Django, APIs & Backend Development | ArivuOn Academy",
 
   description:
-    "Join ArivOn Academy's globally accessible Python course. Learn Python programming, Django, REST APIs, backend development, and deployment with real-world projects. Available worldwide for students, professionals, and beginners.",
+    "Join ArivuOn Academy's globally accessible Python course. Learn Python programming, Django, REST APIs, backend development, and deployment with real-world projects. Available worldwide for students, professionals, and beginners.",
 
-  applicationName: "ArivOn Academy",
+  applicationName: "ArivuOn Academy",
 
   authors: [
     {
-      name: "ArivOn Academy",
-      url: "https://arivonacademy.vercel.app",
+      name: "ArivuOn Academy",
+      url: "https://arivuonacademy.vercel.app",
     },
   ],
 
   generator: "Next.js",
 
-  creator: "ArivOn Academy",
+  creator: "ArivuOn Academy",
 
-  publisher: "ArivOn Academy",
+  publisher: "ArivuOn Academy",
 
   category: "Education",
 
@@ -83,30 +83,30 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://arivonacademy.vercel.app/courses/python",
+    canonical: "https://arivuonacademy.vercel.app/courses/python",
   },
 
   openGraph: {
     type: "website",
 
-    url: "https://arivonacademy.vercel.app/courses/python",
+    url: "https://arivuonacademy.vercel.app/courses/python",
 
     title:
-      "Python Course Online | Django, APIs & Backend Development | ArivOn Academy",
+      "Python Course Online | Django, APIs & Backend Development | ArivuOn Academy",
 
     description:
       "Master Python programming with Django, REST APIs, backend systems, and real-world projects. Globally accessible training.",
 
-    siteName: "ArivOn Academy",
+    siteName: "ArivuOn Academy",
 
     locale: "en_US",
 
     images: [
       {
-        url: "https://arivonacademy.vercel.app/og-image.png",
+        url: "https://arivuonacademy.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Python Course - ArivOn Academy",
+        alt: "Python Course - ArivuOn Academy",
       },
     ],
   },
@@ -114,14 +114,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Python Course Online | ArivOn Academy",
+    title: "Python Course Online | ArivuOn Academy",
 
     description:
       "Become a professional Python developer with real-world projects and industry-level training.",
 
-    images: ["https://arivonacademy.vercel.app/og-image.png"],
+    images: ["https://arivuonacademy.vercel.app/og-image.png"],
 
-    creator: "@arivonacademy",
+    creator: "@arivuonacademy",
   },
 
   other: {
@@ -145,10 +145,10 @@ export const metadata: Metadata = {
 
     revisitAfter: "1 days",
 
-    owner: "ArivOn Academy",
+    owner: "ArivuOn Academy",
 
-    url: "https://arivonacademy.vercel.app",
+    url: "https://arivuonacademy.vercel.app",
 
-    identifierURL: "https://arivonacademy.vercel.app/courses/python",
+    identifierURL: "https://arivuonacademy.vercel.app/courses/python",
   },
 };
