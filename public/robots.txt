@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arivonacademy.vercel.app/sitemap.xml
+Sitemap: https://arivuonacademy.vercel.app/sitemap.xml

@@ -12,6 +12,7 @@ import {
 
 import Link from "next/link";
 import { useGlobal } from "@/app/providers";
+import { label } from "framer-motion/client";
 
 const Footer = () => {
   const { language, setLanguage, currency, setCurrency } = useGlobal();
@@ -28,6 +29,7 @@ const Footer = () => {
     { label: "DevOps Engineering", href: "/courses/devops" },
     { label: "React Development", href: "/courses/react" },
     { label: "Data Science", href: "/courses/datasci" },
+    { label: "Python + Devops Combo", href: "/courses/python-aws-devops-combo" },
   ];
 
   return (
@@ -61,7 +63,7 @@ const Footer = () => {
 
   <Image
     src="/assets/icons/logo2.png"
-    alt="ArivOn Academy Logo"
+    alt="ArivuOn Academy Logo"
     width={200}
     height={80}
     priority
@@ -82,7 +84,7 @@ const Footer = () => {
 
               <div>
                 <div className="text-xl font-bold text-gray-900">
-                  ArivOn
+                  ArivuOn
                   <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent ml-1">
                     Academy
                   </span>
@@ -198,7 +200,7 @@ const Footer = () => {
                 </div>
 
                 <span className="text-gray-600 text-sm">
-                  arivonacademy.info@gmail.com
+                  arivuonacademy.info@gmail.com
                 </span>
 
               </div>
@@ -326,7 +328,7 @@ const Footer = () => {
             {/* copyright */}
             <div className="text-gray-500 text-center lg:text-right">
 
-              © {new Date().getFullYear()} ArivOn Academy. All rights reserved.
+              © {new Date().getFullYear()} ArivuOn Academy. All rights reserved.
 
             </div>
 

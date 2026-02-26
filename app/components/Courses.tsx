@@ -128,7 +128,7 @@ export default function Courses() {
           ">
             <Brain className="w-4 h-4 text-blue-600" />
             <span className="text-sm font-semibold text-blue-700">
-              ArivOn Academy Programs
+              ArivuOn Academy Programs
             </span>
           </div>
 

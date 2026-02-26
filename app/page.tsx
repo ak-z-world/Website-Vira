@@ -6,9 +6,9 @@ import Features from './components/Features';
 // import Cta from './components/Cta';
 
 export const metadata = {
-  title: "Best Python Training Institute in Chennai | ArivOn Academy",
+  title: "Best Python Training Institute in Chennai | ArivuOn Academy",
   description:
-    "Join ArivOn Academy to learn Python, DevOps, and React with real-time projects. 100% placement assistance.",
+    "Join ArivuOn Academy to learn Python, DevOps, and React with real-time projects. 100% placement assistance.",
 };
 
 export default function Home() {

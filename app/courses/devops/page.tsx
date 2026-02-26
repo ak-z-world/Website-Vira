@@ -1,11 +1,15 @@
+"use client";
+import { useGlobal } from '@/app/providers';
 import { CloudCog, Clock, Users, CheckCircle, ArrowRight, BookOpen, Server, Zap, Sparkles, TrendingUp, Database, Terminal, Cpu, Globe, Shield, Award, Star, Layers, GitBranch, Codepen, Cloud, Settings, HardDrive, Wifi, Workflow, Briefcase, Target, Rocket, Layout, Code2 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function DevOpsCoursePage() {
+  const { t, price, originalPrice } = useGlobal();
+
   const courseDetails = {
     title: 'DevOps Engineering',
     subtitle: 'Master Cloud & Automation',
-    description: 'Become an expert in CI/CD pipelines, container orchestration, cloud infrastructure, and infrastructure automation.',
+    description: t("courses.devops.description"),
     duration: '16 Weeks',
     level: 'Intermediate to Advanced',
     fee: '₹30,000',
@@ -16,48 +20,121 @@ export default function DevOpsCoursePage() {
   };
 
   const modules = [
-    { 
-      title: 'Linux & Automation', 
-      topics: ['Linux System Administration', 'Bash Scripting', 'Process Management', 'Networking Fundamentals'],
+    {
+      title: "courses.devops.modules.fundamentals.title",
+      duration: "courses.devops.modules.fundamentals.duration",
+      topics: [
+        "courses.devops.modules.fundamentals.topics.intro",
+        "courses.devops.modules.fundamentals.topics.problems",
+        "courses.devops.modules.fundamentals.topics.culture",
+        "courses.devops.modules.fundamentals.topics.lifecycle",
+        "courses.devops.modules.fundamentals.topics.agile",
+        "courses.devops.modules.fundamentals.topics.roles",
+        "courses.devops.modules.fundamentals.topics.tools",
+      ],
       icon: <Terminal className="w-5 h-5" />,
-      duration: '3 Weeks',
-      projects: 2
+      projects: 2,
     },
-    { 
-      title: 'CI/CD & Version Control', 
-      topics: ['Git Advanced', 'Jenkins Pipeline', 'GitLab CI/CD', 'GitHub Actions', 'Build Automation'],
+
+    {
+      title: "courses.devops.modules.aws.title",
+      duration: "courses.devops.modules.aws.duration",
+      topics: [
+        "courses.devops.modules.aws.topics.cloud",
+        "courses.devops.modules.aws.topics.infrastructure",
+        "courses.devops.modules.aws.topics.iam",
+        "courses.devops.modules.aws.topics.ec2",
+        "courses.devops.modules.aws.topics.security",
+        "courses.devops.modules.aws.topics.networking",
+        "courses.devops.modules.aws.topics.practice",
+      ],
+      icon: <Cloud className="w-5 h-5" />,
+      projects: 2,
+    },
+
+    {
+      title: "courses.devops.modules.git.title",
+      duration: "courses.devops.modules.git.duration",
+      topics: [
+        "courses.devops.modules.git.topics.importance",
+        "courses.devops.modules.git.topics.architecture",
+        "courses.devops.modules.git.topics.installation",
+        "courses.devops.modules.git.topics.commands",
+        "courses.devops.modules.git.topics.branching",
+        "courses.devops.modules.git.topics.github",
+        "courses.devops.modules.git.topics.practice",
+      ],
       icon: <GitBranch className="w-5 h-5" />,
-      duration: '3 Weeks',
-      projects: 3
+      projects: 2,
     },
-    { 
-      title: 'Containerization', 
-      topics: ['Docker Fundamentals', 'Docker Compose', 'Image Optimization', 'Container Security', 'Registry Management'],
-      icon: <Codepen className="w-5 h-5" />,
-      duration: '4 Weeks',
-      projects: 3
-    },
-    { 
-      title: 'Kubernetes Orchestration', 
-      topics: ['K8s Architecture', 'Pods & Services', 'Deployments & StatefulSets', 'Helm Charts', 'Monitoring & Logging'],
+
+    {
+      title: "courses.devops.modules.jenkins.title",
+      duration: "courses.devops.modules.jenkins.duration",
+      topics: [
+        "courses.devops.modules.jenkins.topics.cicd",
+        "courses.devops.modules.jenkins.topics.architecture",
+        "courses.devops.modules.jenkins.topics.installation",
+        "courses.devops.modules.jenkins.topics.pipelines",
+        "courses.devops.modules.jenkins.topics.integration",
+        "courses.devops.modules.jenkins.topics.automation",
+        "courses.devops.modules.jenkins.topics.practice",
+      ],
       icon: <Cpu className="w-5 h-5" />,
-      duration: '4 Weeks',
-      projects: 4
+      projects: 3,
     },
-    { 
-      title: 'Infrastructure as Code', 
-      topics: ['Terraform Fundamentals', 'AWS Infrastructure', 'Ansible Automation', 'Configuration Management', 'CloudFormation'],
+
+    {
+      title: "courses.devops.modules.terraform.title",
+      duration: "courses.devops.modules.terraform.duration",
+      topics: [
+        "courses.devops.modules.terraform.topics.iac",
+        "courses.devops.modules.terraform.topics.architecture",
+        "courses.devops.modules.terraform.topics.providers",
+        "courses.devops.modules.terraform.topics.configuration",
+        "courses.devops.modules.terraform.topics.aws",
+        "courses.devops.modules.terraform.topics.bestPractices",
+        "courses.devops.modules.terraform.topics.practice",
+      ],
       icon: <Settings className="w-5 h-5" />,
-      duration: '2 Weeks',
-      projects: 2
+      projects: 2,
+    },
+
+    {
+      title: "courses.devops.modules.finalProject.title",
+      duration: "courses.devops.modules.finalProject.duration",
+      topics: [
+        "courses.devops.modules.finalProject.topics.cloudwatch",
+        "courses.devops.modules.finalProject.topics.monitoring",
+        "courses.devops.modules.finalProject.topics.bestPractices",
+        "courses.devops.modules.finalProject.topics.infrastructure",
+        "courses.devops.modules.finalProject.topics.git",
+        "courses.devops.modules.finalProject.topics.jenkins",
+        "courses.devops.modules.finalProject.topics.terraform",
+        "courses.devops.modules.finalProject.topics.walkthrough",
+      ],
+      icon: <Workflow className="w-5 h-5" />,
+      projects: 2,
     },
   ];
 
   const benefits = [
-    { icon: <Award className="w-5 h-5" />, text: 'AWS/Azure/GCP certification prep' },
-    { icon: <Layers className="w-5 h-5" />, text: '15+ hands-on DevOps projects' },
-    { icon: <Workflow className="w-5 h-5" />, text: 'Real-world production deployment' },
-    { icon: <Users className="w-5 h-5" />, text: 'Industry expert mentorship' },
+    { icon: <Award className="w-5 h-5" />, text: "courses.devops.benefits.liveTraining" },
+    { icon: <Layers className="w-5 h-5" />, text: "courses.devops.benefits.smallBatch" },
+    { icon: <Workflow className="w-5 h-5" />, text: "courses.devops.benefits.handsOn" },
+    { icon: <Users className="w-5 h-5" />, text: "courses.devops.benefits.mentorship" },
+    { icon: <Cpu className="w-5 h-5" />, text: "courses.devops.benefits.project" },
+  ];
+
+  const outcomes = [
+    t("courses.devops.outcomes.ciCd"),
+    t("courses.devops.outcomes.awsDeploy"),
+    t("courses.devops.outcomes.gitWorkflow"),
+    t("courses.devops.outcomes.jenkinsAutomation"),
+    t("courses.devops.outcomes.terraformProvision"),
+    t("courses.devops.outcomes.monitoring"),
+    t("courses.devops.outcomes.bestPractices"),
+    t("courses.devops.outcomes.projectExperience"),
   ];
 
   const tools = [
@@ -67,32 +144,33 @@ export default function DevOpsCoursePage() {
     { name: 'Terraform', icon: <HardDrive className="w-4 h-4" />, category: 'Infrastructure as Code' },
   ];
 
-  const outcomes = [
-    'Design and implement complete CI/CD pipelines',
-    'Containerize applications using Docker',
-    'Deploy and manage Kubernetes clusters',
-    'Automate cloud infrastructure with Terraform',
-    'Implement monitoring and alerting systems',
-    'Manage configuration with Ansible',
-    'Implement security best practices in DevOps',
-    'Optimize cloud costs and performance',
-  ];
-
   const projects = [
     {
-      title: 'End-to-End CI/CD Pipeline',
-      description: 'Build automated deployment pipeline with Jenkins, Docker, and Kubernetes',
-      technologies: ['Jenkins', 'Docker']
+      title: t("courses.devops.projects.cicd.title"),
+      description: t("courses.devops.projects.cicd.description"),
+      technologies: [
+        t("courses.devops.projects.cicd.technologies.jenkins"),
+        t("courses.devops.projects.cicd.technologies.git"),
+        t("courses.devops.projects.cicd.technologies.aws"),
+      ],
     },
     {
-      title: 'Microservices Deployment',
-      description: 'Deploy and manage microservices on production Kubernetes cluster',
-      technologies: ['Kubernetes', 'Git' ]
+      title: t("courses.devops.projects.microservices.title"),
+      description: t("courses.devops.projects.microservices.description"),
+      technologies: [
+        t("courses.devops.projects.microservices.technologies.git"),
+        t("courses.devops.projects.microservices.technologies.jenkins"),
+        t("courses.devops.projects.microservices.technologies.terraform"),
+      ],
     },
     {
-      title: 'Cloud Infrastructure Automation',
-      description: 'Automate AWS infrastructure using Terraform and Ansible',
-      technologies: ['Terraform', 'AWS', 'CloudFormation']
+      title: t("courses.devops.projects.infrastructure.title"),
+      description: t("courses.devops.projects.infrastructure.description"),
+      technologies: [
+        t("courses.devops.projects.infrastructure.technologies.terraform"),
+        t("courses.devops.projects.infrastructure.technologies.aws"),
+        t("courses.devops.projects.infrastructure.technologies.cloudwatch"),
+      ],
     },
   ];
 
@@ -116,32 +194,26 @@ overflow-hidden
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tr from-blue-50 to-transparent rounded-full blur-3xl opacity-50" />
-        
+
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
-            {/* <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-              <Link href="/" className="hover:text-indigo-600 transition-colors">Home</Link>
-              <span>›</span>
-              <Link href="/courses" className="hover:text-indigo-600 transition-colors">Courses</Link>
-              <span>›</span>
-              <span className="text-indigo-600 font-semibold">DevOps Engineering</span>
-            </div> */}
-            
+
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
                   <TrendingUp className="w-4 h-4 text-blue-500" />
                   <span className="text-sm font-semibold text-indigo-600">High-Demand Career</span>
                 </div>
-                
+
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
                   DevOps <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Engineering</span>
                 </h1>
-                
+
                 <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                  Master the art of automation, cloud infrastructure, and deployment at scale. Become the DevOps expert companies are hiring.
+                  {t("courses.devops.description")}
                 </p>
-                
+
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                   <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.duration}</div>
@@ -151,16 +223,16 @@ overflow-hidden
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.level}</div>
                     <div className="text-sm text-gray-600">Level</div>
                   </div>
-                 
+
                   <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.rating}/5</div>
                     <div className="text-sm text-gray-600">Rating</div>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
-                    href="/contact" 
+                  <Link
+                    href="/contact"
                     className="
 group inline-flex items-center justify-center gap-3
 
@@ -182,10 +254,10 @@ transition-all duration-300
                     Enroll Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                 
+
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl">
@@ -198,18 +270,18 @@ transition-all duration-300
                       15% OFF
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-6">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
                           <div className="text-blue-500">{benefit.icon}</div>
                         </div>
-                        <span className="text-gray-700">{benefit.text}</span>
+                        <span className="text-gray-700">{t(benefit.text)}</span>
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-2xl p-4 mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-semibold text-gray-900">Next Batch Starts</span>
@@ -222,8 +294,8 @@ transition-all duration-300
                       <span className="font-semibold">{courseDetails.seatsLeft} seats left</span>
                     </div>
                   </div>
-                  
-                  <Link 
+
+                  <Link
                     href="/contact"
                     className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-300"
                   >
@@ -251,11 +323,11 @@ transition-all duration-300
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {tools.map((tool, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-4 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="p-2 bg-blue-50 rounded-lg">
@@ -268,7 +340,7 @@ transition-all duration-300
                 </div>
               ))}
             </div>
-            
+
             <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-3xl p-8">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -307,11 +379,11 @@ transition-all duration-300
                 From fundamentals to advanced concepts - become job-ready in 16 weeks
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto justify-items-center">
               {modules.map((module, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="
 group relative
 
@@ -333,24 +405,24 @@ transition-all duration-300
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                       <div className="text-white">{module.icon}</div>
                     </div>
-                    <div className="text-sm font-medium text-gray-500">{module.duration}</div>
+                    <div className="text-sm font-medium text-gray-500">{t(module.duration)}</div>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{module.title}</h3>
-                  
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{t(module.title)}</h3>
+
                   <ul className="space-y-2 mb-4">
                     {module.topics.map((topic, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-600">
                         <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                        <span>{topic}</span>
+                        <span>{t(topic)}</span>
                       </li>
                     ))}
                   </ul>
-                  
+
                   <div className="text-sm text-gray-500">
                     Includes {module.projects} hands-on projects
                   </div>
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
@@ -374,11 +446,11 @@ transition-all duration-300
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               {projects.map((project, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="absolute -top-4 left-6">
@@ -386,11 +458,11 @@ transition-all duration-300
                       {index + 1}
                     </div>
                   </div>
-                  
+
                   <div className="pt-8">
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{project.title}</h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, idx) => (
                         <span key={idx} className="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full">
@@ -416,13 +488,13 @@ transition-all duration-300
                   <Target className="w-4 h-4 text-blue-500" />
                   <span className="text-sm font-semibold text-indigo-600">Career Skills</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                   What You'll <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                     Master
                   </span>
                 </h2>
-                
+
                 <div className="space-y-4">
                   {outcomes.map((outcome, index) => (
                     <div key={index} className="flex items-start gap-3">
@@ -434,7 +506,7 @@ transition-all duration-300
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 text-white">
@@ -443,7 +515,7 @@ transition-all duration-300
                     <h3 className="text-2xl font-bold mb-2">DevOps Career Outlook</h3>
                     <p className="text-gray-300">Why DevOps is in high demand</p>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Average Salary</span>
@@ -473,17 +545,17 @@ transition-all duration-300
               <Rocket className="w-4 h-4 text-blue-500" />
               <span className="text-sm font-semibold text-indigo-600">Limited Seats Available</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
               Launch Your <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                 DevOps Career
               </span>
             </h2>
-            
+
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Join the most comprehensive DevOps program and become an in-demand DevOps Engineer in 16 weeks.
             </p>
-            
+
             <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl max-w-2xl mx-auto mb-10">
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -495,10 +567,10 @@ transition-all duration-300
                   <div className="text-lg font-bold text-indigo-600">{courseDetails.nextBatch}</div>
                 </div>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="group bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center justify-center gap-2">
@@ -506,8 +578,8 @@ transition-all duration-300
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="group bg-white border border-gray-200 text-gray-700 font-semibold py-4 px-6 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
@@ -516,7 +588,7 @@ transition-all duration-300
                   </div>
                 </Link>
               </div>
-              
+
               <div className="mt-6 text-sm text-gray-500 text-center">
                 Only {courseDetails.seatsLeft} seats available
               </div>

@@ -9,13 +9,13 @@ export default function FAQPage() {
 
   const faqs = [
     { 
-      question: 'What is ArivOn Academy?', 
-      answer: 'ArivOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
+      question: 'What is ArivuOn Academy?', 
+      answer: 'ArivuOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
       category: 'general'
     },
     { 
       question: 'Are the courses online or offline?', 
-      answer: 'All courses at ArivOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
+      answer: 'All courses at ArivuOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
       category: 'courses'
     },
     { 
@@ -79,7 +79,7 @@ export default function FAQPage() {
       category: 'support'
     },
     { 
-      question: 'How can I contact ArivOn Academy for support?', 
+      question: 'How can I contact ArivuOn Academy for support?', 
       answer: 'You can contact us through our official website, email, or designated communication channels for any academic or technical support.',
       category: 'support'
     },
@@ -130,7 +130,7 @@ export default function FAQPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                Find quick answers to common questions about courses, enrollment, and support at ArivOn Academy.
+                Find quick answers to common questions about courses, enrollment, and support at ArivuOn Academy.
               </p>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function FAQPage() {
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
-                      href="mailto:arivonacademy.info@gmail.com"
+                      href="mailto:arivuonacademy.info@gmail.com"
                       className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
                     >
                       <Mail className="w-5 h-5" />

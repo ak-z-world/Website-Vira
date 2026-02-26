@@ -71,7 +71,7 @@ export default function Features() {
     {
       id: 4,
       icon: <Award />,
-      title: "ArivOn Certification",
+      title: "ArivuOn Certification",
       description:
         "Industry-recognized certification to boost hiring potential.",
       benefits: [
@@ -114,7 +114,7 @@ export default function Features() {
           bg-blue-50 border border-blue-200 text-blue-700 font-semibold mb-4">
 
             <Zap className="w-4 h-4"/>
-            ArivOn Learning System
+            ArivuOn Learning System
 
           </div>
 

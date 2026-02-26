@@ -1,11 +1,15 @@
+"use client";
 import { Cpu, Clock, Users, CheckCircle, ArrowRight, BookOpen, Code2, Layout, Zap, Sparkles, TrendingUp, Palette, Globe, Shield, Award, Star, Layers, GitBranch, Terminal, TestTube, Smartphone, Monitor, Database, Workflow, Briefcase, Target, Rocket, Server } from 'lucide-react';
 import Link from 'next/link';
+import { useGlobal } from "@/app/providers";
+
 
 export default function ReactCoursePage() {
+  const { t, price, originalPrice } = useGlobal();
   const courseDetails = {
     title: 'React Development',
     subtitle: 'Modern Frontend Mastery',
-    description: 'Master React, Next.js, TypeScript, and modern frontend tools to build high-performance web applications.',
+    description: t("courses.react.description"),
     duration: '12 Weeks',
     level: 'Beginner to Advanced',
     fee: '₹25,000',
@@ -16,42 +20,66 @@ export default function ReactCoursePage() {
   };
 
   const modules = [
-    { 
-      title: 'React Fundamentals', 
-      topics: ['JSX & Components', 'Props & State Management', 'Hooks Ecosystem', 'Event Handling', 'Component Lifecycle'],
+    {
+      title: "courses.react.modules.fundamentals.title",
+      duration: "courses.react.modules.fundamentals.duration",
+      topics: [
+        "courses.react.modules.fundamentals.topics.jsx",
+        "courses.react.modules.fundamentals.topics.props",
+        "courses.react.modules.fundamentals.topics.hooks",
+        "courses.react.modules.fundamentals.topics.events",
+        "courses.react.modules.fundamentals.topics.lifecycle",
+      ],
       icon: <Code2 className="w-5 h-5" />,
-      duration: '3 Weeks',
-      projects: 3
+      projects: 3,
     },
-    { 
-      title: 'Advanced React Patterns', 
-      topics: ['Context API & Redux', 'Custom Hooks', 'Performance Optimization', 'Error Boundaries', 'Code Splitting'],
+    {
+      title: "courses.react.modules.advanced.title",
+      duration: "courses.react.modules.advanced.duration",
+      topics: [
+        "courses.react.modules.advanced.topics.context",
+        "courses.react.modules.advanced.topics.customHooks",
+        "courses.react.modules.advanced.topics.performance",
+        "courses.react.modules.advanced.topics.error",
+        "courses.react.modules.advanced.topics.splitting",
+      ],
       icon: <Zap className="w-5 h-5" />,
-      duration: '3 Weeks',
-      projects: 3
+      projects: 3,
     },
-    { 
-      title: 'Next.js Mastery', 
-      topics: ['App Router Architecture', 'Server & Client Components', 'API Routes', 'SSR/SSG/ISR', 'Middleware & Auth'],
+    {
+      title: "courses.react.modules.nextjs.title",
+      duration: "courses.react.modules.nextjs.duration",
+      topics: [
+        "courses.react.modules.nextjs.topics.router",
+        "courses.react.modules.nextjs.topics.serverClient",
+        "courses.react.modules.nextjs.topics.api",
+        "courses.react.modules.nextjs.topics.rendering",
+        "courses.react.modules.nextjs.topics.middleware",
+      ],
       icon: <Layout className="w-5 h-5" />,
-      duration: '3 Weeks',
-      projects: 4
+      projects: 4,
     },
-    { 
-      title: 'Modern Development', 
-      topics: ['TypeScript Integration', 'Testing with Jest & RTL', 'State Management', 'UI Libraries', 'Animations'],
+    {
+      title: "courses.react.modules.modern.title",
+      duration: "courses.react.modules.modern.duration",
+      topics: [
+        "courses.react.modules.modern.topics.typescript",
+        "courses.react.modules.modern.topics.testing",
+        "courses.react.modules.modern.topics.state",
+        "courses.react.modules.modern.topics.ui",
+        "courses.react.modules.modern.topics.animations",
+      ],
       icon: <Cpu className="w-5 h-5" />,
-      duration: '3 Weeks',
-      projects: 3
+      projects: 3,
     },
   ];
 
   const benefits = [
-    { icon: <Award className="w-5 h-5" />, text: 'Build production-ready projects' },
-    { icon: <Layers className="w-5 h-5" />, text: 'Master modern React patterns' },
-    { icon: <Monitor className="w-5 h-5" />, text: 'Full-stack application development' },
-    { icon: <Users className="w-5 h-5" />, text: 'Industry expert mentorship' },
-    { icon: <Database className="w-5 h-5" />, text: 'GitHub portfolio setup' },
+    { icon: <Award className="w-5 h-5" />, text: "courses.react.benefits.projects" },
+    { icon: <Layers className="w-5 h-5" />, text: "courses.react.benefits.patterns" },
+    { icon: <Monitor className="w-5 h-5" />, text: "courses.react.benefits.fullstack" },
+    { icon: <Users className="w-5 h-5" />, text: "courses.react.benefits.mentorship" },
+    { icon: <Database className="w-5 h-5" />, text: "courses.react.benefits.portfolio" },
   ];
 
   const technologies = [
@@ -66,31 +94,43 @@ export default function ReactCoursePage() {
   ];
 
   const outcomes = [
-    'Build scalable React applications with modern architecture',
-    'Master Next.js for production-ready applications',
-    'Implement TypeScript for type-safe development',
-    'Create responsive UIs with Tailwind CSS',
-    'Set up comprehensive testing with Jest & React Testing Library',
-    'Implement state management with Redux Toolkit',
-    'Optimize application performance',
-    'Deploy applications to production',
+    t("courses.react.outcomes.scalable"),
+    t("courses.react.outcomes.nextjs"),
+    t("courses.react.outcomes.typescript"),
+    t("courses.react.outcomes.ui"),
+    t("courses.react.outcomes.testing"),
+    t("courses.react.outcomes.redux"),
+    t("courses.react.outcomes.performance"),
+    t("courses.react.outcomes.deployment"),
   ];
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-featured online store with cart, checkout, payment integration, and admin dashboard',
-      technologies: ['Next.js 14', 'Tailwind', 'Redux']
+      title: "courses.react.projects.ecommerce.title",
+      description: "courses.react.projects.ecommerce.description",
+      technologies: [
+        "courses.react.projects.ecommerce.technologies.next",
+        "courses.react.projects.ecommerce.technologies.tailwind",
+        "courses.react.projects.ecommerce.technologies.redux",
+      ],
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Real-time social platform with posts, comments, likes, and user authentication',
-      technologies: ['React', 'Context API', 'Material-UI']
+      title: "courses.react.projects.social.title",
+      description: "courses.react.projects.social.description",
+      technologies: [
+        "courses.react.projects.social.technologies.react",
+        "courses.react.projects.social.technologies.context",
+        "courses.react.projects.social.technologies.mui",
+      ],
     },
     {
-      title: 'Analytics Dashboard',
-      description: 'Interactive data visualization platform with charts, filters, and real-time updates',
-      technologies: ['Next.js', 'TypeScript', 'API Integration']
+      title: "courses.react.projects.analytics.title",
+      description: "courses.react.projects.analytics.description",
+      technologies: [
+        "courses.react.projects.analytics.technologies.next",
+        "courses.react.projects.analytics.technologies.typescript",
+        "courses.react.projects.analytics.technologies.api",
+      ],
     },
   ];
 
@@ -102,32 +142,26 @@ export default function ReactCoursePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-indigo-50" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-indigo-100 to-transparent rounded-full blur-3xl opacity-60" />
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tr from-indigo-50 to-transparent rounded-full blur-3xl opacity-50" />
-        
+
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
-            {/* <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-              <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-              <span>›</span>
-              <Link href="/courses" className="hover:text-blue-600 transition-colors">Courses</Link>
-              <span>›</span>
-              <span className="text-blue-600 font-semibold">React Development</span>
-            </div> */}
-            
+
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
                   <TrendingUp className="w-4 h-4 text-blue-500" />
                   <span className="text-sm font-semibold text-blue-600">High-Demand Skill</span>
                 </div>
-                
+
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
                   React <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Development</span>
                 </h1>
-                
+
                 <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                  Master modern frontend development with React and Next.js. Build fast, scalable, and beautiful applications that users love.
+                  {t("courses.react.description")}
                 </p>
-                
+
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                   <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.duration}</div>
@@ -137,16 +171,16 @@ export default function ReactCoursePage() {
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.level}</div>
                     <div className="text-sm text-gray-600">Level</div>
                   </div>
-                  
+
                   <div className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-shadow flex flex-col justify-center items-center text-center h-full">
                     <div className="text-2xl font-bold text-gray-900 mb-1">{courseDetails.rating}/5</div>
                     <div className="text-sm text-gray-600">Rating</div>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
-                    href="/contact" 
+                  <Link
+                    href="/contact"
                     className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105"
                   >
                     Enroll Now
@@ -161,7 +195,7 @@ export default function ReactCoursePage() {
                   </Link> */}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl">
@@ -174,18 +208,18 @@ export default function ReactCoursePage() {
                       20% OFF
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-6">
                     {benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
                           <div className="text-blue-500">{benefit.icon}</div>
                         </div>
-                        <span className="text-gray-700">{benefit.text}</span>
+                        <span className="text-gray-700">{t(benefit.text)}</span>
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100/30 border border-blue-200 rounded-2xl p-4 mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-semibold text-gray-900">Next Batch Starts</span>
@@ -198,8 +232,8 @@ export default function ReactCoursePage() {
                       <span className="font-semibold">{courseDetails.seatsLeft} seats left</span>
                     </div>
                   </div>
-                  
-                  <Link 
+
+                  <Link
                     href="/contact"
                     className="block text-center py-3 bg-gray-50 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-300"
                   >
@@ -227,11 +261,11 @@ export default function ReactCoursePage() {
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {technologies.map((tech, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group flex items-center gap-3 bg-white border border-gray-100 rounded-xl p-4 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="p-2 bg-blue-50 rounded-lg">
@@ -244,7 +278,7 @@ export default function ReactCoursePage() {
                 </div>
               ))}
             </div>
-            
+
             <div className="bg-gradient-to-br from-indigo-50 to-indigo-100/30 border border-indigo-200 rounded-3xl p-8">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -283,35 +317,41 @@ export default function ReactCoursePage() {
                 From basics to advanced concepts - become a React expert in 12 weeks
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {modules.map((module, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
                       <div className="text-white">{module.icon}</div>
                     </div>
-                    <div className="text-sm font-medium text-gray-500">{module.duration}</div>
+
+                    <div className="text-sm font-medium text-gray-500">
+                      {t(module.duration)}
+                    </div>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{module.title}</h3>
-                  
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {t(module.title)}
+                  </h3>
+
                   <ul className="space-y-2 mb-4">
                     {module.topics.map((topic, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-600">
                         <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
-                        <span>{topic}</span>
+                        <span>{t(topic)}</span>
                       </li>
                     ))}
                   </ul>
-                  
+
                   <div className="text-sm text-gray-500">
-                    Includes {module.projects} hands-on projects
+                    {t("courses.react.includesProjects")} {module.projects}{" "}
+                    {t("courses.react.project")}
                   </div>
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
@@ -335,11 +375,11 @@ export default function ReactCoursePage() {
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               {projects.map((project, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="absolute -top-4 left-6">
@@ -347,15 +387,23 @@ export default function ReactCoursePage() {
                       {index + 1}
                     </div>
                   </div>
-                  
+
                   <div className="pt-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{project.title}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
-                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      {t(project.title)}
+                    </h3>
+
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {t(project.description)}
+                    </p>
+
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full">
-                          {tech}
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full"
+                        >
+                          {t(tech)}
                         </span>
                       ))}
                     </div>
@@ -377,13 +425,13 @@ export default function ReactCoursePage() {
                   <Target className="w-4 h-4 text-blue-500" />
                   <span className="text-sm font-semibold text-blue-600">Skills You'll Gain</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                   Master <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                     Frontend Development
                   </span>
                 </h2>
-                
+
                 <div className="space-y-4">
                   {outcomes.map((outcome, index) => (
                     <div key={index} className="flex items-start gap-3">
@@ -395,7 +443,7 @@ export default function ReactCoursePage() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full blur-3xl opacity-20" />
                 <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 text-white">
@@ -404,7 +452,7 @@ export default function ReactCoursePage() {
                     <h3 className="text-2xl font-bold mb-2">React Career Outlook</h3>
                     <p className="text-gray-300">Why React developers are in high demand</p>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                       <span className="text-gray-300">Average Salary</span>
@@ -434,17 +482,17 @@ export default function ReactCoursePage() {
               <Rocket className="w-4 h-4 text-blue-500" />
               <span className="text-sm font-semibold text-blue-600">Limited Seats Available</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
               Start Your <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                 React Journey
               </span>
             </h2>
-            
+
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Join thousands of developers who launched their careers with our React development program.
             </p>
-            
+
             <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-2xl max-w-2xl mx-auto mb-10">
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -456,10 +504,10 @@ export default function ReactCoursePage() {
                   <div className="text-lg font-bold text-blue-600">{courseDetails.nextBatch}</div>
                 </div>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="group bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center justify-center gap-2">
@@ -467,8 +515,8 @@ export default function ReactCoursePage() {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="group bg-white border border-gray-200 text-gray-700 font-semibold py-4 px-6 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-center gap-2">
@@ -477,7 +525,7 @@ export default function ReactCoursePage() {
                   </div>
                 </Link>
               </div>
-              
+
               <div className="mt-6 text-sm text-gray-500 text-center">
                 Only {courseDetails.seatsLeft} seats available • Portfolio review included
               </div>

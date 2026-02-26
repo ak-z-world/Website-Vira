@@ -94,10 +94,10 @@ export default function TermsPage() {
                     <div className="flex items-center justify-between">
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                          ArivOn Academy Terms & Conditions
+                          ArivuOn Academy Terms & Conditions
                         </h2>
                         <p className="text-gray-600 mt-2">
-                          Welcome to ArivOn Academy! We thank you for choosing us as your learning partner for professional software training.
+                          Welcome to ArivuOn Academy! We thank you for choosing us as your learning partner for professional software training.
                         </p>
                       </div>
                     </div>
@@ -111,7 +111,7 @@ export default function TermsPage() {
                         <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-orange-200">
                           <Shield className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" />
                           <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Welcome to ArivOn Academy</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Welcome to ArivuOn Academy</h3>
                             <p className="text-gray-700 leading-relaxed">
                               We thank you for choosing us as your learning partner for professional software training. Our mission is to empower students worldwide with career-oriented training and practical skills to prepare them for the competitive global job market.
                             </p>
@@ -139,7 +139,7 @@ export default function TermsPage() {
                           <div className="space-y-4">
                             <div className="p-4 bg-blue-50 rounded-xl">
                               <p className="text-gray-700">
-                                ArivOn Academy provides career guidance and placement assistance but does not guarantee job placement. Placement assistance includes resume building support, portfolio development, and mock interview preparation to improve employability.
+                                ArivuOn Academy provides career guidance and placement assistance but does not guarantee job placement. Placement assistance includes resume building support, portfolio development, and mock interview preparation to improve employability.
                               </p>
                             </div>
                           </div>
@@ -272,7 +272,7 @@ export default function TermsPage() {
 
                           <div className="p-4 bg-green-50 rounded-xl">
                             <p className="text-gray-700">
-                              ArivOn Academy ensures the confidentiality of personal data. Information collected during enrollment will be used solely for educational, administrative, and promotional purposes in accordance with applicable international data protection standards.
+                              ArivuOn Academy ensures the confidentiality of personal data. Information collected during enrollment will be used solely for educational, administrative, and promotional purposes in accordance with applicable international data protection standards.
                             </p>
                           </div>
                         </div>
@@ -294,7 +294,7 @@ export default function TermsPage() {
 
                           <div className="p-4 bg-indigo-50 rounded-xl">
                             <p className="text-gray-700">
-                              ArivOn Academy offers fully online learning accessible from anywhere in the world. Course fees may be paid in accepted currencies based on the student's country and available payment options.
+                              ArivuOn Academy offers fully online learning accessible from anywhere in the world. Course fees may be paid in accepted currencies based on the student's country and available payment options.
                             </p>
                           </div>
                         </div>
@@ -338,7 +338,7 @@ export default function TermsPage() {
 
                           <div className="p-4 bg-cyan-50 rounded-xl">
                             <p className="text-gray-700">
-                              ArivOn Academy assists students in developing professional resumes and portfolios to enhance career opportunities.
+                              ArivuOn Academy assists students in developing professional resumes and portfolios to enhance career opportunities.
                             </p>
                           </div>
                         </div>
@@ -355,7 +355,7 @@ export default function TermsPage() {
                       <div>
                         <h3 className="text-lg font-bold text-gray-900 mb-2">Your Agreement</h3>
                         <p className="text-gray-700">
-                          By enrolling in ArivOn Academy, you acknowledge that you have read, understood, and agreed to these terms and conditions.
+                          By enrolling in ArivuOn Academy, you acknowledge that you have read, understood, and agreed to these terms and conditions.
                         </p>
                       </div>
                     </div>
