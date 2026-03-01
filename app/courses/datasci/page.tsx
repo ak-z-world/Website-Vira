@@ -34,13 +34,12 @@ export default function DataScienceCoursePage() {
             "Master Data Science, Machine Learning, and AI. Build intelligent applications using real-world datasets.",
         description:
             "Become an expert in Data Science using Python, ML, Deep Learning, NLP, and Computer Vision.",
-        duration: "12 Weeks",
+        duration: "6 Weeks",
         level: "Beginner to Professional",
         nextBatch: "March 10, 2026",
         seatsLeft: "10",
         rating: "4.9",
     };
-
 
     const modules = [
 
@@ -82,7 +81,7 @@ export default function DataScienceCoursePage() {
                 "Computer Vision"
             ],
             icon: <Brain className="w-5 h-5" />,
-            duration: "4 Weeks",
+            duration: "2 Weeks",
             projects: 4
         },
 
@@ -95,12 +94,11 @@ export default function DataScienceCoursePage() {
                 "Deployment"
             ],
             icon: <Server className="w-5 h-5" />,
-            duration: "2 Weeks",
+            duration: "1 Week",
             projects: 2
         }
 
     ];
-
 
     const benefits = [
 
@@ -126,7 +124,6 @@ export default function DataScienceCoursePage() {
 
     ];
 
-
     const outcomes = [
 
         "Analyze real-world datasets",
@@ -146,7 +143,6 @@ export default function DataScienceCoursePage() {
         "Become job-ready Data Scientist"
 
     ];
-
 
     const tools = [
 
