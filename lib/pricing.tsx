@@ -10,6 +10,6 @@ export const manualCountryPricing: Record<string, CountryPricing> = {
   US: { currency: "USD", price: 419, originalPrice: 599 },
   AE: { currency: "AED", price: 1549, originalPrice: 1999 },
   KW: { currency: "KWD", price: 129, originalPrice: 159 },
-  IN: { currency: "INR", price: 28000, originalPrice: 35000 },
+  IN: { currency: "INR", price: 15000, originalPrice: 35000 },
 };
 

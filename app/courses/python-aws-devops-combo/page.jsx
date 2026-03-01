@@ -27,13 +27,13 @@ import Link from "next/link";
 export default function PythonDevOpsComboPage() {
     const { t, price, originalPrice } = useGlobal();
     const courseDetails = {
-        title: "Python Full Stack + AWS DevOps Engineering (Combo Pack)",
+        title: "Python + AWS DevOps Engineering (Combo Pack)",
         subtitle:
             "Build scalable Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
         description: t("courses.pythonDevopsCombo.courseDetails.description"),
-        duration: "16 Weeks",
+        duration: "12 Weeks",
         level: "Beginner to Advanced",
-        fee: "₹15,000",
+        fee: "₹20,000",
         originalFee: "₹65,000",
         nextBatch: "March 30, 2026",
         seatsLeft: "10",
@@ -204,12 +204,12 @@ export default function PythonDevOpsComboPage() {
                                     <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
                                         <TrendingUp className="w-4 h-4 text-blue-500" />
                                         <span className="text-sm font-semibold text-blue-600">
-                                            High-Demand Full Stack + DevOps Career
+                                            High-Demand Python + DevOps Career
                                         </span>
                                     </div>
 
                                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
-                                        Python Full Stack +{" "}
+                                        Python + DevOps
                                         <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                                             AWS DevOps
                                         </span>
@@ -409,7 +409,7 @@ export default function PythonDevOpsComboPage() {
                                 </h2>
 
                                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                                    Comprehensive curriculum designed to make you Full Stack + DevOps ready
+                                    Comprehensive curriculum designed to make you Python + DevOps ready
                                 </p>
                             </div>
 
@@ -477,7 +477,7 @@ export default function PythonDevOpsComboPage() {
                                     <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                                         Become a{" "}
                                         <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                            Full Stack + DevOps Engineer
+                                            Python + DevOps Engineer
                                         </span>
                                     </h2>
 
@@ -554,7 +554,7 @@ export default function PythonDevOpsComboPage() {
                             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                                 Launch Your{" "}
                                 <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                    Full Stack + DevOps
+                                    Python + DevOps
                                 </span>{" "}
                                 Career
                             </h2>

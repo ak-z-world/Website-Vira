@@ -12,11 +12,12 @@ import {
   CheckCircle,
   Brain,
   Zap,
+  Rocket,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-type CourseTab = "python" | "devops" | "react" | "datascience";
+type CourseTab = "python" | "devops" | "python-devops";
 
 interface CourseStats {
   students: string;
@@ -37,9 +38,15 @@ interface TabItem {
 }
 
 const Hero = () => {
-  const [activeTab, setActiveTab] = useState<CourseTab>("python");
+  const [activeTab, setActiveTab] = useState("python-devops");
 
   const tabs: TabItem[] = [
+    {
+      id: "python-devops",
+      label: "Python + DevOps(Combo Pack)",
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-100",
+    },
     {
       id: "python",
       label: "Python",
@@ -52,75 +59,55 @@ const Hero = () => {
       color: "text-blue-600",
       bgColor: "bg-blue-100",
     },
-    {
-      id: "react",
-      label: "React",
-      color: "text-purple-600",
-      bgColor: "bg-purple-100",
-    },
-    {
-      id: "datascience",
-      label: "Data Science",
-      color: "text-green-600",
-      bgColor: "bg-green-100",
-    },
   ];
 
   const getCourseTitle = () => {
     switch (activeTab) {
+      case "python-devops":
+        return "Python + DevOps AWS DevOps Engineering (Combo Pack)";
       case "python":
-        return "Python Full Stack Development";
+        return "Python & Django Development";
       case "devops":
         return "DevOps Engineering";
-      case "react":
-        return "React Development";
-      case "datascience":
-        return "Data Science & AI";
       default:
-        return "Python Full Stack Development";
+        return "Python + DevOps AWS DevOps Engineering (Combo Pack)";
     }
   };
 
   const getCourseDescription = () => {
     switch (activeTab) {
+      case "python-devops":
+        return "Backend Development + CI/CD + Docker + Kubernetes + AWS with real-world deployment projects";
       case "python":
-        return "Master Django, FastAPI, AI/ML & real-world projects";
+        return "Master Django, REST APIs, Database Design & real-world projects";
       case "devops":
         return "Docker, Kubernetes, AWS Cloud & automation";
-      case "react":
-        return "Modern React, Next.js, TypeScript & state management";
-      case "datascience":
-        return "Machine Learning, Deep Learning, NLP & Computer Vision";
       default:
-        return "Master Django, FastAPI, AI/ML & real-world projects";
+        return "Backend Development + CI/CD + Docker + Kubernetes + AWS with real-world deployment projects";
     }
   };
 
   const getCoursePrice = () => {
     switch (activeTab) {
+      case "python-devops":
+        return "₹20,000";
       case "python":
-        return "₹35,000";
+        return "₹15,000";
       case "devops":
-        return "₹35,000";
-      case "react":
-        return "₹35,000";
-      case "datascience":
-        return "₹35,000";
+        return "₹20,000";
       default:
-        return "₹35,000";
+        return "₹20,000";
     }
   };
 
   const getCourseDuration = () => {
     switch (activeTab) {
-      case "python":
+      case "python-devops":
         return "12 Weeks";
+      case "python":
+        return "6 Weeks";
       case "devops":
-        return "16 Weeks";
-      case "react":
-        return "10 Weeks";
-      case "datascience":
-        return "14 Weeks";
+        return "6 Weeks";
       default:
         return "12 Weeks";
     }
@@ -129,22 +116,20 @@ const Hero = () => {
 
   const getCourseIcon = () => {
     switch (activeTab) {
+      case "python-devops":
+        return <Rocket className="w-6 h-6 text-white" />;
       case "python":
         return <Sparkles className="w-6 h-6 text-white" />;
       case "devops":
         return <TrendingUp className="w-6 h-6 text-white" />;
-      case "react":
-        return <Star className="w-6 h-6 text-white" />;
-      case "datascience":
-        return <Brain className="w-6 h-6 text-white" />;
       default:
-        return <Sparkles className="w-6 h-6 text-white" />;
+        return <Rocket className="w-6 h-6 text-white" />;
     }
   };
 
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F8FAFF] to-[#E0ECFF] pt-32 pb-10 md:pt-10 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F8FAFF] to-[#E0ECFF] pt-12 pb-10 md:pt-10 text-white">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-[#1E3A8A]/20 via-[#3B82F6]/10 to-transparent rounded-full blur-3xl"></div>
@@ -219,7 +204,6 @@ const Hero = () => {
   " />
 
       </div>
-      {/* Neural network nodes */}
       {/* Neural Network Nodes — LEFT AREA */}
       <div className="absolute inset-0 pointer-events-none z-0">
 
@@ -241,24 +225,6 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             <div className="space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-2xl border border-white/10 px-5 py-3 rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.6)]">
-                  <Brain className="w-5 h-5 text-[#0B1F3A]" />
-                </div>
-
-                <div>
-                  <div className="text-sm font-semibold text-[#0B1F3A] tracking-wide">
-                    ArivuOn Quantum Excellence
-                  </div>
-                  <div className="text-xs text-gray-600">
-                    98% Success Probability
-                  </div>
-                </div>
-
-              </div>
-
               {/* Main Heading */}
               <div className="relative space-y-4 sm:space-y-5 md:space-y-6">
 
@@ -476,22 +442,22 @@ const Hero = () => {
   gap-4 sm:gap-5
 ">
 
-  {[
-    {
-      icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#2563EB]" />,
-      title: "1:1 Industry Mentorship",
-      subtitle: null,
-    },
-    {
-      icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E3A8A]" />,
-      title: "Certification",
-      subtitle: "ArivuOn Academy",
-    },
-  ].map((feature, idx) => (
+                {[
+                  {
+                    icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#2563EB]" />,
+                    title: "1:1 Industry Mentorship",
+                    subtitle: null,
+                  },
+                  {
+                    icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E3A8A]" />,
+                    title: "Certification",
+                    subtitle: "ArivuOn Academy",
+                  },
+                ].map((feature, idx) => (
 
-    <div
-      key={idx}
-      className="
+                  <div
+                    key={idx}
+                    className="
         group
         flex items-center gap-3 sm:gap-4
 
@@ -509,10 +475,10 @@ const Hero = () => {
 
         transition-all duration-300
       "
-    >
+                  >
 
-      {/* Icon */}
-      <div className="
+                    {/* Icon */}
+                    <div className="
         flex items-center justify-center
 
         w-9 h-9 sm:w-10 sm:h-10
@@ -528,41 +494,41 @@ const Hero = () => {
         group-hover:scale-110
         transition-transform
       ">
-        {feature.icon}
-      </div>
+                      {feature.icon}
+                    </div>
 
 
-      {/* Text */}
-      <div className="flex flex-col leading-tight">
+                    {/* Text */}
+                    <div className="flex flex-col leading-tight">
 
-        <span className="
+                      <span className="
           text-sm sm:text-base
           font-semibold
           text-[#0F172A]
           group-hover:text-[#1E3A8A]
           transition-colors
         ">
-          {feature.title}
-        </span>
+                        {feature.title}
+                      </span>
 
-        {feature.subtitle && (
-          <span className="
+                      {feature.subtitle && (
+                        <span className="
             text-xs sm:text-sm
             font-medium
             text-[#2563EB]
             whitespace-nowrap
           ">
-            {feature.subtitle}
-          </span>
-        )}
+                          {feature.subtitle}
+                        </span>
+                      )}
 
-      </div>
+                    </div>
 
-    </div>
+                  </div>
 
-  ))}
+                ))}
 
-</div>
+              </div>
             </div>
 
             {/* Right Side - Interactive Card */}
@@ -607,38 +573,58 @@ const Hero = () => {
                   </div>
 
 
-                  {/* Course Selector */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 sm:mb-8">
+                  {/* Course Selector - Modern Horizontal Pills */}
+                  <div className="mb-8">
 
-                    {tabs.map((tab) => (
+  <div className="
+    flex
+    flex-wrap
+    gap-3
+    justify-start
+  ">
 
-                      <button
-                        key={tab.id}
-                        onClick={() => setActiveTab(tab.id)}
-                        className={`
-              px-3 sm:px-4
-              py-2.5 sm:py-3
+    {tabs.map((tab) => {
+      const isActive = activeTab === tab.id;
 
-              text-xs sm:text-sm
+      return (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`
+            relative
+            px-5 py-2.5
+            rounded-full
+            text-sm sm:text-base
+            font-semibold
+            whitespace-nowrap
+            transition-all duration-300
+            border
 
-              rounded-lg sm:rounded-xl
+            ${isActive
+              ? `
+                bg-[#1E3A8A]
+                text-white
+                border-[#1E3A8A]
+                shadow-lg
+              `
+              : `
+                bg-white
+                text-gray-700
+                border-gray-200
+                hover:border-[#2563EB]
+                hover:text-[#1E3A8A]
+              `
+            }
+          `}
+        >
+          {tab.label}
+        </button>
+      );
+    })}
 
-              font-semibold
+  </div>
 
-              transition-all duration-300
-
-              ${activeTab === tab.id
-                            ? "bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] text-white shadow-md"
-                            : "bg-[#F8FAFF] text-gray-600 hover:bg-[#EEF2FF]"
-                          }
-            `}
-                      >
-                        {tab.label}
-                      </button>
-
-                    ))}
-
-                  </div>
+</div>
 
                 </div>
 
@@ -815,7 +801,7 @@ const Hero = () => {
               <div className="
     hidden sm:flex
 
-    absolute -top-6 -right-6
+    absolute -top-12 sm:-top-14 -right-6
 
     w-20 h-20 sm:w-28 sm:h-28
 

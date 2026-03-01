@@ -176,29 +176,29 @@
       }
     },
     "pythonDevopsCombo": {
-      "title": "Python Full Stack + AWS DevOps Engineering",
+      "title": "Python  + AWS DevOps Engineering",
       "subtitle": "Build Applications. Deploy to Cloud. Automate Everything.",
       "description": "Master Python programming, Django backend development, REST APIs, AWS cloud infrastructure, CI/CD automation, and Infrastructure as Code.",
       "tagline": "Complete Developer to DevOps Career Path",
       "heroText": "Build scalable Django applications and deploy them to AWS using CI/CD pipelines and Terraform automation.",
-      "ecosystemTitle": "Full Stack + Cloud Ecosystem",
+      "ecosystemTitle": " + Cloud Ecosystem",
       "stackTitle": "Master the Complete Modern Stack",
       "curriculumTitle": "Structured Learning Path",
       "curriculumDesc": "From Python fundamentals to full production cloud deployment in 16 weeks.",
       "projectsTitle": "End-to-End Deployment Projects",
       "skillsTitle": "Skills You Will Master",
-      "careerTitle": "Full Stack + DevOps Career Opportunities",
+      "careerTitle": " + DevOps Career Opportunities",
       "careerSubtitle": "Why This Combo Is Highly In Demand",
       "averageSalary": "Average Salary Range",
       "jobGrowth": "Job Growth Rate",
       "industryDemand": "Market Demand",
-      "ctaTitle": "Launch Your Full Stack + DevOps Career",
+      "ctaTitle": "Launch Your  + DevOps Career",
       "ctaDesc": "Join the most comprehensive Python + AWS DevOps combo program and become job-ready in 16 weeks.",
       "courseDetails": {
-        "title": "Python Full Stack + AWS DevOps Engineering (Combo Pack)",
+        "title": "Python  + AWS DevOps Engineering (Combo Pack)",
         "subtitle": "Build scalable Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
         "description": "Master Python programming, Django backend development, APIs, databases, and complete DevOps automation using AWS, Git, Jenkins, and Terraform.",
-        "duration": "16 Weeks",
+        "duration": "12 Weeks",
         "level": "Beginner to Advanced",
         "nextBatch": "March 30, 2026",
         "seatsLeft": "10",
@@ -217,7 +217,7 @@
         },
         "djangoDevelopment": {
           "title": "Django Backend Development",
-          "duration": "Weeks 4-6",
+          "duration": "Weeks 4-5",
           "topics": {
             "architecture": "MVC Architecture",
             "models": "Models, Views and URL Routing",
@@ -227,7 +227,7 @@
         },
         "databaseApi": {
           "title": "Database and API Design",
-          "duration": "Weeks 7-8",
+          "duration": "Weeks 5-6",
           "topics": {
             "postgres": "PostgreSQL Database Integration",
             "orm": "Django ORM and Relationships",
@@ -237,7 +237,7 @@
         },
         "devopsFundamentals": {
           "title": "DevOps Fundamentals",
-          "duration": "Week 9",
+          "duration": "Week 6-7",
           "topics": {
             "lifecycle": "DevOps Lifecycle",
             "agile": "Agile and SDLC Overview",
@@ -247,7 +247,7 @@
         },
         "awsInfrastructure": {
           "title": "AWS Cloud Infrastructure",
-          "duration": "Weeks 10-11",
+          "duration": "Weeks 8-9",
           "topics": {
             "iam": "IAM (Users, Roles, Policies)",
             "ec2": "EC2 and Security Groups",
@@ -257,7 +257,7 @@
         },
         "gitCicd": {
           "title": "Git and CI/CD Automation",
-          "duration": "Weeks 12-13",
+          "duration": "Weeks 10-11",
           "topics": {
             "git": "Git Workflow and Branching",
             "github": "GitHub Collaboration",
@@ -267,7 +267,7 @@
         },
         "terraformMonitoring": {
           "title": "Infrastructure as Code and Monitoring",
-          "duration": "Weeks 14-16",
+          "duration": "Weeks 11-12",
           "topics": {
             "terraform": "Terraform Configuration and Provisioning",
             "awsInfra": "Provision AWS Infrastructure",
@@ -277,7 +277,7 @@
         }
       },
       "benefits": {
-        "certification": "Full Stack + DevOps Certification",
+        "certification": "Python + DevOps Certification",
         "hours": "150+ Hours of Live Training",
         "projects": "10+ Real Industry Projects",
         "mentorship": "1:1 Mentorship and Career Guidance"
@@ -290,7 +290,7 @@
         "terraform": "Provision infrastructure using Terraform",
         "monitoring": "Monitor applications using CloudWatch",
         "bestPractices": "Implement DevOps best practices",
-        "careerReady": "Become job-ready as a Full Stack + DevOps Engineer"
+        "careerReady": "Become job-ready as a Python + DevOps Engineer"
       },
       "tools": {
         "python": "Python 3.11+",
