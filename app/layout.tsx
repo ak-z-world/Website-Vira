@@ -5,7 +5,7 @@ import Footer from './layouts/Footer';
 import { GlobalProvider } from "./providers"; // FIXED PATH
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arivuonacademy.vercel.app"),
+  metadataBase: new URL("https://academy.arivuon.in"),
 
   title: "ArivuOn Academy | Python, DevOps & React Training",
 
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "ArivuOn Academy | Python, DevOps & React Training",
     description:
       "Master in-demand tech skills with our comprehensive training programs.",
-    url: "https://arivuonacademy.vercel.app",
+    url: "https://academy.arivuon.in",
     siteName: "ArivuOn Academy",
     images: [
       {

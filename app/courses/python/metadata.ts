@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arivuonacademy.vercel.app"),
+  metadataBase: new URL("https://academy.arivuon.in"),
 
   title:
     "Python Course Online | Professional Python Programming, Django, APIs & Backend Development | ArivuOn Academy",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "ArivuOn Academy",
-      url: "https://arivuonacademy.vercel.app",
+      url: "https://academy.arivuon.in",
     },
   ],
 
@@ -83,13 +83,13 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://arivuonacademy.vercel.app/courses/python",
+    canonical: "https://academy.arivuon.in/courses/python",
   },
 
   openGraph: {
     type: "website",
 
-    url: "https://arivuonacademy.vercel.app/courses/python",
+    url: "https://academy.arivuon.in/courses/python",
 
     title:
       "Python Course Online | Django, APIs & Backend Development | ArivuOn Academy",
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://arivuonacademy.vercel.app/og-image.png",
+        url: "https://academy.arivuon.in/og-image.png",
         width: 1200,
         height: 630,
         alt: "Python Course - ArivuOn Academy",
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     description:
       "Become a professional Python developer with real-world projects and industry-level training.",
 
-    images: ["https://arivuonacademy.vercel.app/og-image.png"],
+    images: ["https://academy.arivuon.in/og-image.png"],
 
     creator: "@arivuonacademy",
   },
@@ -147,8 +147,8 @@ export const metadata: Metadata = {
 
     owner: "ArivuOn Academy",
 
-    url: "https://arivuonacademy.vercel.app",
+    url: "https://academy.arivuon.in",
 
-    identifierURL: "https://arivuonacademy.vercel.app/courses/python",
+    identifierURL: "https://academy.arivuon.in/courses/python",
   },
 };

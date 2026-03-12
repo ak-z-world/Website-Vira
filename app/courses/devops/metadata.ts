@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arivuonacademy.vercel.app"),
+  metadataBase: new URL("https://academy.arivuon.in"),
 
   title:
     "AWS DevOps Course Online | CI/CD, Jenkins, Terraform & Cloud Engineering | ArivuOn Academy",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "ArivuOn Academy",
-      url: "https://arivuonacademy.vercel.app",
+      url: "https://academy.arivuon.in",
     },
   ],
 
@@ -85,13 +85,13 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://arivuonacademy.vercel.app/courses/devops",
+    canonical: "https://academy.arivuon.in/courses/devops",
   },
 
   openGraph: {
     type: "website",
 
-    url: "https://arivuonacademy.vercel.app/courses/devops",
+    url: "https://academy.arivuon.in/courses/devops",
 
     title:
       "AWS DevOps Course Online | CI/CD, Jenkins & Terraform | ArivuOn Academy",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://arivuonacademy.vercel.app/og-image-devops.png",
+        url: "https://academy.arivuon.in/og-image-devops.png",
         width: 1200,
         height: 630,
         alt: "AWS DevOps Course - ArivuOn Academy",
@@ -123,7 +123,7 @@ export const metadata: Metadata = {
       "Become a professional DevOps Engineer with AWS, Jenkins, Git, Terraform and real production deployment training.",
 
     images: [
-      "https://arivuonacademy.vercel.app/og-image-devops.png",
+      "https://academy.arivuon.in/og-image-devops.png",
     ],
 
     creator: "@arivuonacademy",
@@ -147,9 +147,9 @@ export const metadata: Metadata = {
 
     owner: "ArivuOn Academy",
 
-    url: "https://arivuonacademy.vercel.app",
+    url: "https://academy.arivuon.in",
 
     identifierURL:
-      "https://arivuonacademy.vercel.app/courses/devops",
+      "https://academy.arivuon.in/courses/devops",
   },
 };

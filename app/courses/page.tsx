@@ -30,7 +30,7 @@ export default function CoursesPage() {
       icon: <Code2 className="w-8 h-8" />,
       duration: '6 Weeks',
       level: 'Beginner to Advanced',
-      fee: '₹15,000',
+      fee: '₹10,000',
       features: ['Django & FastAPI', 'REST APIs', 'Database Design', 'Real Projects', 'Placement Support'],
       popular: true,
     },
@@ -41,7 +41,7 @@ export default function CoursesPage() {
       icon: <CloudCog className="w-8 h-8" />,
       duration: '6 Weeks',
       level: 'Intermediate',
-      fee: '₹18,000',
+      fee: '₹10,000',
       features: ['Docker & Kubernetes', 'AWS Cloud', 'CI/CD Pipeline', 'Terraform', 'Monitoring Tools', 'Cloud Security'],
       popular: true,
     },
@@ -52,7 +52,7 @@ export default function CoursesPage() {
       icon: <Cpu className="w-8 h-8" />,
       duration: '6 Weeks',
       level: 'Beginner to Advanced',
-      fee: '₹15,000',
+      fee: '₹10,000',
       features: ['React & Next.js', 'TypeScript', 'State Management', 'Testing', 'Performance', 'Deployment'],
       popular: false,
     },
@@ -63,7 +63,7 @@ export default function CoursesPage() {
     icon: <Brain className="w-8 h-8" />,
     duration: '6 Weeks',
     level: 'Beginner to Professional',
-    fee: '₹15,000',
+    fee: '₹10,000',
     features: [
       'Python for Data Science',
       'NumPy & Pandas',
@@ -208,9 +208,6 @@ export default function CoursesPage() {
                       <Clock className="w-4 h-4" />
                       {course.duration}
                     </div>
-
-                    
-
                   </div>
 
 

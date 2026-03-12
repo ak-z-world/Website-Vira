@@ -12,7 +12,7 @@ export default function DevOpsCoursePage() {
     description: t("courses.devops.description"),
     duration: '6 Weeks',
     level: 'Intermediate to Advanced',
-    fee: '₹20,000',
+    fee: '₹10,000',
     originalFee: '₹38,000',
     nextBatch: 'March 25, 2026',
     seatsLeft: '6',

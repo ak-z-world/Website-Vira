@@ -48,7 +48,7 @@ export default function Courses() {
         "Build production-grade applications using Python, Django, FastAPI and AI integration.",
       icon: <Code2 className="w-6 h-6" />,
       duration: "12 Weeks",
-      price: "₹28,000",
+      price: "₹10,000",
       badge: "Most Popular",
     },
     {
@@ -58,7 +58,7 @@ export default function Courses() {
         "Master Docker, Kubernetes, CI/CD pipelines and AWS Cloud deployment.",
       icon: <CloudCog className="w-6 h-6" />,
       duration: "16 Weeks",
-      price: "₹30,000",
+      price: "₹10,000",
       badge: "High Demand",
     },
     {
@@ -68,7 +68,7 @@ export default function Courses() {
         "Build scalable frontend applications using React, Next.js and TypeScript.",
       icon: <Cpu className="w-6 h-6" />,
       duration: "10 Weeks",
-      price: "₹25,000",
+      price: "₹10,000",
       badge: "Trending",
     },
   ];
