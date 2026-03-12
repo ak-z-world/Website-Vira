@@ -14,7 +14,7 @@ export default function PythonDjangoCoursePage() {
     description: 'Become an expert in Python programming and Django framework to build robust, scalable web applications and APIs.',
     duration: '6 Weeks',
     level: 'Beginner to Professional',
-    fee: '₹15,000',
+    fee: '₹10,000',
     originalFee: '₹40,000',
     nextBatch: 'March 20, 2026',
     seatsLeft: '8',
@@ -112,7 +112,7 @@ export default function PythonDjangoCoursePage() {
             provider: {
               "@type": "Organization",
               name: "ArivuOn Academy",
-              url: "https://arivuonacademy.vercel.app",
+              url: "https://academy.arivuon.in",
             },
 
             educationalLevel: "Beginner to Advanced",

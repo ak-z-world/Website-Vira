@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arivuonacademy.vercel.app"),
+  metadataBase: new URL("https://academy.arivuon.in"),
 
   title:
     "Python + AWS DevOps Course Online | Full Stack Development, CI/CD, Cloud & Terraform | ArivuOn Academy",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "ArivuOn Academy",
-      url: "https://arivuonacademy.vercel.app",
+      url: "https://academy.arivuon.in",
     },
   ],
 
@@ -85,13 +85,13 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical:
-      "https://arivuonacademy.vercel.app/courses/python-aws-devops-combo",
+      "https://academy.arivuon.in/courses/python-aws-devops-combo",
   },
 
   openGraph: {
     type: "website",
 
-    url: "https://arivuonacademy.vercel.app/courses/python-aws-devops-combo",
+    url: "https://academy.arivuon.in/courses/python-aws-devops-combo",
 
     title:
       "Python + AWS DevOps Engineering | Full Stack + Cloud Deployment | ArivuOn Academy",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://arivuonacademy.vercel.app/og-image-combo.png",
+        url: "https://academy.arivuon.in/og-image-combo.png",
         width: 1200,
         height: 630,
         alt: "Python + AWS DevOps Course - ArivuOn Academy",
@@ -123,7 +123,7 @@ export const metadata: Metadata = {
       "Master Python, Django, AWS, CI/CD, and Terraform in one industry-ready combo program.",
 
     images: [
-      "https://arivuonacademy.vercel.app/og-image-combo.png",
+      "https://academy.arivuon.in/og-image-combo.png",
     ],
 
     creator: "@arivuonacademy",
@@ -147,9 +147,9 @@ export const metadata: Metadata = {
 
     owner: "ArivuOn Academy",
 
-    url: "https://arivuonacademy.vercel.app",
+    url: "https://academy.arivuon.in",
 
     identifierURL:
-      "https://arivuonacademy.vercel.app/courses/python-aws-devops-combo",
+      "https://academy.arivuon.in/courses/python-aws-devops-combo",
   },
 };

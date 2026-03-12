@@ -12,7 +12,7 @@ export default function ReactCoursePage() {
     description: t("courses.react.description"),
     duration: '6 Weeks',
     level: 'Beginner to Advanced',
-    fee: '₹15,000',
+    fee: '₹10,000',
     originalFee: '₹35,000',
     nextBatch: 'March 28, 2026',
     seatsLeft: '10',

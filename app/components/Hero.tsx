@@ -92,9 +92,9 @@ const Hero = () => {
       case "python-devops":
         return "₹20,000";
       case "python":
-        return "₹15,000";
+        return "₹10,000";
       case "devops":
-        return "₹20,000";
+        return "₹10,000";
       default:
         return "₹20,000";
     }
