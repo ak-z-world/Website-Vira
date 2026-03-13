@@ -16,12 +16,14 @@ export async function POST(req) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    host: "smtp.zoho.in",
+    port: 587,
+    secure: false, // important for TLS
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
     await transporter.sendMail({
       from: `"ArivuOn Academy Website" <${process.env.EMAIL_USER}>`,
@@ -43,8 +45,15 @@ export async function POST(req) {
     });
 
     return Response.json({ success: true });
-  } catch (error) {
-    console.error(error);
-    return Response.json({ success: false }, { status: 500 });
-  }
+  }catch (error) {
+  console.error("Email Error:", error);
+
+  return Response.json(
+    {
+      success: false,
+      error: error.message,
+    },
+    { status: 500 }
+  );
+}
 }

@@ -243,14 +243,14 @@ export default function FAQPage() {
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
-                      href="mailto:arivuonacademy.info@gmail.com"
+                      href="mailto:info@arivuon.in"
                       className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
                     >
                       <Mail className="w-5 h-5" />
                       Email Support
                     </a>
                     <a 
-                      href="tel:+919677377316"
+                      href="tel:+9194457 70160"
                       className="inline-flex items-center justify-center gap-3 bg-white border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                     >
                       <Phone className="w-5 h-5" />

@@ -187,7 +187,7 @@ const Footer = () => {
                 </div>
 
                 <span className="text-gray-600 text-sm">
-                  +91 96773 77316
+                  +91 94457 70160
                 </span>
 
               </div>
@@ -200,7 +200,7 @@ const Footer = () => {
                 </div>
 
                 <span className="text-gray-600 text-sm">
-                  arivuonacademy.info@gmail.com
+                  info@arivuon.in
                 </span>
 
               </div>
