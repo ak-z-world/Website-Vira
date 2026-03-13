@@ -95,7 +95,7 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Whatsapp Support",
-      details: ["+91 96773 77316"],
+      details: ["+91 94457 70160"],
       subtitle: "Available 9 AM - 7 PM",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-gradient-to-br from-blue-50 to-indigo-100/50",
@@ -103,7 +103,7 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["arivuonacademy.info@gmail.com"],
+      details: ["info@arivuon.in"],
       subtitle: "Response within 24 hours",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-gradient-to-br from-blue-50 to-indigo-100/50",
@@ -439,7 +439,7 @@ export default function ContactPage() {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900 mb-2">
-                    +91 96773 77316
+                    +91 94457 70160
                   </div>
                   <p className="text-sm text-gray-500">
                     Available 9 AM - 7 PM, Monday to Saturday

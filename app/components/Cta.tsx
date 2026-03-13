@@ -264,10 +264,10 @@ const Cta = () => {
                       <p>
                         <span className="font-medium">Need help choosing?</span>{" "}
                         <a
-                          href="tel:+919677377316"
+                          href="tel:+9194457 70160"
                           className="underline hover:text-white"
                         >
-                          Call ArivuOn Counselor: +91 96773 77316
+                          Call ArivuOn Counselor: +91 94457 70160
                         </a>
                       </p>
                     </div>
