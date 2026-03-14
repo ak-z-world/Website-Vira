@@ -1,0 +1,392 @@
+[
+    {
+        "slug": "how-to-become-devops-engineer-2026",
+        "title": "How to Become a DevOps Engineer in 2026 — Complete Roadmap",
+        "excerpt": "DevOps is one of the highest-paying tech roles in 2026. This complete roadmap covers every skill, tool, and milestone you need — from zero to job-ready.",
+        "coverImage": "/blog/devops-roadmap-2026.png",
+        "coverImageAlt": "DevOps Engineer Roadmap 2026 — ArivuOn Academy",
+        "category": "DevOps",
+        "tags": [
+            "DevOps",
+            "AWS",
+            "CI/CD",
+            "Career",
+            "Jenkins",
+            "Terraform"
+        ],
+        "publishedAt": "2026-06-15",
+        "updatedAt": "2026-06-15",
+        "readingTime": 9,
+        "featured": true,
+        "seo": {
+            "metaTitle": "How to Become a DevOps Engineer in 2026 — Complete Roadmap | ArivuOn Academy",
+            "metaDescription": "Step-by-step roadmap to become a DevOps engineer in 2026. Learn which tools to master, in what order, and how long it takes — from ArivuOn Academy.",
+            "keywords": [
+                "how to become devops engineer",
+                "devops roadmap 2026",
+                "devops engineer career path",
+                "learn devops from scratch",
+                "devops skills required"
+            ]
+        },
+        "content": [
+            {
+                "type": "intro",
+                "text": "DevOps engineers in India earn between ₹8–30 LPA. Globally, the average salary is $120,000/year. In 2026, it remains one of the fastest-growing roles in tech. But most beginners have no idea where to start — they get lost in tool lists and conflicting advice. This roadmap cuts through the noise."
+            },
+            {
+                "type": "heading2",
+                "text": "What Does a DevOps Engineer Actually Do?"
+            },
+            {
+                "type": "paragraph",
+                "text": "A DevOps engineer sits at the intersection of software development and IT operations. You write code, but you also build the infrastructure that runs that code. You automate deployments so that releasing software takes minutes, not days. You set up monitoring so teams know instantly when something breaks. The core job: make software delivery fast, reliable, and repeatable."
+            },
+            {
+                "type": "callout",
+                "variant": "insight",
+                "title": "The One Thing DevOps Is About",
+                "text": "DevOps is not a tool. It is not a job title. It is a culture of automation — eliminating every manual step between writing code and running it in production."
+            },
+            {
+                "type": "heading2",
+                "text": "The Exact Roadmap — Step by Step"
+            },
+            {
+                "type": "roadmap",
+                "steps": [
+                    {
+                        "phase": "Phase 1",
+                        "duration": "4 weeks",
+                        "title": "Linux & Networking Fundamentals",
+                        "skills": [
+                            "Linux command line",
+                            "File permissions",
+                            "SSH",
+                            "Networking basics (DNS, HTTP, TCP/IP)",
+                            "Bash scripting"
+                        ],
+                        "why": "Every server runs Linux. Every DevOps tool runs on Linux. This is non-negotiable."
+                    },
+                    {
+                        "phase": "Phase 2",
+                        "duration": "3 weeks",
+                        "title": "Git & Version Control",
+                        "skills": [
+                            "Git branching strategies",
+                            "Pull requests",
+                            "Git workflows (GitFlow, trunk-based)",
+                            "GitHub Actions basics"
+                        ],
+                        "why": "All modern deployments start with a Git push. You must master this before touching anything else."
+                    },
+                    {
+                        "phase": "Phase 3",
+                        "duration": "4 weeks",
+                        "title": "Docker & Containers",
+                        "skills": [
+                            "Docker images and containers",
+                            "Dockerfile writing",
+                            "Docker Compose",
+                            "Container networking",
+                            "Registry (ECR, DockerHub)"
+                        ],
+                        "why": "Containers are how modern applications are packaged. 90% of DevOps job descriptions require Docker."
+                    },
+                    {
+                        "phase": "Phase 4",
+                        "duration": "5 weeks",
+                        "title": "CI/CD Pipelines",
+                        "skills": [
+                            "Jenkins pipeline scripting",
+                            "GitHub Actions workflows",
+                            "Build automation",
+                            "Testing integration",
+                            "Deployment strategies (blue/green, rolling)"
+                        ],
+                        "why": "CI/CD is the heart of DevOps. This is where you automate everything — build, test, deploy."
+                    },
+                    {
+                        "phase": "Phase 5",
+                        "duration": "5 weeks",
+                        "title": "AWS Cloud Infrastructure",
+                        "skills": [
+                            "EC2, VPC, S3, IAM",
+                            "RDS, CloudWatch",
+                            "Load Balancers",
+                            "Auto Scaling Groups",
+                            "AWS CLI"
+                        ],
+                        "why": "AWS holds 31% of the cloud market. Most companies run on AWS. This is the #1 cloud to learn first."
+                    },
+                    {
+                        "phase": "Phase 6",
+                        "duration": "3 weeks",
+                        "title": "Infrastructure as Code — Terraform",
+                        "skills": [
+                            "Terraform syntax (HCL)",
+                            "State management",
+                            "Modules",
+                            "Terraform with AWS",
+                            "Remote backends"
+                        ],
+                        "why": "Manual server setup is dead. Infrastructure as Code means your entire AWS setup is reproducible, version-controlled, and automated."
+                    }
+                ]
+            },
+            {
+                "type": "heading2",
+                "text": "Tools Every DevOps Engineer Must Know in 2026"
+            },
+            {
+                "type": "toolGrid",
+                "categories": [
+                    {
+                        "category": "CI/CD",
+                        "tools": [
+                            "Jenkins",
+                            "GitHub Actions",
+                            "GitLab CI",
+                            "CircleCI"
+                        ]
+                    },
+                    {
+                        "category": "Cloud",
+                        "tools": [
+                            "AWS",
+                            "Azure",
+                            "GCP",
+                            "DigitalOcean"
+                        ]
+                    },
+                    {
+                        "category": "IaC",
+                        "tools": [
+                            "Terraform",
+                            "Ansible",
+                            "Pulumi",
+                            "CloudFormation"
+                        ]
+                    },
+                    {
+                        "category": "Containers",
+                        "tools": [
+                            "Docker",
+                            "Kubernetes",
+                            "Helm",
+                            "containerd"
+                        ]
+                    },
+                    {
+                        "category": "Monitoring",
+                        "tools": [
+                            "Prometheus",
+                            "Grafana",
+                            "CloudWatch",
+                            "Datadog"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "callout",
+                "variant": "warning",
+                "title": "The Biggest Mistake Beginners Make",
+                "text": "Trying to learn Kubernetes before Docker. Trying to learn Terraform before AWS. Trying to learn Jenkins before understanding Git. The order matters. Follow the phases above — each one builds the foundation for the next."
+            },
+            {
+                "type": "heading2",
+                "text": "How Long Does It Take to Get a DevOps Job?"
+            },
+            {
+                "type": "paragraph",
+                "text": "With focused study of 4–6 hours per day: 6 months for a career changer with some programming background. 3–4 months if you already know Linux and any cloud basics. The bottleneck is not knowledge — it is building real projects. Recruiters want to see a GitHub with actual CI/CD pipelines, not certificates."
+            },
+            {
+                "type": "codeBlock",
+                "language": "yaml",
+                "title": "A Real Jenkins Pipeline — What You'll Build",
+                "code": "pipeline {\n  agent any\n  stages {\n    stage('Clone') {\n      steps { git 'https://github.com/your-app.git' }\n    }\n    stage('Build') {\n      steps { sh 'docker build -t myapp:latest .' }\n    }\n    stage('Test') {\n      steps { sh 'docker run myapp:latest pytest tests/' }\n    }\n    stage('Deploy to AWS') {\n      steps {\n        sh 'aws ecr get-login-password | docker login --username AWS ...'\n        sh 'docker push myapp:latest'\n        sh 'aws ecs update-service --cluster prod --service myapp'\n      }\n    }\n  }\n}"
+            },
+            {
+                "type": "heading2",
+                "text": "Frequently Asked Questions"
+            },
+            {
+                "type": "faq",
+                "items": [
+                    {
+                        "question": "Do I need to know programming to learn DevOps?",
+                        "answer": "You need scripting basics — Bash and Python. You do not need to be a full software developer. However, the more you understand code, the better DevOps engineer you will be. Start with Python fundamentals before jumping into DevOps tools."
+                    },
+                    {
+                        "question": "Is AWS certification worth it for DevOps?",
+                        "answer": "AWS Certified DevOps Engineer — Professional is one of the most respected certifications in the field. It validates real skills, not just theory. However, certification alone will not get you a job — you need project experience to back it up."
+                    },
+                    {
+                        "question": "DevOps vs Cloud Engineer — what is the difference?",
+                        "answer": "A Cloud Engineer focuses primarily on infrastructure design and cloud architecture. A DevOps Engineer focuses on the software delivery pipeline — automation, CI/CD, and the bridge between development and operations. In practice, most job descriptions overlap heavily. Learning both makes you extremely hireable."
+                    },
+                    {
+                        "question": "What salary can I expect as a fresher DevOps engineer in India?",
+                        "answer": "Freshers with real project experience typically start at ₹5–8 LPA in India. With 2–3 years of experience and AWS certifications, this jumps to ₹15–25 LPA. Senior DevOps roles in product companies cross ₹35 LPA."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "python-backend-developer-guide-2026",
+        "title": "Python Backend Development in 2026 — From Beginner to Production",
+        "excerpt": "Python is the #1 language for backend development, AI, and automation. Learn what you need to build real production applications — APIs, databases, deployment and beyond.",
+        "coverImage": "/blog/python-backend-2026.png",
+        "coverImageAlt": "Python Backend Development Guide 2026 — ArivuOn Academy",
+        "category": "Python",
+        "tags": [
+            "Python",
+            "Django",
+            "REST API",
+            "Backend",
+            "Career"
+        ],
+        "publishedAt": "2026-06-10",
+        "updatedAt": "2026-06-10",
+        "readingTime": 8,
+        "featured": true,
+        "seo": {
+            "metaTitle": "Python Backend Development in 2026 — Complete Beginner Guide | ArivuOn Academy",
+            "metaDescription": "Learn Python backend development from scratch. Django, REST APIs, databases, and deployment explained for beginners — complete guide by ArivuOn Academy.",
+            "keywords": [
+                "python backend development 2026",
+                "learn python for backend",
+                "django rest api tutorial",
+                "python developer roadmap",
+                "backend development python"
+            ]
+        },
+        "content": [
+            {
+                "type": "intro",
+                "text": "Python is the most popular programming language in the world for four years running. It powers Instagram, Pinterest, Netflix recommendation systems, and most of the AI you interact with daily. But most tutorials teach you Python syntax — not how to build real, production-grade backend systems. This guide does."
+            },
+            {
+                "type": "heading2",
+                "text": "Why Python for Backend Development?"
+            },
+            {
+                "type": "paragraph",
+                "text": "Python's dominance in backend development comes from three things: readability (code that looks almost like English), an enormous ecosystem of libraries, and its seamless connection to data science and AI. When you learn Python for backend, you are not just learning web development — you are opening doors to machine learning, automation, data engineering, and more."
+            },
+            {
+                "type": "callout",
+                "variant": "insight",
+                "title": "Python vs Node.js for Backend in 2026",
+                "text": "Node.js wins on raw I/O performance. Python wins on developer productivity, AI/ML integration, and ecosystem maturity. For most startups and enterprise applications, Python is the pragmatic choice."
+            },
+            {
+                "type": "heading2",
+                "text": "The Python Backend Stack You Need to Master"
+            },
+            {
+                "type": "roadmap",
+                "steps": [
+                    {
+                        "phase": "Layer 1",
+                        "duration": "3 weeks",
+                        "title": "Python Core",
+                        "skills": [
+                            "Data types, functions, classes",
+                            "List comprehensions",
+                            "Decorators",
+                            "Error handling",
+                            "File I/O",
+                            "Virtual environments"
+                        ],
+                        "why": "You cannot skip this. Every framework builds on these fundamentals."
+                    },
+                    {
+                        "phase": "Layer 2",
+                        "duration": "4 weeks",
+                        "title": "Django Web Framework",
+                        "skills": [
+                            "Django ORM",
+                            "Views and URL routing",
+                            "Templates",
+                            "Admin panel",
+                            "Middleware",
+                            "Authentication"
+                        ],
+                        "why": "Django is batteries-included. It handles auth, admin, ORM, forms — so you build features, not infrastructure."
+                    },
+                    {
+                        "phase": "Layer 3",
+                        "duration": "3 weeks",
+                        "title": "REST API Development",
+                        "skills": [
+                            "Django REST Framework",
+                            "Serializers",
+                            "ViewSets",
+                            "JWT authentication",
+                            "API versioning",
+                            "Pagination"
+                        ],
+                        "why": "Modern apps are API-first. Mobile apps, React frontends, and third-party integrations all consume REST APIs."
+                    },
+                    {
+                        "phase": "Layer 4",
+                        "duration": "2 weeks",
+                        "title": "Databases",
+                        "skills": [
+                            "PostgreSQL with Django",
+                            "Query optimization",
+                            "Migrations",
+                            "Indexes",
+                            "Redis for caching"
+                        ],
+                        "why": "Every backend is only as good as its data layer. Poor database design kills applications at scale."
+                    },
+                    {
+                        "phase": "Layer 5",
+                        "duration": "2 weeks",
+                        "title": "Deployment",
+                        "skills": [
+                            "Docker containerization",
+                            "AWS EC2 deployment",
+                            "Nginx + Gunicorn",
+                            "Environment variables",
+                            "SSL certificates"
+                        ],
+                        "why": "Code that does not run in production is a hobby project. Deployment is what makes you a professional."
+                    }
+                ]
+            },
+            {
+                "type": "codeBlock",
+                "language": "python",
+                "title": "A Production-Ready Django API View",
+                "code": "from rest_framework import generics, permissions\nfrom rest_framework.response import Response\nfrom rest_framework import status\nfrom .models import Course\nfrom .serializers import CourseSerializer\n\nclass CourseListView(generics.ListCreateAPIView):\n    serializer_class = CourseSerializer\n    permission_classes = [permissions.IsAuthenticatedOrReadOnly]\n\n    def get_queryset(self):\n        queryset = Course.objects.select_related('instructor')\n        category = self.request.query_params.get('category')\n        if category:\n            queryset = queryset.filter(category=category)\n        return queryset.order_by('-created_at')\n\n    def create(self, request, *args, **kwargs):\n        serializer = self.get_serializer(data=request.data)\n        serializer.is_valid(raise_exception=True)\n        self.perform_create(serializer)\n        return Response(\n            serializer.data,\n            status=status.HTTP_201_CREATED\n        )"
+            },
+            {
+                "type": "heading2",
+                "text": "Frequently Asked Questions"
+            },
+            {
+                "type": "faq",
+                "items": [
+                    {
+                        "question": "Django or FastAPI — which should I learn first?",
+                        "answer": "Learn Django first. It forces you to understand the full stack — ORM, routing, auth, admin. Once you know Django well, FastAPI takes a week to pick up. The reverse is not true."
+                    },
+                    {
+                        "question": "How long does it take to get a Python backend job?",
+                        "answer": "With 4-5 hours of daily study: 4-5 months to build job-ready skills. The key is building 2-3 complete projects with real databases, authentication, and deployment — not just tutorials."
+                    },
+                    {
+                        "question": "What Python salary can I expect in India?",
+                        "answer": "Python developers in India earn ₹5–8 LPA as freshers, ₹12–20 LPA at mid-level, and ₹25–40 LPA at senior levels. Companies like Swiggy, Razorpay, and Zepto actively hire Python engineers."
+                    }
+                ]
+            }
+        ]
+    }
+]
