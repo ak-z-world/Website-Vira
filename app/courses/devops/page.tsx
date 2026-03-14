@@ -183,6 +183,51 @@ via-blue-50/30
 to-white
 overflow-hidden
 ">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "AWS DevOps Engineering Course",
+            "description": "Learn AWS DevOps with hands-on projects including CI/CD pipelines, Docker, Kubernetes, Terraform, and cloud deployment.",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "ArivuOn Academy",
+              "url": "https://academy.arivuon.in"
+            },
+            "url": "https://academy.arivuon.in/courses/aws-devops",
+            "image": "https://academy.arivuon.in/og-image.png",
+            "inLanguage": "en",
+            "availableLanguage": "en",
+            "educationalLevel": "Beginner to Advanced",
+            "teaches": [
+              "AWS Cloud",
+              "DevOps Fundamentals",
+              "CI/CD Pipelines",
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "Infrastructure as Code",
+              "Cloud Deployment"
+            ],
+            "courseMode": "online",
+            "isAccessibleForFree": false,
+            "offers": {
+              "@type": "Offer",
+              "category": "Paid",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://academy.arivuon.in/courses/devops"
+            },
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "courseWorkload": "PT12H"
+            }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="
 relative

@@ -17,7 +17,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-type CourseTab = "python" | "devops" | "python-devops";
+type CourseTab = "python" | "devops" | "python-ai-aws-devops-combo";
 
 interface CourseStats {
   students: string;
@@ -38,12 +38,12 @@ interface TabItem {
 }
 
 const Hero = () => {
-  const [activeTab, setActiveTab] = useState("python-devops");
+  const [activeTab, setActiveTab] = useState("python-ai-aws-devops-combo");
 
   const tabs: TabItem[] = [
     {
-      id: "python-devops",
-      label: "Python + DevOps(Combo Pack)",
+      id: "python-ai-aws-devops-combo",
+      label: "Python + AI + DevOps(Combo Pack)",
       color: "text-indigo-600",
       bgColor: "bg-indigo-100",
     },
@@ -63,21 +63,21 @@ const Hero = () => {
 
   const getCourseTitle = () => {
     switch (activeTab) {
-      case "python-devops":
-        return "Python + DevOps AWS DevOps Engineering (Combo Pack)";
+      case "python-ai-aws-devops-combo":
+        return "Python + AI + DevOps AWS DevOps Engineering (Combo Pack)";
       case "python":
         return "Python & Django Development";
       case "devops":
         return "DevOps Engineering";
       default:
-        return "Python + DevOps AWS DevOps Engineering (Combo Pack)";
+        return "Python + AI + DevOps AWS DevOps Engineering (Combo Pack)";
     }
   };
 
   const getCourseDescription = () => {
     switch (activeTab) {
-      case "python-devops":
-        return "Backend Development + CI/CD + Docker + Kubernetes + AWS with real-world deployment projects";
+      case "python-ai-aws-devops-combo":
+        return "Backend Development + AI (Basics) + CI/CD + Docker + Kubernetes + AWS with real-world deployment projects";
       case "python":
         return "Master Django, REST APIs, Database Design & real-world projects";
       case "devops":
@@ -89,20 +89,20 @@ const Hero = () => {
 
   const getCoursePrice = () => {
     switch (activeTab) {
-      case "python-devops":
-        return "₹20,000";
+      case "python-ai-aws-devops-combo":
+        return "₹15,000";
       case "python":
         return "₹10,000";
       case "devops":
         return "₹10,000";
       default:
-        return "₹20,000";
+        return "₹15,000";
     }
   };
 
   const getCourseDuration = () => {
     switch (activeTab) {
-      case "python-devops":
+      case "python-ai-aws-devops-combo":
         return "12 Weeks";
       case "python":
         return "6 Weeks";
@@ -116,7 +116,7 @@ const Hero = () => {
 
   const getCourseIcon = () => {
     switch (activeTab) {
-      case "python-devops":
+      case "python-ai-aws-devops-combo":
         return <Rocket className="w-6 h-6 text-white" />;
       case "python":
         return <Sparkles className="w-6 h-6 text-white" />;
@@ -129,7 +129,7 @@ const Hero = () => {
 
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F8FAFF] to-[#E0ECFF] pt-12 pb-10 md:pt-10 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F8FAFF] to-[#E0ECFF] pt-12 pb-10 md:pt-20 text-white">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-[#1E3A8A]/20 via-[#3B82F6]/10 to-transparent rounded-full blur-3xl"></div>
@@ -293,7 +293,7 @@ const Hero = () => {
   ">
                   Transform your career with industry-focused training at
                   <span className="font-semibold text-[#0E2A5A]"> ArivuOn Academy</span>.
-                  Master Python, DevOps, and React with hands-on projects, expert mentorship, and placement support.
+                  Master Python, AI & ML, DevOps, and React with hands-on projects, expert mentorship, and placement support.
                 </p>
 
               </div>

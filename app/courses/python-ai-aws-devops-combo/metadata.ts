@@ -86,13 +86,13 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical:
-      "https://academy.arivuon.in/courses/python-aws-devops-combo",
+      "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
   },
 
   openGraph: {
     type: "website",
 
-    url: "https://academy.arivuon.in/courses/python-aws-devops-combo",
+    url: "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
 
     title:
       "Python + AWS DevOps Engineering | Full Stack + Cloud Deployment | ArivuOn Academy",
@@ -151,6 +151,6 @@ export const metadata: Metadata = {
     url: "https://academy.arivuon.in",
 
     identifierURL:
-      "https://academy.arivuon.in/courses/python-aws-devops-combo",
+      "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
   },
 };

@@ -5,20 +5,22 @@ export default function CoursesPage() {
   const allCourses = [
     {
       id: 0,
-      title: 'Python + DevOps AWS DevOps Engineering (Combo Pack)',
+      title: 'Python + AI + AWS DevOps Engineering (Combo Pack)',
       description:
-        'Complete backend development + CI/CD + Docker + Kubernetes + AWS deployment with real-world production projects.',
+        'Master Python programming, AI basics, Django backend development, CI/CD pipelines, Docker, Kubernetes, and AWS cloud deployment with real-world production projects.',
       icon: <CloudCog className="w-8 h-8" />,
       duration: '12 Weeks',
       level: 'Beginner to Advanced',
-      fee: '₹20,000',
+      fee: '₹15,000',
       features: [
-        'Python & Django',
+        'Python Programming',
+        'AI Fundamentals',
+        'Django Backend Development',
         'Docker & Kubernetes',
         'AWS Cloud Deployment',
         'CI/CD Pipelines',
         'Infrastructure as Code',
-        'Live Production Project',
+        'Live AI + DevOps Production Project',
         'Placement Assistance'
       ],
       popular: true,
@@ -57,22 +59,22 @@ export default function CoursesPage() {
       popular: false,
     },
     {
-    id: 4,
-    title: 'Data Science & AI Engineering',
-    description: 'Master Data Science, Machine Learning, NLP, and Computer Vision with real-world projects.',
-    icon: <Brain className="w-8 h-8" />,
-    duration: '6 Weeks',
-    level: 'Beginner to Professional',
-    fee: '₹10,000',
-    features: [
-      'Python for Data Science',
-      'NumPy & Pandas',
-      'Machine Learning',
-      'NLP & Computer Vision',
-      'AI Model Deployment'
-    ],
-    popular: false,
-  },
+      id: 4,
+      title: 'Data Science & AI Engineering',
+      description: 'Master Data Science, Machine Learning, NLP, and Computer Vision with real-world projects.',
+      icon: <Brain className="w-8 h-8" />,
+      duration: '6 Weeks',
+      level: 'Beginner to Professional',
+      fee: '₹10,000',
+      features: [
+        'Python for Data Science',
+        'NumPy & Pandas',
+        'Machine Learning',
+        'NLP & Computer Vision',
+        'AI Model Deployment'
+      ],
+      popular: false,
+    },
 
   ];
 

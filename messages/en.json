@@ -176,28 +176,28 @@
       }
     },
     "pythonDevopsCombo": {
-      "title": "Python  + AWS DevOps Engineering",
-      "subtitle": "Build Applications. Deploy to Cloud. Automate Everything.",
-      "description": "Master Python programming, Django backend development, REST APIs, AWS cloud infrastructure, CI/CD automation, and Infrastructure as Code.",
-      "tagline": "Complete Developer to DevOps Career Path",
-      "heroText": "Build scalable Django applications and deploy them to AWS using CI/CD pipelines and Terraform automation.",
-      "ecosystemTitle": " + Cloud Ecosystem",
-      "stackTitle": "Master the Complete Modern Stack",
+      "title": "Python + AI + AWS DevOps Engineering",
+      "subtitle": "Build Intelligent Applications. Deploy to Cloud. Automate Everything.",
+      "description": "Master Python programming, Artificial Intelligence basics, Django backend development, REST APIs, AWS cloud infrastructure, CI/CD automation, and Infrastructure as Code.",
+      "tagline": "Complete AI Developer to DevOps Career Path",
+      "heroText": "Build AI-powered Django applications and deploy them to AWS using CI/CD pipelines and Terraform automation.",
+      "ecosystemTitle": " + AI & Cloud Ecosystem",
+      "stackTitle": "Master the Complete Modern AI + DevOps Stack",
       "curriculumTitle": "Structured Learning Path",
-      "curriculumDesc": "From Python fundamentals to full production cloud deployment in 16 weeks.",
-      "projectsTitle": "End-to-End Deployment Projects",
+      "curriculumDesc": "From Python fundamentals to AI development and full production cloud deployment in 16 weeks.",
+      "projectsTitle": "End-to-End AI Deployment Projects",
       "skillsTitle": "Skills You Will Master",
-      "careerTitle": " + DevOps Career Opportunities",
-      "careerSubtitle": "Why This Combo Is Highly In Demand",
+      "careerTitle": " + AI DevOps Career Opportunities",
+      "careerSubtitle": "Why AI + DevOps Skills Are Highly In Demand",
       "averageSalary": "Average Salary Range",
       "jobGrowth": "Job Growth Rate",
       "industryDemand": "Market Demand",
-      "ctaTitle": "Launch Your  + DevOps Career",
-      "ctaDesc": "Join the most comprehensive Python + AWS DevOps combo program and become job-ready in 16 weeks.",
+      "ctaTitle": "Launch Your AI + DevOps Career",
+      "ctaDesc": "Join the most comprehensive Python + AI + AWS DevOps combo program and become job-ready in 16 weeks.",
       "courseDetails": {
-        "title": "Python  + AWS DevOps Engineering (Combo Pack)",
-        "subtitle": "Build scalable Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
-        "description": "Master Python programming, Django backend development, APIs, databases, and complete DevOps automation using AWS, Git, Jenkins, and Terraform.",
+        "title": "Python + AI + AWS DevOps Engineering (Combo Pack)",
+        "subtitle": "Build intelligent Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
+        "description": "Master Python programming, Artificial Intelligence basics, Django backend development, APIs, databases, and complete DevOps automation using AWS, Git, Jenkins, and Terraform.",
         "duration": "12 Weeks",
         "level": "Beginner to Advanced",
         "nextBatch": "March 30, 2026",
@@ -272,12 +272,12 @@
             "terraform": "Terraform Configuration and Provisioning",
             "awsInfra": "Provision AWS Infrastructure",
             "cloudwatch": "CloudWatch Monitoring and Alerts",
-            "finalProject": "End-to-End Production Deployment"
+            "finalProject": "AI-powered Production Deployment"
           }
         }
       },
       "benefits": {
-        "certification": "Python + DevOps Certification",
+        "certification": "Python + AI + DevOps Certification",
         "hours": "150+ Hours of Live Training",
         "projects": "10+ Real Industry Projects",
         "mentorship": "1:1 Mentorship and Career Guidance"
@@ -290,7 +290,7 @@
         "terraform": "Provision infrastructure using Terraform",
         "monitoring": "Monitor applications using CloudWatch",
         "bestPractices": "Implement DevOps best practices",
-        "careerReady": "Become job-ready as a Python + DevOps Engineer"
+        "careerReady": "Become job-ready as a Python + AI + DevOps Engineer"
       },
       "tools": {
         "python": "Python 3.11+",
