@@ -1,3 +1,4 @@
+// D:\Website-Vira\app\courses\datasci\metadata.ts
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
