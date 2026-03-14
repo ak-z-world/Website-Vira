@@ -58,25 +58,109 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
         <link rel="icon" href="/favicon.ico" />
-      </head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [
+                  {
+                    "@type": "EducationalOrganization",
+                    "@id": "https://academy.arivuon.in/#organization",
+                    "name": "ArivuOn Academy",
+                    "alternateName": ["Arivuon Academy", "ArivuOn"],
+                    "url": "https://academy.arivuon.in",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://academy.arivuon.in/logo.png",
+                      "width": 400,
+                      "height": 100
+                    },
+                    "image": "https://academy.arivuon.in/og-image.png",
+                    "description": "ArivuOn Academy offers globally accessible Python, DevOps, AWS, and React training programs for students and professionals worldwide.",
+                    "foundingDate": "2024",
+                    "email": "contact@arivuon.in",  // replace with real email
+                    "telephone": "+91-XXXXXXXXXX",   // replace with real phone
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressCountry": "IN",
+                      "addressRegion": "Tamil Nadu"
+                    },
+                    "sameAs": [
+                      "https://www.youtube.com/@arivuonacademy",   // add your real profiles
+                      "https://www.linkedin.com/company/arivuon",
+                      "https://twitter.com/arivuonacademy",
+                      "https://www.instagram.com/arivuonacademy",
+                      "https://g.co/kgs/XXXXXX"  // Google Business Profile URL
+                    ],
+                    "hasOfferCatalog": {
+                      "@type": "OfferCatalog",
+                      "name": "ArivuOn Academy Courses",
+                      "itemListElement": [
+                        {
+                          "@type": "Course",
+                          "name": "Python Programming Course",
+                          "url": "https://academy.arivuon.in/courses/python"
+                        },
+                        {
+                          "@type": "Course",
+                          "name": "AWS DevOps Course",
+                          "url": "https://academy.arivuon.in/courses/devops"
+                        },
+                        {
+                          "@type": "Course",
+                          "name": "Python + AWS DevOps Combo",
+                          "url": "https://academy.arivuon.in/courses/python-aws-devops-combo"
+                        },
+                        {
+                          "@type": "Course",
+                          "name": "React Development Course",
+                          "url": "https://academy.arivuon.in/courses/react"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "@type": "WebSite",
+                    "@id": "https://academy.arivuon.in/#website",
+                    "url": "https://academy.arivuon.in",
+                    "name": "ArivuOn Academy",
+                    "publisher": {
+                      "@id": "https://academy.arivuon.in/#organization"
+                    },
+                    "potentialAction": {
+                      "@type": "SearchAction",
+                      "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://academy.arivuon.in/search?q={search_term_string}"
+                      },
+                      "query-input": "required name=search_term_string"
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </head>
 
-      <body className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50/30">
+        <body className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50/30">
 
-        {/* Provider wraps everything */}
-        <GlobalProvider>
+          {/* Provider wraps everything */}
+          <GlobalProvider>
 
-          <Header />
+            <Header />
 
-          <main className="flex-grow">
-            {children}
-          </main>
+            <main className="flex-grow">
+              {children}
+            </main>
 
-          <Footer />
+            <Footer />
 
-        </GlobalProvider>
+          </GlobalProvider>
 
-      </body>
+        </body>
     </html>
   );
 }
