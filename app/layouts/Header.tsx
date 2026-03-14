@@ -31,8 +31,8 @@ const Header = () => {
         { label: 'Python & Django', href: '/courses/python', badge: 'Popular', },
         { label: 'DevOps ', href: '/courses/devops', badge: 'High Demand' },
         { label: 'React Development', href: '/courses/react', badge: 'Trending' },
-        { label: 'Data Science', href: '/courses/datasci', badge: "Hot" },
-        { label: "Python + AWS DevOps Combo", href: "/courses/python-aws-devops-combo", badge: "New" },
+        { label: 'Data Science', href: '/courses/data-science', badge: "Hot" },
+        { label: "Python + AI + AWS DevOps Combo", href: "/courses/python-ai-aws-devops-combo", badge: "New" },
       ]
     },
     { label: 'About', href: '/about', icon: <Users className="w-4 h-4" /> },

@@ -111,8 +111,8 @@ export default function RootLayout({
                         },
                         {
                           "@type": "Course",
-                          "name": "Python + AWS DevOps Combo",
-                          "url": "https://academy.arivuon.in/courses/python-aws-devops-combo"
+                          "name": "Python + AI(Basics) + AWS DevOps Combo",
+                          "url": "https://academy.arivuon.in/courses/python-ai-aws-devops-combo"
                         },
                         {
                           "@type": "Course",

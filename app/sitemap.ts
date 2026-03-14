@@ -52,7 +52,7 @@ const COURSES: CourseEntry[] = [
     lastModified: new Date("2025-06-01"),
   },
   {
-    slug: "python-aws-devops-combo",
+    slug: "python-ai-aws-devops-combo",
     ogImage: "/og-image-combo.png",
     priority: 0.98, // Flagship — highest priority after homepage
     changeFrequency: "weekly",
@@ -66,7 +66,7 @@ const COURSES: CourseEntry[] = [
     lastModified: new Date("2025-06-01"),
   },
   {
-    slug: "datasci",
+    slug: "data-science",
     ogImage: "/og-image-datasci.png",
     priority: 0.93,
     changeFrequency: "weekly",

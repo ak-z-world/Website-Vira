@@ -18,22 +18,22 @@ import {
     Rocket,
     Target,
     Workflow,
-    FileCode,      // ✅ ADD THIS
-    Cpu,           // ✅ Needed for Tech Stack section
-    BookOpen       // ✅ Needed in Curriculum section
+    FileCode,
+    Cpu,
+    BookOpen
 } from "lucide-react";
 import Link from "next/link";
 
-export default function PythonDevOpsComboPage() {
+export default function PythonAiAwsComboPage() {
     const { t, price, originalPrice } = useGlobal();
     const courseDetails = {
-        title: "Python + AWS DevOps Engineering (Combo Pack)",
+        title: "Python + AI + AWS DevOps Engineering (Combo Pack)",
         subtitle:
-            "Build scalable Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
+            "Build intelligent Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
         description: t("courses.pythonDevopsCombo.courseDetails.description"),
         duration: "12 Weeks",
         level: "Beginner to Advanced",
-        fee: "₹20,000",
+        fee: "₹15,000",
         originalFee: "₹65,000",
         nextBatch: "March 30, 2026",
         seatsLeft: "10",
@@ -166,7 +166,7 @@ export default function PythonDevOpsComboPage() {
         "Working IT Professionals",
         "Developers & System Engineers",
         "Career Switchers",
-        "Beginners interested in Cloud & Backend Development",
+        "Beginners interested in AI, Cloud & Backend Development",
     ];
 
     const batchDetails = {
@@ -177,15 +177,63 @@ export default function PythonDevOpsComboPage() {
     };
 
     const finalProject = {
-        title: "End-to-End Production Deployment Project",
+        title: "End-to-End AI-Powered Production Deployment Project",
         description:
-            "Build a Django application → Push to GitHub → Configure Jenkins CI/CD → Provision AWS infrastructure using Terraform → Deploy to production.",
-        technologies: ["Python", "Django", "AWS", "Git", "Jenkins", "Terraform"],
+            "Build an AI-powered Django application → Push to GitHub → Configure Jenkins CI/CD → Provision AWS infrastructure using Terraform → Deploy to production.",
+        technologies: ["Python", "Django", "AI Basics", "AWS", "Git", "Jenkins", "Terraform"],
     };
 
     return (
         <>
 
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Course",
+                        "name": "Python + AI + AWS DevOps Combo Course",
+                        "description": "Comprehensive combo program covering Python programming, Artificial Intelligence fundamentals, and DevOps tools like AWS, Jenkins, Terraform and CI/CD with real-world projects.",
+                        "provider": {
+                            "@type": "EducationalOrganization",
+                            "name": "ArivuOn Academy",
+                            "url": "https://academy.arivuon.in"
+                        },
+                        "url": "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
+                        "image": "https://academy.arivuon.in/og-image.png",
+                        "inLanguage": "en",
+                        "availableLanguage": "en",
+                        "educationalLevel": "Beginner to Advanced",
+                        "teaches": [
+                            "Python Programming",
+                            "Data Structures with Python",
+                            "Artificial Intelligence Basics",
+                            "Machine Learning Fundamentals",
+                            "Django Backend Development",
+                            "REST API Design",
+                            "DevOps Fundamentals",
+                            "CI/CD Pipelines",
+                            "AWS Cloud Infrastructure",
+                            "Terraform Infrastructure as Code",
+                            "CloudWatch Monitoring"
+                        ],
+                        "courseMode": "online",
+                        "isAccessibleForFree": false,
+                        "offers": {
+                            "@type": "Offer",
+                            "category": "Paid",
+                            "priceCurrency": "INR",
+                            "availability": "https://schema.org/InStock",
+                            "url": "https://academy.arivuon.in/courses/python-ai-aws-devops-combo"
+                        },
+                        "hasCourseInstance": {
+                            "@type": "CourseInstance",
+                            "courseMode": "online",
+                            "courseWorkload": "PT20H"
+                        }
+                    })
+                }}
+            />
 
             <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white">
 
@@ -204,15 +252,25 @@ export default function PythonDevOpsComboPage() {
                                     <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
                                         <TrendingUp className="w-4 h-4 text-blue-500" />
                                         <span className="text-sm font-semibold text-blue-600">
-                                            High-Demand Python + DevOps Career
+                                            High-Demand Python + AI + DevOps Career
                                         </span>
                                     </div>
 
-                                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
-                                        Python + DevOps
-                                        <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                            AWS DevOps
+                                    <h1 className="font-bold tracking-tight mb-4 leading-tight
+               text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+
+                                        <span className="block">
+                                            Python
                                         </span>
+
+                                        <span className="block bg-gradient-to-r from-[#EFBF04] to-[#856A00] bg-clip-text text-transparent">
+                                            + AI (Basics)
+                                        </span>
+
+                                        <span className="block bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
+                                            + AWS DevOps
+                                        </span>
+
                                     </h1>
 
                                     <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
@@ -331,7 +389,7 @@ export default function PythonDevOpsComboPage() {
                     </div>
                 </section>
 
-                {/* CURRICULUM */}
+                {/* TECH STACK */}
                 <section className="py-5 bg-white">
                     <div className="section-padding">
                         <div className="max-w-6xl mx-auto">
@@ -347,7 +405,7 @@ export default function PythonDevOpsComboPage() {
                                 <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
                                     Master the{" "}
                                     <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                        Modern Stack
+                                        Modern AI + DevOps Stack
                                     </span>
                                 </h2>
                             </div>
@@ -375,7 +433,7 @@ export default function PythonDevOpsComboPage() {
                                         <div className="text-gray-600">Real Projects</div>
                                     </div>
                                     <div>
-                                        <div className="text-3xl font-bold text-gray-900 mb-2">100+</div>
+                                        <div className="text-3xl font-bold text-gray-900 mb-2">150+</div>
                                         <div className="text-gray-600">Hours of Learning</div>
                                     </div>
                                     <div>
@@ -389,6 +447,7 @@ export default function PythonDevOpsComboPage() {
                     </div>
                 </section>
 
+                {/* CURRICULUM */}
                 <section id="curriculum" className="py-5 bg-gray-50">
                     <div className="section-padding">
                         <div className="max-w-6xl mx-auto">
@@ -409,7 +468,7 @@ export default function PythonDevOpsComboPage() {
                                 </h2>
 
                                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                                    Comprehensive curriculum designed to make you Python + DevOps ready
+                                    Comprehensive curriculum designed to make you Python + AI + DevOps ready
                                 </p>
                             </div>
 
@@ -424,13 +483,11 @@ export default function PythonDevOpsComboPage() {
                                                 <div className="text-white">{module.icon}</div>
                                             </div>
 
-                                            {/* FIX HERE */}
                                             <div className="text-sm font-medium text-gray-500">
                                                 {t(module.duration)}
                                             </div>
                                         </div>
 
-                                        {/* FIX HERE */}
                                         <h3 className="text-xl font-bold text-gray-900 mb-4">
                                             {t(module.title)}
                                         </h3>
@@ -439,8 +496,6 @@ export default function PythonDevOpsComboPage() {
                                             {module.topics.map((topic, idx) => (
                                                 <li key={idx} className="flex items-start gap-2 text-gray-600">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-
-                                                    {/* FIX HERE */}
                                                     <span>{t(topic)}</span>
                                                 </li>
                                             ))}
@@ -459,6 +514,7 @@ export default function PythonDevOpsComboPage() {
                     </div>
                 </section>
 
+                {/* OUTCOMES */}
                 <section className="py-8 bg-white">
                     <div className="section-padding">
                         <div className="max-w-6xl mx-auto">
@@ -477,7 +533,7 @@ export default function PythonDevOpsComboPage() {
                                     <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                                         Become a{" "}
                                         <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                            Python + DevOps Engineer
+                                            Python + AI + DevOps Engineer
                                         </span>
                                     </h2>
 
@@ -531,9 +587,7 @@ export default function PythonDevOpsComboPage() {
                     </div>
                 </section>
 
-
                 {/* FINAL CTA */}
-                {/* CTA Section */}
                 <section className="py-8 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">
                     {/* Background Glow */}
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
@@ -554,14 +608,14 @@ export default function PythonDevOpsComboPage() {
                             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                                 Launch Your{" "}
                                 <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                    Python + DevOps
+                                    Python + AI + DevOps
                                 </span>{" "}
                                 Career
                             </h2>
 
                             {/* Subtitle */}
                             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                                Build applications. Deploy to AWS. Automate everything.
+                                Build AI-powered applications. Deploy to AWS. Automate everything.
                                 Become industry-ready in just {courseDetails.duration}.
                             </p>
 
