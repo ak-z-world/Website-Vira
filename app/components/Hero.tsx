@@ -43,7 +43,7 @@ const Hero = () => {
   const tabs: TabItem[] = [
     {
       id: "python-ai-aws-devops-combo",
-      label: "Python + AI + DevOps(Combo Pack)",
+      label: "Python + AI + AWS DevOps(Combo Pack)",
       color: "text-indigo-600",
       bgColor: "bg-indigo-100",
     },
@@ -55,7 +55,7 @@ const Hero = () => {
     },
     {
       id: "devops",
-      label: "DevOps",
+      label: "AWS DevOps",
       color: "text-blue-600",
       bgColor: "bg-blue-100",
     },
@@ -64,26 +64,26 @@ const Hero = () => {
   const getCourseTitle = () => {
     switch (activeTab) {
       case "python-ai-aws-devops-combo":
-        return "Python + AI + DevOps AWS DevOps Engineering (Combo Pack)";
+        return "Python + AI + AWS DevOps Engineering (Combo Pack)";
       case "python":
         return "Python & Django Development";
       case "devops":
-        return "DevOps Engineering";
+        return "AWS DevOps Engineering";
       default:
-        return "Python + AI + DevOps AWS DevOps Engineering (Combo Pack)";
+        return "Python + AI + AWS DevOps Engineering (Combo Pack)";
     }
   };
 
   const getCourseDescription = () => {
     switch (activeTab) {
       case "python-ai-aws-devops-combo":
-        return "Backend Development + AI (Basics) + CI/CD + Docker + Kubernetes + AWS with real-world deployment projects";
+        return "Backend Development + AI (Basics) + CI/CD + Docker  + AWS with real-world deployment projects";
       case "python":
         return "Master Django, REST APIs, Database Design & real-world projects";
       case "devops":
-        return "Docker, Kubernetes, AWS Cloud & automation";
+        return "Docker, CI/CD, AWS Cloud & automation";
       default:
-        return "Backend Development + CI/CD + Docker + Kubernetes + AWS with real-world deployment projects";
+        return "Backend Development + CI/CD + Docker + AWS with real-world deployment projects";
     }
   };
 

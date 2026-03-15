@@ -17,11 +17,11 @@
   },
   "courses": {
     "devops": {
-      "title": "DevOps Engineering",
+      "title": "AWS DevOps Engineering",
       "subtitle": "Master Cloud and Automation",
       "description": "Become an expert in CI/CD pipelines, container orchestration, cloud infrastructure, and system automation.",
       "tagline": "Highly In-Demand Career Path",
-      "heroText": "Master automation, cloud infrastructure, and scalable deployments. Become the DevOps expert companies are hiring.",
+      "heroText": "Master automation, cloud infrastructure, and scalable deployments. Become the AWS DevOps expert companies are hiring.",
       "ecosystemTitle": "DevOps Ecosystem",
       "stackTitle": "Master the Full Stack",
       "curriculumTitle": "Structured Curriculum",
@@ -33,7 +33,7 @@
       "averageSalary": "Average Salary",
       "jobGrowth": "Job Growth Rate",
       "industryDemand": "Market Demand",
-      "ctaTitle": "Start Your DevOps Career",
+      "ctaTitle": "Start Your AWS DevOps Career",
       "projects": {
         "cicd": {
           "title": "End-to-End CI/CD Pipeline",

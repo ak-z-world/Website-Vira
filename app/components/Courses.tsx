@@ -43,9 +43,9 @@ export default function Courses() {
   const courses: Course[] = [
     {
       id: 1,
-      title: "Python Full Stack Development",
+      title: "Python & Django Development",
       description:
-        "Build production-grade applications using Python, Django, FastAPI and AI integration.",
+        "Build production-grade applications using Python, Django.",
       icon: <Code2 className="w-6 h-6" />,
       duration: "12 Weeks",
       price: "₹10,000",
@@ -55,7 +55,7 @@ export default function Courses() {
       id: 2,
       title: "DevOps Engineering",
       description:
-        "Master Docker, Kubernetes, CI/CD pipelines and AWS Cloud deployment.",
+        "Master Docker, CI/CD pipelines and AWS Cloud deployment.",
       icon: <CloudCog className="w-6 h-6" />,
       duration: "16 Weeks",
       price: "₹10,000",
