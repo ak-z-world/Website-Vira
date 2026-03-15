@@ -116,13 +116,13 @@ const STATIC_PAGES: StaticPage[] = [
     ogImage: "/og-image.png",
   },
   // ↓ Uncomment ONLY when the page is live — a 404 in sitemap hurts your ranking
-  // {
-  //   path: "/blog",
-  //   priority: 0.85,
-  //   changeFrequency: "daily",
-  //   lastModified: new Date("2025-06-15"),
-  //   ogImage: "/og-image.png",
-  // },
+  {
+    path: "/blog",
+    priority: 0.85,
+    changeFrequency: "daily",
+    lastModified: new Date("2025-06-15"),
+    ogImage: "/og-image.png",
+  },
 ];
 
 // ─── SITEMAP BUILDER ─────────────────────────────────────────────────────────
