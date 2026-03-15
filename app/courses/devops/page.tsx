@@ -138,7 +138,6 @@ export default function DevOpsCoursePage() {
   ];
 
   const tools = [
-    { name: 'Kubernetes', icon: <Cpu className="w-4 h-4" />, category: 'Orchestration' },
     { name: 'AWS', icon: <Cloud className="w-4 h-4" />, category: 'Cloud Platform' },
     { name: 'Jenkins', icon: <Settings className="w-4 h-4" />, category: 'CI/CD' },
     { name: 'Terraform', icon: <HardDrive className="w-4 h-4" />, category: 'Infrastructure as Code' },
@@ -190,7 +189,7 @@ overflow-hidden
             "@context": "https://schema.org",
             "@type": "Course",
             "name": "AWS DevOps Engineering Course",
-            "description": "Learn AWS DevOps with hands-on projects including CI/CD pipelines, Docker, Kubernetes, Terraform, and cloud deployment.",
+            "description": "Learn AWS DevOps with hands-on projects including CI/CD pipelines, Docker, Terraform, and cloud deployment.",
             "provider": {
               "@type": "EducationalOrganization",
               "name": "ArivuOn Academy",
@@ -206,7 +205,6 @@ overflow-hidden
               "DevOps Fundamentals",
               "CI/CD Pipelines",
               "Docker",
-              "Kubernetes",
               "Terraform",
               "Infrastructure as Code",
               "Cloud Deployment"

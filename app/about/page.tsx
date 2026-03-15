@@ -33,31 +33,6 @@ export default function AboutPage() {
     }
   ];
 
-  const milestones = [
-    { year: '2024', title: 'Founded', description: 'Launched with Python courses', highlight: true },
-    { year: '2025', title: 'Expansion', description: 'Added DevOps & React programs' },
-    { year: '2026', title: 'Global', description: 'International online batches launched', highlight: true }
-  ];
-
-
-  const leadership = [
-    {
-      icon: <Crown className="w-7 h-7" />,
-      initials: 'S',
-      name: 'Shiva Vignesh',
-      role: 'Founder & CEO',
-      bio: ' 15+ years in software development, DevOps Specialist',
-      expertise: ['Cloud Architecture', 'DevOps']
-    },
-    {
-      icon: <Crown className="w-7 h-7" />,
-      initials: 'S',
-      name: 'Arun Kumar',
-      role: 'Co-Founder & CTO',
-      bio: 'Full Stack Ai Developer, React Expert',
-      expertise: ['python', 'React', 'Full Stack', 'AI', 'ML', 'Deep Learning']
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
@@ -104,145 +79,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones + Leadership Section */}
-      <section className="py-8 bg-gray-50 overflow-hidden">
-        <div className="section-padding max-w-7xl mx-auto">
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                Journey & Leadership
-              </span>
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Milestones that shaped us and the people driving our vision
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-16">
-
-            {/* Animated Timeline */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={{
-                hidden: {},
-                visible: {
-                  transition: { staggerChildren: 0.3 }
-                }
-              }}
-              className="relative"
-            >
-
-              {/* Vertical line */}
-              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-200 to-blue-500 rounded-full" />
-
-              {milestones.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={{
-                    hidden: { opacity: 0, x: -40 },
-                    visible: { opacity: 1, x: 0 }
-                  }}
-                  className="relative pl-16 mb-12"
-                >
-                  {/* Dot */}
-                  <div className={`absolute left-3 w-6 h-6 rounded-full ${item.highlight
-                    ? "bg-blue-500 shadow-lg shadow-blue-400/40"
-                    : "bg-gray-300"
-                    }`} />
-
-                  {/* Card */}
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="bg-white border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all"
-                  >
-                    <div className="text-blue-600 font-bold text-xl mb-2">
-                      {item.year}
-                    </div>
-                    <h3 className="font-semibold text-lg mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {item.description}
-                    </p>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* Leadership Cards */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={{
-                hidden: {},
-                visible: { transition: { staggerChildren: 0.25 } }
-              }}
-              className="grid gap-8"
-            >
-              {leadership.map((leader, index) => (
-                <motion.div
-                  key={index}
-                  variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0 }
-                  }}
-                  whileHover={{ scale: 1.04 }}
-                  className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-3xl opacity-40 pointer-events-none" />
-
-                  <div className="relative flex gap-6 items-start">
-
-                    <motion.div
-                      animate={{ rotate: [0, 6, -6, 0] }}
-                      transition={{ duration: 6, repeat: Infinity }}
-                      className="relative w-16 h-16 flex items-center justify-center"
-                    >
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 blur-md opacity-40" />
-
-                      <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-xl border border-white/20">
-                        {leader.icon}
-                      </div>
-                    </motion.div>
-
-                    <div>
-                      <h3 className="text-xl font-bold">{leader.name}</h3>
-                      <p className="text-blue-600 font-medium mb-2">{leader.role}</p>
-                      <p className="text-gray-600 mb-4">{leader.bio}</p>
-
-                      <div className="flex flex-wrap gap-2">
-                        {leader.expertise.map((skill, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-
-      
       {/* Our Story */}
       <section className="py-8 bg-gray-50">
         <div className="section-padding">
@@ -259,7 +95,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600">
                 <p className="leading-relaxed">
-                  Founded in 2024 by industry veterans, ArivuOn Academy emerged from a critical insight:
+                  Founded in 2025 by industry veterans, ArivuOn Academy emerged from a critical insight:
                   traditional education fails to equip students with practical, industry-relevant skills.
                 </p>
                 <p className="leading-relaxed">
