@@ -81,8 +81,8 @@ export default function RootLayout({
                     "image": "https://academy.arivuon.in/og-image.png",
                     "description": "ArivuOn Academy offers globally accessible Python, DevOps, AWS, and React training programs for students and professionals worldwide.",
                     "foundingDate": "2024",
-                    "email": "contact@arivuon.in",  // replace with real email
-                    "telephone": "+91-XXXXXXXXXX",   // replace with real phone
+                    "email": "info@arivuon.in",  // replace with real email
+                    "telephone": "+91-9445770160",   // replace with real phone
                     "address": {
                       "@type": "PostalAddress",
                       "addressCountry": "IN",
@@ -92,8 +92,8 @@ export default function RootLayout({
                       "https://www.youtube.com/@arivuonacademy",   // add your real profiles
                       "https://www.linkedin.com/company/arivuon",
                       "https://twitter.com/arivuonacademy",
-                      "https://www.instagram.com/arivuonacademy",
-                      "https://g.co/kgs/XXXXXX"  // Google Business Profile URL
+                      "https://www.instagram.com/arivuon_academy",
+                      "https://g.page/r/CaLW7A4cOmu1EBM/review"  // Google Business Profile URL
                     ],
                     "hasOfferCatalog": {
                       "@type": "OfferCatalog",
