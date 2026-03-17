@@ -705,5 +705,248 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "system-design-interview-guide-2026",
+    "title": "System Design Interview Guide 2026 — How to Crack Any Tech Company Interview",
+    "excerpt": "System design is the difference between a ₹12 LPA offer and a ₹35 LPA offer. This complete guide covers every pattern, framework and example you need to ace any system design round.",
+    "coverImage": "/blog/system-design-interview-2026.png",
+    "coverImageAlt": "System Design Interview Guide 2026 — ArivuOn Academy",
+    "category": "Career",
+    "tags": ["System Design", "Interview", "Career", "Software Architecture", "Backend"],
+    "publishedAt": "2026-02-28",
+    "updatedAt": "2026-02-28",
+    "readingTime": 12,
+    "featured": false,
+    "seo": {
+      "metaTitle": "System Design Interview Guide 2026 — Crack FAANG & Top Tech Companies | ArivuOn Academy",
+      "metaDescription": "Complete system design interview preparation guide for 2026. Learn scalability, databases, caching, load balancing and real examples like designing Twitter or YouTube.",
+      "keywords": [
+        "system design interview 2026",
+        "how to crack system design interview",
+        "system design for beginners",
+        "design twitter system design",
+        "scalability interview questions",
+        "software architecture interview"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "System design interviews separate junior from senior engineers. Companies like Google, Amazon, Flipkart and Razorpay use them to filter for engineers who can think at scale. Most candidates fail not because they lack knowledge — but because they lack a framework. This guide gives you the exact framework used by engineers who pass."
+      },
+      {
+        "type": "heading2",
+        "text": "The 6-Step Framework for Any System Design Question"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Step 1",
+            "duration": "5 minutes",
+            "title": "Clarify Requirements — Never Skip This",
+            "skills": ["Functional requirements (what it does)", "Non-functional requirements (scale, latency, availability)", "Ask: how many users? reads vs writes ratio? data size?", "Confirm what is in scope vs out of scope"],
+            "why": "Interviewers give intentionally vague questions to see if you ask the right questions. Jumping straight to design without clarifying is the #1 mistake candidates make."
+          },
+          {
+            "phase": "Step 2",
+            "duration": "5 minutes",
+            "title": "Capacity Estimation — Back of Envelope Math",
+            "skills": ["Daily active users → requests per second", "Storage requirements calculation", "Bandwidth estimation", "Memory requirements"],
+            "why": "Estimating scale determines your entire architecture. A system for 1000 users is completely different from one for 100 million users."
+          },
+          {
+            "phase": "Step 3",
+            "duration": "5 minutes",
+            "title": "High-Level Architecture — Draw the Big Picture",
+            "skills": ["Client → Load Balancer → App Servers → Database", "Identify all major components", "Show data flow between components", "Name the APIs"],
+            "why": "Get agreement on the overall shape before diving into details. Most candidates jump to details too early and run out of time."
+          },
+          {
+            "phase": "Step 4",
+            "duration": "15 minutes",
+            "title": "Deep Dive — Focus on the Hard Parts",
+            "skills": ["Database schema design", "Caching strategy (Redis, CDN)", "Message queues for async processing", "Sharding and replication strategy"],
+            "why": "This is where senior engineers stand out. Know when to use SQL vs NoSQL, why you need a cache, and how to handle the most critical flows."
+          },
+          {
+            "phase": "Step 5",
+            "duration": "5 minutes",
+            "title": "Bottlenecks and Trade-offs",
+            "skills": ["Single points of failure", "Consistency vs availability trade-off (CAP theorem)", "What happens when a service goes down?", "Cost vs performance trade-offs"],
+            "why": "Every design has weaknesses. Identifying them yourself shows engineering maturity. Interviewers respect candidates who proactively flag trade-offs."
+          },
+          {
+            "phase": "Step 6",
+            "duration": "5 minutes",
+            "title": "Scale Further — Handle 10x Growth",
+            "skills": ["Horizontal scaling strategy", "Database read replicas", "CDN for static content", "Microservices decomposition"],
+            "why": "The final question is almost always: 'How would you scale this to 10x?' Have a ready answer."
+          }
+        ]
+      },
+      {
+        "type": "heading2",
+        "text": "Core Components You Must Know Cold"
+      },
+      {
+        "type": "toolGrid",
+        "categories": [
+          {
+            "category": "Databases",
+            "tools": ["PostgreSQL (relational)", "MongoDB (document)", "Cassandra (wide-column)", "Redis (cache/KV)"]
+          },
+          {
+            "category": "Messaging",
+            "tools": ["Kafka (event streaming)", "RabbitMQ (task queues)", "AWS SQS", "Redis Pub/Sub"]
+          },
+          {
+            "category": "Caching",
+            "tools": ["Redis", "Memcached", "CDN (CloudFront)", "Application cache"]
+          },
+          {
+            "category": "Infrastructure",
+            "tools": ["Load Balancers (ALB)", "API Gateway", "Service Mesh (Istio)", "Kubernetes"]
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "The Most Important Concept: CAP Theorem",
+        "text": "In a distributed system, you can only guarantee two of three: Consistency, Availability, Partition Tolerance. Since network partitions always happen, the real choice is between Consistency (every read gets the latest write) and Availability (every request gets a response). SQL databases prioritize Consistency. Most NoSQL databases prioritize Availability."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "How long does it take to prepare for system design interviews?",
+            "answer": "With 1-2 hours of focused daily study: 4-6 weeks to be competent. 2-3 months to be strong. The best preparation is reading about real architectures (Netflix tech blog, Uber engineering, Airbnb engineering) and practicing with a framework. Depth on 10 well-understood patterns beats shallow knowledge of 50 systems."
+          },
+          {
+            "question": "What are the most commonly asked system design questions?",
+            "answer": "Design a URL shortener (covers hashing, redirects, analytics), Design a messaging app like WhatsApp (covers real-time, storage, delivery guarantees), Design a video streaming platform like YouTube (covers CDN, transcoding, storage), Design a social media feed like Twitter (covers fan-out, caching, ranking). Master these four and you cover 80% of all scenarios."
+          },
+          {
+            "question": "Do I need system design skills for a backend developer role?",
+            "answer": "Yes — for any role above junior level. Senior backend, staff engineer, and tech lead roles all include system design rounds. Even for mid-level backend roles at product companies, basic system design awareness is expected. The earlier you build this skill, the faster you progress in your career."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "typescript-complete-guide-javascript-developers-2026",
+    "title": "TypeScript in 2026 — Why Every JavaScript Developer Must Learn It Now",
+    "excerpt": "TypeScript is now used in 78% of professional JavaScript projects. If you are still writing plain JavaScript for production code, this guide will change how you think about it.",
+    "coverImage": "/blog/typescript-guide-2026.png",
+    "coverImageAlt": "TypeScript Complete Guide 2026 — ArivuOn Academy",
+    "category": "React",
+    "tags": ["TypeScript", "JavaScript", "Frontend", "React", "Node.js", "Career"],
+    "publishedAt": "2026-02-20",
+    "updatedAt": "2026-02-20",
+    "readingTime": 9,
+    "featured": false,
+    "seo": {
+      "metaTitle": "TypeScript Complete Guide 2026 — For JavaScript Developers | ArivuOn Academy",
+      "metaDescription": "Learn TypeScript in 2026. Why TypeScript matters, how to migrate JavaScript projects, advanced types, and real-world patterns — complete guide by ArivuOn Academy.",
+      "keywords": [
+        "typescript guide 2026",
+        "learn typescript for beginners",
+        "typescript vs javascript",
+        "typescript for react developers",
+        "typescript advanced types",
+        "migrate javascript to typescript"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "TypeScript caught 68% of bugs before runtime in a 2025 study of large JavaScript codebases. Companies like Airbnb, Slack, and every major tech company migrated to TypeScript for exactly this reason. It is not about being fancy — it is about not shipping bugs to users at 3am."
+      },
+      {
+        "type": "heading2",
+        "text": "TypeScript vs JavaScript — The Real Difference"
+      },
+      {
+        "type": "paragraph",
+        "text": "JavaScript is dynamically typed — variables can change type at runtime, and many errors only surface when users trigger specific code paths. TypeScript adds a static type system on top, catching errors at compile time, before your code runs. TypeScript is a superset of JavaScript — every valid JavaScript file is valid TypeScript. You migrate gradually, not all at once."
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "The Real Reason Teams Adopt TypeScript",
+        "text": "TypeScript is not about types — it is about documentation that the compiler enforces. When you define a function signature in TypeScript, every developer on your team instantly knows what it expects and returns, and the compiler tells them immediately if they get it wrong."
+      },
+      {
+        "type": "heading2",
+        "text": "TypeScript Concepts — From Basics to Advanced"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Level 1",
+            "duration": "1 week",
+            "title": "Basic Types and Annotations",
+            "skills": ["string, number, boolean, null, undefined", "Arrays and tuples", "Function parameter and return types", "Type inference (when to annotate vs let TS infer)"],
+            "why": "80% of TypeScript value comes from these basics. Master them first before touching advanced features."
+          },
+          {
+            "phase": "Level 2",
+            "duration": "1 week",
+            "title": "Interfaces and Type Aliases",
+            "skills": ["interface vs type (when to use each)", "Optional and readonly properties", "Extending interfaces", "Union and intersection types"],
+            "why": "This is where you model your application's data. Strong interface design makes the entire codebase self-documenting."
+          },
+          {
+            "phase": "Level 3",
+            "duration": "1 week",
+            "title": "Generics — Write Once, Type Safely",
+            "skills": ["Generic functions and interfaces", "Generic constraints", "Built-in utility types (Partial, Required, Pick, Omit)", "Conditional types"],
+            "why": "Generics let you write reusable code that maintains type safety. They are what separates TypeScript beginners from intermediate developers."
+          },
+          {
+            "phase": "Level 4",
+            "duration": "1 week",
+            "title": "Advanced Patterns in Real Projects",
+            "skills": ["Discriminated unions for state management", "Template literal types", "Mapped types", "Type guards and narrowing"],
+            "why": "These patterns appear in every large TypeScript codebase. Understanding them makes you effective on any professional TypeScript project."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "typescript",
+        "title": "Real-World TypeScript — API Response Typing",
+        "code": "// Define your API response shape\ninterface ApiResponse<T> {\n  data: T;\n  error: string | null;\n  status: 'success' | 'error' | 'loading';\n}\n\ninterface Course {\n  id: string;\n  title: string;\n  price: number;\n  category: 'python' | 'devops' | 'react';\n  enrolledAt?: Date;  // optional field\n}\n\n// TypeScript catches mismatches at compile time\nasync function fetchCourse(id: string): Promise<ApiResponse<Course>> {\n  const res = await fetch(`/api/courses/${id}`);\n  return res.json();\n}\n\n// Usage — TypeScript knows exactly what .data contains\nconst result = await fetchCourse('course-123');\nif (result.status === 'success') {\n  console.log(result.data.title);    // ✅ TypeScript knows this exists\n  console.log(result.data.unknown);  // ❌ TypeScript error at compile time\n}"
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Should I learn JavaScript before TypeScript?",
+            "answer": "Yes — TypeScript is a layer on top of JavaScript, not a replacement. Learn JavaScript fundamentals (functions, closures, async/await, array methods) first. Then add TypeScript. Trying to learn both simultaneously leads to confusion about what is JavaScript and what is TypeScript."
+          },
+          {
+            "question": "Is TypeScript required for React development in 2026?",
+            "answer": "Required? No. Expected? Yes. The vast majority of professional React codebases in 2026 use TypeScript. Every major React framework (Next.js, Remix) defaults to TypeScript. React's own type definitions are first-class. If you are learning React for a professional career, learn it with TypeScript from day one."
+          },
+          {
+            "question": "How long does it take to become productive in TypeScript?",
+            "answer": "If you know JavaScript: 1-2 weeks to write basic TypeScript comfortably, 1-2 months to use it confidently across a full project, 3-6 months to understand advanced patterns. The learning curve is not steep — most TypeScript concepts map directly to patterns you already use in JavaScript."
+          }
+        ]
+      }
+    ]
   }
 ]
