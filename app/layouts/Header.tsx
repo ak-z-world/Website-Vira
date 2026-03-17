@@ -31,7 +31,7 @@ const Header = () => {
         { label: 'DevOps',                        href: '/courses/devops',                  badge: 'High Demand' },
         { label: 'React Development',             href: '/courses/react',                   badge: 'Trending'    },
         { label: 'Data Science',                  href: '/courses/datasci',                 badge: 'Hot'         },
-        { label: 'Python + AI + AWS DevOps Combo',href: '/courses/python-aws-devops-combo', badge: 'New'         },
+        { label: 'Python + AI + AWS DevOps Combo',href: '/courses/python-ai-aws-devops-combo', badge: 'New'         },
       ],
     },
     { label: 'Blog', href: '/blog', icon: <PenLine className="w-4 h-4" /> }, // ← ADDED
