@@ -11,7 +11,7 @@ export default function CoursesPage() {
       icon: <CloudCog className="w-8 h-8" />,
       duration: '12 Weeks',
       level: 'Beginner to Advanced',
-      fee: '₹15,000',
+      fee: '₹10,000',
       features: [
         'Python Programming',
         'AI Fundamentals',

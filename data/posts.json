@@ -948,5 +948,215 @@
         ]
       }
     ]
+  },
+    {
+    "slug": "kubernetes-beginners-guide-2026",
+    "title": "Kubernetes in 2026 — A Beginner's Guide to Container Orchestration",
+    "excerpt": "Kubernetes is mentioned in 60% of senior DevOps job descriptions. You do not need to understand every corner of it — you need to understand the core concepts that appear in every production deployment.",
+    "coverImage": "/blog/kubernetes-beginners-2026.png",
+    "coverImageAlt": "Kubernetes Beginner Guide 2026 — ArivuOn Academy",
+    "category": "DevOps",
+    "tags": ["Kubernetes", "Docker", "DevOps", "Containers", "AWS", "Cloud"],
+    "publishedAt": "2026-02-15",
+    "updatedAt": "2026-02-15",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "Kubernetes for Beginners 2026 — Complete Guide to K8s | ArivuOn Academy",
+      "metaDescription": "Learn Kubernetes from scratch in 2026. Pods, deployments, services, ingress and real AWS EKS deployment explained for beginners — ArivuOn Academy.",
+      "keywords": [
+        "kubernetes for beginners 2026",
+        "kubernetes tutorial",
+        "learn k8s from scratch",
+        "kubernetes vs docker",
+        "kubernetes pods deployments explained",
+        "aws eks tutorial"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Kubernetes runs Netflix, Spotify, Airbnb, and the majority of large-scale software infrastructure globally. It is the operating system of the cloud-native world. But its documentation is notoriously dense, and most tutorials assume you already understand half of it. This guide starts at zero."
+      },
+      {
+        "type": "heading2",
+        "text": "Why Kubernetes Exists — The Problem It Solves"
+      },
+      {
+        "type": "paragraph",
+        "text": "Docker lets you package applications into containers. But when you run 50 containers across 10 servers in production, who decides which container runs on which server? What happens when a container crashes? How do you update 50 containers with zero downtime? How do you scale from 50 to 5000 containers when traffic spikes? This is the problem Kubernetes solves. It is a container orchestration platform — the manager that decides where, when and how your containers run."
+      },
+      {
+        "type": "heading2",
+        "text": "Core Kubernetes Concepts — The Mental Model"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Concept 1",
+            "duration": "Fundamental",
+            "title": "Pod — The Smallest Unit",
+            "skills": ["One or more containers running together", "Shared network namespace", "Ephemeral — dies and is replaced", "Never manage Pods directly"],
+            "why": "Everything in Kubernetes revolves around Pods. Understand that a Pod is temporary by design — Kubernetes replaces dead Pods automatically."
+          },
+          {
+            "phase": "Concept 2",
+            "duration": "Fundamental",
+            "title": "Deployment — How You Run Applications",
+            "skills": ["Declares desired state (3 replicas of nginx)", "Kubernetes maintains that state automatically", "Rolling updates with zero downtime", "Rollback to previous version in seconds"],
+            "why": "Deployments are how you run every real application in Kubernetes. You say 'I want 3 replicas' and Kubernetes makes it happen and keeps it that way."
+          },
+          {
+            "phase": "Concept 3",
+            "duration": "Networking",
+            "title": "Service — How Pods Talk to Each Other",
+            "skills": ["Stable DNS name for a set of Pods", "Load balances across all matching Pods", "ClusterIP (internal)", "LoadBalancer (external, creates AWS ELB)"],
+            "why": "Pods have ephemeral IP addresses that change when they restart. Services provide a stable endpoint. This is the glue that makes microservices work."
+          },
+          {
+            "phase": "Concept 4",
+            "duration": "Networking",
+            "title": "Ingress — HTTP Routing to Services",
+            "skills": ["Route example.com/api to backend service", "Route example.com/app to frontend service", "SSL termination", "Works with nginx-ingress or AWS ALB ingress"],
+            "why": "Ingress is how traffic from the internet gets to your applications. One Ingress controller replaces multiple load balancers, saving significant cost."
+          },
+          {
+            "phase": "Concept 5",
+            "duration": "Configuration",
+            "title": "ConfigMap and Secret",
+            "skills": ["ConfigMap: non-sensitive configuration", "Secret: passwords, API keys (base64 encoded)", "Injected as environment variables or files", "Change config without rebuilding images"],
+            "why": "Never bake configuration into Docker images. ConfigMaps and Secrets let you deploy the same image to dev, staging, and production with different configuration."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "yaml",
+        "title": "A Production Deployment YAML — What You'll Write",
+        "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: arivuon-api\n  namespace: production\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: arivuon-api\n  template:\n    metadata:\n      labels:\n        app: arivuon-api\n    spec:\n      containers:\n      - name: api\n        image: your-registry/arivuon-api:v2.1.0\n        ports:\n        - containerPort: 8000\n        env:\n        - name: DATABASE_URL\n          valueFrom:\n            secretKeyRef:\n              name: app-secrets\n              key: database-url\n        resources:\n          requests:\n            memory: \"256Mi\"\n            cpu: \"250m\"\n          limits:\n            memory: \"512Mi\"\n            cpu: \"500m\"\n        readinessProbe:\n          httpGet:\n            path: /health\n            port: 8000\n          initialDelaySeconds: 10"
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "The Biggest Mistake When Learning Kubernetes",
+        "text": "Trying to learn Kubernetes without first mastering Docker. Kubernetes orchestrates containers — if you do not understand how containers work, ports, volumes, and networking, Kubernetes will be incomprehensible. Spend 3-4 weeks with Docker first."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Do I need to learn Kubernetes to be a DevOps engineer?",
+            "answer": "For most DevOps roles in 2026 — yes. Kubernetes appears in 60%+ of DevOps job descriptions at companies with more than 50 engineers. However, you do not need to be a Kubernetes administrator. Understanding core concepts, deploying applications, debugging Pod issues, and working with Helm charts covers 90% of what most DevOps engineers need."
+          },
+          {
+            "question": "Kubernetes vs Docker Compose — which should I use?",
+            "answer": "Docker Compose for local development and small applications (1-5 services, single machine). Kubernetes for production, multi-machine, multi-service deployments that need auto-scaling, self-healing, and zero-downtime deployments. The answer is usually: both — Docker Compose locally, Kubernetes in production."
+          },
+          {
+            "question": "What is the easiest way to start a Kubernetes cluster?",
+            "answer": "For learning: use Minikube (single-node cluster on your laptop) or kind (Kubernetes in Docker). For production: use a managed service — AWS EKS, Google GKE, or Azure AKS. Managed services handle control plane management, upgrades, and high availability automatically. Never run your own Kubernetes control plane unless you have a dedicated platform team."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "react-server-components-nextjs-2026",
+    "title": "React Server Components in 2026 — What They Are and Why They Change Everything",
+    "excerpt": "React Server Components fundamentally change how React applications are built. If you are still building SPAs the 2021 way, you are missing the most important React evolution in years.",
+    "coverImage": "/blog/react-server-components-2026.png",
+    "coverImageAlt": "React Server Components Next.js 2026 — ArivuOn Academy",
+    "category": "React",
+    "tags": ["React", "Next.js", "Server Components", "Frontend", "Performance"],
+    "publishedAt": "2026-02-10",
+    "updatedAt": "2026-02-10",
+    "readingTime": 8,
+    "featured": false,
+    "seo": {
+      "metaTitle": "React Server Components 2026 — Complete Guide with Next.js | ArivuOn Academy",
+      "metaDescription": "Understand React Server Components in 2026. When to use server vs client components, performance benefits, and real Next.js patterns — ArivuOn Academy.",
+      "keywords": [
+        "react server components 2026",
+        "nextjs server components tutorial",
+        "server components vs client components",
+        "react server components explained",
+        "nextjs app router guide",
+        "react performance 2026"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "React Server Components ship JavaScript to users only when necessary. In a standard React SPA, every component ships to the browser. In a Server Component architecture, components that fetch data, access databases, or perform heavy computation run on the server — and only their rendered HTML reaches the user. The result: dramatically smaller JavaScript bundles and faster load times."
+      },
+      {
+        "type": "heading2",
+        "text": "Server Components vs Client Components — The Core Mental Model"
+      },
+      {
+        "type": "paragraph",
+        "text": "In Next.js 14+, every component is a Server Component by default. It runs on the server, can directly access databases and APIs, and sends rendered HTML to the browser. When you need interactivity — event handlers, useState, useEffect — you add 'use client' to the top of the file. That component now ships to the browser and can be interactive. The key insight: most of your UI does not need to be interactive. Navbars, footers, product listings, blog posts — these are perfect for Server Components."
+      },
+      {
+        "type": "toolGrid",
+        "categories": [
+          {
+            "category": "Server Components",
+            "tools": ["Data fetching", "Database queries", "Heavy computation", "Access to secrets/env vars"]
+          },
+          {
+            "category": "Client Components",
+            "tools": ["onClick, onChange handlers", "useState and useEffect", "Browser APIs", "Real-time subscriptions"]
+          },
+          {
+            "category": "Performance Gains",
+            "tools": ["Zero JS for static content", "Smaller bundle size", "Faster Time to Interactive", "Better Core Web Vitals"]
+          },
+          {
+            "category": "Next.js Features",
+            "tools": ["App Router", "Server Actions", "Streaming with Suspense", "Partial Prerendering"]
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "typescript",
+        "title": "Server Component — Direct Database Access, Zero Client JS",
+        "code": "// app/courses/page.tsx\n// This is a Server Component (no 'use client' = server by default)\n// It runs ONLY on the server — the database query never ships to the browser\n\nimport { db } from '@/lib/database';\n\nexport default async function CoursesPage() {\n  // Direct database access — possible because this runs on the server\n  const courses = await db.query(\n    'SELECT * FROM courses WHERE active = true ORDER BY created_at DESC'\n  );\n\n  return (\n    <main>\n      <h1>All Courses</h1>\n      {courses.map(course => (\n        <div key={course.id}>\n          <h2>{course.title}</h2>\n          <p>{course.description}</p>\n          {/* This interactive button MUST be a Client Component */}\n          <EnrollButton courseId={course.id} />\n        </div>\n      ))}\n    </main>\n  );\n}\n\n// app/components/EnrollButton.tsx\n'use client'; // ← Only this component ships to the browser\n\nexport function EnrollButton({ courseId }: { courseId: string }) {\n  return (\n    <button onClick={() => handleEnroll(courseId)}>\n      Enroll Now\n    </button>\n  );\n}"
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "The Golden Rule of Server vs Client Components",
+        "text": "Push 'use client' as far down the component tree as possible. A page can be a Server Component that fetches data, with one small Client Component button for interactivity. This gives you the best of both: server data access and client interactivity with minimal JavaScript shipped."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Do I need to relearn React for Server Components?",
+            "answer": "Not relearn — extend. Your React knowledge is still valid. Server Components add a new mental model on top: every component is server by default, opt into client with 'use client' when needed. The component model, JSX, props, and composition patterns all work the same way."
+          },
+          {
+            "question": "Can I use useState in a Server Component?",
+            "answer": "No — useState, useEffect, and all React hooks that manage client-side state are unavailable in Server Components. This is intentional: Server Components run once on the server, not persistently in the browser. If you need state or interactivity, that specific component must be marked 'use client'."
+          },
+          {
+            "question": "Are Server Components only for Next.js?",
+            "answer": "Currently, Next.js App Router is the most mature implementation. Remix and other frameworks are adopting them. React Server Components are a core React feature — they are part of React itself, not Next.js. But as of 2026, Next.js is the primary framework where you would use them in production."
+          }
+        ]
+      }
+    ]
   }
 ]
