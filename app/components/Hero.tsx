@@ -90,13 +90,13 @@ const Hero = () => {
   const getCoursePrice = () => {
     switch (activeTab) {
       case "python-ai-aws-devops-combo":
-        return "₹15,000";
+        return "₹10,000";
       case "python":
         return "₹10,000";
       case "devops":
         return "₹10,000";
       default:
-        return "₹15,000";
+        return "₹10,000";
     }
   };
 

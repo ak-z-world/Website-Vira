@@ -30,7 +30,7 @@ const Header = () => {
         { label: 'Python & Django',              href: '/courses/python',                  badge: 'Popular'     },
         { label: 'DevOps',                        href: '/courses/devops',                  badge: 'High Demand' },
         { label: 'React Development',             href: '/courses/react',                   badge: 'Trending'    },
-        { label: 'Data Science',                  href: '/courses/datasci',                 badge: 'Hot'         },
+        { label: 'Data Science',                  href: '/courses/data-science',                 badge: 'Hot'         },
         { label: 'Python + AI + AWS DevOps Combo',href: '/courses/python-ai-aws-devops-combo', badge: 'New'         },
       ],
     },
@@ -66,9 +66,9 @@ const Header = () => {
               src="/assets/icons/logo2.png"
               alt="ArivuOn Academy Logo"
               width={400}
-              height={120}
+              height={150}
               priority
-              className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+              className="h-10 sm:h-12 lg:h-20 w-auto object-contain"
             />
           </Link>
 

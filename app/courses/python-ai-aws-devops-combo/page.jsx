@@ -33,7 +33,7 @@ export default function PythonAiAwsComboPage() {
         description: t("courses.pythonDevopsCombo.courseDetails.description"),
         duration: "12 Weeks",
         level: "Beginner to Advanced",
-        fee: "₹15,000",
+        fee: "₹10,000",
         originalFee: "₹65,000",
         nextBatch: "March 30, 2026",
         seatsLeft: "10",
