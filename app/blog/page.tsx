@@ -84,11 +84,11 @@ function BlogListingJsonLd({ posts }: { posts: BlogPost[] }) {
 // ─── CATEGORY STYLES ─────────────────────────────────────────────────────────
 
 const CATEGORY_STYLES: Record<string, string> = {
-  DevOps:  "bg-[#FBF3DC] text-[#8B6914] border-[#E0C068]",
-  Python:  "bg-[#EFF6FF] text-[#1E3A8A] border-[#BFDBFE]",
-  Cloud:   "bg-[#F0F9FF] text-[#0C4A6E] border-[#BAE6FD]",
-  React:   "bg-[#ECFEFF] text-[#155E75] border-[#A5F3FC]",
-  Career:  "bg-[#F0FDF4] text-[#14532D] border-[#86EFAC]",
+  DevOps: "bg-[#FBF3DC] text-[#8B6914] border-[#E0C068]",
+  Python: "bg-[#EFF6FF] text-[#1E3A8A] border-[#BFDBFE]",
+  Cloud: "bg-[#F0F9FF] text-[#0C4A6E] border-[#BAE6FD]",
+  React: "bg-[#ECFEFF] text-[#155E75] border-[#A5F3FC]",
+  Career: "bg-[#F0FDF4] text-[#14532D] border-[#86EFAC]",
   default: "bg-[#F8F8F6] text-[#4B5563] border-[#E5E7EB]",
 };
 
@@ -119,6 +119,7 @@ function SectionHeading({ label }: { label: string }) {
 
 function FeaturedCard({ post }: { post: BlogPost }) {
   return (
+
     <Link
       href={`/blog/${post.slug}`}
       className="group relative flex flex-col md:flex-row rounded-2xl overflow-hidden border border-[#E0C068]/30 bg-white shadow-sm hover:shadow-xl hover:border-[#C9952A]/50 transition-all duration-300"
@@ -167,7 +168,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
           <span className="text-[#C9952A] text-sm font-semibold inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
             Read article
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
+              <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </span>
         </div>
@@ -226,14 +227,27 @@ function PostCard({ post }: { post: BlogPost }) {
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
 
 export default function BlogPage() {
-  const allPosts     = getAllPosts();
-  const featured     = getFeaturedPosts();
-  const categories   = getAllCategories();
-  const tags         = getAllTags();
+  const allPosts = getAllPosts();
+  const featured = getFeaturedPosts();
+  const categories = getAllCategories();
+  const tags = getAllTags();
   const regularPosts = allPosts.filter((p) => !p.featured);
 
   return (
     <>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9398KXWC97"></script>
+
+      {/* 3. Google Tag Manager - Inline Script (The Fix) */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9398KXWC97');
+        `,
+        }}
+      />
       <BlogListingJsonLd posts={allPosts} />
 
       <main className="min-h-screen bg-white">
@@ -297,9 +311,8 @@ export default function BlogPage() {
               {categories.map((cat) => (
                 <span
                   key={cat}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold border cursor-default ${
-                    CATEGORY_STYLES[cat] ?? CATEGORY_STYLES.default
-                  }`}
+                  className={`px-4 py-1.5 rounded-full text-xs font-semibold border cursor-default ${CATEGORY_STYLES[cat] ?? CATEGORY_STYLES.default
+                    }`}
                 >
                   {cat}
                 </span>

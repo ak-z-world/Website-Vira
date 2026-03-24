@@ -135,6 +135,19 @@ export default function PythonDjangoCoursePage() {
           }),
         }}
       />
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-9398KXWC97"></script>
+
+      {/* 3. Google Tag Manager - Inline Script (The Fix) */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9398KXWC97');
+        `,
+        }}
+      />
       <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
         {/* Hero Section */}
         <section className="relative pt-10 pb-5 overflow-hidden">
