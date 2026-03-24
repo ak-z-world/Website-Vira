@@ -226,6 +226,19 @@ overflow-hidden
           })
         }}
       />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9398KXWC97"></script>
+
+      {/* 3. Google Tag Manager - Inline Script (The Fix) */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9398KXWC97');
+        `,
+        }}
+      />
       {/* Hero Section */}
       <section className="
 relative
@@ -250,7 +263,7 @@ overflow-hidden
                 </div>
 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
-                  DevOps <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Engineering</span>
+                  AWS DevOps <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Engineering</span>
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">

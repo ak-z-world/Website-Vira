@@ -213,6 +213,19 @@ export default function DataScienceCoursePage() {
                     })
                 }}
             />
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-9398KXWC97"></script>
+
+            {/* 3. Google Tag Manager - Inline Script (The Fix) */}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9398KXWC97');
+        `,
+                }}
+            />
 
             <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
 

@@ -129,32 +129,50 @@ const Hero = () => {
 
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F8FAFF] to-[#E0ECFF] pt-12 pb-10 md:pt-20 text-white">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-[#1E3A8A]/20 via-[#3B82F6]/10 to-transparent rounded-full blur-3xl"></div>
+    <>
 
-        <div className="absolute top-40 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#0E2A5A]/20 via-[#3B82F6]/10 to-transparent rounded-full blur-3xl"></div>
-        {/* Large Nebula Blob */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-600/30 via-indigo-500/20 to-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9398KXWC97"></script>
 
-        {/* Secondary Blob */}
-        <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-transparent rounded-full blur-3xl animate-[spin_40s_linear_infinite]"></div>
+      {/* Google Tag Manager - Inline Script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9398KXWC97');
+        `,
+        }}
+      />
 
-        {/* Floating Orb */}
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-indigo-500/20 to-blue-400/20 rounded-full blur-3xl animate-float"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#F8FAFF] to-[#E0ECFF] pt-12 pb-10 md:pt-20 text-white">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-30 w-[300px] h-[300px] md:w-[700px] md:h-[700px] bg-gradient-to-br from-[#1E3A8A]/20 via-[#3B82F6]/10 to-transparent rounded-full blur-3xl"></div>
 
-        {/* Star Particles */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.15)_1px,_transparent_1px)] bg-[length:40px_40px] opacity-20"></div>
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-orange-100/40 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-orange-50/30 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-50/20 to-transparent rounded-full blur-3xl"></div>
-      </div>
-      {/* Quantum Effects — LEFT SIDE ONLY */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute top-40 right-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-gradient-to-bl from-[#0E2A5A]/20 via-[#3B82F6]/10 to-transparent rounded-full blur-3xl"></div>
 
-        {/* Main quantum orbit */}
-        <div className="
+          {/* Large Nebula Blob — hidden on mobile */}
+          <div className="hidden sm:block absolute -top-40 -right-40 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-br from-blue-600/30 via-indigo-500/20 to-purple-600/30 rounded-full blur-3xl animate-pulse"></div>
+
+          {/* Secondary Blob — hidden on mobile */}
+          <div className="hidden sm:block absolute -bottom-40 -left-40 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-transparent rounded-full blur-3xl animate-[spin_40s_linear_infinite]"></div>
+
+          {/* Floating Orb — hidden on mobile */}
+          <div className="hidden md:block absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-indigo-500/20 to-blue-400/20 rounded-full blur-3xl animate-float"></div>
+
+          {/* Star Particles */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.15)_1px,_transparent_1px)] bg-[length:40px_40px] opacity-20"></div>
+          <div className="hidden sm:block absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-orange-100/40 to-transparent rounded-full blur-3xl"></div>
+          <div className="hidden sm:block absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-orange-50/30 to-transparent rounded-full blur-3xl"></div>
+          <div className="hidden md:block absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-50/20 to-transparent rounded-full blur-3xl"></div>
+        </div>
+
+        {/* Quantum Effects — hidden on mobile, visible md+ */}
+        <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
+
+          {/* Main quantum orbit */}
+          <div className="
     absolute
     top-[35%]
     left-[20%]
@@ -165,7 +183,8 @@ const Hero = () => {
     animate-spin
     opacity-60
   " style={{ animationDuration: "60s" }} />
-        <div className="
+
+          <div className="
     absolute
     top-[35%]
     left-[20%]
@@ -177,8 +196,8 @@ const Hero = () => {
     opacity-80
   " style={{ animationDuration: "60s" }} />
 
-        {/* Secondary orbit */}
-        <div className="
+          {/* Secondary orbit */}
+          <div className="
     absolute
     top-[40%]
     left-[25%]
@@ -190,8 +209,8 @@ const Hero = () => {
     opacity-50
   " style={{ animationDuration: "40s", animationDirection: "reverse" }} />
 
-        {/* Core glow */}
-        <div className="
+          {/* Core glow */}
+          <div className="
     absolute
     top-[48%]
     left-[33%]
@@ -203,33 +222,35 @@ const Hero = () => {
     animate-pulse
   " />
 
-      </div>
-      {/* Neural Network Nodes — LEFT AREA */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+        </div>
 
-        <div className="absolute top-[25%] left-[12%] w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
+        {/* Neural Network Nodes — hidden on mobile */}
+        <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
 
-        <div className="absolute top-[45%] left-[28%] w-2 h-2 bg-indigo-400 rounded-full animate-ping"
-          style={{ animationDelay: "1s" }} />
+          <div className="absolute top-[25%] left-[12%] w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
 
-        <div className="absolute top-[60%] left-[18%] w-2 h-2 bg-purple-400 rounded-full animate-ping"
-          style={{ animationDelay: "2s" }} />
+          <div className="absolute top-[45%] left-[28%] w-2 h-2 bg-indigo-400 rounded-full animate-ping"
+            style={{ animationDelay: "1s" }} />
 
-        <div className="absolute top-[35%] left-[30%] w-2 h-2 bg-blue-400 rounded-full animate-ping"
-          style={{ animationDelay: "1.5s" }} />
+          <div className="absolute top-[60%] left-[18%] w-2 h-2 bg-purple-400 rounded-full animate-ping"
+            style={{ animationDelay: "2s" }} />
 
-      </div>
-      <div className="section-padding relative z-10">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="absolute top-[35%] left-[30%] w-2 h-2 bg-blue-400 rounded-full animate-ping"
+            style={{ animationDelay: "1.5s" }} />
 
-            <div className="space-y-8">
-              {/* Main Heading */}
-              <div className="relative space-y-4 sm:space-y-5 md:space-y-6">
+        </div>
 
-                {/* Quantum Nebula Glow */}
-                <div className="
+        <div className="section-padding relative z-10">
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Content */}
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
+
+              <div className="space-y-6 sm:space-y-8">
+                {/* Main Heading */}
+                <div className="relative space-y-4 sm:space-y-5 md:space-y-6">
+
+                  {/* Quantum Nebula Glow */}
+                  <div className="
     absolute 
     -inset-10 sm:-inset-14 md:-inset-16 lg:-inset-20
     bg-gradient-to-r 
@@ -240,8 +261,8 @@ const Hero = () => {
     rounded-full
   "></div>
 
-                {/* Heading */}
-                <h1 className="
+                  {/* Heading */}
+                  <h1 className="
     relative 
     font-bold 
     leading-tight 
@@ -254,7 +275,7 @@ const Hero = () => {
     xl:text-7xl
   ">
 
-                  <span className="
+                    <span className="
       bg-gradient-to-r 
       from-[#0B1F3A] 
       via-[#0E2A5A] 
@@ -262,12 +283,12 @@ const Hero = () => {
       bg-clip-text 
       text-transparent
     ">
-                    Accelerate Your
-                  </span>
+                      Accelerate Your
+                    </span>
 
-                  <br />
+                    <br />
 
-                  <span className="
+                    <span className="
       bg-gradient-to-r 
       from-[#1E3A8A] 
       via-[#2563EB] 
@@ -276,13 +297,13 @@ const Hero = () => {
       text-transparent
       animate-[pulse_4s_ease-in-out_infinite]
     ">
-                    Tech Career
-                  </span>
+                      Tech Career
+                    </span>
 
-                </h1>
+                  </h1>
 
-                {/* Description */}
-                <p className="
+                  {/* Description */}
+                  <p className="
     text-gray-600 
     leading-relaxed 
     max-w-xl sm:max-w-2xl
@@ -291,36 +312,35 @@ const Hero = () => {
     sm:text-lg
     md:text-xl
   ">
-                  Transform your career with industry-focused training at
-                  <span className="font-semibold text-[#0E2A5A]"> ArivuOn Academy</span>.
-                  Master Python, AI & ML, DevOps, and React with hands-on projects, expert mentorship, and placement support.
-                </p>
+                    Transform your career with industry-focused training at
+                    <span className="font-semibold text-[#0E2A5A]"> ArivuOn Academy</span>.
+                    Master Python, AI & ML, DevOps, and React with hands-on projects, expert mentorship, and placement support.
+                  </p>
 
-              </div>
-              {/* Code particles */}
-              <div className="absolute inset-0 opacity-10 text-indigo-400 text-xs font-mono pointer-events-none">
+                </div>
 
-                <div className="absolute top-20 left-10 animate-float">{'{ AI }'}</div>
-                <div className="absolute top-40 right-20 animate-float delay-1000">{'< ML />'}</div>
-                <div className="absolute bottom-20 left-32 animate-float delay-500">{'0101'}</div>
-                <div className="absolute bottom-40 right-40 animate-float delay-700">{'< />'}</div>
+                {/* Code particles — hidden on mobile */}
+                <div className="hidden sm:block absolute inset-0 opacity-10 text-indigo-400 text-xs font-mono pointer-events-none">
+                  <div className="absolute top-20 left-10 animate-float">{'{ AI }'}</div>
+                  <div className="absolute top-40 right-20 animate-float delay-1000">{'< ML />'}</div>
+                  <div className="absolute bottom-20 left-32 animate-float delay-500">{'0101'}</div>
+                  <div className="absolute bottom-40 right-40 animate-float delay-700">{'< />'}</div>
+                </div>
 
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="
+                {/* CTA Buttons */}
+                <div className="
   flex 
   flex-col 
   sm:flex-row 
   items-stretch sm:items-center
   gap-3 sm:gap-4 
-  pt-4 sm:pt-6
+  pt-2 sm:pt-4 md:pt-6
 ">
 
-                {/* Primary Button */}
-                <Link
-                  href="/courses"
-                  className="
+                  {/* Primary Button */}
+                  <Link
+                    href="/courses"
+                    className="
       group 
       relative 
       inline-flex 
@@ -353,10 +373,10 @@ const Hero = () => {
       transition-all 
       duration-300
     "
-                >
+                  >
 
-                  {/* Glow effect */}
-                  <div className="
+                    {/* Glow effect */}
+                    <div className="
       absolute 
       inset-0 
       rounded-xl sm:rounded-2xl
@@ -370,24 +390,23 @@ const Hero = () => {
       duration-500
     "></div>
 
-                  <span className="relative z-10">
-                    Explore Programs
-                  </span>
+                    <span className="relative z-10">
+                      Explore Programs
+                    </span>
 
-                  <ArrowRight className="
+                    <ArrowRight className="
       relative z-10
       w-4 h-4 sm:w-5 sm:h-5
       group-hover:translate-x-1
       transition-transform
     "/>
 
-                </Link>
+                  </Link>
 
-
-                {/* Secondary Button */}
-                <Link
-                  href="/contact"
-                  className="
+                  {/* Secondary Button */}
+                  <Link
+                    href="/contact"
+                    className="
       group
       inline-flex 
       items-center 
@@ -418,46 +437,46 @@ const Hero = () => {
       transition-all 
       duration-300
     "
-                >
+                  >
 
-                  <PlayCircle className="
+                    <PlayCircle className="
       w-4 h-4 sm:w-5 sm:h-5
       text-[#2563EB]
       group-hover:scale-110
       transition-transform
     "/>
 
-                  Free Career Session
+                    Free Career Session
 
-                </Link>
+                  </Link>
 
-              </div>
+                </div>
 
-              {/* Features */}
-              <div className="
+                {/* Features */}
+                <div className="
   grid 
   grid-cols-1 
   sm:grid-cols-2 
   lg:grid-cols-3 
-  gap-4 sm:gap-5
+  gap-3 sm:gap-4 md:gap-5
 ">
 
-                {[
-                  {
-                    icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#2563EB]" />,
-                    title: "1:1 Industry Mentorship",
-                    subtitle: null,
-                  },
-                  {
-                    icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E3A8A]" />,
-                    title: "Certification",
-                    subtitle: "ArivuOn Academy",
-                  },
-                ].map((feature, idx) => (
+                  {[
+                    {
+                      icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#2563EB]" />,
+                      title: "1:1 Industry Mentorship",
+                      subtitle: null,
+                    },
+                    {
+                      icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E3A8A]" />,
+                      title: "Certification",
+                      subtitle: "ArivuOn Academy",
+                    },
+                  ].map((feature, idx) => (
 
-                  <div
-                    key={idx}
-                    className="
+                    <div
+                      key={idx}
+                      className="
         group
         flex items-center gap-3 sm:gap-4
 
@@ -475,10 +494,11 @@ const Hero = () => {
 
         transition-all duration-300
       "
-                  >
+                    >
 
-                    {/* Icon */}
-                    <div className="
+                      {/* Icon */}
+                      <div className="
+        flex-shrink-0
         flex items-center justify-center
 
         w-9 h-9 sm:w-10 sm:h-10
@@ -494,48 +514,48 @@ const Hero = () => {
         group-hover:scale-110
         transition-transform
       ">
-                      {feature.icon}
-                    </div>
+                        {feature.icon}
+                      </div>
 
+                      {/* Text */}
+                      <div className="flex flex-col leading-tight min-w-0">
 
-                    {/* Text */}
-                    <div className="flex flex-col leading-tight">
-
-                      <span className="
+                        <span className="
           text-sm sm:text-base
           font-semibold
           text-[#0F172A]
           group-hover:text-[#1E3A8A]
           transition-colors
+          truncate
         ">
-                        {feature.title}
-                      </span>
+                          {feature.title}
+                        </span>
 
-                      {feature.subtitle && (
-                        <span className="
+                        {feature.subtitle && (
+                          <span className="
             text-xs sm:text-sm
             font-medium
             text-[#2563EB]
             whitespace-nowrap
           ">
-                          {feature.subtitle}
-                        </span>
-                      )}
+                            {feature.subtitle}
+                          </span>
+                        )}
+
+                      </div>
 
                     </div>
 
-                  </div>
+                  ))}
 
-                ))}
-
+                </div>
               </div>
-            </div>
 
-            {/* Right Side - Interactive Card */}
-            <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+              {/* Right Side - Interactive Card */}
+              <div className="relative w-full max-w-lg mx-auto lg:max-w-none mt-4 sm:mt-0">
 
-              {/* Main Card */}
-              <div className="
+                {/* Main Card */}
+                <div className="
     relative
 
     bg-white
@@ -550,92 +570,97 @@ const Hero = () => {
     overflow-hidden
   ">
 
-                {/* Header */}
-                <div className="px-4 sm:px-6 pt-1 sm:pt-1">
+                  {/* Header */}
+                  <div className="px-4 sm:px-6 pt-4 sm:pt-5">
 
-                  <div className="flex items-center gap-2 sm:gap-3 mb-5">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
 
-                    <div className="flex gap-1.5 sm:gap-2">
-                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
-                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
-                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
-                    </div>
+                      <div className="flex gap-1.5 sm:gap-2">
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
+                      </div>
 
-                    <span className="
+                      <span className="
           text-xs sm:text-sm
           font-semibold
           text-[#1E3A8A]
           tracking-wide
+          truncate
         ">
-                      ArivuOn Academy Dashboard
-                    </span>
+                        ArivuOn Academy Dashboard
+                      </span>
 
-                  </div>
+                    </div>
 
-
-                  {/* Course Selector - Modern Horizontal Pills */}
-                  <div className="mb-8">
-
-  <div className="
+                    {/* Course Selector - Horizontally scrollable on mobile */}
+                    <div className="mb-6 sm:mb-8">
+                      <div className="
     flex
-    flex-wrap
-    gap-3
-    justify-start
-  ">
+    flex-nowrap
+    sm:flex-wrap
+    gap-2 sm:gap-3
+    overflow-x-auto
+    pb-2 sm:pb-0
+    scrollbar-hide
+    -mx-4 sm:mx-0
+    px-4 sm:px-0
+  "
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                      >
 
-    {tabs.map((tab) => {
-      const isActive = activeTab === tab.id;
+                        {tabs.map((tab) => {
+                          const isActive = activeTab === tab.id;
 
-      return (
-        <button
-          key={tab.id}
-          onClick={() => setActiveTab(tab.id)}
-          className={`
+                          return (
+                            <button
+                              key={tab.id}
+                              onClick={() => setActiveTab(tab.id)}
+                              className={`
             relative
-            px-5 py-2.5
+            flex-shrink-0
+            px-4 sm:px-5 py-2 sm:py-2.5
             rounded-full
-            text-sm sm:text-base
+            text-xs sm:text-sm md:text-base
             font-semibold
             whitespace-nowrap
             transition-all duration-300
             border
 
             ${isActive
-              ? `
+                                  ? `
                 bg-[#1E3A8A]
                 text-white
                 border-[#1E3A8A]
                 shadow-lg
               `
-              : `
+                                  : `
                 bg-white
                 text-gray-700
                 border-gray-200
                 hover:border-[#2563EB]
                 hover:text-[#1E3A8A]
               `
-            }
+                                }
           `}
-        >
-          {tab.label}
-        </button>
-      );
-    })}
+                            >
+                              {tab.label}
+                            </button>
+                          );
+                        })}
 
-  </div>
+                      </div>
+                    </div>
 
-</div>
+                  </div>
 
-                </div>
+                  {/* Course Content */}
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-6">
 
+                    <div className="space-y-3 sm:space-y-4">
 
-                {/* Course Content */}
-                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-
-                  <div className="space-y-4">
-
-                    {/* Course Card */}
-                    <div className="
+                      {/* Course Card */}
+                      <div className="
           p-4 sm:p-5
 
           rounded-xl sm:rounded-2xl
@@ -645,10 +670,11 @@ const Hero = () => {
           border border-[#E6ECFF]
         ">
 
-                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="flex items-start gap-3 sm:gap-4">
 
-                        {/* Icon */}
-                        <div className="
+                          {/* Icon */}
+                          <div className="
+              flex-shrink-0
               w-10 h-10 sm:w-12 sm:h-12
 
               rounded-lg sm:rounded-xl
@@ -661,47 +687,50 @@ const Hero = () => {
 
               shadow-md
             ">
-                          {getCourseIcon()}
-                        </div>
+                            {getCourseIcon()}
+                          </div>
 
+                          {/* Content */}
+                          <div className="flex-1 min-w-0">
 
-                        {/* Content */}
-                        <div className="flex-1">
-
-                          <h3 className="
+                            <h3 className="
                 font-bold
-                text-base sm:text-lg
+                text-sm sm:text-base md:text-lg
                 text-[#0F172A]
                 mb-1
+                leading-snug
               ">
-                            {getCourseTitle()}
-                          </h3>
+                              {getCourseTitle()}
+                            </h3>
 
-                          <p className="
-                text-sm
+                            <p className="
+                text-xs sm:text-sm
                 text-gray-600
                 mb-3
+                leading-relaxed
               ">
-                            {getCourseDescription()}
-                          </p>
+                              {getCourseDescription()}
+                            </p>
 
+                            <div className="flex items-center justify-between gap-2 flex-wrap">
 
-                          <div className="flex items-center justify-between">
-
-                            <span className="
+                              <span className="
                   font-bold
                   text-[#1E3A8A]
                   text-sm sm:text-base
                 ">
-                              {getCoursePrice()}
-                            </span>
+                                {getCoursePrice()}
+                              </span>
 
-                            <span className="
+                              <span className="
                   text-xs sm:text-sm
                   text-gray-500
+                  whitespace-nowrap
                 ">
-                              {getCourseDuration()}
-                            </span>
+                                {getCourseDuration()}
+                              </span>
+
+                            </div>
 
                           </div>
 
@@ -709,11 +738,8 @@ const Hero = () => {
 
                       </div>
 
-                    </div>
-
-
-                    {/* Next Batch */}
-                    <div className="
+                      {/* Next Batch */}
+                      <div className="
           p-3 sm:p-4
 
           bg-[#F8FAFF]
@@ -723,24 +749,26 @@ const Hero = () => {
           rounded-lg sm:rounded-xl
         ">
 
-                      <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between gap-2">
 
-                        <div>
-                          <div className="text-sm font-semibold text-[#0F172A]">
-                            Next Batch Starts
+                          <div className="min-w-0">
+                            <div className="text-xs sm:text-sm font-semibold text-[#0F172A]">
+                              Next Batch Starts
+                            </div>
+                            <div className="text-xs text-gray-500">
+                              Limited seats available
+                            </div>
                           </div>
-                          <div className="text-xs text-gray-500">
-                            Limited seats available
-                          </div>
-                        </div>
 
-                        <div className="text-right">
-                          <div className="text-sm font-bold text-[#2563EB]">
-                            March 15, 2026
+                          <div className="text-right flex-shrink-0">
+                            <div className="text-xs sm:text-sm font-bold text-[#2563EB]">
+                              March 15, 2026
+                            </div>
+                            <div className="text-xs text-gray-500">
+                              Enroll before Mar 10
+                            </div>
                           </div>
-                          <div className="text-xs text-gray-500">
-                            Enroll before Mar 10
-                          </div>
+
                         </div>
 
                       </div>
@@ -749,11 +777,8 @@ const Hero = () => {
 
                   </div>
 
-                </div>
-
-
-                {/* Footer */}
-                <div className="
+                  {/* Footer */}
+                  <div className="
       px-4 sm:px-6
       py-4 sm:py-5
 
@@ -762,9 +787,9 @@ const Hero = () => {
       bg-[#F8FAFF]
     ">
 
-                  <Link
-                    href={`/contact?course=${activeTab}`}
-                    className="
+                    <Link
+                      href={`/contact?course=${activeTab}`}
+                      className="
           w-full
 
           flex items-center justify-center gap-2
@@ -787,23 +812,22 @@ const Hero = () => {
 
           transition-all duration-300
         "
-                  >
-                    Start Learning at ArivuOn
-                    <ChevronRight className="w-4 h-4" />
-                  </Link>
+                    >
+                      Start Learning at ArivuOn
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+
+                  </div>
 
                 </div>
 
-              </div>
-
-
-              {/* Success Badge */}
-              <div className="
+                {/* Success Badge */}
+                <div className="
     hidden sm:flex
 
-    absolute -top-12 sm:-top-14 -right-6
+    absolute -top-12 sm:-top-14 -right-2 sm:-right-6
 
-    w-20 h-20 sm:w-28 sm:h-28
+    w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28
 
     bg-gradient-to-br from-[#1E3A8A] to-[#2563EB]
 
@@ -815,18 +839,17 @@ const Hero = () => {
 
     shadow-lg
   ">
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold">98%</div>
-                  <div className="text-[10px] sm:text-xs">Success Rate</div>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold">98%</div>
+                    <div className="text-[9px] sm:text-[10px] md:text-xs leading-tight">Success Rate</div>
+                  </div>
                 </div>
-              </div>
 
-
-              {/* Trust Badge */}
-              <div className="
+                {/* Trust Badge */}
+                <div className="
     hidden sm:flex
 
-    absolute -bottom-6 right-6
+    absolute -bottom-5 sm:-bottom-6 right-4 sm:right-6
 
     px-3 py-2 sm:px-4 sm:py-3
 
@@ -841,30 +864,32 @@ const Hero = () => {
     items-center gap-2 sm:gap-3
   ">
 
-                <div className="
-      w-8 h-8 sm:w-10 sm:h-10
+                  <div className="
+      w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10
 
       bg-[#EEF2FF]
 
       rounded-lg
 
       flex items-center justify-center
+      flex-shrink-0
     ">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#2563EB]" />
-                </div>
+                    <CheckCircle className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 text-[#2563EB]" />
+                  </div>
 
-                <div className="text-xs sm:text-sm font-semibold text-[#0F172A]">
-                  ArivuOn Academy
+                  <div className="text-xs sm:text-xs md:text-sm font-semibold text-[#0F172A] whitespace-nowrap">
+                    ArivuOn Academy
+                  </div>
+
                 </div>
 
               </div>
-
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none"></div>
-    </section>
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none"></div>
+      </section>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import { Code2, CloudCog, Cpu, Clock, Users, TrendingUp, CheckCircle, Brain } from 'lucide-react';
 import Link from 'next/link';
-
+import Script from 'next/script';
 export default function CoursesPage() {
   const allCourses = [
     {
@@ -79,6 +79,20 @@ export default function CoursesPage() {
   ];
 
   return (
+    <>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9398KXWC97"></script>
+
+      {/* 3. Google Tag Manager - Inline Script (The Fix) */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9398KXWC97');
+        `,
+        }}
+      />
     <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
 
       {/* HERO SECTION */}
@@ -253,5 +267,6 @@ export default function CoursesPage() {
       </section>
 
     </div>
+    </>
   );
 }
