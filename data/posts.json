@@ -1411,5 +1411,214 @@
         ]
       }
     ]
+  },
+   {
+    "slug": "git-advanced-workflows-developers-2026",
+    "title": "Git Advanced Workflows in 2026 — Beyond git add, commit, push",
+    "excerpt": "90% of developers know basic Git. The 10% who know advanced Git solve problems in minutes that everyone else spends hours on. Rebase, cherry-pick, bisect, reflog — here is how to actually use them.",
+    "coverImage": "/blog/git-advanced-2026.png",
+    "coverImageAlt": "Git Advanced Workflows 2026 — ArivuOn Academy",
+    "category": "DevOps",
+    "tags": ["Git", "DevOps", "Productivity", "Version Control", "CI/CD"],
+    "publishedAt": "2026-01-20",
+    "updatedAt": "2026-01-20",
+    "readingTime": 8,
+    "featured": false,
+    "seo": {
+      "metaTitle": "Git Advanced Workflows 2026 — Rebase, Cherry-Pick, Bisect Explained | ArivuOn Academy",
+      "metaDescription": "Master advanced Git in 2026. Rebase vs merge, interactive rebase, cherry-pick, git bisect for debugging, and reflog for recovery — ArivuOn Academy.",
+      "keywords": [
+        "git advanced tutorial 2026",
+        "git rebase vs merge",
+        "interactive rebase tutorial",
+        "git cherry pick explained",
+        "git bisect debugging",
+        "advanced git workflow developers"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Every developer knows git commit and git push. But when a 6-month-old bug appears in production, when a team member commits directly to main, when you need one fix from a branch that is not ready to merge — that is when you need the commands most developers have never used. This guide makes you the developer the team calls when Git goes wrong."
+      },
+      {
+        "type": "heading2",
+        "text": "Rebase vs Merge — The Decision That Defines Your Git History"
+      },
+      {
+        "type": "paragraph",
+        "text": "Merge preserves full history — every branch, every merge commit. The history is truthful but can be noisy. Rebase rewrites commits to appear as if they were made on top of the target branch — history is linear and clean but the commit SHAs change. Neither is universally correct. Merge for shared branches where preserving when things happened matters. Rebase for feature branches before merging to keep main history readable."
+      },
+      {
+        "type": "codeBlock",
+        "language": "bash",
+        "title": "Interactive Rebase — Rewrite History Like a Professional",
+        "code": "# Rebase last 4 commits interactively\ngit rebase -i HEAD~4\n\n# In the editor that opens:\n# pick a1b2c3d First commit\n# squash d4e5f6g Fix typo           <- squash into previous commit\n# reword h7i8j9k Add feature        <- change commit message\n# drop  k0l1m2n Temporary debug     <- remove this commit entirely\n# pick  n3o4p5q Final cleanup\n\n# Result: clean, logical history before opening a PR\n\n# Cherry-pick — bring ONE commit from another branch\ngit cherry-pick a1b2c3d\n\n# Find when a bug was introduced — binary search through commits\ngit bisect start\ngit bisect bad                    # current commit has the bug\ngit bisect good v2.0.0            # this version was fine\n# Git checks out middle commit — test it, then tell Git:\ngit bisect good  # or: git bisect bad\n# Repeat until Git identifies the exact commit that introduced the bug\n\n# Recover anything — even after force push or accidental delete\ngit reflog                        # shows every HEAD movement\ngit reset --hard HEAD@{3}         # restore to 3 moves ago"
+      },
+      {
+        "type": "heading2",
+        "text": "Git Workflows — Which One Should Your Team Use"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Option 1",
+            "duration": "Small teams",
+            "title": "Trunk-Based Development",
+            "skills": ["Everyone commits to main daily", "Feature flags for incomplete features", "Short-lived branches (max 1-2 days)", "Continuous deployment from main"],
+            "why": "Recommended by Google and Netflix. Small branches mean small merges mean no integration hell. Requires good test coverage and feature flags."
+          },
+          {
+            "phase": "Option 2",
+            "duration": "Medium teams",
+            "title": "GitHub Flow",
+            "skills": ["main is always deployable", "Create branch for every feature", "Open PR, code review, merge", "Deploy immediately after merge"],
+            "why": "Simple, effective, widely understood. Works well for teams with CI/CD pipelines. Most common workflow in product companies."
+          },
+          {
+            "phase": "Option 3",
+            "duration": "Release-based products",
+            "title": "GitFlow",
+            "skills": ["main + develop + feature/* + release/* + hotfix/*", "Structured releases", "Good for versioned software", "Complex but predictable"],
+            "why": "Use for software with discrete version releases (mobile apps, libraries). Too complex for continuous-deployment web applications."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "tip",
+        "title": "The One Git Alias Every Developer Should Have",
+        "text": "Add this to your ~/.gitconfig: lg = log --oneline --graph --decorate --all — it gives you a visual tree of your entire branch history in the terminal. Once you use it, you will never go back to plain git log."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "When should I use git rebase and when should I use git merge?",
+            "answer": "Rebase your feature branch onto main before merging (keeps main history linear). Never rebase commits that have already been pushed to a shared branch — rewriting shared history breaks everyone's local repos. Merge for integrating long-lived branches or when you want to preserve the exact history of when branches diverged and merged."
+          },
+          {
+            "question": "How do I undo a git push --force that broke the team's repo?",
+            "answer": "If someone force-pushed and overwrote commits others have: find the lost commits with git reflog on any machine that had them before the force push. Then git push --force-with-lease with the recovered commits. To prevent this in future: protect your main branch in GitHub/GitLab settings — enable 'Require pull request before merging' and 'Disallow force pushes'."
+          },
+          {
+            "question": "What is git stash and when should I use it?",
+            "answer": "git stash temporarily saves your uncommitted changes and reverts your working directory to the last commit — letting you switch branches or pull changes cleanly. Use it when you need to quickly switch context without committing incomplete work. git stash pop restores the changes. Note: stash is for temporary use, not long-term storage. If you stash something important, create a branch instead."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "postgresql-performance-optimization-guide-2026",
+    "title": "PostgreSQL Performance Optimization in 2026 — Stop Your Database from Being the Bottleneck",
+    "excerpt": "Slow queries are the #1 cause of production performance issues. This guide gives you the exact tools and techniques to find, diagnose, and fix slow PostgreSQL queries in real applications.",
+    "coverImage": "/blog/postgresql-performance-2026.png",
+    "coverImageAlt": "PostgreSQL Performance Optimization 2026 — ArivuOn Academy",
+    "category": "Python",
+    "tags": ["PostgreSQL", "Database", "Backend", "Performance", "Django", "DevOps"],
+    "publishedAt": "2026-01-15",
+    "updatedAt": "2026-01-15",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "PostgreSQL Performance Optimization 2026 — Fix Slow Queries | ArivuOn Academy",
+      "metaDescription": "Learn PostgreSQL performance optimization in 2026. EXPLAIN ANALYZE, indexes, query optimization, connection pooling and caching strategies — ArivuOn Academy.",
+      "keywords": [
+        "postgresql performance optimization 2026",
+        "postgres slow query optimization",
+        "postgresql indexes tutorial",
+        "explain analyze postgresql",
+        "django database optimization",
+        "postgresql connection pooling"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Your application is slow. The team adds more servers. It is still slow. The real problem is almost always the database. A query that takes 2 seconds instead of 2 milliseconds does not just affect one user — it holds a database connection, blocks other queries, and can cascade into a full outage. This guide teaches you to diagnose and fix it."
+      },
+      {
+        "type": "heading2",
+        "text": "The Diagnostic Toolkit — Find the Problem Before Fixing It"
+      },
+      {
+        "type": "codeBlock",
+        "language": "sql",
+        "title": "Find Your Slowest Queries Right Now",
+        "code": "-- Enable query statistics (add to postgresql.conf)\n-- shared_preload_libraries = 'pg_stat_statements'\n\n-- Find the top 10 slowest queries in your database\nSELECT\n  round(total_exec_time::numeric, 2) AS total_ms,\n  round(mean_exec_time::numeric, 2) AS avg_ms,\n  calls,\n  round((100 * total_exec_time / sum(total_exec_time) OVER ())::numeric, 2) AS pct_total,\n  query\nFROM pg_stat_statements\nORDER BY total_exec_time DESC\nLIMIT 10;\n\n-- EXPLAIN ANALYZE — see the query execution plan\nEXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT)\nSELECT u.name, COUNT(e.id) as enrollments\nFROM users u\nJOIN enrollments e ON u.id = e.user_id\nWHERE u.created_at > '2026-01-01'\nGROUP BY u.id, u.name\nORDER BY enrollments DESC\nLIMIT 20;\n-- Look for: 'Seq Scan' on large tables (needs an index)\n-- Look for: high 'actual rows' vs 'estimated rows' (stale stats)\n-- Look for: 'Hash Join' on millions of rows (may need index)"
+      },
+      {
+        "type": "heading2",
+        "text": "Indexes — The Single Highest-Impact Optimization"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Type 1",
+            "duration": "Most common",
+            "title": "B-Tree Index — Default, Use for Equality and Range",
+            "skills": ["WHERE user_id = 123", "WHERE created_at > '2026-01-01'", "ORDER BY created_at DESC", "Multi-column: CREATE INDEX ON orders(user_id, created_at)"],
+            "why": "Turns a sequential scan of 10 million rows into a lookup of 10. This single optimization fixes 80% of slow query problems."
+          },
+          {
+            "phase": "Type 2",
+            "duration": "Specific cases",
+            "title": "Partial Index — Index Only the Rows You Query",
+            "skills": ["CREATE INDEX ON orders(user_id) WHERE status = 'pending'", "Smaller index, faster updates", "Use when queries always filter on a specific value", "Dramatically reduces index size"],
+            "why": "If you always query WHERE status = 'pending' and only 1% of rows are pending, a partial index is 100x smaller and faster than indexing all rows."
+          },
+          {
+            "phase": "Type 3",
+            "duration": "Text search",
+            "title": "GIN Index — Full Text Search and Arrays",
+            "skills": ["CREATE INDEX ON courses USING GIN(to_tsvector('english', title || ' ' || description))", "WHERE to_tsvector('english', title) @@ to_tsquery('python')", "Also for JSONB and array columns"],
+            "why": "Use when you need real full-text search — 'find all courses mentioning Python'. Far more powerful and faster than LIKE '%python%' which cannot use indexes."
+          },
+          {
+            "phase": "Type 4",
+            "duration": "High-write tables",
+            "title": "Know When NOT to Add an Index",
+            "skills": ["Every index slows down INSERT/UPDATE/DELETE", "Tables with heavy write load need fewer indexes", "Unused indexes waste space and slow writes", "Review pg_stat_user_indexes for unused indexes"],
+            "why": "Indexes are not free. On a table with millions of inserts per day, 10 unnecessary indexes can degrade write performance by 50%. Audit your indexes regularly."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "The Django N+1 Query Problem",
+        "text": "The most common Django performance killer: querying the database once for a list of objects, then querying once more for each object's related data. A page showing 50 courses with their instructors makes 51 queries instead of 1. Fix: use select_related() for ForeignKey and prefetch_related() for ManyToMany. Always check your query count in development with django-debug-toolbar."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "How many indexes is too many?",
+            "answer": "There is no fixed number — it depends on your read/write ratio. A read-heavy analytics database can have 20+ indexes on a table. A write-heavy transactional table should have as few as possible — only indexes that appear in frequent, slow queries. Review pg_stat_user_indexes monthly to identify indexes with zero or near-zero usage and drop them."
+          },
+          {
+            "question": "When should I use PostgreSQL vs MongoDB?",
+            "answer": "Use PostgreSQL by default — it handles relational, JSON, full-text search, geospatial, and time-series data all in one system. Consider MongoDB only if your data is genuinely document-oriented with highly variable schemas, you need horizontal write scaling at extreme levels, or your team has deep MongoDB expertise. 'Our data is JSON' is not a sufficient reason to use MongoDB over PostgreSQL's JSONB support."
+          },
+          {
+            "question": "What is connection pooling and do I need it?",
+            "answer": "PostgreSQL creates a new process for every connection — connecting is expensive. Connection pooling (via PgBouncer or application-level poolers) maintains a pool of database connections that your application reuses. For Django applications, use django-db-geventpool or connect via PgBouncer. If you are seeing 'too many connections' errors or slow response times under load, connection pooling is the fix."
+          }
+        ]
+      }
+    ]
   }
+
 ]
