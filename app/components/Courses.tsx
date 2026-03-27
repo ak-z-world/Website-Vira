@@ -112,8 +112,8 @@ export default function Courses() {
         {/* Header */}
         <div
           className={`text-center mb-14 transition-all duration-700 ${visible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
             }`}
         >
 
@@ -134,31 +134,35 @@ export default function Courses() {
 
           {/* Heading */}
           <h2 className="
-            text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-            font-bold
-            text-gray-900
-            mb-6
-          ">
-            Industry-Focused
+      font-bold
+      text-gray-900
+      leading-tight
+      tracking-tight
+      text-3xl
+      sm:text-4xl
+      md:text-5xl
+      lg:text-6xl
+    ">
+            Industry-Focused{" "}
 
             <span className="
-              block
-              bg-gradient-to-r
-              from-blue-600
-              to-indigo-600
-              bg-clip-text
-              text-transparent
-            ">
+        block
+        mt-2
+        bg-gradient-to-r
+        from-blue-600
+        to-indigo-600
+        bg-clip-text
+        text-transparent
+      ">
               Tech Programs
             </span>
-
           </h2>
 
           {/* Description */}
           <p className="
             text-gray-600
             text-base sm:text-lg
-            max-w-2xl mx-auto
+            max-w-2xl mx-auto mt-2
           ">
             Master real-world technologies with expert mentorship,
             production projects and career-focused learning.

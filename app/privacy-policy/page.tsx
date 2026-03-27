@@ -30,13 +30,13 @@ export default function PrivacyPage() {
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                <Lock className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">Privacy & Security</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-indigo-200 rounded-full px-4 py-2 mb-6">
+                <Lock className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-indigo-600">Privacy & Security</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Privacy <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Policy</span>
+                Privacy <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Policy</span>
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
               {/* Sidebar Navigation */}
               <div className="lg:col-span-1">
                 <div className="sticky top-24 space-y-2">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-4 mb-6">
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-indigo-200 rounded-2xl p-4 mb-6">
                     <h3 className="font-bold text-gray-900 mb-3">Quick Navigation</h3>
                     <p className="text-sm text-gray-600 mb-4">
                       Jump to specific sections
@@ -69,14 +69,14 @@ export default function PrivacyPage() {
                         onClick={() => setActiveSection(section.id)}
                         className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-1 transition-all duration-300 ${
                           activeSection === section.id
-                            ? 'bg-gradient-to-r from-orange-50 to-orange-100 text-orange-600'
+                            ? 'bg-gradient-to-r from-orange-50 to-orange-100 text-indigo-600'
                             : 'text-gray-700 hover:bg-gray-50'
                         }`}
                       >
                         <div className={`p-2 rounded-lg ${
                           activeSection === section.id ? 'bg-orange-100' : 'bg-gray-100'
                         }`}>
-                          <div className={`${activeSection === section.id ? 'text-orange-600' : 'text-gray-500'}`}>
+                          <div className={`${activeSection === section.id ? 'text-indigo-600' : 'text-gray-500'}`}>
                             {section.icon}
                           </div>
                         </div>
@@ -109,8 +109,8 @@ export default function PrivacyPage() {
                     {/* Overview Section */}
                     {activeSection === 'overview' && (
                       <div className="animate-in fade-in duration-300">
-                        <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-orange-200">
-                          <Shield className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" />
+                        <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-indigo-200">
+                          <Shield className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
                           <div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Privacy Policy – ArivuOn Academy</h3>
                             <p className="text-gray-700 leading-relaxed">
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Lock className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -144,21 +144,21 @@ export default function PrivacyPage() {
                             <div className="space-y-3 pl-4">
                               <div className="flex items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                  <span className="text-orange-600 text-sm">•</span>
+                                  <span className="text-indigo-600 text-sm">•</span>
                                 </div>
                                 <p className="text-gray-700">The types of data we collect</p>
                               </div>
                               
                               <div className="flex items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                  <span className="text-orange-600 text-sm">•</span>
+                                  <span className="text-indigo-600 text-sm">•</span>
                                 </div>
                                 <p className="text-gray-700">How we use your information</p>
                               </div>
                               
                               <div className="flex items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                  <span className="text-orange-600 text-sm">•</span>
+                                  <span className="text-indigo-600 text-sm">•</span>
                                 </div>
                                 <p className="text-gray-700">The measures we take to safeguard your data</p>
                               </div>
@@ -179,7 +179,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Eye className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -198,7 +198,7 @@ export default function PrivacyPage() {
                                   {['Name', 'Email address', 'Contact details', 'Payment information (processed securely through third-party payment providers)', 'Any additional information submitted through forms, registrations, or inquiries'].map((item, index) => (
                                     <div key={index} className="flex items-start gap-2">
                                       <div className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <span className="text-orange-600 text-xs">•</span>
+                                        <span className="text-indigo-600 text-xs">•</span>
                                       </div>
                                       <span className="text-gray-700 text-sm">{item}</span>
                                     </div>
@@ -225,7 +225,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <FileText className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -247,7 +247,7 @@ export default function PrivacyPage() {
                               ].map((item, index) => (
                                 <div key={index} className="flex items-start gap-2">
                                   <div className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span className="text-orange-600 text-xs">•</span>
+                                    <span className="text-indigo-600 text-xs">•</span>
                                   </div>
                                   <span className="text-gray-700 text-sm">{item}</span>
                                 </div>
@@ -263,7 +263,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Globe className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -302,7 +302,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <FileText className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -338,7 +338,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Lock className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -360,7 +360,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Cookie className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -382,7 +382,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Link className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -404,7 +404,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Globe className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -426,7 +426,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <RefreshCw className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -448,7 +448,7 @@ export default function PrivacyPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Mail className="w-7 h-7 text-white" />
                             </div>
                             <div>
