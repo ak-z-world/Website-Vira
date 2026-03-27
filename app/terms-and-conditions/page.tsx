@@ -31,13 +31,13 @@ export default function TermsPage() {
         <div className="section-padding relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                <Shield className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-semibold text-orange-600">Legal Policies</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
+                <Shield className="w-4 h-4 text-blue-500" />
+                <span className="text-sm font-semibold text-indigo-600">Legal Policies</span>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Terms & <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Conditions</span>
+                Terms & <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Conditions</span>
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -69,13 +69,13 @@ export default function TermsPage() {
                         key={section.id}
                         onClick={() => setActiveSection(section.id)}
                         className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-1 transition-all duration-300 ${activeSection === section.id
-                            ? 'bg-gradient-to-r from-orange-50 to-orange-100 text-orange-600'
+                            ? 'bg-gradient-to-r from-orange-50 to-orange-100 text-indigo-600'
                             : 'text-gray-700 hover:bg-gray-50'
                           }`}
                       >
                         <div className={`p-2 rounded-lg ${activeSection === section.id ? 'bg-orange-100' : 'bg-gray-100'
                           }`}>
-                          <div className={`${activeSection === section.id ? 'text-orange-600' : 'text-gray-500'}`}>
+                          <div className={`${activeSection === section.id ? 'text-indigo-600' : 'text-gray-500'}`}>
                             {section.icon}
                           </div>
                         </div>
@@ -109,7 +109,7 @@ export default function TermsPage() {
                     {activeSection === 'overview' && (
                       <div className="animate-in fade-in duration-300">
                         <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-orange-200">
-                          <Shield className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" />
+                          <Shield className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
                           <div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Welcome to ArivuOn Academy</h3>
                             <p className="text-gray-700 leading-relaxed">
@@ -306,7 +306,7 @@ export default function TermsPage() {
                       <div className="animate-in fade-in duration-300">
                         <div className="p-6 bg-white border border-gray-100 rounded-2xl">
                           <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                               <Clock className="w-7 h-7 text-white" />
                             </div>
                             <div>
@@ -349,7 +349,7 @@ export default function TermsPage() {
                   {/* Agreement Section */}
                   <div className="border-t border-gray-100 p-6 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100/30">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="w-6 h-6 text-white" />
                       </div>
                       <div>

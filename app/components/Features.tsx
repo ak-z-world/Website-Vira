@@ -171,7 +171,7 @@ export default function Features() {
         <div className="grid lg:grid-cols-2 gap-10">
 
           {/* FEATURE LIST */}
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5 ">
 
             {features.map((feature) => {
 
@@ -182,7 +182,7 @@ export default function Features() {
                   key={feature.id}
                   onClick={() => setActiveFeature(feature.id)}
 
-                  className={`relative p-6 rounded-xl border text-left transition-all duration-300
+                  className={`relative p-6 rounded-xl border text-left transition-all cursor-pointer duration-300
 
                   ${
                     isActive
