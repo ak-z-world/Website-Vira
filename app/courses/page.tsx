@@ -9,7 +9,7 @@ export default function CoursesPage() {
       description:
         'Master Python programming, AI basics, Django backend development, CI/CD pipelines, Docker, and AWS cloud deployment with real-world production projects.',
       icon: <CloudCog className="w-8 h-8" />,
-      duration: '12 Weeks',
+      duration: '8 Weeks',
       level: 'Beginner to Advanced',
       fee: '₹10,000',
       features: [

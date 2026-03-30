@@ -103,13 +103,13 @@ const Hero = () => {
   const getCourseDuration = () => {
     switch (activeTab) {
       case "python-ai-aws-devops-combo":
-        return "12 Weeks";
+        return "8 Weeks";
       case "python":
         return "6 Weeks";
       case "devops":
         return "6 Weeks";
       default:
-        return "12 Weeks";
+        return "8 Weeks";
     }
   };
 

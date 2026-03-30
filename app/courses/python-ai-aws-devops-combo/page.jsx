@@ -31,7 +31,7 @@ export default function PythonAiAwsComboPage() {
         subtitle:
             "Build intelligent Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
         description: t("courses.pythonDevopsCombo.courseDetails.description"),
-        duration: "12 Weeks",
+        duration: "8 Weeks",
         level: "Beginner to Advanced",
         fee: "₹10,000",
         originalFee: "₹65,000",
