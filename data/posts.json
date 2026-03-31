@@ -713,7 +713,13 @@
     "coverImage": "/blog/system-design-interview-2026.png",
     "coverImageAlt": "System Design Interview Guide 2026 — ArivuOn Academy",
     "category": "Career",
-    "tags": ["System Design", "Interview", "Career", "Software Architecture", "Backend"],
+    "tags": [
+      "System Design",
+      "Interview",
+      "Career",
+      "Software Architecture",
+      "Backend"
+    ],
     "publishedAt": "2026-02-28",
     "updatedAt": "2026-02-28",
     "readingTime": 12,
@@ -746,42 +752,72 @@
             "phase": "Step 1",
             "duration": "5 minutes",
             "title": "Clarify Requirements — Never Skip This",
-            "skills": ["Functional requirements (what it does)", "Non-functional requirements (scale, latency, availability)", "Ask: how many users? reads vs writes ratio? data size?", "Confirm what is in scope vs out of scope"],
+            "skills": [
+              "Functional requirements (what it does)",
+              "Non-functional requirements (scale, latency, availability)",
+              "Ask: how many users? reads vs writes ratio? data size?",
+              "Confirm what is in scope vs out of scope"
+            ],
             "why": "Interviewers give intentionally vague questions to see if you ask the right questions. Jumping straight to design without clarifying is the #1 mistake candidates make."
           },
           {
             "phase": "Step 2",
             "duration": "5 minutes",
             "title": "Capacity Estimation — Back of Envelope Math",
-            "skills": ["Daily active users → requests per second", "Storage requirements calculation", "Bandwidth estimation", "Memory requirements"],
+            "skills": [
+              "Daily active users → requests per second",
+              "Storage requirements calculation",
+              "Bandwidth estimation",
+              "Memory requirements"
+            ],
             "why": "Estimating scale determines your entire architecture. A system for 1000 users is completely different from one for 100 million users."
           },
           {
             "phase": "Step 3",
             "duration": "5 minutes",
             "title": "High-Level Architecture — Draw the Big Picture",
-            "skills": ["Client → Load Balancer → App Servers → Database", "Identify all major components", "Show data flow between components", "Name the APIs"],
+            "skills": [
+              "Client → Load Balancer → App Servers → Database",
+              "Identify all major components",
+              "Show data flow between components",
+              "Name the APIs"
+            ],
             "why": "Get agreement on the overall shape before diving into details. Most candidates jump to details too early and run out of time."
           },
           {
             "phase": "Step 4",
             "duration": "15 minutes",
             "title": "Deep Dive — Focus on the Hard Parts",
-            "skills": ["Database schema design", "Caching strategy (Redis, CDN)", "Message queues for async processing", "Sharding and replication strategy"],
+            "skills": [
+              "Database schema design",
+              "Caching strategy (Redis, CDN)",
+              "Message queues for async processing",
+              "Sharding and replication strategy"
+            ],
             "why": "This is where senior engineers stand out. Know when to use SQL vs NoSQL, why you need a cache, and how to handle the most critical flows."
           },
           {
             "phase": "Step 5",
             "duration": "5 minutes",
             "title": "Bottlenecks and Trade-offs",
-            "skills": ["Single points of failure", "Consistency vs availability trade-off (CAP theorem)", "What happens when a service goes down?", "Cost vs performance trade-offs"],
+            "skills": [
+              "Single points of failure",
+              "Consistency vs availability trade-off (CAP theorem)",
+              "What happens when a service goes down?",
+              "Cost vs performance trade-offs"
+            ],
             "why": "Every design has weaknesses. Identifying them yourself shows engineering maturity. Interviewers respect candidates who proactively flag trade-offs."
           },
           {
             "phase": "Step 6",
             "duration": "5 minutes",
             "title": "Scale Further — Handle 10x Growth",
-            "skills": ["Horizontal scaling strategy", "Database read replicas", "CDN for static content", "Microservices decomposition"],
+            "skills": [
+              "Horizontal scaling strategy",
+              "Database read replicas",
+              "CDN for static content",
+              "Microservices decomposition"
+            ],
             "why": "The final question is almost always: 'How would you scale this to 10x?' Have a ready answer."
           }
         ]
@@ -795,19 +831,39 @@
         "categories": [
           {
             "category": "Databases",
-            "tools": ["PostgreSQL (relational)", "MongoDB (document)", "Cassandra (wide-column)", "Redis (cache/KV)"]
+            "tools": [
+              "PostgreSQL (relational)",
+              "MongoDB (document)",
+              "Cassandra (wide-column)",
+              "Redis (cache/KV)"
+            ]
           },
           {
             "category": "Messaging",
-            "tools": ["Kafka (event streaming)", "RabbitMQ (task queues)", "AWS SQS", "Redis Pub/Sub"]
+            "tools": [
+              "Kafka (event streaming)",
+              "RabbitMQ (task queues)",
+              "AWS SQS",
+              "Redis Pub/Sub"
+            ]
           },
           {
             "category": "Caching",
-            "tools": ["Redis", "Memcached", "CDN (CloudFront)", "Application cache"]
+            "tools": [
+              "Redis",
+              "Memcached",
+              "CDN (CloudFront)",
+              "Application cache"
+            ]
           },
           {
             "category": "Infrastructure",
-            "tools": ["Load Balancers (ALB)", "API Gateway", "Service Mesh (Istio)", "Kubernetes"]
+            "tools": [
+              "Load Balancers (ALB)",
+              "API Gateway",
+              "Service Mesh (Istio)",
+              "Kubernetes"
+            ]
           }
         ]
       },
@@ -847,7 +903,14 @@
     "coverImage": "/blog/typescript-guide-2026.png",
     "coverImageAlt": "TypeScript Complete Guide 2026 — ArivuOn Academy",
     "category": "React",
-    "tags": ["TypeScript", "JavaScript", "Frontend", "React", "Node.js", "Career"],
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "Frontend",
+      "React",
+      "Node.js",
+      "Career"
+    ],
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-02-20",
     "readingTime": 9,
@@ -894,28 +957,48 @@
             "phase": "Level 1",
             "duration": "1 week",
             "title": "Basic Types and Annotations",
-            "skills": ["string, number, boolean, null, undefined", "Arrays and tuples", "Function parameter and return types", "Type inference (when to annotate vs let TS infer)"],
+            "skills": [
+              "string, number, boolean, null, undefined",
+              "Arrays and tuples",
+              "Function parameter and return types",
+              "Type inference (when to annotate vs let TS infer)"
+            ],
             "why": "80% of TypeScript value comes from these basics. Master them first before touching advanced features."
           },
           {
             "phase": "Level 2",
             "duration": "1 week",
             "title": "Interfaces and Type Aliases",
-            "skills": ["interface vs type (when to use each)", "Optional and readonly properties", "Extending interfaces", "Union and intersection types"],
+            "skills": [
+              "interface vs type (when to use each)",
+              "Optional and readonly properties",
+              "Extending interfaces",
+              "Union and intersection types"
+            ],
             "why": "This is where you model your application's data. Strong interface design makes the entire codebase self-documenting."
           },
           {
             "phase": "Level 3",
             "duration": "1 week",
             "title": "Generics — Write Once, Type Safely",
-            "skills": ["Generic functions and interfaces", "Generic constraints", "Built-in utility types (Partial, Required, Pick, Omit)", "Conditional types"],
+            "skills": [
+              "Generic functions and interfaces",
+              "Generic constraints",
+              "Built-in utility types (Partial, Required, Pick, Omit)",
+              "Conditional types"
+            ],
             "why": "Generics let you write reusable code that maintains type safety. They are what separates TypeScript beginners from intermediate developers."
           },
           {
             "phase": "Level 4",
             "duration": "1 week",
             "title": "Advanced Patterns in Real Projects",
-            "skills": ["Discriminated unions for state management", "Template literal types", "Mapped types", "Type guards and narrowing"],
+            "skills": [
+              "Discriminated unions for state management",
+              "Template literal types",
+              "Mapped types",
+              "Type guards and narrowing"
+            ],
             "why": "These patterns appear in every large TypeScript codebase. Understanding them makes you effective on any professional TypeScript project."
           }
         ]
@@ -949,14 +1032,21 @@
       }
     ]
   },
-    {
+  {
     "slug": "kubernetes-beginners-guide-2026",
     "title": "Kubernetes in 2026 — A Beginner's Guide to Container Orchestration",
     "excerpt": "Kubernetes is mentioned in 60% of senior DevOps job descriptions. You do not need to understand every corner of it — you need to understand the core concepts that appear in every production deployment.",
     "coverImage": "/blog/kubernetes-beginners-2026.png",
     "coverImageAlt": "Kubernetes Beginner Guide 2026 — ArivuOn Academy",
     "category": "DevOps",
-    "tags": ["Kubernetes", "Docker", "DevOps", "Containers", "AWS", "Cloud"],
+    "tags": [
+      "Kubernetes",
+      "Docker",
+      "DevOps",
+      "Containers",
+      "AWS",
+      "Cloud"
+    ],
     "publishedAt": "2026-02-15",
     "updatedAt": "2026-02-15",
     "readingTime": 10,
@@ -997,35 +1087,60 @@
             "phase": "Concept 1",
             "duration": "Fundamental",
             "title": "Pod — The Smallest Unit",
-            "skills": ["One or more containers running together", "Shared network namespace", "Ephemeral — dies and is replaced", "Never manage Pods directly"],
+            "skills": [
+              "One or more containers running together",
+              "Shared network namespace",
+              "Ephemeral — dies and is replaced",
+              "Never manage Pods directly"
+            ],
             "why": "Everything in Kubernetes revolves around Pods. Understand that a Pod is temporary by design — Kubernetes replaces dead Pods automatically."
           },
           {
             "phase": "Concept 2",
             "duration": "Fundamental",
             "title": "Deployment — How You Run Applications",
-            "skills": ["Declares desired state (3 replicas of nginx)", "Kubernetes maintains that state automatically", "Rolling updates with zero downtime", "Rollback to previous version in seconds"],
+            "skills": [
+              "Declares desired state (3 replicas of nginx)",
+              "Kubernetes maintains that state automatically",
+              "Rolling updates with zero downtime",
+              "Rollback to previous version in seconds"
+            ],
             "why": "Deployments are how you run every real application in Kubernetes. You say 'I want 3 replicas' and Kubernetes makes it happen and keeps it that way."
           },
           {
             "phase": "Concept 3",
             "duration": "Networking",
             "title": "Service — How Pods Talk to Each Other",
-            "skills": ["Stable DNS name for a set of Pods", "Load balances across all matching Pods", "ClusterIP (internal)", "LoadBalancer (external, creates AWS ELB)"],
+            "skills": [
+              "Stable DNS name for a set of Pods",
+              "Load balances across all matching Pods",
+              "ClusterIP (internal)",
+              "LoadBalancer (external, creates AWS ELB)"
+            ],
             "why": "Pods have ephemeral IP addresses that change when they restart. Services provide a stable endpoint. This is the glue that makes microservices work."
           },
           {
             "phase": "Concept 4",
             "duration": "Networking",
             "title": "Ingress — HTTP Routing to Services",
-            "skills": ["Route example.com/api to backend service", "Route example.com/app to frontend service", "SSL termination", "Works with nginx-ingress or AWS ALB ingress"],
+            "skills": [
+              "Route example.com/api to backend service",
+              "Route example.com/app to frontend service",
+              "SSL termination",
+              "Works with nginx-ingress or AWS ALB ingress"
+            ],
             "why": "Ingress is how traffic from the internet gets to your applications. One Ingress controller replaces multiple load balancers, saving significant cost."
           },
           {
             "phase": "Concept 5",
             "duration": "Configuration",
             "title": "ConfigMap and Secret",
-            "skills": ["ConfigMap: non-sensitive configuration", "Secret: passwords, API keys (base64 encoded)", "Injected as environment variables or files", "Change config without rebuilding images"],
+            "skills": [
+              "ConfigMap: non-sensitive configuration",
+              "Secret: passwords, API keys (base64 encoded)",
+              "Injected as environment variables or files",
+              "Change config without rebuilding images"
+            ],
             "why": "Never bake configuration into Docker images. ConfigMaps and Secrets let you deploy the same image to dev, staging, and production with different configuration."
           }
         ]
@@ -1065,7 +1180,6 @@
       }
     ]
   },
-
   {
     "slug": "react-server-components-nextjs-2026",
     "title": "React Server Components in 2026 — What They Are and Why They Change Everything",
@@ -1073,7 +1187,13 @@
     "coverImage": "/blog/react-server-components-2026.png",
     "coverImageAlt": "React Server Components Next.js 2026 — ArivuOn Academy",
     "category": "React",
-    "tags": ["React", "Next.js", "Server Components", "Frontend", "Performance"],
+    "tags": [
+      "React",
+      "Next.js",
+      "Server Components",
+      "Frontend",
+      "Performance"
+    ],
     "publishedAt": "2026-02-10",
     "updatedAt": "2026-02-10",
     "readingTime": 8,
@@ -1108,19 +1228,39 @@
         "categories": [
           {
             "category": "Server Components",
-            "tools": ["Data fetching", "Database queries", "Heavy computation", "Access to secrets/env vars"]
+            "tools": [
+              "Data fetching",
+              "Database queries",
+              "Heavy computation",
+              "Access to secrets/env vars"
+            ]
           },
           {
             "category": "Client Components",
-            "tools": ["onClick, onChange handlers", "useState and useEffect", "Browser APIs", "Real-time subscriptions"]
+            "tools": [
+              "onClick, onChange handlers",
+              "useState and useEffect",
+              "Browser APIs",
+              "Real-time subscriptions"
+            ]
           },
           {
             "category": "Performance Gains",
-            "tools": ["Zero JS for static content", "Smaller bundle size", "Faster Time to Interactive", "Better Core Web Vitals"]
+            "tools": [
+              "Zero JS for static content",
+              "Smaller bundle size",
+              "Faster Time to Interactive",
+              "Better Core Web Vitals"
+            ]
           },
           {
             "category": "Next.js Features",
-            "tools": ["App Router", "Server Actions", "Streaming with Suspense", "Partial Prerendering"]
+            "tools": [
+              "App Router",
+              "Server Actions",
+              "Streaming with Suspense",
+              "Partial Prerendering"
+            ]
           }
         ]
       },
@@ -1159,14 +1299,21 @@
       }
     ]
   },
-    {
+  {
     "slug": "python-for-ai-ml-beginners-guide-2026",
     "title": "Python for AI and Machine Learning in 2026 — The Beginner's Complete Roadmap",
     "excerpt": "AI is the fastest-growing engineering discipline on earth. Python is the language of AI. This is the exact roadmap to go from Python basics to building real AI applications.",
     "coverImage": "/blog/python-ai-ml-2026.png",
     "coverImageAlt": "Python for AI and Machine Learning 2026 — ArivuOn Academy",
     "category": "Python",
-    "tags": ["Python", "AI", "Machine Learning", "Data Science", "Career", "Deep Learning"],
+    "tags": [
+      "Python",
+      "AI",
+      "Machine Learning",
+      "Data Science",
+      "Career",
+      "Deep Learning"
+    ],
     "publishedAt": "2026-02-05",
     "updatedAt": "2026-02-05",
     "readingTime": 11,
@@ -1197,23 +1344,48 @@
         "categories": [
           {
             "category": "Data Manipulation",
-            "tools": ["NumPy", "Pandas", "Polars (faster Pandas)", "SQL"]
+            "tools": [
+              "NumPy",
+              "Pandas",
+              "Polars (faster Pandas)",
+              "SQL"
+            ]
           },
           {
             "category": "Visualization",
-            "tools": ["Matplotlib", "Seaborn", "Plotly", "Streamlit"]
+            "tools": [
+              "Matplotlib",
+              "Seaborn",
+              "Plotly",
+              "Streamlit"
+            ]
           },
           {
             "category": "Machine Learning",
-            "tools": ["scikit-learn", "XGBoost", "LightGBM", "statsmodels"]
+            "tools": [
+              "scikit-learn",
+              "XGBoost",
+              "LightGBM",
+              "statsmodels"
+            ]
           },
           {
             "category": "Deep Learning",
-            "tools": ["PyTorch", "TensorFlow/Keras", "Hugging Face", "JAX"]
+            "tools": [
+              "PyTorch",
+              "TensorFlow/Keras",
+              "Hugging Face",
+              "JAX"
+            ]
           },
           {
             "category": "LLM/GenAI",
-            "tools": ["LangChain", "LlamaIndex", "OpenAI SDK", "Anthropic SDK"]
+            "tools": [
+              "LangChain",
+              "LlamaIndex",
+              "OpenAI SDK",
+              "Anthropic SDK"
+            ]
           }
         ]
       },
@@ -1228,35 +1400,60 @@
             "phase": "Month 1",
             "duration": "4 weeks",
             "title": "Python + Math Fundamentals",
-            "skills": ["Python core (functions, classes, list comprehensions)", "NumPy arrays and operations", "Linear algebra basics (vectors, matrices, dot products)", "Statistics basics (mean, variance, distributions)"],
+            "skills": [
+              "Python core (functions, classes, list comprehensions)",
+              "NumPy arrays and operations",
+              "Linear algebra basics (vectors, matrices, dot products)",
+              "Statistics basics (mean, variance, distributions)"
+            ],
             "why": "Every ML algorithm is math. You do not need a degree — but you need enough linear algebra and statistics to understand what your models are doing."
           },
           {
             "phase": "Month 2",
             "duration": "4 weeks",
             "title": "Data Analysis with Pandas",
-            "skills": ["Loading and cleaning messy datasets", "Groupby, pivot tables, merges", "Handling missing data", "Exploratory data analysis (EDA) workflow"],
+            "skills": [
+              "Loading and cleaning messy datasets",
+              "Groupby, pivot tables, merges",
+              "Handling missing data",
+              "Exploratory data analysis (EDA) workflow"
+            ],
             "why": "Real-world ML is 70% data cleaning. Engineers who can wrangle messy data are invaluable. Pandas is the core tool."
           },
           {
             "phase": "Month 3",
             "duration": "4 weeks",
             "title": "Classical Machine Learning with scikit-learn",
-            "skills": ["Train/test split, cross-validation", "Linear regression, logistic regression", "Decision trees, random forests", "Model evaluation metrics (accuracy, precision, recall, F1)"],
+            "skills": [
+              "Train/test split, cross-validation",
+              "Linear regression, logistic regression",
+              "Decision trees, random forests",
+              "Model evaluation metrics (accuracy, precision, recall, F1)"
+            ],
             "why": "Gradient boosted trees (XGBoost, LightGBM) still win most tabular data competitions. These classical models are used in production far more than neural networks."
           },
           {
             "phase": "Month 4",
             "duration": "4 weeks",
             "title": "Deep Learning with PyTorch",
-            "skills": ["Neural network fundamentals", "Backpropagation intuition", "CNN for images", "LSTM/Transformer for sequences"],
+            "skills": [
+              "Neural network fundamentals",
+              "Backpropagation intuition",
+              "CNN for images",
+              "LSTM/Transformer for sequences"
+            ],
             "why": "PyTorch is the framework of research and production deep learning. Understanding how neural networks work makes you dramatically better at using pre-trained models."
           },
           {
             "phase": "Month 5–6",
             "duration": "8 weeks",
             "title": "LLMs and Generative AI Applications",
-            "skills": ["OpenAI and Anthropic APIs", "Prompt engineering", "RAG with vector databases", "Building AI-powered applications with LangChain"],
+            "skills": [
+              "OpenAI and Anthropic APIs",
+              "Prompt engineering",
+              "RAG with vector databases",
+              "Building AI-powered applications with LangChain"
+            ],
             "why": "Generative AI is the fastest-growing area in tech. Engineers who can build real LLM-powered products are in extreme demand in 2026."
           }
         ]
@@ -1290,7 +1487,6 @@
       }
     ]
   },
-
   {
     "slug": "microservices-vs-monolith-when-to-use-2026",
     "title": "Microservices vs Monolith in 2026 — When to Use Each (The Honest Guide)",
@@ -1298,7 +1494,13 @@
     "coverImage": "/blog/microservices-monolith-2026.png",
     "coverImageAlt": "Microservices vs Monolith Architecture 2026 — ArivuOn Academy",
     "category": "DevOps",
-    "tags": ["Microservices", "Architecture", "Backend", "System Design", "DevOps"],
+    "tags": [
+      "Microservices",
+      "Architecture",
+      "Backend",
+      "System Design",
+      "DevOps"
+    ],
     "publishedAt": "2026-01-28",
     "updatedAt": "2026-01-28",
     "readingTime": 9,
@@ -1343,19 +1545,39 @@
         "categories": [
           {
             "category": "Monolith Advantages",
-            "tools": ["Simple local development", "Easy debugging", "Fewer moving parts", "One deployment pipeline"]
+            "tools": [
+              "Simple local development",
+              "Easy debugging",
+              "Fewer moving parts",
+              "One deployment pipeline"
+            ]
           },
           {
             "category": "Monolith Disadvantages",
-            "tools": ["Single point of failure", "Scaling whole app for one bottleneck", "Large team merge conflicts", "Tech stack locked in"]
+            "tools": [
+              "Single point of failure",
+              "Scaling whole app for one bottleneck",
+              "Large team merge conflicts",
+              "Tech stack locked in"
+            ]
           },
           {
             "category": "Microservices Advantages",
-            "tools": ["Independent scaling per service", "Independent deployment", "Team autonomy per service", "Technology flexibility"]
+            "tools": [
+              "Independent scaling per service",
+              "Independent deployment",
+              "Team autonomy per service",
+              "Technology flexibility"
+            ]
           },
           {
             "category": "Microservices Disadvantages",
-            "tools": ["Network latency between services", "Distributed system complexity", "Data consistency challenges", "Significant DevOps overhead"]
+            "tools": [
+              "Network latency between services",
+              "Distributed system complexity",
+              "Data consistency challenges",
+              "Significant DevOps overhead"
+            ]
           }
         ]
       },
@@ -1370,21 +1592,35 @@
             "phase": "Signal 1",
             "duration": "Real pain",
             "title": "A specific component needs independent scaling",
-            "skills": ["Checkout service needs 10x more capacity than catalog", "Image processing consuming all shared resources", "Specific module has 100x more traffic than others"],
+            "skills": [
+              "Checkout service needs 10x more capacity than catalog",
+              "Image processing consuming all shared resources",
+              "Specific module has 100x more traffic than others"
+            ],
             "why": "If your monolith can scale by adding more instances and that is affordable, do it. Extract a service only when independent scaling of one component becomes economically necessary."
           },
           {
             "phase": "Signal 2",
             "duration": "Real pain",
             "title": "Multiple large teams own separate domains",
-            "skills": ["50+ engineers across 5+ teams", "Merge conflicts slowing deployment", "Different release cadences needed", "Team A's bugs blocking Team B's deploys"],
+            "skills": [
+              "50+ engineers across 5+ teams",
+              "Merge conflicts slowing deployment",
+              "Different release cadences needed",
+              "Team A's bugs blocking Team B's deploys"
+            ],
             "why": "Conway's Law: your architecture mirrors your team structure. When team friction from a shared codebase is real and measurable, services can help."
           },
           {
             "phase": "Signal 3",
             "duration": "Technical need",
             "title": "Different components need different technology",
-            "skills": ["ML inference service needs Python/GPU", "Core API stays in Django", "Real-time features need Node.js/WebSockets", "Each can now use the best tool for the job"],
+            "skills": [
+              "ML inference service needs Python/GPU",
+              "Core API stays in Django",
+              "Real-time features need Node.js/WebSockets",
+              "Each can now use the best tool for the job"
+            ],
             "why": "When one component genuinely needs a different runtime or language that cannot coexist in your monolith, extraction makes technical sense."
           }
         ]
@@ -1412,14 +1648,20 @@
       }
     ]
   },
-   {
+  {
     "slug": "git-advanced-workflows-developers-2026",
     "title": "Git Advanced Workflows in 2026 — Beyond git add, commit, push",
     "excerpt": "90% of developers know basic Git. The 10% who know advanced Git solve problems in minutes that everyone else spends hours on. Rebase, cherry-pick, bisect, reflog — here is how to actually use them.",
     "coverImage": "/blog/git-advanced-2026.png",
     "coverImageAlt": "Git Advanced Workflows 2026 — ArivuOn Academy",
     "category": "DevOps",
-    "tags": ["Git", "DevOps", "Productivity", "Version Control", "CI/CD"],
+    "tags": [
+      "Git",
+      "DevOps",
+      "Productivity",
+      "Version Control",
+      "CI/CD"
+    ],
     "publishedAt": "2026-01-20",
     "updatedAt": "2026-01-20",
     "readingTime": 8,
@@ -1466,21 +1708,36 @@
             "phase": "Option 1",
             "duration": "Small teams",
             "title": "Trunk-Based Development",
-            "skills": ["Everyone commits to main daily", "Feature flags for incomplete features", "Short-lived branches (max 1-2 days)", "Continuous deployment from main"],
+            "skills": [
+              "Everyone commits to main daily",
+              "Feature flags for incomplete features",
+              "Short-lived branches (max 1-2 days)",
+              "Continuous deployment from main"
+            ],
             "why": "Recommended by Google and Netflix. Small branches mean small merges mean no integration hell. Requires good test coverage and feature flags."
           },
           {
             "phase": "Option 2",
             "duration": "Medium teams",
             "title": "GitHub Flow",
-            "skills": ["main is always deployable", "Create branch for every feature", "Open PR, code review, merge", "Deploy immediately after merge"],
+            "skills": [
+              "main is always deployable",
+              "Create branch for every feature",
+              "Open PR, code review, merge",
+              "Deploy immediately after merge"
+            ],
             "why": "Simple, effective, widely understood. Works well for teams with CI/CD pipelines. Most common workflow in product companies."
           },
           {
             "phase": "Option 3",
             "duration": "Release-based products",
             "title": "GitFlow",
-            "skills": ["main + develop + feature/* + release/* + hotfix/*", "Structured releases", "Good for versioned software", "Complex but predictable"],
+            "skills": [
+              "main + develop + feature/* + release/* + hotfix/*",
+              "Structured releases",
+              "Good for versioned software",
+              "Complex but predictable"
+            ],
             "why": "Use for software with discrete version releases (mobile apps, libraries). Too complex for continuous-deployment web applications."
           }
         ]
@@ -1514,7 +1771,6 @@
       }
     ]
   },
-
   {
     "slug": "postgresql-performance-optimization-guide-2026",
     "title": "PostgreSQL Performance Optimization in 2026 — Stop Your Database from Being the Bottleneck",
@@ -1522,7 +1778,14 @@
     "coverImage": "/blog/postgresql-performance-2026.png",
     "coverImageAlt": "PostgreSQL Performance Optimization 2026 — ArivuOn Academy",
     "category": "Python",
-    "tags": ["PostgreSQL", "Database", "Backend", "Performance", "Django", "DevOps"],
+    "tags": [
+      "PostgreSQL",
+      "Database",
+      "Backend",
+      "Performance",
+      "Django",
+      "DevOps"
+    ],
     "publishedAt": "2026-01-15",
     "updatedAt": "2026-01-15",
     "readingTime": 10,
@@ -1565,28 +1828,47 @@
             "phase": "Type 1",
             "duration": "Most common",
             "title": "B-Tree Index — Default, Use for Equality and Range",
-            "skills": ["WHERE user_id = 123", "WHERE created_at > '2026-01-01'", "ORDER BY created_at DESC", "Multi-column: CREATE INDEX ON orders(user_id, created_at)"],
+            "skills": [
+              "WHERE user_id = 123",
+              "WHERE created_at > '2026-01-01'",
+              "ORDER BY created_at DESC",
+              "Multi-column: CREATE INDEX ON orders(user_id, created_at)"
+            ],
             "why": "Turns a sequential scan of 10 million rows into a lookup of 10. This single optimization fixes 80% of slow query problems."
           },
           {
             "phase": "Type 2",
             "duration": "Specific cases",
             "title": "Partial Index — Index Only the Rows You Query",
-            "skills": ["CREATE INDEX ON orders(user_id) WHERE status = 'pending'", "Smaller index, faster updates", "Use when queries always filter on a specific value", "Dramatically reduces index size"],
+            "skills": [
+              "CREATE INDEX ON orders(user_id) WHERE status = 'pending'",
+              "Smaller index, faster updates",
+              "Use when queries always filter on a specific value",
+              "Dramatically reduces index size"
+            ],
             "why": "If you always query WHERE status = 'pending' and only 1% of rows are pending, a partial index is 100x smaller and faster than indexing all rows."
           },
           {
             "phase": "Type 3",
             "duration": "Text search",
             "title": "GIN Index — Full Text Search and Arrays",
-            "skills": ["CREATE INDEX ON courses USING GIN(to_tsvector('english', title || ' ' || description))", "WHERE to_tsvector('english', title) @@ to_tsquery('python')", "Also for JSONB and array columns"],
+            "skills": [
+              "CREATE INDEX ON courses USING GIN(to_tsvector('english', title || ' ' || description))",
+              "WHERE to_tsvector('english', title) @@ to_tsquery('python')",
+              "Also for JSONB and array columns"
+            ],
             "why": "Use when you need real full-text search — 'find all courses mentioning Python'. Far more powerful and faster than LIKE '%python%' which cannot use indexes."
           },
           {
             "phase": "Type 4",
             "duration": "High-write tables",
             "title": "Know When NOT to Add an Index",
-            "skills": ["Every index slows down INSERT/UPDATE/DELETE", "Tables with heavy write load need fewer indexes", "Unused indexes waste space and slow writes", "Review pg_stat_user_indexes for unused indexes"],
+            "skills": [
+              "Every index slows down INSERT/UPDATE/DELETE",
+              "Tables with heavy write load need fewer indexes",
+              "Unused indexes waste space and slow writes",
+              "Review pg_stat_user_indexes for unused indexes"
+            ],
             "why": "Indexes are not free. On a table with millions of inserts per day, 10 unnecessary indexes can degrade write performance by 50%. Audit your indexes regularly."
           }
         ]
@@ -1619,6 +1901,113 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "api-security-best-practices-developers-2026",
+    "title": "API Security in 2026 — The Complete Guide for Backend Developers",
+    "excerpt": "API security breaches cost companies millions. Most vulnerabilities are not sophisticated attacks — they are basic mistakes that any developer can prevent. This is the checklist every backend developer must follow.",
+    "coverImage": "/blog/api-security-2026.png",
+    "coverImageAlt": "API Security Best Practices 2026 — ArivuOn Academy",
+    "category": "Python",
+    "tags": ["Security", "API", "Backend", "Django", "JWT", "DevOps"],
+    "publishedAt": "2026-01-10",
+    "updatedAt": "2026-01-10",
+    "readingTime": 9,
+    "featured": false,
+    "seo": {
+      "metaTitle": "API Security Best Practices 2026 — Complete Guide for Developers | ArivuOn Academy",
+      "metaDescription": "Learn API security in 2026. Authentication, authorization, rate limiting, SQL injection prevention, JWT best practices — complete backend security guide by ArivuOn Academy.",
+      "keywords": [
+        "api security best practices 2026",
+        "backend security for developers",
+        "jwt security best practices",
+        "django api security",
+        "rest api security checklist",
+        "how to secure api endpoints"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "In 2025, API attacks accounted for 83% of all web application breaches according to industry reports. The most common vulnerabilities were not zero-day exploits — they were authentication flaws, missing authorization checks, and exposed sensitive data. Every one of them preventable. This guide is the security checklist every backend developer must internalize."
+      },
+      {
+        "type": "heading2",
+        "text": "The OWASP API Security Top 10 — What Actually Gets Exploited"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Risk 1",
+            "duration": "Critical",
+            "title": "Broken Object Level Authorization (BOLA)",
+            "skills": ["Check ownership on every object access", "Never trust client-provided IDs alone", "Example: /api/orders/456 — verify 456 belongs to the requesting user", "Django: always filter by request.user"],
+            "why": "The #1 API vulnerability for 5 years running. An attacker changes order_id=123 to order_id=124 and reads another user's order. Takes one line of code to prevent, costs millions when exploited."
+          },
+          {
+            "phase": "Risk 2",
+            "duration": "Critical",
+            "title": "Broken Authentication",
+            "skills": ["JWT: validate signature AND expiry on every request", "Refresh token rotation — invalidate old tokens on use", "Rate limit login endpoints", "Never store passwords in plain text (use bcrypt/argon2)"],
+            "why": "Weak authentication is the front door being unlocked. Once bypassed, every other security measure is irrelevant."
+          },
+          {
+            "phase": "Risk 3",
+            "duration": "High",
+            "title": "Excessive Data Exposure",
+            "skills": ["Return only fields the client actually needs", "Never serialize full ORM objects to API responses", "Use explicit serializer fields (whitelist, not blacklist)", "Audit every API response for sensitive fields"],
+            "why": "APIs that return full database rows often leak passwords (hashed but still), internal IDs, personal data. Define explicit response schemas."
+          },
+          {
+            "phase": "Risk 4",
+            "duration": "High",
+            "title": "Lack of Rate Limiting",
+            "skills": ["Rate limit all authentication endpoints (max 5 attempts/min)", "Rate limit expensive computation endpoints", "Use sliding window rate limiting (Redis)", "Return 429 Too Many Requests with Retry-After header"],
+            "why": "Without rate limiting, password brute-force attacks, credential stuffing, and API abuse are trivial. One compromised endpoint can bring down your entire service."
+          },
+          {
+            "phase": "Risk 5",
+            "duration": "High",
+            "title": "Security Misconfiguration",
+            "skills": ["HTTPS everywhere — no HTTP in production", "CORS configured restrictively (not *)", "Security headers: HSTS, X-Frame-Options, CSP", "Debug mode OFF in production"],
+            "why": "Misconfiguration is the most common cause of breaches. A Django app with DEBUG=True in production exposes your entire settings file including database credentials."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "python",
+        "title": "Secure Django API Pattern — BOLA Prevention + Rate Limiting",
+        "code": "from rest_framework import generics, permissions\nfrom rest_framework.exceptions import PermissionDenied\nfrom django_ratelimit.decorators import ratelimit\nfrom django.utils.decorators import method_decorator\n\nclass OrderDetailView(generics.RetrieveUpdateAPIView):\n    serializer_class = OrderSerializer\n    permission_classes = [permissions.IsAuthenticated]\n\n    def get_queryset(self):\n        # BOLA prevention: ALWAYS filter by the requesting user\n        # Even if someone passes ?id=another_users_order, this query\n        # will return nothing instead of that order\n        return Order.objects.filter(\n            user=self.request.user,   # ← this one line prevents BOLA\n            is_deleted=False\n        )\n\n    def get_serializer_class(self):\n        # Return different serializer for different roles\n        # Admin gets full data, regular users get limited fields\n        if self.request.user.is_staff:\n            return AdminOrderSerializer\n        return CustomerOrderSerializer  # excludes internal fields\n\n@method_decorator(\n    ratelimit(key='user', rate='10/m', method='POST', block=True),\n    name='dispatch'\n)\nclass LoginView(generics.GenericAPIView):\n    # Rate limited: max 10 POST requests per minute per user/IP\n    permission_classes = [permissions.AllowAny]\n    ..."
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "Never Do This With JWTs",
+        "text": "Never store sensitive data in JWT payload — it is base64 encoded, not encrypted. Anyone can decode it. Never use 'none' algorithm. Always validate the algorithm in the header matches what your server expects. Set short expiry (15-60 minutes) and use refresh tokens for long-lived sessions."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "JWT vs Session-based authentication — which should I use?",
+            "answer": "Session-based (server stores session state) for traditional web apps — simpler, more secure by default, easy to invalidate. JWT (stateless — client holds the token) for APIs consumed by mobile apps, SPAs, or third-party clients. JWT's weakness: you cannot truly invalidate a token before expiry without a server-side blocklist, which defeats the 'stateless' benefit. For most Django APIs, JWT with short expiry + refresh token rotation is the right choice."
+          },
+          {
+            "question": "How do I protect against SQL injection in Django?",
+            "answer": "The ORM protects you by default — always use it. The vulnerability appears when you write raw SQL with string interpolation: cursor.execute('SELECT * FROM users WHERE id = ' + user_id) — never do this. If you must write raw SQL, use parameterized queries: cursor.execute('SELECT * FROM users WHERE id = %s', [user_id]). The %s placeholder escapes the input safely."
+          },
+          {
+            "question": "What security headers should every API have?",
+            "answer": "Critical: Strict-Transport-Security (forces HTTPS), X-Content-Type-Options: nosniff (prevents MIME sniffing), X-Frame-Options: DENY (prevents clickjacking). For APIs: remove X-Powered-By and Server headers (do not advertise your stack). For SPAs: Content-Security-Policy. In Django, use django-security or manually add these in your middleware. Check your headers at securityheaders.com."
+          }
+        ]
+      }
+    ]
   }
-
 ]
