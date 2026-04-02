@@ -1,3 +1,912 @@
 [
-   
+
+  {
+    "imagePrompt": "Minimalist tech poster, midnight blue (#0D1B3E) to teal (#0F6E56) gradient background, clean white hexagonal MCP hub in center with 6 thin white lines radiating outward to small labeled node circles (Claude, VSCode, Cursor, GitHub, Slack, Zed), bold gold text 'MCP' large center, subtitle 'Model Context Protocol' below in white, flat geometric no-glow design, 1200x630px",
+
+    "slug": "mcp-model-context-protocol-developers-guide-2026",
+    "title": "MCP Explained — The Protocol That Connects AI to Everything in 2026",
+    "excerpt": "Model Context Protocol went from Anthropic proposal to industry standard in 6 months. It is now built into VS Code, Cursor, GitHub Copilot, and Windsurf. Every developer building AI applications needs to understand it.",
+    "coverImage": "/blog/mcp-model-context-protocol-2026.png",
+    "coverImageAlt": "Model Context Protocol MCP Guide 2026 — ArivuOn Academy",
+    "category": "AI",
+    "tags": ["MCP", "AI", "Claude", "API Integration", "AI Agents", "Developer Tools"],
+    "publishedAt": "2026-03-28",
+    "updatedAt": "2026-03-28",
+    "readingTime": 8,
+    "featured": true,
+    "seo": {
+      "metaTitle": "MCP Model Context Protocol 2026 — Complete Developer Guide | ArivuOn Academy",
+      "metaDescription": "What is MCP (Model Context Protocol)? How it works, how to build MCP servers, and why it became the AI integration standard in 2026 — complete guide by ArivuOn Academy.",
+      "keywords": [
+        "mcp model context protocol 2026",
+        "model context protocol explained",
+        "how mcp works",
+        "build mcp server python",
+        "claude mcp integration",
+        "ai tool integration standard 2026"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Before MCP, every AI tool built its own integration with every service. Cursor had its own GitHub connector. Claude had a different one. VS Code Copilot had yet another. Each was proprietary, incompatible with the others, and required separate maintenance. MCP is the USB-C moment for AI — one universal protocol that any AI tool can use to connect to any service."
+      },
+      {
+        "type": "heading2",
+        "text": "What MCP Actually Does"
+      },
+      {
+        "type": "paragraph",
+        "text": "MCP is a standardised protocol that lets AI models discover, request, and use external tools — databases, APIs, filesystems, services — in a secure and structured way. Build one MCP server for your PostgreSQL database and every MCP-compatible AI tool (Claude, Cursor, Windsurf, VS Code) can use it instantly without any additional integration work."
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "MCP in One Sentence",
+        "text": "MCP is a universal adapter that lets any AI model connect to any external tool — so you build the integration once and every AI tool in your workflow can use it immediately."
+      },
+      {
+        "type": "heading2",
+        "text": "MCP Architecture — Three Components"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Component 1",
+            "duration": "The AI app",
+            "title": "MCP Host — Claude, Cursor, VS Code, Windsurf",
+            "skills": ["Runs the AI model", "Manages connections to MCP servers", "Decides which servers to connect to", "Exposes available tools to the model"],
+            "why": "The host is what the user interacts with. It tells the AI which tools exist and routes AI tool requests to the correct server automatically."
+          },
+          {
+            "phase": "Component 2",
+            "duration": "Built-in",
+            "title": "MCP Client — the protocol handler (built into hosts)",
+            "skills": ["Maintains connection to each MCP server", "Translates AI requests to MCP protocol format", "Handles transport (stdio, SSE, HTTP)", "You do not build this — it is built into hosts"],
+            "why": "The client is the translator layer. It is already built into every MCP-compatible tool. You interact with it only when configuring which servers to connect."
+          },
+          {
+            "phase": "Component 3",
+            "duration": "What YOU build",
+            "title": "MCP Server — your custom tool integrations",
+            "skills": ["Exposes tools, resources, and prompts", "Connects to: databases, APIs, filesystems", "Runs locally or remotely", "Responds to AI tool call requests in real time"],
+            "why": "This is where developers create value. An MCP server for your internal API lets every connected AI tool query your data without you writing custom connectors for each tool."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "python",
+        "title": "Build a PostgreSQL MCP Server in 30 Lines",
+        "code": "# pip install mcp asyncpg\nfrom mcp.server import Server\nfrom mcp.types import Tool, TextContent\nimport asyncpg, json\n\nserver = Server(\"postgres-mcp\")\n\n@server.list_tools()\nasync def list_tools():\n    return [\n        Tool(\n            name=\"query_db\",\n            description=\"Run a SELECT query on the company database\",\n            inputSchema={\n                \"type\": \"object\",\n                \"properties\": {\"sql\": {\"type\": \"string\"}},\n                \"required\": [\"sql\"]\n            }\n        )\n    ]\n\n@server.call_tool()\nasync def call_tool(name: str, arguments: dict):\n    if name == \"query_db\":\n        conn = await asyncpg.connect(\"postgresql://localhost/company_db\")\n        rows = await conn.fetch(arguments[\"sql\"])\n        await conn.close()\n        return [TextContent(type=\"text\",\n                            text=json.dumps([dict(r) for r in rows]))]\n\n# Configure in Claude Desktop claude_desktop_config.json:\n# { \"mcpServers\": { \"postgres\": { \"command\": \"python server.py\" } } }\n# Now Claude can query your database in every conversation"
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Is MCP only for Claude?",
+            "answer": "MCP was created by Anthropic but is an open standard. By 2026 it is supported by VS Code, Cursor, Windsurf, Zed, GitHub Copilot, and dozens of other AI tools. Anthropic designed it as a universal protocol deliberately — any MCP server the community builds works with every MCP-compatible AI tool, including Claude."
+          },
+          {
+            "question": "How is MCP different from OpenAI function calling?",
+            "answer": "Function calling is a feature of individual API calls — you define tools inline for a single request. MCP is a persistent connection protocol — you define a server that stays running and any connected AI can discover and call its tools at any time. MCP is more like a plugin architecture; function calling is more like a one-time tool definition."
+          },
+          {
+            "question": "What can I connect to MCP?",
+            "answer": "Anything: PostgreSQL, MongoDB, REST APIs, GraphQL endpoints, local filesystems, Slack, Jira, GitHub, Notion, Google Workspace, internal company tools. The MCP ecosystem already has hundreds of pre-built servers for common services at modelcontextprotocol.io/servers. If your service does not have one, building a custom MCP server typically takes less than 50 lines of Python."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Clean tech poster, dark navy (#0D1B3E) to deep purple gradient background, center illustration of a funnel with small document icons falling in from the top, the funnel converting to a search/magnifying glass, then to an LLM chat bubble at the bottom, bold gold label 'RAG' large on the left, subtitle 'Retrieval Augmented Generation' in clean white text, flat minimal geometric, 1200x630px",
+
+    "slug": "rag-complete-guide-build-ai-on-your-data-2026",
+    "title": "RAG in 2026 — How to Build AI That Knows Your Company's Data",
+    "excerpt": "Retrieval Augmented Generation is the foundation of every production AI app that works with private data. This complete guide covers architecture, vector databases, chunking strategies, and real Python implementation.",
+    "coverImage": "/blog/rag-architecture-guide-2026.png",
+    "coverImageAlt": "RAG Architecture Complete Guide 2026 — ArivuOn Academy",
+    "category": "AI",
+    "tags": ["RAG", "LLM", "Python", "LangChain", "Vector Database", "AI Engineering"],
+    "publishedAt": "2026-03-25",
+    "updatedAt": "2026-03-25",
+    "readingTime": 11,
+    "featured": false,
+    "seo": {
+      "metaTitle": "RAG Guide 2026 — Build AI on Your Own Data | ArivuOn Academy",
+      "metaDescription": "Complete RAG (Retrieval Augmented Generation) guide 2026. Vector databases, embeddings, LangChain, chunking and production deployment — ArivuOn Academy.",
+      "keywords": [
+        "rag architecture 2026",
+        "retrieval augmented generation guide",
+        "build rag with python langchain",
+        "vector database for rag",
+        "rag vs fine tuning 2026",
+        "how to build ai on your data"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Every company wants an AI that understands their internal documents, product knowledge, customer history, and proprietary data. RAG is how you build it — without retraining models, without fine-tuning, and without hallucinating about information the model was never trained on. In 2026, RAG skills are the most in-demand AI engineering competency after prompt engineering."
+      },
+      {
+        "type": "heading2",
+        "text": "How RAG Works — The Four-Stage Pipeline"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Stage 1",
+            "duration": "One-time setup",
+            "title": "Index — Chunk, embed, and store your documents",
+            "skills": ["Load: PDF, Word, URLs, database records", "Split into chunks of 500–1000 tokens each", "Generate vector embeddings for each chunk", "Store embeddings + original text in vector database"],
+            "why": "This runs once (or when documents update). You are building a searchable index of your data's meaning, not its keywords. Every future query searches this index."
+          },
+          {
+            "phase": "Stage 2",
+            "duration": "Per query",
+            "title": "Embed — Convert user question to a vector",
+            "skills": ["Receive the user's natural language question", "Generate an embedding using the same model used for indexing", "Embedding captures meaning, not exact words", "'What is the refund policy?' and 'How do returns work?' get similar vectors"],
+            "why": "The question must be converted to the same mathematical space as the documents. Semantic search matches meaning, not keywords — critical for natural language queries."
+          },
+          {
+            "phase": "Stage 3",
+            "duration": "Per query",
+            "title": "Retrieve — Find the most relevant document chunks",
+            "skills": ["Cosine similarity search across all embeddings", "Return top-K most semantically similar chunks (typically 5)", "Optional: re-rank with a cross-encoder for precision", "Filter by metadata: date, source, category, department"],
+            "why": "This is the intelligence of RAG. A question about 'refund policy' correctly retrieves the returns document, not the shipping guide — because embeddings encode meaning, not just text overlap."
+          },
+          {
+            "phase": "Stage 4",
+            "duration": "Per query",
+            "title": "Generate — LLM answers using retrieved context",
+            "skills": ["Inject retrieved chunks into LLM context as source material", "Instruct: 'Answer using only the provided context'", "Model cites sources from retrieved chunks", "Returns grounded, accurate answer with source references"],
+            "why": "The LLM is now grounded in your actual data. It cannot hallucinate about topics not in your documents because the prompt explicitly limits it to retrieved context."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "python",
+        "title": "Production RAG Pipeline — LangChain + Pinecone",
+        "code": "from langchain_openai import OpenAIEmbeddings, ChatOpenAI\nfrom langchain_pinecone import PineconeVectorStore\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain_core.prompts import ChatPromptTemplate\nfrom langchain_core.runnables import RunnablePassthrough\nfrom langchain_community.document_loaders import PyPDFLoader\n\n# 1. Load and chunk\nloader = PyPDFLoader(\"company_policies.pdf\")\nchunks = RecursiveCharacterTextSplitter(\n    chunk_size=800, chunk_overlap=100\n).split_documents(loader.load())\n\n# 2. Embed and index in Pinecone\nembeddings  = OpenAIEmbeddings(model=\"text-embedding-3-small\")\nvectorstore = PineconeVectorStore.from_documents(\n    chunks, embeddings, index_name=\"company-knowledge\"\n)\nretriever = vectorstore.as_retriever(search_kwargs={\"k\": 5})\n\n# 3. RAG chain with source grounding\nprompt = ChatPromptTemplate.from_template(\"\"\"\nAnswer ONLY using the context below.\nIf the answer is not present, say: 'Not found in company documents.'\n\nContext: {context}\nQuestion: {question}\n\"\"\")\n\nchain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | prompt\n    | ChatOpenAI(model=\"gpt-4o-mini\", temperature=0)\n)\n\nanswer = chain.invoke(\"What is our annual leave policy?\")\nprint(answer.content)"
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "RAG vs fine-tuning — which should I use?",
+            "answer": "RAG for: knowledge that changes frequently, proprietary data you cannot send for training, applications needing source citations, and cost-efficiency at scale. Fine-tuning for: teaching the model a specific writing style, embedding domain reasoning patterns, and cases where retrieval latency is unacceptable. For 90% of enterprise AI applications in 2026, RAG is the correct answer."
+          },
+          {
+            "question": "Which vector database should I use?",
+            "answer": "Pinecone for fully managed production service with zero infrastructure. Weaviate or Qdrant for self-hosted with rich metadata filtering. pgvector (PostgreSQL extension) for teams already on PostgreSQL who want to avoid new infrastructure. Chroma for local development. For Django or FastAPI applications: start with pgvector — it integrates with your existing database and is production-ready."
+          },
+          {
+            "question": "How do I handle RAG for Arabic or Tamil language documents?",
+            "answer": "Use a multilingual embedding model: OpenAI's text-embedding-3-large handles 100+ languages. Cohere's embed-multilingual-v3 is specifically optimised for non-English. For Arabic: chunk at sentence boundaries (not character count) as Arabic is more information-dense per character. Retrieval quality is nearly identical to English when using a proper multilingual embedding model."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Split-panel tech poster, dark charcoal (#1A1A2E) background, left panel: single large white monolithic cube labeled 'MONOLITH' with all-in-one icons inside, right panel: six smaller white interconnected cubes labeled 'MICROSERVICES' with thin white arrows between them, clean gold vertical dividing line in center, bold white headline 'Monolith vs Microservices' at top, flat minimal architecture illustration, 1200x630px",
+
+    "slug": "monolith-vs-microservices-honest-guide-2026",
+    "title": "Monolith vs Microservices in 2026 — The Honest Guide to When Each Is Right",
+    "excerpt": "Every startup wants microservices. Most should not have them. This is the technical breakdown of when microservices actually make sense — and the expensive mistakes teams make by choosing the wrong architecture.",
+    "coverImage": "/blog/microservices-monolith-2026.png",
+    "coverImageAlt": "Monolith vs Microservices Architecture 2026 — ArivuOn Academy",
+    "category": "DevOps",
+    "tags": ["Microservices", "Architecture", "System Design", "Backend", "DevOps", "Scalability"],
+    "publishedAt": "2026-03-22",
+    "updatedAt": "2026-03-22",
+    "readingTime": 9,
+    "featured": false,
+    "seo": {
+      "metaTitle": "Monolith vs Microservices 2026 — When to Use Each | ArivuOn Academy",
+      "metaDescription": "Honest guide to monolith vs microservices in 2026. When microservices make sense, when they don't, modular monolith pattern, and real trade-offs — ArivuOn Academy.",
+      "keywords": [
+        "monolith vs microservices 2026",
+        "when to use microservices",
+        "modular monolith architecture",
+        "microservices for beginners",
+        "software architecture 2026",
+        "microservices vs monolith real world"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Amazon runs on microservices. Netflix runs on microservices. Shopify, Stack Overflow, and Basecamp run on monoliths — at massive scale. The architecture that powers the world's largest platforms comes with operational complexity that destroys small teams. The question is not which architecture is 'better' — it is which is right for your team size, traffic patterns, and engineering maturity right now."
+      },
+      {
+        "type": "heading2",
+        "text": "The Monolith Is Not a Legacy Pattern"
+      },
+      {
+        "type": "paragraph",
+        "text": "A monolith is a single deployable unit containing all application logic. One codebase, one deployment, one database. Shopify served billions in GMV on a Rails monolith. Stack Overflow handles 1.5 billion pageviews per month from a .NET monolith on a handful of servers. A monolith is not a technical debt — it is the right starting architecture for 95% of applications."
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "The Rule That Saves Engineering Teams",
+        "text": "Start as a monolith. Extract a service only when you have a specific, proven pain point that a service would solve — and only when your team has the operational maturity to run distributed systems. 'We might need to scale this independently someday' is not a valid reason to start with microservices."
+      },
+      {
+        "type": "heading2",
+        "text": "When Microservices Actually Make Sense"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Signal 1",
+            "duration": "Real scaling pain",
+            "title": "One component needs independent scaling",
+            "skills": ["Checkout service needs 20x more capacity than catalog", "Image processing consuming all shared resources", "One module has 100x more traffic than everything else", "Horizontal scaling of the whole monolith becomes uneconomical"],
+            "why": "If your monolith can scale by adding more instances and that is affordable, do it. Extract a service only when independent scaling of one component becomes economically necessary — not theoretically desirable."
+          },
+          {
+            "phase": "Signal 2",
+            "duration": "Real team pain",
+            "title": "50+ engineers with separate domain ownership",
+            "skills": ["Measurable merge conflict slowdown", "Team A's deploy blocked by Team B's broken tests", "Different release cadences for genuinely separate products", "Org chart clearly maps to separate bounded contexts"],
+            "why": "Conway's Law: your architecture mirrors your team structure. When team friction from a shared codebase is real and measurable in shipping speed, services can provide organisational boundaries."
+          },
+          {
+            "phase": "Signal 3",
+            "duration": "Technical requirement",
+            "title": "Components genuinely need different technology stacks",
+            "skills": ["ML inference needs Python/GPU, rest of app is Node.js", "Real-time features need Go/WebSockets", "Data processing needs Spark on JVM", "Each component can now use the best tool for its job"],
+            "why": "When one component genuinely requires a different runtime that cannot coexist in your monolith, extraction has a technical reason. Not 'I prefer Go' — a requirement that cannot be met otherwise."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "tip",
+        "title": "The Best of Both Worlds — Modular Monolith",
+        "text": "A modular monolith enforces strict module boundaries internally — each module owns its code and database tables, communicates through defined interfaces, and has no cross-module database queries. You get the organisational clarity of microservices without the operational overhead. This is the recommended pattern for most teams in 2026."
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Can a monolith handle high traffic?",
+            "answer": "Yes. Stack Overflow handles 1.5 billion pageviews per month from 9 web servers running a monolith. The bottleneck for most applications is the database, not the application tier. A monolith with a read replica, Redis cache, and proper indexing handles enormous scale. Microservices do not inherently solve database bottlenecks — they introduce new ones through distributed data."
+          },
+          {
+            "question": "How do microservices communicate with each other?",
+            "answer": "Synchronous: HTTP/REST or gRPC — service A calls service B and waits. Asynchronous: message queues like Kafka or RabbitMQ — service A publishes an event, service B processes it when ready. Asynchronous is more resilient but harder to debug. Most production microservice architectures use both depending on consistency requirements. Synchronous for user-facing reads, asynchronous for writes and background processing."
+          },
+          {
+            "question": "What is the biggest mistake teams make with microservices?",
+            "answer": "Introducing microservices before the team has DevOps maturity. Running 15 services requires: service discovery, distributed tracing, centralised logging, circuit breakers, independent deployment pipelines, inter-service authentication, and distributed transaction management. A team that struggles with a single deployment pipeline will be overwhelmed by 15. Get excellent at operating one service before splitting it."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Minimal tech poster, dark navy (#0D1B3E) to electric blue gradient, center: large white 'TS' TypeScript logo with clean diagonal code snippet lines floating behind it in low opacity, left side: bold gold title 'TypeScript', subtitle '2026 Complete Guide' in white below, small white type annotations floating like '<string>' '<number>' '<boolean>' around the logo, ultra flat geometric design, 1200x630px",
+
+    "slug": "typescript-complete-guide-2026",
+    "title": "TypeScript in 2026 — Why Every JavaScript Developer Must Learn It Now",
+    "excerpt": "TypeScript is used in 78% of professional JavaScript projects. It caught 68% of runtime bugs before deployment in large codebases. If you are still writing plain JavaScript for production, this guide explains what you are missing.",
+    "coverImage": "/blog/typescript-guide-2026.png",
+    "coverImageAlt": "TypeScript Complete Guide 2026 — ArivuOn Academy",
+    "category": "React",
+    "tags": ["TypeScript", "JavaScript", "Frontend", "React", "Node.js", "Career"],
+    "publishedAt": "2026-03-20",
+    "updatedAt": "2026-03-20",
+    "readingTime": 9,
+    "featured": false,
+    "seo": {
+      "metaTitle": "TypeScript Complete Guide 2026 — For JavaScript Developers | ArivuOn Academy",
+      "metaDescription": "Learn TypeScript in 2026. Types, interfaces, generics, utility types and real-world React patterns — complete guide for JavaScript developers by ArivuOn Academy.",
+      "keywords": [
+        "typescript guide 2026",
+        "learn typescript for beginners",
+        "typescript vs javascript 2026",
+        "typescript for react developers",
+        "typescript generics tutorial",
+        "typescript advanced patterns"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "TypeScript caught 68% of production bugs before runtime in a 2025 analysis of large JavaScript codebases. Airbnb, Slack, Microsoft, Vercel, and virtually every company running JavaScript at scale have migrated to TypeScript. It is not about being fancy — it is about not shipping bugs to users at 3am because a function received a string when it expected a number."
+      },
+      {
+        "type": "heading2",
+        "text": "TypeScript vs JavaScript — The Real Difference"
+      },
+      {
+        "type": "paragraph",
+        "text": "JavaScript is dynamically typed — variables can hold any type, functions accept anything, and many errors only surface at runtime when users trigger specific paths. TypeScript adds a static type system: variables have declared types, function signatures are explicit, and the compiler catches mismatches before your code runs. TypeScript is a superset of JavaScript — every valid JS file is valid TS. You can migrate gradually."
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "The Real Value of TypeScript",
+        "text": "TypeScript is not about types — it is about documentation that the compiler enforces. When you write a function signature in TypeScript, every developer who uses that function instantly knows what it accepts and returns. The compiler tells them immediately if they get it wrong."
+      },
+      {
+        "type": "heading2",
+        "text": "TypeScript Learning Path — Beginner to Advanced"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Level 1",
+            "duration": "1 week",
+            "title": "Basic types and annotations",
+            "skills": ["string, number, boolean, null, undefined, void", "Arrays: string[] and Array<string>", "Function parameter and return types", "Type inference — when to annotate vs let TypeScript infer"],
+            "why": "80% of TypeScript's value comes from these basics. Master them before touching advanced features. Most production TypeScript code uses nothing beyond this level."
+          },
+          {
+            "phase": "Level 2",
+            "duration": "1 week",
+            "title": "Interfaces and type aliases",
+            "skills": ["interface vs type (when to use each)", "Optional properties with ?", "Readonly properties", "Union types: string | number", "Intersection types: TypeA & TypeB"],
+            "why": "This is where you model your application data. Strong interface design makes the entire codebase self-documenting and prevents entire classes of bugs at API boundaries."
+          },
+          {
+            "phase": "Level 3",
+            "duration": "1 week",
+            "title": "Generics — write once, type safely",
+            "skills": ["Generic functions: function identity<T>(arg: T): T", "Generic interfaces and classes", "Generic constraints with extends", "Built-in utility types: Partial, Required, Pick, Omit, Record"],
+            "why": "Generics let you write reusable code that maintains full type safety. They separate TypeScript beginners from intermediate developers and appear in almost every library."
+          },
+          {
+            "phase": "Level 4",
+            "duration": "1 week",
+            "title": "Advanced patterns for production codebases",
+            "skills": ["Discriminated unions for state machines", "Template literal types", "Mapped types for object transformations", "Type guards and narrowing patterns"],
+            "why": "These patterns appear in every large TypeScript codebase. Understanding them makes you effective on any professional TS project from day one."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "typescript",
+        "title": "Real TypeScript — Typed API Response with Generics",
+        "code": "// Generic API response wrapper — used across your entire application\ninterface ApiResponse<T> {\n  data: T;\n  error: string | null;\n  status: 'success' | 'error' | 'loading';\n  timestamp: Date;\n}\n\n// Course model with strict typing\ninterface Course {\n  id: string;\n  title: string;\n  price: number;\n  category: 'python' | 'devops' | 'react' | 'datasci';\n  enrolledAt?: Date;  // optional — only present after enrollment\n  isActive: boolean;\n}\n\n// TypeScript knows EXACTLY what this function returns\nasync function fetchCourse(id: string): Promise<ApiResponse<Course>> {\n  const res = await fetch(`/api/courses/${id}`);\n  return res.json();\n}\n\n// Usage — compiler catches every mistake\nconst result = await fetchCourse('py-001');\nif (result.status === 'success') {\n  console.log(result.data.title);       // ✅ TypeScript knows this exists\n  console.log(result.data.price * 1.1); // ✅ number × number = valid\n  console.log(result.data.unknown);     // ❌ Error at compile time — not runtime\n  result.data.category = 'java';        // ❌ 'java' is not in the union type\n}"
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Should I learn JavaScript before TypeScript?",
+            "answer": "Yes. TypeScript is a layer on top of JavaScript, not a replacement. Learn JavaScript fundamentals first — functions, closures, async/await, array methods, the event loop. Then add TypeScript. Trying to learn both simultaneously causes confusion about what is JavaScript behaviour and what is TypeScript syntax."
+          },
+          {
+            "question": "Is TypeScript required for React development in 2026?",
+            "answer": "Required? No. Expected in professional settings? Yes. The vast majority of professional React codebases in 2026 use TypeScript. Next.js, Remix, and every major React framework default to TypeScript. React's own type definitions are first-class. If you are learning React for a professional career, learn it with TypeScript from day one."
+          },
+          {
+            "question": "How long does it take to become productive in TypeScript?",
+            "answer": "If you already know JavaScript: 1–2 weeks to write basic TypeScript comfortably, 1–2 months to use it confidently across a full project. The learning curve is shallow — most TypeScript concepts map directly to JavaScript patterns you already know. The main investment is learning to think in types, which pays compound returns in code quality."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Tech poster, dark navy (#0D1B3E) background with subtle geometric grid in gold, center-right: a clean white database cylinder with a gold lightning bolt icon, below the cylinder: a simple horizontal bar chart with two bars — left bar taller in red labeled 'Before', right bar shorter in green labeled 'After', bold gold title 'PostgreSQL' large on the left, subtitle 'Performance Guide' in white, flat minimal design, 1200x630px",
+
+    "slug": "postgresql-performance-optimization-guide-2026",
+    "title": "PostgreSQL Performance Optimization in 2026 — Fix Slow Queries Before They Kill Your App",
+    "excerpt": "Slow queries are the number one cause of production performance issues. This guide gives you the exact tools to find, diagnose, and fix slow PostgreSQL queries in real applications.",
+    "coverImage": "/blog/postgresql-performance-2026.png",
+    "coverImageAlt": "PostgreSQL Performance Optimization 2026 — ArivuOn Academy",
+    "category": "Python",
+    "tags": ["PostgreSQL", "Database", "Backend", "Performance", "Django", "SQL"],
+    "publishedAt": "2026-03-18",
+    "updatedAt": "2026-03-18",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "PostgreSQL Performance Optimization 2026 — Fix Slow Queries | ArivuOn Academy",
+      "metaDescription": "PostgreSQL performance guide 2026. EXPLAIN ANALYZE, index strategies, Django N+1 prevention, connection pooling and query optimization — ArivuOn Academy.",
+      "keywords": [
+        "postgresql performance optimization 2026",
+        "postgres slow query fix",
+        "postgresql indexes guide",
+        "explain analyze postgresql",
+        "django database performance",
+        "n+1 query problem django"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Your application is slow. Adding more servers does not fix it. The real problem is almost always the database. A query taking 2 seconds instead of 2 milliseconds does not just affect one user — it holds a database connection, blocks other queries, and can cascade into a full application outage under load. This guide teaches you to find it and fix it."
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "The Django N+1 Problem — Most Common Cause",
+        "text": "Querying the database once for a list of objects, then querying once more for each object's related data. A page listing 50 courses with their instructor names makes 51 database queries instead of 1. Fix with select_related() for ForeignKey and prefetch_related() for ManyToMany. Always check query count in development using django-debug-toolbar."
+      },
+      {
+        "type": "heading2",
+        "text": "Step 1 — Find Your Slowest Queries Right Now"
+      },
+      {
+        "type": "codeBlock",
+        "language": "sql",
+        "title": "Find the Top 10 Slowest Queries in Your Database",
+        "code": "-- Enable pg_stat_statements in postgresql.conf first:\n-- shared_preload_libraries = 'pg_stat_statements'\n\n-- Top 10 slowest queries by total execution time\nSELECT\n  round(total_exec_time::numeric, 2) AS total_ms,\n  round(mean_exec_time::numeric, 2)  AS avg_ms,\n  calls,\n  round((100 * total_exec_time /\n         sum(total_exec_time) OVER ())::numeric, 2) AS pct_total,\n  left(query, 120) AS query_preview\nFROM pg_stat_statements\nORDER BY total_exec_time DESC\nLIMIT 10;\n\n-- Then use EXPLAIN ANALYZE on the worst offender:\nEXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT)\nSELECT u.name, COUNT(e.id)\nFROM users u\nJOIN enrollments e ON u.id = e.user_id\nWHERE u.created_at > '2026-01-01'\nGROUP BY u.id, u.name\nORDER BY count DESC\nLIMIT 20;\n\n-- Look for in the output:\n-- 'Seq Scan' on large tables → needs an index\n-- High actual rows vs estimated rows → stale statistics\n-- 'Hash Join' on millions of rows → may need index"
+      },
+      {
+        "type": "heading2",
+        "text": "The Four Index Types You Must Know"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Index 1",
+            "duration": "Default — use for 80% of cases",
+            "title": "B-Tree — equality and range queries",
+            "skills": ["WHERE user_id = 123", "WHERE created_at > '2026-01-01'", "ORDER BY created_at DESC", "CREATE INDEX ON orders(user_id, created_at) — multi-column"],
+            "why": "Turns a sequential scan of 10 million rows into a lookup of 10. This single change fixes the majority of slow query problems."
+          },
+          {
+            "phase": "Index 2",
+            "duration": "Low-cardinality columns",
+            "title": "Partial Index — index only rows you actually query",
+            "skills": ["CREATE INDEX ON orders(user_id) WHERE status = 'pending'", "Index is 10-100x smaller than full table index", "Faster updates since fewer rows to index", "Use when queries always filter on a specific value"],
+            "why": "If only 1% of orders are 'pending' and you always filter on that, a partial index is 100x smaller than indexing all orders. Smaller index = faster everything."
+          },
+          {
+            "phase": "Index 3",
+            "duration": "Full text search",
+            "title": "GIN Index — full-text search and JSONB",
+            "skills": ["CREATE INDEX ON courses USING GIN(to_tsvector('english', title || ' ' || description))", "SELECT ... WHERE to_tsvector @@ to_tsquery('python')", "Also for JSONB columns: CREATE INDEX USING GIN(metadata)", "Replaces LIKE '%keyword%' which cannot use any index"],
+            "why": "LIKE '%keyword%' performs a full table scan on every query — no index can help it. GIN with tsvector gives you true full-text search that scales to millions of rows."
+          },
+          {
+            "phase": "Index 4",
+            "duration": "Know when NOT to index",
+            "title": "Every index slows writes — audit regularly",
+            "skills": ["Every INSERT/UPDATE/DELETE must update all indexes", "Heavy-write tables need fewer indexes", "Check unused indexes: SELECT * FROM pg_stat_user_indexes WHERE idx_scan = 0", "Drop unused indexes — they waste space and degrade write performance"],
+            "why": "On a table with millions of inserts per day, 10 unnecessary indexes can degrade write throughput by 50%. Indexes are not free — audit and drop what you don't use."
+          }
+        ]
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "When should I use PostgreSQL vs MongoDB?",
+            "answer": "Use PostgreSQL by default. It handles relational data, JSON (JSONB), full-text search, geospatial queries, and time-series all in one system. Consider MongoDB only when: your data is genuinely document-oriented with highly variable schemas, you need extreme horizontal write scaling, or your team has deep MongoDB expertise. 'Our data is stored as JSON' is not a sufficient reason to choose MongoDB over PostgreSQL's native JSONB support."
+          },
+          {
+            "question": "How many indexes is too many?",
+            "answer": "No fixed answer — it depends on your read/write ratio. Read-heavy analytics databases can have 20+ indexes per table. Write-heavy transactional tables should have as few as possible. The rule: only add an index if it appears in a frequent, measured slow query. Review pg_stat_user_indexes monthly and drop indexes with idx_scan = 0."
+          },
+          {
+            "question": "What is connection pooling and do I need it for Django?",
+            "answer": "PostgreSQL creates a new OS process for every connection — connecting is expensive. Connection pooling maintains a pool of connections that Django reuses instead of creating new ones on every request. For production Django applications, use PgBouncer as a connection pooler in front of PostgreSQL, or use django-db-geventpool. If you see 'too many connections' errors or slow response times under load, connection pooling is the fix."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Minimal tech poster, deep navy (#0D1B3E) to dark teal gradient, center: a white stylized brain outline with thin neural network lines connecting bright nodes inside it, labeled data tokens floating to the left in gold, a gear/settings icon on the right in white representing fine-tuning, bold gold title 'Fine-Tuning LLMs' on the left, subtitle 'When & How in 2026' in white below, flat geometric no-glow, 1200x630px",
+
+    "slug": "fine-tuning-llms-when-how-2026",
+    "title": "Fine-Tuning LLMs in 2026 — When It Makes Sense and How to Do It Right",
+    "excerpt": "Everyone talks about fine-tuning. Few understand when it actually beats RAG, prompt engineering, or a bigger context window. This guide covers when fine-tuning is worth it and the exact process for Python developers.",
+    "coverImage": "/blog/fine-tuning-llms-2026.png",
+    "coverImageAlt": "Fine-Tuning LLMs Guide 2026 — ArivuOn Academy",
+    "category": "AI",
+    "tags": ["LLM", "Fine-Tuning", "Python", "AI Engineering", "Machine Learning", "GPT"],
+    "publishedAt": "2026-03-15",
+    "updatedAt": "2026-03-15",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "Fine-Tuning LLMs 2026 — When to Fine-Tune vs RAG vs Prompting | ArivuOn Academy",
+      "metaDescription": "When does fine-tuning LLMs actually beat RAG? Complete guide to fine-tuning GPT-4o, Llama 3, and open models in 2026 — ArivuOn Academy.",
+      "keywords": [
+        "fine tuning llm 2026",
+        "when to fine tune vs rag",
+        "llm fine tuning guide python",
+        "gpt-4o fine tuning tutorial",
+        "llama 3 fine tuning",
+        "fine tuning vs prompt engineering"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Fine-tuning is one of the most misunderstood techniques in AI development. Most teams that fine-tune when they should be using RAG waste $5,000–$50,000 on training, end up with a model that goes stale as their data changes, and ultimately get worse results than a well-crafted RAG pipeline. This guide tells you when fine-tuning is actually the right answer — and walks through the complete process."
+      },
+      {
+        "type": "heading2",
+        "text": "Fine-Tuning vs RAG vs Prompting — The Decision Tree"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Choose 1",
+            "duration": "Try first — free",
+            "title": "Prompt Engineering — solve 60% of problems",
+            "skills": ["Better system prompt with role and constraints", "Few-shot examples in the prompt", "Chain-of-thought reasoning instructions", "Structured output format specification"],
+            "why": "Before spending anything on RAG or fine-tuning, exhaust prompt engineering. Most AI performance issues are prompt quality issues, not model capability issues."
+          },
+          {
+            "phase": "Choose 2",
+            "duration": "For private/changing data",
+            "title": "RAG — for knowledge that changes or is private",
+            "skills": ["Company documents, policies, product knowledge", "Customer data, order history, internal records", "Any knowledge that updates more than quarterly", "Use cases requiring source citations"],
+            "why": "RAG costs cents per query and updates instantly when you update your vector database. Fine-tuning costs thousands and goes stale. For knowledge retrieval, RAG wins almost always."
+          },
+          {
+            "phase": "Choose 3",
+            "duration": "For behaviour, not knowledge",
+            "title": "Fine-Tuning — teach style, format, or domain reasoning",
+            "skills": ["Consistent response format (JSON schema, specific structure)", "Brand voice and writing style", "Domain-specific reasoning patterns (medical, legal, code)", "Latency requirements where retrieval is unacceptable"],
+            "why": "Fine-tuning embeds behaviour into the model weights. Use it when you want the model to consistently behave differently — not when you want it to know different facts."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "python",
+        "title": "Fine-Tune GPT-4o Mini — Upload Dataset and Start Training",
+        "code": "from openai import OpenAI\nimport json\n\nclient = OpenAI()\n\n# 1. Prepare your training data (minimum 10 examples, recommended 50+)\ntraining_data = [\n    {\n        \"messages\": [\n            {\"role\": \"system\",  \"content\": \"You are ArivuOn Academy's course advisor. Reply concisely in 2-3 sentences.\"},\n            {\"role\": \"user\",    \"content\": \"What is the best course for a Python beginner?\"},\n            {\"role\": \"assistant\",\"content\": \"Start with our Python & Django course — it covers Python fundamentals, web development with Django, and REST API creation. It is designed for complete beginners and takes 12 weeks with live mentorship. Enroll at academy.arivuon.in/courses/python.\"}\n        ]\n    },\n    # ... add 50+ more examples for best results\n]\n\n# Save as JSONL\nwith open(\"training.jsonl\", \"w\") as f:\n    for item in training_data:\n        f.write(json.dumps(item) + \"\\n\")\n\n# 2. Upload training file\nwith open(\"training.jsonl\", \"rb\") as f:\n    file_response = client.files.create(file=f, purpose=\"fine-tune\")\n\n# 3. Start fine-tuning job\njob = client.fine_tuning.jobs.create(\n    training_file=file_response.id,\n    model=\"gpt-4o-mini-2024-07-18\",\n    hyperparameters={\"n_epochs\": 3}\n)\nprint(f\"Fine-tuning job started: {job.id}\")\n# Training takes 10-60 minutes depending on dataset size\n\n# 4. Use your fine-tuned model\nresponse = client.chat.completions.create(\n    model=job.fine_tuned_model,  # Your custom model ID\n    messages=[{\"role\": \"user\", \"content\": \"Which course should I take?\"}]\n)"
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "How much training data do I need to fine-tune?",
+            "answer": "OpenAI recommends minimum 10 examples but quality over quantity is the rule. 50 high-quality, diverse examples beat 500 repetitive ones. For style and format consistency: 50–200 examples. For domain-specific reasoning: 200–1000 examples. For significant capability improvements: 1000+ examples. Always split into 80% training / 20% validation to detect overfitting."
+          },
+          {
+            "question": "How much does fine-tuning cost?",
+            "answer": "GPT-4o Mini fine-tuning: approximately $0.30 per 1M training tokens. A 500-example dataset with ~200 tokens per example costs about $0.03 to train — negligible. Inference on a fine-tuned GPT-4o Mini model is $0.60 per 1M input tokens. For open source models (Llama 3, Mistral): training cost depends on compute. A 7B model can be fine-tuned on a single A100 GPU in 2-8 hours at $1–4/hour."
+          },
+          {
+            "question": "Does fine-tuning improve factual accuracy?",
+            "answer": "No — this is the most common misconception. Fine-tuning changes how the model behaves (style, format, structure, reasoning approach), not what it knows. You cannot fine-tune a model to know your company's internal documents — that requires RAG. Fine-tuning a model on incorrect facts will make it confidently wrong more consistently. Use RAG for knowledge, fine-tuning for behaviour."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Tech architecture poster, dark charcoal (#1A1A2E) to navy gradient, center-right: clean white boxes arranged as a horizontal pipeline showing 'Source Code' → 'GitHub Actions' → 'Docker Build' → 'AWS ECS' with thin white arrows, a green checkmark at the end, bold gold title 'GitHub Actions' on the left, subtitle 'CI/CD Pipeline 2026' in white, flat minimal no-glow geometric illustration, 1200x630px",
+
+    "slug": "github-actions-cicd-complete-guide-2026",
+    "title": "GitHub Actions CI/CD in 2026 — From Zero to Automated Production Deployment",
+    "excerpt": "GitHub Actions overtook Jenkins as the most-used CI/CD tool globally. Zero infrastructure, deeply GitHub-integrated, free for public repos. This is the complete guide from first workflow to production deployment.",
+    "coverImage": "/blog/github-actions-cicd-2026.png",
+    "coverImageAlt": "GitHub Actions CI/CD Complete Guide 2026 — ArivuOn Academy",
+    "category": "DevOps",
+    "tags": ["GitHub Actions", "CI/CD", "DevOps", "Docker", "AWS", "Automation"],
+    "publishedAt": "2026-03-12",
+    "updatedAt": "2026-03-12",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "GitHub Actions CI/CD Guide 2026 — Build to Production Pipeline | ArivuOn Academy",
+      "metaDescription": "Complete GitHub Actions tutorial 2026. Build CI/CD pipelines for Python Django, Docker and AWS ECS deployment. Zero infrastructure required — ArivuOn Academy.",
+      "keywords": [
+        "github actions tutorial 2026",
+        "github actions cicd pipeline",
+        "github actions django python",
+        "github actions docker aws deploy",
+        "cicd pipeline tutorial beginners",
+        "github actions vs jenkins 2026"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "GitHub Actions ran over 3.5 billion workflow executions in 2025. It shipped in 2019 and took 6 years to displace Jenkins — not by being more powerful, but by being dramatically simpler. Commit a YAML file. No Jenkins server to maintain. No agents to configure. No plugins to manage. Your pipeline runs in 30 seconds. This guide teaches you to build production-grade pipelines from scratch."
+      },
+      {
+        "type": "heading2",
+        "text": "Core Concepts — What Every Term Means"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Concept 1",
+            "duration": "Top level",
+            "title": "Workflow — the YAML file in .github/workflows/",
+            "skills": ["Lives at .github/workflows/deploy.yml", "Triggered by events: push, pull_request, schedule, workflow_dispatch", "Contains one or more jobs", "One YAML file = one automated process"],
+            "why": "Every pipeline starts here. You can have multiple workflow files — deploy.yml, test.yml, release.yml — each triggered by different events."
+          },
+          {
+            "phase": "Concept 2",
+            "duration": "Parallelism unit",
+            "title": "Job — runs on one machine, contains steps",
+            "skills": ["Runs on GitHub-hosted runner: ubuntu-latest, windows-latest, macos-latest", "Jobs run in parallel by default", "Use 'needs: [job-name]' to create dependencies", "Each job gets a fresh virtual machine"],
+            "why": "Test and lint jobs can run in parallel. The deploy job must wait for both to pass. Jobs model your pipeline's dependency graph."
+          },
+          {
+            "phase": "Concept 3",
+            "duration": "Execution unit",
+            "title": "Step — individual action or shell command",
+            "skills": ["uses: actions/checkout@v4 (pre-built action from marketplace)", "run: pytest tests/ (shell command)", "Steps in a job share the same filesystem", "Failure in any step fails the job by default"],
+            "why": "Steps are the atoms of a pipeline. The GitHub Actions Marketplace has 20,000+ pre-built actions — for Docker, AWS, Kubernetes, notifications, and more."
+          },
+          {
+            "phase": "Concept 4",
+            "duration": "Security essential",
+            "title": "Secrets — never hardcode credentials",
+            "skills": ["Settings → Secrets → Actions → New repository secret", "Access in YAML: ${{ secrets.AWS_ACCESS_KEY_ID }}", "Secrets are masked in all log output", "Organisation secrets can be shared across repos"],
+            "why": "Production pipelines need AWS keys, Docker credentials, SSH keys. GitHub Secrets keeps them encrypted and never exposes them in logs or to other workflows."
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "yaml",
+        "title": "Production Pipeline — Django + Docker + AWS ECS Deployment",
+        "code": "# .github/workflows/deploy.yml\nname: Test → Build → Deploy\n\non:\n  push:\n    branches: [main]\n  pull_request:\n    branches: [main]\n\njobs:\n\n  test:\n    runs-on: ubuntu-latest\n    services:\n      postgres:\n        image: postgres:15\n        env: { POSTGRES_PASSWORD: test, POSTGRES_DB: testdb }\n        options: --health-cmd pg_isready --health-interval 10s --health-retries 5\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with: { python-version: '3.12' }\n      - run: pip install -r requirements.txt\n      - run: python manage.py test --parallel\n        env:\n          DATABASE_URL: postgresql://postgres:test@localhost/testdb\n          SECRET_KEY: test-secret-key\n\n  deploy:\n    needs: test\n    runs-on: ubuntu-latest\n    if: github.ref == 'refs/heads/main'\n    steps:\n      - uses: actions/checkout@v4\n\n      - name: Configure AWS credentials\n        uses: aws-actions/configure-aws-credentials@v4\n        with:\n          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}\n          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}\n          aws-region:            ap-south-1\n\n      - name: Login to ECR\n        uses: aws-actions/amazon-ecr-login@v2\n\n      - name: Build, tag and push Docker image\n        run: |\n          IMAGE=${{ secrets.ECR_REGISTRY }}/myapp:${{ github.sha }}\n          docker build -t $IMAGE .\n          docker push $IMAGE\n\n      - name: Deploy to ECS\n        run: |\n          aws ecs update-service \\\n            --cluster production \\\n            --service myapp-service \\\n            --force-new-deployment\n\n      - name: Notify on success\n        run: echo \"Deployed commit ${{ github.sha }} to production\""
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "GitHub Actions vs Jenkins — which should I learn in 2026?",
+            "answer": "Learn GitHub Actions first. Zero infrastructure, massive pre-built action marketplace, and covers 90% of CI/CD use cases. Jenkins is still relevant for large enterprise environments with complex requirements, legacy systems, or on-premises infrastructure constraints. For new projects and most developer roles in 2026, GitHub Actions is the expected standard."
+          },
+          {
+            "question": "Is GitHub Actions free?",
+            "answer": "Free for public repositories with unlimited minutes. For private repositories: 2,000 minutes/month free on personal accounts, 3,000 on Pro. Ubuntu runners are billed at 1x, Windows at 2x, macOS at 10x. For teams with many private repos and heavy pipelines, self-hosted runners on your own servers eliminate the cost entirely while maintaining the GitHub Actions workflow syntax."
+          },
+          {
+            "question": "How do I speed up slow GitHub Actions workflows?",
+            "answer": "Four techniques: (1) Cache dependencies — use actions/cache to cache pip packages, node_modules between runs (3-5x speedup). (2) Parallelize jobs — run test, lint, and type-check as parallel jobs instead of sequential. (3) Use matrix strategy to test across Python/Node versions simultaneously. (4) Run only affected tests on PRs using path filtering — only trigger the full pipeline when relevant files change."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Minimal tech poster, dark slate (#1A1A2E) to deep emerald gradient background, center: clean white Docker whale logo with a small multi-stage pipeline illustration beneath it showing 'Build Stage' → 'Production Stage' with an arrow and '90% smaller' label in gold, bold white title 'Docker Production' on the left, subtitle 'Best Practices 2026' in gold below, flat geometric minimal design, 1200x630px",
+
+    "slug": "docker-production-best-practices-2026",
+    "title": "Docker Production Best Practices in 2026 — Security, Size, and Orchestration",
+    "excerpt": "Most developers know docker run. Production Docker is completely different — multi-stage builds, non-root users, health checks, secrets management, and orchestration. This guide closes the gap.",
+    "coverImage": "/blog/docker-production-guide-2026.png",
+    "coverImageAlt": "Docker Production Best Practices 2026 — ArivuOn Academy",
+    "category": "DevOps",
+    "tags": ["Docker", "DevOps", "Kubernetes", "Security", "CI/CD", "Production"],
+    "publishedAt": "2026-03-08",
+    "updatedAt": "2026-03-08",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "Docker Production Best Practices 2026 — Security & Optimization | ArivuOn Academy",
+      "metaDescription": "Production Docker guide 2026. Multi-stage builds, non-root security, health checks, secrets management and Kubernetes deployment — ArivuOn Academy.",
+      "keywords": [
+        "docker production best practices 2026",
+        "docker multi stage build tutorial",
+        "dockerfile security best practices",
+        "docker non root user tutorial",
+        "docker health check kubernetes",
+        "docker production optimization"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "A development Docker container and a production Docker container should look nothing alike. Development containers are large, run as root, include build tools, and expose credentials through environment variables. Production containers should be minimal, run as a non-root user, contain only what is needed to run, and handle credentials through the orchestration layer. This guide builds the production version."
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "The Most Dangerous Production Docker Mistake",
+        "text": "Running containers as root. If an attacker exploits your application running as root inside a container, they gain root-level access. Container escape vulnerabilities then give them root on the host. Always run as a non-root user. This single change closes a large class of container security vulnerabilities."
+      },
+      {
+        "type": "heading2",
+        "text": "The Production Dockerfile — Multi-Stage, Minimal, Secure"
+      },
+      {
+        "type": "codeBlock",
+        "language": "dockerfile",
+        "title": "Production-Grade Python Dockerfile with All Best Practices",
+        "code": "# ── Stage 1: Install dependencies (build tools available here) ──\nFROM python:3.12-slim AS builder\nWORKDIR /build\n\n# Copy requirements first — Docker caches this layer\n# until requirements.txt changes, not on every code change\nCOPY requirements.txt .\nRUN pip install --user --no-cache-dir -r requirements.txt\n\n# ── Stage 2: Production image (no build tools) ────────────────\nFROM python:3.12-alpine AS production\n\n# Security: create non-root user before anything else\nRUN addgroup -S appgroup && adduser -S appuser -G appgroup\n\nWORKDIR /app\n\n# Copy only installed packages from builder stage\nCOPY --from=builder /root/.local /home/appuser/.local\n\n# Copy application code with correct ownership\nCOPY --chown=appuser:appgroup . .\n\n# Security: switch to non-root user\nUSER appuser\n\n# Health check — Kubernetes/ECS uses this to route traffic\n# Without this, orchestrators cannot know if your app crashed internally\nHEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \\\n    CMD wget -qO- http://localhost:8000/health/ || exit 1\n\nEXPOSE 8000\n\n# Exec form (not shell form) — receives signals correctly for graceful shutdown\nCMD [\"uvicorn\", \"main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\"]\n\n# Result: ~85MB final image vs ~1.4GB naive python:3.12 image\n# 94% size reduction. Pulls 16x faster in CI and on production servers."
+      },
+      {
+        "type": "heading2",
+        "text": "Production Checklist — Before Every Deployment"
+      },
+      {
+        "type": "roadmap",
+        "steps": [
+          {
+            "phase": "Security",
+            "duration": "Non-negotiable",
+            "title": "Non-root user and no secrets in images",
+            "skills": ["Create non-root user with adduser/addgroup", "Never COPY .env files into images", "Never use ENV to store passwords or API keys", "Scan images with: docker scout cves myimage"],
+            "why": "Secrets baked into Docker images are exposed to anyone who can pull the image from your registry. A non-root user limits blast radius if a container is compromised."
+          },
+          {
+            "phase": "Size",
+            "duration": "Performance",
+            "title": "Alpine base + multi-stage + .dockerignore",
+            "skills": ["python:3.12-alpine over python:3.12 (10x smaller base)", "Multi-stage to exclude all build tooling from final image", ".dockerignore: exclude tests/, docs/, .git, *.md, __pycache__", "Combine RUN commands to reduce layer count"],
+            "why": "Smaller images pull faster in CI, deploy faster to production, and have a smaller attack surface. An 85MB image deploys in 8 seconds. A 1.4GB image takes 2 minutes on a slow network."
+          },
+          {
+            "phase": "Reliability",
+            "duration": "Production requirement",
+            "title": "Health checks and proper signal handling",
+            "skills": ["HEALTHCHECK with realistic timeout and interval", "CMD in exec form: CMD [\"uvicorn\", ...] not CMD uvicorn ...", "Handle SIGTERM for graceful shutdown (drain requests first)", "Set memory and CPU limits in Kubernetes/ECS task definition"],
+            "why": "Without health checks, your orchestrator cannot distinguish a crashed container from a healthy one and will route traffic to dead containers. Signal handling ensures zero-downtime rolling deploys."
+          }
+        ]
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Docker Compose vs Kubernetes — which for production?",
+            "answer": "Docker Compose is excellent for local development and small single-server deployments. For production at scale: Kubernetes for complex multi-service systems needing auto-scaling and self-healing. AWS ECS for teams wanting managed container orchestration without Kubernetes complexity. Docker Swarm as a middle ground for teams not ready for Kubernetes. Compose works for single-server production but lacks rolling updates and auto-scaling."
+          },
+          {
+            "question": "How do I pass secrets to containers in production?",
+            "answer": "Three secure methods: AWS Secrets Manager injected at ECS task startup, Kubernetes Secrets mounted as environment variables or volume files, or HashiCorp Vault for enterprise-grade rotation. Never: COPY .env into images, hardcode in Dockerfile ENV, or pass as build arguments (they appear in docker history and are visible to anyone with image access)."
+          },
+          {
+            "question": "How do I optimise Docker layer caching in GitHub Actions?",
+            "answer": "Use the actions/cache action to cache Docker layers between workflow runs — this cuts build time from 5 minutes to under 1 minute for most applications. Also critical: structure your Dockerfile with COPY requirements.txt first, then RUN pip install, then COPY application code. This ensures the expensive dependency installation step is cached unless requirements.txt changes."
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "imagePrompt": "Clean tech poster, deep navy (#0D1B3E) to bright sky blue gradient, center-right: clean white Next.js logo (N) with thin component tree lines branching downward showing 'Server Component' on left branch and 'Client Component' on right branch, small 'use client' label on the client branch in gold, bold white title 'Next.js 15' on the left, subtitle 'Full Stack 2026' in gold, ultra flat geometric minimal, 1200x630px",
+
+    "slug": "nextjs-15-full-stack-guide-2026",
+    "title": "Next.js 15 in 2026 — React Server Components, Server Actions and the Full Stack Stack",
+    "excerpt": "Next.js 15 with React 19 changes how full stack JavaScript is built. Server Actions replace API routes for mutations. Partial Prerendering is stable. This is what every React developer must know in 2026.",
+    "coverImage": "/blog/nextjs-15-fullstack-2026.png",
+    "coverImageAlt": "Next.js 15 Full Stack Guide 2026 — ArivuOn Academy",
+    "category": "React",
+    "tags": ["Next.js", "React", "TypeScript", "Full Stack", "Server Actions", "Frontend"],
+    "publishedAt": "2026-03-05",
+    "updatedAt": "2026-03-05",
+    "readingTime": 10,
+    "featured": false,
+    "seo": {
+      "metaTitle": "Next.js 15 Full Stack Guide 2026 — Server Actions, React 19 & TypeScript | ArivuOn Academy",
+      "metaDescription": "Complete Next.js 15 guide for 2026. React Server Components, Server Actions, App Router, TypeScript patterns and Vercel deployment — ArivuOn Academy.",
+      "keywords": [
+        "nextjs 15 guide 2026",
+        "next js react server components",
+        "server actions nextjs tutorial",
+        "nextjs app router 2026",
+        "react 19 nextjs",
+        "next.js full stack typescript 2026"
+      ]
+    },
+    "content": [
+      {
+        "type": "intro",
+        "text": "Next.js 15 ships with React 19 support, stable Partial Prerendering, improved Server Actions, and the React Compiler for automatic memoization. The App Router is now the mature, production-standard approach. If you are still using the Pages Router for new projects, this guide explains what you are missing — and why the transition is worth making."
+      },
+      {
+        "type": "callout",
+        "variant": "insight",
+        "title": "The Core Mental Model for Next.js 15",
+        "text": "Every component is a Server Component by default. Server Components run on the server, can access databases directly, and ship zero JavaScript to the browser. Only add 'use client' when you need interactivity. Push 'use client' as far down the component tree as possible — this is the pattern that makes Next.js 15 dramatically faster than traditional SPAs."
+      },
+      {
+        "type": "heading2",
+        "text": "Server Components vs Client Components — When to Use Each"
+      },
+      {
+        "type": "toolGrid",
+        "categories": [
+          {
+            "category": "Server Components (default)",
+            "tools": ["Data fetching from database", "Accessing environment variables", "Heavy computation", "Static rendered content"]
+          },
+          {
+            "category": "Client Components (use client)",
+            "tools": ["onClick, onChange handlers", "useState and useEffect hooks", "Browser APIs (localStorage etc)", "Real-time subscriptions"]
+          },
+          {
+            "category": "Performance Wins",
+            "tools": ["Zero JS for static content", "Smaller bundle size", "Faster Time to Interactive", "Better Core Web Vitals scores"]
+          },
+          {
+            "category": "New in React 19",
+            "tools": ["use() hook for promises", "useOptimistic for UX", "React Compiler auto-memo", "Improved Server Actions"]
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "language": "typescript",
+        "title": "Server Component + Server Action — Zero API Routes Needed",
+        "code": "// app/courses/page.tsx — Server Component\n// Runs ONLY on server. Direct DB access. Zero JavaScript to browser.\n\nimport { db } from '@/lib/db';\n\n// Server Action — replaces a POST API route\nasync function enrollInCourse(formData: FormData) {\n  'use server'; // marks this function as a Server Action\n\n  const courseId = formData.get('courseId') as string;\n  const userId   = await getCurrentUserId(); // server-side auth\n\n  await db.enrollment.create({\n    data: { courseId, userId }\n  });\n\n  // revalidatePath('/courses'); // refresh this page's cache\n}\n\nexport default async function CoursesPage() {\n  // Direct DB query — this never ships to the browser\n  const courses = await db.course.findMany({\n    where: { isActive: true },\n    include: { instructor: true },\n    orderBy: { createdAt: 'desc' }\n  });\n\n  return (\n    <main>\n      {courses.map(course => (\n        <div key={course.id}>\n          <h2>{course.title}</h2>\n          <p>By {course.instructor.name}</p>\n\n          {/* Server Action — no API route, no fetch, no state */}\n          <form action={enrollInCourse}>\n            <input type=\"hidden\" name=\"courseId\" value={course.id} />\n            <button type=\"submit\">Enroll Now</button>\n          </form>\n        </div>\n      ))}\n    </main>\n  );\n}"
+      },
+      {
+        "type": "heading2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "faq",
+        "items": [
+          {
+            "question": "Do I need to relearn React for Next.js 15 App Router?",
+            "answer": "Extend, not relearn. Your React knowledge (components, props, JSX, hooks) is still valid. The App Router adds a new mental model on top: every component is server by default, opt into client with 'use client' when needed. Server Actions replace most API routes for mutations. Partial Prerendering optimises rendering strategy automatically. The concepts build on React — they do not replace it."
+          },
+          {
+            "question": "Should I migrate from Pages Router to App Router?",
+            "answer": "For new projects: always use App Router. For existing Pages Router projects: migrate incrementally if the performance or DX benefits justify the effort. The App Router and Pages Router coexist in the same Next.js application — you can migrate route by route. Vercel recommends migration for applications where Server Components would reduce JavaScript bundle size significantly (data-heavy pages, marketing sites, blogs)."
+          },
+          {
+            "question": "Can I use Next.js with a separate Django backend?",
+            "answer": "Yes — this is a very common architecture in 2026. Use Next.js App Router for the frontend with Server Components fetching from your Django REST API. Or use Next.js API Routes / Server Actions for simple operations while keeping Django for complex business logic. The two can coexist: Next.js handles the frontend and light API operations, Django handles the heavy backend business logic and database models."
+          }
+        ]
+      }
+    ]
+  }
 ]
