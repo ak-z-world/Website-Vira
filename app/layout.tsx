@@ -9,7 +9,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import { GlobalProvider } from "./providers";
@@ -218,9 +218,6 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico",
   },
-
-  // ── Web app manifest ──────────────────────────────────────────────────────
-  manifest: "/manifest.json",
 
   // ── Open Graph ────────────────────────────────────────────────────────────
   // Controls how your site appears when shared on:

@@ -278,7 +278,7 @@ const Hero = () => {
                 </div>
 
                 {/* Features */}
-                <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-2.5 xs:gap-3 sm:gap-4 md:gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     {
                       icon: <Users className="w-4 h-4 xs:w-5 xs:h-5 text-[#2563EB]" />,
@@ -301,16 +301,16 @@ const Hero = () => {
                       </div>
 
                       {/* Text */}
-                      <div className="flex flex-col leading-tight min-w-0">
-                        <span className="text-xs xs:text-sm sm:text-base font-semibold text-[#0F172A] group-hover:text-[#1E3A8A] transition-colors truncate">
+                      <div className="flex flex-col justify-center flex-1">
+                        <span className="text-xs xs:text-sm sm:text-base font-semibold text-[#0F172A] group-hover:text-[#1E3A8A] transition-colors leading-snug">
                           {feature.title}
                         </span>
 
                         {feature.subtitle && (
-                          <span className="text-[10px] xs:text-xs sm:text-sm font-medium text-[#2563EB] whitespace-nowrap">
+                          <span className="text-[10px] xs:text-xs sm:text-sm font-medium text-[#2563EB] leading-snug">
                             {feature.subtitle}
                           </span>
-                        )}
+                        )}  
                       </div>
                     </div>
                   ))}
