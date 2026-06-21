@@ -75,16 +75,16 @@ const Footer = () => {
           {/* BRAND */}
           <div className="sm:col-span-2 lg:col-span-2">
 
-            <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
+            <Link href="/" className="inline-flex items-center gap-0 mb-5 group">
               <div className="relative flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition duration-500" />
                 <Image
-                  src="/assets/icons/logo2.png"
+                  src="/logo_black.png"
                   alt="ArivuOn Academy Logo"
                   width={200}
                   height={80}
                   priority
-                  className="relative h-12 sm:h-14 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[2deg]"
+                  className="relative h-13 sm:h-18 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[2deg]"
                 />
               </div>
               <div>

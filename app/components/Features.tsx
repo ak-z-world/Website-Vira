@@ -90,7 +90,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="relative bg-white py-16 sm:py-20 md:py-24 overflow-hidden">
+    <section className="relative bg-white py-16 sm:py-1 md:py-5 overflow-hidden">
 
       {/* VISIBLE NEBULA BACKGROUND */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-2xl"></div>
