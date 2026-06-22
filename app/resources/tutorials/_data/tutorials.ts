@@ -297,7 +297,7 @@ export const TUTORIALS_DATA: Tutorial[] = [
     bestPractices: [
       {
         title: "Use virtual environments for every project",
-        description: "Isolating dependencies per project with venv, poetry, or uv prevents version conflicts between unrelated projects sharing a global Python installation.",
+        description: "Isolating dependencies per project with venv, poetry, or uv prevents version conflicts between unrelated projects sharing a best Python installation.",
         good: "python3 -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt",
         bad: "pip install requests pandas flask  # installed globally, conflicts likely",
       },
