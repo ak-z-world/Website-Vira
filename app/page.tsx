@@ -8,7 +8,7 @@ import Features from "./components/Features";
 
 export const metadata: Metadata = {
   title:
-    "ArivuOn Academy | Global Python, AI & DevOps Training Institute",
+    "ArivuOn Academy | Best Python, AI & DevOps Training Institute",
 
   description:
     "ArivuOn Academy is a global software training institute offering industry-focused Python, AI, AWS DevOps, and React courses. Learn with real-world projects, expert mentorship, and career-focused training designed for students worldwide.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "ArivuOn Academy | Global Python, AI & DevOps Training Institute",
+      "ArivuOn Academy | Best Python, AI & DevOps Training Institute",
     description:
       "Learn Python, AI, AWS DevOps, and React with industry-ready training at ArivuOn Academy. Real-world projects and mentorship for students worldwide.",
     url: "https://academy.arivuon.in",
