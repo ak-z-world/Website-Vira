@@ -508,7 +508,7 @@ export const courses: Course[] = [
       metaTitle: "Full Stack Development Course — ArivuOn Academy",
       metaDescription:
         "Learn full-stack web development in 16 weeks. React, Node.js, PostgreSQL. Build and deploy real applications with placement support.",
-      canonicalUrl: "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
+      canonicalUrl: "https://academy.arivuon.in/courses/full-stack-development",
       focusKeyword: "full stack development course",
       robots: "index, follow",
     },
@@ -525,7 +525,7 @@ export const courses: Course[] = [
       about: "Full Stack Web Development",
     },
     relatedCourseSlugs: ["react", "aws-devops", "python-course"],
-    canonicalCourseUrl: "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
+    canonicalCourseUrl: "https://academy.arivuon.in/courses/full-stack-development",
   },
 
   // ─────────────────────────────────────────────
@@ -800,13 +800,13 @@ export const courses: Course[] = [
       "NLP Engineer",
     ],
     averageSalaryRange: "₹6 LPA – ₹14 LPA (India)",
-    thumbnailUrl: "/images/courses/data-science.jpg",
+    thumbnailUrl: "/images/courses/machine-learning.jpg",
     iconUrl: "/images/icons/ml.svg",
     seo: {
       metaTitle: "Machine Learning Course — ArivuOn Academy",
       metaDescription:
         "Learn machine learning end-to-end in 16 weeks. TensorFlow, Scikit-learn, NLP, and ML deployment. Real projects and placement support.",
-      canonicalUrl: "https://academy.arivuon.in/courses/data-science",
+      canonicalUrl: "https://academy.arivuon.in/courses/machine-learning",
       focusKeyword: "machine learning course",
       robots: "index, follow",
     },
@@ -823,7 +823,7 @@ export const courses: Course[] = [
       about: "Machine Learning and Deep Learning",
     },
     relatedCourseSlugs: ["data-science", "ai-engineering", "python-course"],
-    canonicalCourseUrl: "https://academy.arivuon.in/courses/data-science",
+    canonicalCourseUrl: "https://academy.arivuon.in/courses/machine-learning",
   },
 
   // ─────────────────────────────────────────────
