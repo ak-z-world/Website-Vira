@@ -91,7 +91,7 @@ export const metadata: Metadata = {
 
   // ── Manifest (PWA) ─────────────────────────────────────────────────────
   // Enables "Add to Home Screen" on Android/iOS — another discovery surface
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
 
   // ── Keywords ───────────────────────────────────────────────────────────
   // STRATEGY: 5-tier keyword architecture
@@ -1588,7 +1588,7 @@ function SeoHeadTags() {
       <link rel="llms" href={`${SITE_URL}/llms.txt`} type="text/plain" />
 
       {/* ── Web App Manifest (PWA) ────────────────────────────────────── */}
-      <link rel="manifest" href="/manifest.json" />
+      <link rel="manifest" href="/manifest.webmanifest" />
 
       {/* ── AI Crawler explicit robot meta tags ───────────────────────── */}
       {/* These complement the metadata.robots field and robots.txt.       */}
