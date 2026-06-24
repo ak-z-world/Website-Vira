@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { countries } from "@/lib/location-data/countries";
 import { states } from "@/lib/location-data/states";
 import { cities } from "@/lib/location-data/cities";
-import { CountryPage } from "@/components/location/CountryPage";
+import { CountryPage } from "@/app/components/location/CountryPage";
 
 export const revalidate = 604800;
 

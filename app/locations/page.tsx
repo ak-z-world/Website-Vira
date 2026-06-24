@@ -6,7 +6,7 @@ import { cities } from "@/lib/location-data/cities";
 import { courses } from "@/lib/location-data/courses";
 import { locationPages } from "@/lib/location-data/location-pages";
 import { isPublishableLocationPage } from "@/lib/location-data/types";
-import { LocationCoursePage } from "@/components/location/LocationCoursePage";
+import { LocationCoursePage } from "@/app/components/location/LocationCoursePage";
 
 export const revalidate = 86400;
 
@@ -18,14 +18,12 @@ interface Params {
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return locationPages
-    .filter(isPublishableLocationPage)
-    .map((lp) => ({
-      country: lp.countrySlug,
-      state: lp.stateSlug,
-      city: lp.citySlug,
-      "course-slug": lp.courseSlug,
-    }));
+  return locationPages.filter(isPublishableLocationPage).map((lp) => ({
+    country: lp.countrySlug,
+    state: lp.stateSlug,
+    city: lp.citySlug,
+    "course-slug": lp.courseSlug,
+  }));
 }
 
 export async function generateMetadata({
@@ -181,7 +179,7 @@ export default async function LocationCourseRoutePage({
           price: localPrice.amount,
           priceCurrency: localPrice.currency,
           availability:
-            batch.seatsAvailable > 0
+            (batch.seatsAvailable ?? 0) > 0
               ? "https://schema.org/InStock"
               : "https://schema.org/SoldOut",
         },
@@ -189,19 +187,21 @@ export default async function LocationCourseRoutePage({
   };
 
   const faqSchema =
-    locationPage.locationCourseSpecificFAQ &&
-    locationPage.locationCourseSpecificFAQ.length > 0
+    locationPage.aeo.locationCourseSpecificFAQ &&
+    locationPage.aeo.locationCourseSpecificFAQ.length > 0
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: locationPage.locationCourseSpecificFAQ.map((item) => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: item.answer,
-            },
-          })),
+          mainEntity: locationPage.aeo.locationCourseSpecificFAQ.map(
+            (item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            }),
+          ),
         }
       : null;
 

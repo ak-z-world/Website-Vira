@@ -4,7 +4,7 @@ import { countries } from "@/lib/location-data/countries";
 import { states } from "@/lib/location-data/states";
 import { cities } from "@/lib/location-data/cities";
 import { isPublishableCity } from "@/lib/location-data/types";
-import { CityResourcesPage } from "@/components/location/CityResourcesPage";
+import { CityResourcesPage } from "@/app/components/location/CityResourcesPage";
 
 export const revalidate = 604800;
 

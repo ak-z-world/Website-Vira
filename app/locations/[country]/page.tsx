@@ -6,7 +6,7 @@ import { cities } from "@/lib/location-data/cities";
 import { courses } from "@/lib/location-data/courses";
 import { locationPages } from "@/lib/location-data/location-pages";
 import { isPublishableCity } from "@/lib/location-data/types";
-import { CityHubPage } from "@/components/location/CityHubPage";
+import { CityHubPage } from "@/app/components/location/CityHubPage";
 
 export const revalidate = 604800;
 
@@ -17,13 +17,11 @@ interface Params {
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return cities
-    .filter(isPublishableCity)
-    .map((city) => ({
-      country: city.countrySlug,
-      state: city.stateSlug,
-      city: city.slug,
-    }));
+  return cities.filter(isPublishableCity).map((city) => ({
+    country: city.countrySlug,
+    state: city.stateSlug,
+    city: city.slug,
+  }));
 }
 
 export async function generateMetadata({
@@ -125,7 +123,7 @@ export default async function CityHubRoutePage({
     name: `ArivuOn Academy ${city.name}`,
     description: city.seo.metaDescription,
     url: city.seo.canonicalUrl,
-    telephone: city.schema?.telephone ?? undefined,
+    telephone: city.phone ?? undefined,
     address: {
       "@type": "PostalAddress",
       streetAddress: city.address.streetAddress,
@@ -134,11 +132,13 @@ export default async function CityHubRoutePage({
       postalCode: city.address.postalCode,
       addressCountry: city.address.addressCountry,
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: city.coordinates.latitude,
-      longitude: city.coordinates.longitude,
-    },
+    ...(city.coordinates && {
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: city.coordinates.latitude,
+        longitude: city.coordinates.longitude,
+      },
+    }),
     sameAs: city.schema?.sameAs ?? [],
   };
 
@@ -183,7 +183,9 @@ export default async function CityHubRoutePage({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
       />
       <script
         type="application/ld+json"

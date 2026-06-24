@@ -147,10 +147,8 @@ export interface FAQItem {
  * These map directly to JSON-LD output.
  */
 export interface SchemaFields {
-  schemaType: SchemaType | SchemaType[];
-  /** schema:sameAs links (Wikipedia, Wikidata, etc.) */
+  schemaType: SchemaType | SchemaType[] | readonly SchemaType[];
   sameAs?: string[];
-  /** Additional schema properties as key-value pairs */
   additionalSchemaProps?: Record<string, unknown>;
 }
 
