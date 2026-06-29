@@ -75,9 +75,8 @@ export const courses: Course[] = [
       "Postman",
     ],
     certificationOffered: true,
-    certificationName:
-      "ArivuOn Python + AI + AWS DevOps Engineering Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap Python Developer Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -168,36 +167,19 @@ export const courses: Course[] = [
         durationHours: 8,
       },
     ],
-    targetAudience:
-      "Students, graduates, career changers, aspiring backend developers, cloud engineers, AI enthusiasts, and working professionals looking to transition into AI and DevOps roles.",
-    description:
-      "ArivuOn's Python + AI + AWS DevOps Engineering program is a comprehensive 12-week career accelerator designed to transform beginners into industry-ready AI and cloud professionals. Students learn Python programming, Django backend development, AI fundamentals, AWS cloud infrastructure, CI/CD automation, and Infrastructure as Code. The curriculum is built around real-world projects that simulate enterprise software development and deployment workflows.",
-    shortDescription:
-      "Master Python, AI, Django, AWS, CI/CD, and Terraform in one industry-focused career program.",
-    careerPaths: [
-      "Python Developer",
-      "Backend Developer",
-      "Django Developer",
-      "AI Engineer",
-      "Machine Learning Engineer",
-      "Cloud Engineer",
-      "AWS Engineer",
-      "DevOps Engineer",
-      "Site Reliability Engineer",
-      "Platform Engineer",
-    ],
-    averageSalaryRange: "₹5 LPA – ₹12 LPA (entry to mid-level, India)",
-    thumbnailUrl: "/images/courses/python-ai-aws-devops-combo.jpg",
-    iconUrl: "/images/icons/python-ai-devops.svg",
+    targetAudience: 'Engineering graduates, career changers, and working professionals with no prior programming experience who want to become Python developers.',
+    description: 'Crack Leap\'s Python Programming course is a 10-week, project-first program that takes students from zero programming knowledge to a deployable Python application. The curriculum is built around real-world tasks — data processing, API development, automation — rather than theoretical exercises. Students graduate with three portfolio projects and the Python skills that entry-level developer roles demand.',
+    shortDescription: 'A 10-week beginner-to-developer Python course. Build APIs, automate tasks, and process data with industry-standard libraries.',
+    careerPaths: ['Python Developer', 'Backend Developer', 'Data Engineer', 'Software Engineer', 'Automation Engineer'],
+    averageSalaryRange: '₹3.5 LPA – ₹6.5 LPA (entry level, India)',
+    thumbnailUrl: '/images/courses/python-course.jpg',
+    iconUrl: '/images/icons/python.svg',
     seo: {
-      metaTitle:
-        "Python + AI + AWS DevOps Engineering Course — ArivuOn Academy",
-      metaDescription:
-        "Master Python, Artificial Intelligence, Django, AWS, CI/CD, Jenkins, and Terraform. Build intelligent applications and deploy them to production with industry mentorship.",
-      canonicalUrl:
-        "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
-      focusKeyword: "Python AI AWS DevOps Course",
-      robots: "index, follow",
+      metaTitle: 'Python Programming Course — Crack Leap',
+      metaDescription: 'Learn Python from scratch in 10 weeks. Build APIs, automate tasks, and process data. Industry-aligned curriculum with placement support.',
+      canonicalUrl: 'https://arivuon.com/courses/python',
+      focusKeyword: 'Python programming course',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",
@@ -415,8 +397,8 @@ export const courses: Course[] = [
       "Railway",
     ],
     certificationOffered: true,
-    certificationName: "ArivuOn Full Stack Developer Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap Full Stack Developer Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -488,29 +470,19 @@ export const courses: Course[] = [
         durationHours: 20,
       },
     ],
-    targetAudience:
-      "Engineering graduates and working professionals who want to build complete web applications and become employable as full-stack developers.",
-    description:
-      "ArivuOn's Full Stack Development course is a 16-week program covering the complete web development stack from HTML/CSS through React on the frontend to Node.js, Express, and PostgreSQL on the backend. Students build three progressively complex projects culminating in a full-stack deployed application as their portfolio centrepiece.",
-    shortDescription:
-      "A 16-week end-to-end web development course. Master React, Node.js, and PostgreSQL to build and deploy real applications.",
-    careerPaths: [
-      "Full Stack Developer",
-      "Frontend Developer",
-      "Backend Developer",
-      "Software Engineer",
-      "Web Developer",
-    ],
-    averageSalaryRange: "₹4 LPA – ₹8 LPA (entry level, India)",
-    thumbnailUrl: "/images/courses/full-stack.jpg",
-    iconUrl: "/images/icons/full-stack.svg",
+    targetAudience: 'Engineering graduates and working professionals who want to build complete web applications and become employable as full-stack developers.',
+    description: 'Crack Leap\'s Full Stack Development course is a 16-week program covering the complete web development stack from HTML/CSS through React on the frontend to Node.js, Express, and PostgreSQL on the backend. Students build three progressively complex projects culminating in a full-stack deployed application as their portfolio centrepiece.',
+    shortDescription: 'A 16-week end-to-end web development course. Master React, Node.js, and PostgreSQL to build and deploy real applications.',
+    careerPaths: ['Full Stack Developer', 'Frontend Developer', 'Backend Developer', 'Software Engineer', 'Web Developer'],
+    averageSalaryRange: '₹4 LPA – ₹8 LPA (entry level, India)',
+    thumbnailUrl: '/images/courses/full-stack.jpg',
+    iconUrl: '/images/icons/full-stack.svg',
     seo: {
-      metaTitle: "Full Stack Development Course — ArivuOn Academy",
-      metaDescription:
-        "Learn full-stack web development in 16 weeks. React, Node.js, PostgreSQL. Build and deploy real applications with placement support.",
-      canonicalUrl: "https://academy.arivuon.in/courses/full-stack-development",
-      focusKeyword: "full stack development course",
-      robots: "index, follow",
+      metaTitle: 'Full Stack Development Course — Crack Leap',
+      metaDescription: 'Learn full-stack web development in 16 weeks. React, Node.js, PostgreSQL. Build and deploy real applications with placement support.',
+      canonicalUrl: 'https://arivuon.com/courses/full-stack-development',
+      focusKeyword: 'full stack development course',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",
@@ -548,11 +520,8 @@ export const courses: Course[] = [
     level: "intermediate",
     durationWeeks: 14,
     totalHours: 160,
-    basePrice: inr(12999, "₹12,999"),
-    prerequisites: [
-      "Basic Python knowledge (or completion of ArivuOn Python course)",
-      "Basic mathematics/statistics understanding",
-    ],
+    basePrice: inr(12999, '₹12,999'),
+    prerequisites: ['Basic Python knowledge (or completion of Crack Leap Python course)', 'Basic mathematics/statistics understanding'],
     learningOutcomes: [
       "Collect, clean, and explore large datasets using Pandas",
       "Apply statistical analysis and hypothesis testing",
@@ -575,8 +544,8 @@ export const courses: Course[] = [
       "Power BI",
     ],
     certificationOffered: true,
-    certificationName: "ArivuOn Data Science Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap Data Science Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -645,29 +614,19 @@ export const courses: Course[] = [
         durationHours: 20,
       },
     ],
-    targetAudience:
-      "Engineers and graduates with basic Python knowledge who want to transition into data analyst or data science roles.",
-    description:
-      "ArivuOn's Data Science course is a 14-week program covering the complete data science workflow from data collection and cleaning through statistical analysis, machine learning model building, and deployment. Students work with real datasets throughout and graduate with a deployed data project suitable for job applications.",
-    shortDescription:
-      "A 14-week data science program. Master Pandas, Scikit-learn, and data visualisation. Build and deploy a real ML model.",
-    careerPaths: [
-      "Data Analyst",
-      "Data Scientist",
-      "Business Analyst",
-      "Machine Learning Engineer",
-      "BI Analyst",
-    ],
-    averageSalaryRange: "₹4.5 LPA – ₹9 LPA (entry level, India)",
-    thumbnailUrl: "/images/courses/data-science.jpg",
-    iconUrl: "/images/icons/data-science.svg",
+    targetAudience: 'Engineers and graduates with basic Python knowledge who want to transition into data analyst or data science roles.',
+    description: 'Crack Leap\'s Data Science course is a 14-week program covering the complete data science workflow from data collection and cleaning through statistical analysis, machine learning model building, and deployment. Students work with real datasets throughout and graduate with a deployed data project suitable for job applications.',
+    shortDescription: 'A 14-week data science program. Master Pandas, Scikit-learn, and data visualisation. Build and deploy a real ML model.',
+    careerPaths: ['Data Analyst', 'Data Scientist', 'Business Analyst', 'Machine Learning Engineer', 'BI Analyst'],
+    averageSalaryRange: '₹4.5 LPA – ₹9 LPA (entry level, India)',
+    thumbnailUrl: '/images/courses/data-science.jpg',
+    iconUrl: '/images/icons/data-science.svg',
     seo: {
-      metaTitle: "Data Science Course — ArivuOn Academy",
-      metaDescription:
-        "Learn data science in 14 weeks. Pandas, Scikit-learn, statistics, ML, and dashboards. Real projects, placement support.",
-      canonicalUrl: "https://academy.arivuon.in/courses/data-science",
-      focusKeyword: "data science course",
-      robots: "index, follow",
+      metaTitle: 'Data Science Course — Crack Leap',
+      metaDescription: 'Learn data science in 14 weeks. Pandas, Scikit-learn, statistics, ML, and dashboards. Real projects, placement support.',
+      canonicalUrl: 'https://arivuon.com/courses/data-science',
+      focusKeyword: 'data science course',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",
@@ -727,8 +686,8 @@ export const courses: Course[] = [
       "Docker",
     ],
     certificationOffered: true,
-    certificationName: "ArivuOn Machine Learning Engineer Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap Machine Learning Engineer Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -786,29 +745,19 @@ export const courses: Course[] = [
         durationHours: 30,
       },
     ],
-    targetAudience:
-      "Engineers and data science graduates who want to specialise in machine learning engineering and applied AI.",
-    description:
-      "ArivuOn's Machine Learning course is a 16-week program that progresses from classical ML algorithms through deep learning, NLP, and production deployment. Students build models on real datasets across computer vision, natural language processing, and tabular data domains, graduating with a portfolio of ML projects and deployment experience.",
-    shortDescription:
-      "A 16-week ML program. Master Scikit-learn, TensorFlow, NLP, and model deployment. Build real ML projects for your portfolio.",
-    careerPaths: [
-      "Machine Learning Engineer",
-      "Data Scientist",
-      "AI Engineer",
-      "Computer Vision Engineer",
-      "NLP Engineer",
-    ],
-    averageSalaryRange: "₹6 LPA – ₹14 LPA (India)",
-    thumbnailUrl: "/images/courses/machine-learning.jpg",
-    iconUrl: "/images/icons/ml.svg",
+    targetAudience: 'Engineers and data science graduates who want to specialise in machine learning engineering and applied AI.',
+    description: 'Crack Leap\'s Machine Learning course is a 16-week program that progresses from classical ML algorithms through deep learning, NLP, and production deployment. Students build models on real datasets across computer vision, natural language processing, and tabular data domains, graduating with a portfolio of ML projects and deployment experience.',
+    shortDescription: 'A 16-week ML program. Master Scikit-learn, TensorFlow, NLP, and model deployment. Build real ML projects for your portfolio.',
+    careerPaths: ['Machine Learning Engineer', 'Data Scientist', 'AI Engineer', 'Computer Vision Engineer', 'NLP Engineer'],
+    averageSalaryRange: '₹6 LPA – ₹14 LPA (India)',
+    thumbnailUrl: '/images/courses/machine-learning.jpg',
+    iconUrl: '/images/icons/ml.svg',
     seo: {
-      metaTitle: "Machine Learning Course — ArivuOn Academy",
-      metaDescription:
-        "Learn machine learning end-to-end in 16 weeks. TensorFlow, Scikit-learn, NLP, and ML deployment. Real projects and placement support.",
-      canonicalUrl: "https://academy.arivuon.in/courses/machine-learning",
-      focusKeyword: "machine learning course",
-      robots: "index, follow",
+      metaTitle: 'Machine Learning Course — Crack Leap',
+      metaDescription: 'Learn machine learning end-to-end in 16 weeks. TensorFlow, Scikit-learn, NLP, and ML deployment. Real projects and placement support.',
+      canonicalUrl: 'https://arivuon.com/courses/machine-learning',
+      focusKeyword: 'machine learning course',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",
@@ -867,8 +816,8 @@ export const courses: Course[] = [
       "Prometheus",
     ],
     certificationOffered: true,
-    certificationName: "ArivuOn AWS DevOps Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap AWS DevOps Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -938,29 +887,19 @@ export const courses: Course[] = [
         durationHours: 10,
       },
     ],
-    targetAudience:
-      "Developers and IT professionals who want to move into cloud engineering and DevOps roles, and engineers preparing for AWS certification.",
-    description:
-      "ArivuOn's AWS DevOps course is a 12-week hands-on program that covers cloud infrastructure, containerisation, CI/CD pipelines, and infrastructure as code. Students gain practical AWS experience through lab-based learning on real AWS accounts, graduating with the skills required for cloud engineer and DevOps engineer roles.",
-    shortDescription:
-      "A 12-week AWS and DevOps program. Master Docker, Kubernetes, Terraform, and CI/CD pipelines on real AWS infrastructure.",
-    careerPaths: [
-      "DevOps Engineer",
-      "Cloud Engineer",
-      "Site Reliability Engineer",
-      "Platform Engineer",
-      "AWS Solutions Architect",
-    ],
-    averageSalaryRange: "₹6 LPA – ₹15 LPA (India)",
-    thumbnailUrl: "/images/courses/devops.jpg",
-    iconUrl: "/images/icons/aws.svg",
+    targetAudience: 'Developers and IT professionals who want to move into cloud engineering and DevOps roles, and engineers preparing for AWS certification.',
+    description: 'Crack Leap\'s AWS DevOps course is a 12-week hands-on program that covers cloud infrastructure, containerisation, CI/CD pipelines, and infrastructure as code. Students gain practical AWS experience through lab-based learning on real AWS accounts, graduating with the skills required for cloud engineer and DevOps engineer roles.',
+    shortDescription: 'A 12-week AWS and DevOps program. Master Docker, Kubernetes, Terraform, and CI/CD pipelines on real AWS infrastructure.',
+    careerPaths: ['DevOps Engineer', 'Cloud Engineer', 'Site Reliability Engineer', 'Platform Engineer', 'AWS Solutions Architect'],
+    averageSalaryRange: '₹6 LPA – ₹15 LPA (India)',
+    thumbnailUrl: '/images/courses/aws-devops.jpg',
+    iconUrl: '/images/icons/aws.svg',
     seo: {
-      metaTitle: "AWS DevOps Course — ArivuOn Academy",
-      metaDescription:
-        "Learn AWS, Docker, Kubernetes, and CI/CD in 12 weeks. Hands-on labs on real AWS. Placement support for DevOps and Cloud Engineer roles.",
-      canonicalUrl: "https://academy.arivuon.in/courses/devops",
-      focusKeyword: "AWS DevOps course",
-      robots: "index, follow",
+      metaTitle: 'AWS DevOps Course — Crack Leap',
+      metaDescription: 'Learn AWS, Docker, Kubernetes, and CI/CD in 12 weeks. Hands-on labs on real AWS. Placement support for DevOps and Cloud Engineer roles.',
+      canonicalUrl: 'https://arivuon.com/courses/aws-devops',
+      focusKeyword: 'AWS DevOps course',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",
@@ -968,8 +907,69 @@ export const courses: Course[] = [
       teaches: ["AWS", "DevOps", "Docker", "Kubernetes", "Terraform", "CI/CD"],
       about: "Cloud Computing and DevOps",
     },
-    relatedCourseSlugs: ["full-stack-development", "machine-learning"],
-    canonicalCourseUrl: "https://academy.arivuon.in/courses/devops",
+    relatedCourseSlugs: ['full-stack-development', 'machine-learning'],
+    canonicalCourseUrl: 'https://arivuon.com/courses/aws-devops',
+  },
+
+  // ─────────────────────────────────────────────
+  // JAVA
+  // ─────────────────────────────────────────────
+  {
+    slug: 'java',
+    name: 'Java Programming',
+    shortName: 'Java',
+    category: 'Programming',
+    tags: ['java', 'backend', 'spring-boot', 'enterprise', 'oop'],
+    status: 'published',
+    offeredAtLocations: true,
+    level: 'beginner',
+    durationWeeks: 12,
+    totalHours: 150,
+    basePrice: inr(10999, '₹10,999'),
+    prerequisites: ['Basic computer literacy', 'No prior Java experience required'],
+    learningOutcomes: [
+      'Write object-oriented Java programs using industry best practices',
+      'Build Spring Boot REST APIs with database integration',
+      'Write unit tests with JUnit 5 and Mockito',
+      'Work with Hibernate and JPA for database operations',
+      'Use Maven or Gradle for dependency and build management',
+      'Deploy Java applications to cloud environments',
+      'Understand Java concurrency and multithreading basics',
+    ],
+    toolsUsed: ['Java 17+', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'MySQL', 'Maven', 'JUnit 5', 'Mockito', 'IntelliJ IDEA', 'Postman'],
+    certificationOffered: true,
+    certificationName: 'Crack Leap Java Developer Certificate',
+    certificationProvider: 'Crack Leap',
+    syllabus: [
+      { order: 1, title: 'Java Fundamentals', topics: ['Syntax, data types, control flow', 'OOP: classes, objects, inheritance', 'Interfaces and abstract classes', 'Collections framework'], durationHours: 35 },
+      { order: 2, title: 'Advanced Java', topics: ['Generics and lambdas', 'Streams API', 'Exception handling', 'Concurrency basics', 'File I/O'], durationHours: 30 },
+      { order: 3, title: 'Spring Boot Fundamentals', topics: ['Spring IoC and DI', 'Spring Boot auto-configuration', 'REST controller creation', 'Request/response handling'], durationHours: 35 },
+      { order: 4, title: 'Database Integration', topics: ['JPA entities and repositories', 'Hibernate ORM', 'MySQL with Spring Data', 'Database migrations with Flyway'], durationHours: 25 },
+      { order: 5, title: 'Testing & Deployment', topics: ['JUnit 5 and Mockito', 'Integration testing with TestContainers', 'Maven build lifecycle', 'Deployment to cloud'], durationHours: 15 },
+      { order: 6, title: 'Capstone Project', topics: ['Full Spring Boot application', 'REST API with database', 'Test coverage', 'Portfolio documentation'], durationHours: 10 },
+    ],
+    targetAudience: 'Graduates targeting enterprise software roles and IT services companies that primarily use Java and Spring Boot in their technology stacks.',
+    description: 'Crack Leap\'s Java Programming course is a 12-week program from Java fundamentals through Spring Boot application development. The course is specifically aligned to IT services company hiring patterns — where Java and Spring Boot remain the dominant backend stack — giving students a direct pathway to IT services roles at TCS, Infosys, Wipro, Cognizant, and similar employers.',
+    shortDescription: 'A 12-week Java to Spring Boot program. Build enterprise-grade REST APIs. Aligned to IT services company hiring requirements.',
+    careerPaths: ['Java Developer', 'Backend Developer', 'Software Engineer', 'Spring Boot Developer', 'Enterprise Application Developer'],
+    averageSalaryRange: '₹3.5 LPA – ₹7 LPA (entry level, India)',
+    thumbnailUrl: '/images/courses/java.jpg',
+    iconUrl: '/images/icons/java.svg',
+    seo: {
+      metaTitle: 'Java Programming Course — Crack Leap',
+      metaDescription: 'Learn Java and Spring Boot in 12 weeks. Enterprise-grade REST APIs, JPA, and testing. Aligned to IT services company hiring. Placement support.',
+      canonicalUrl: 'https://arivuon.com/courses/java',
+      focusKeyword: 'Java programming course',
+      robots: 'index, follow',
+    },
+    schema: {
+      schemaType: 'Course',
+      educationalLevel: 'Beginner',
+      teaches: ['Java', 'Spring Boot', 'REST APIs', 'JPA', 'Hibernate'],
+      about: 'Java Enterprise Development',
+    },
+    relatedCourseSlugs: ['full-stack-development', 'aws-devops', 'python-course'],
+    canonicalCourseUrl: 'https://arivuon.com/courses/java',
   },
 
   // ─────────────────────────────────────────────
@@ -1014,8 +1014,8 @@ export const courses: Course[] = [
       "Vercel",
     ],
     certificationOffered: true,
-    certificationName: "ArivuOn React Developer Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap React Developer Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -1085,28 +1085,19 @@ export const courses: Course[] = [
         durationHours: 12,
       },
     ],
-    targetAudience:
-      "JavaScript developers and engineers who want to specialise in React and become frontend or full-stack developers at product companies.",
-    description:
-      "ArivuOn's React Development course is a 10-week program for developers with JavaScript fundamentals who want to build production-grade React applications. The course covers React 18, TypeScript, modern state management, testing, and deployment — the exact skill set product companies and startups hire for.",
-    shortDescription:
-      "A 10-week React specialisation. React 18, TypeScript, React Query, and testing. Build and deploy production-grade SPAs.",
-    careerPaths: [
-      "Frontend Developer",
-      "React Developer",
-      "Full Stack Developer",
-      "UI Engineer",
-    ],
-    averageSalaryRange: "₹5 LPA – ₹12 LPA (India)",
-    thumbnailUrl: "/images/courses/react.jpg",
-    iconUrl: "/images/icons/react.svg",
+    targetAudience: 'JavaScript developers and engineers who want to specialise in React and become frontend or full-stack developers at product companies.',
+    description: 'Crack Leap\'s React Development course is a 10-week program for developers with JavaScript fundamentals who want to build production-grade React applications. The course covers React 18, TypeScript, modern state management, testing, and deployment — the exact skill set product companies and startups hire for.',
+    shortDescription: 'A 10-week React specialisation. React 18, TypeScript, React Query, and testing. Build and deploy production-grade SPAs.',
+    careerPaths: ['Frontend Developer', 'React Developer', 'Full Stack Developer', 'UI Engineer'],
+    averageSalaryRange: '₹5 LPA – ₹12 LPA (India)',
+    thumbnailUrl: '/images/courses/react.jpg',
+    iconUrl: '/images/icons/react.svg',
     seo: {
-      metaTitle: "React Development Course — ArivuOn Academy",
-      metaDescription:
-        "Learn React 18, TypeScript, and modern state management in 10 weeks. Build production-grade SPAs. Placement support for frontend roles.",
-      canonicalUrl: "https://academy.arivuon.in/courses/react",
-      focusKeyword: "React development course",
-      robots: "index, follow",
+      metaTitle: 'React Development Course — Crack Leap',
+      metaDescription: 'Learn React 18, TypeScript, and modern state management in 10 weeks. Build production-grade SPAs. Placement support for frontend roles.',
+      canonicalUrl: 'https://arivuon.com/courses/react',
+      focusKeyword: 'React development course',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",
@@ -1167,8 +1158,8 @@ export const courses: Course[] = [
       "Anthropic Claude API",
     ],
     certificationOffered: true,
-    certificationName: "ArivuOn AI Engineer Certificate",
-    certificationProvider: "ArivuOn Academy",
+    certificationName: 'Crack Leap AI Engineer Certificate',
+    certificationProvider: 'Crack Leap',
     syllabus: [
       {
         order: 1,
@@ -1241,29 +1232,19 @@ export const courses: Course[] = [
         durationHours: 20,
       },
     ],
-    targetAudience:
-      "Python developers and ML engineers who want to specialise in building production AI applications powered by large language models.",
-    description:
-      "ArivuOn's AI Engineering course is a 16-week advanced program for developers who want to build production AI applications. Covering LLM APIs, RAG systems, AI agents, fine-tuning, and production deployment, this course positions graduates for the fastest-growing job category in India's technology sector — AI/ML engineering with a focus on generative AI and LLM application development.",
-    shortDescription:
-      "A 16-week generative AI program. Build RAG systems, AI agents, and production LLM apps with OpenAI, LangChain, and more.",
-    careerPaths: [
-      "AI Engineer",
-      "LLM Engineer",
-      "Generative AI Developer",
-      "AI Solutions Architect",
-      "Machine Learning Engineer",
-    ],
-    averageSalaryRange: "₹9 LPA – ₹25 LPA (India)",
-    thumbnailUrl: "/images/courses/ai-engineering.jpg",
-    iconUrl: "/images/icons/ai.svg",
+    targetAudience: 'Python developers and ML engineers who want to specialise in building production AI applications powered by large language models.',
+    description: 'Crack Leap\'s AI Engineering course is a 16-week advanced program for developers who want to build production AI applications. Covering LLM APIs, RAG systems, AI agents, fine-tuning, and production deployment, this course positions graduates for the fastest-growing job category in India\'s technology sector — AI/ML engineering with a focus on generative AI and LLM application development.',
+    shortDescription: 'A 16-week generative AI program. Build RAG systems, AI agents, and production LLM apps with OpenAI, LangChain, and more.',
+    careerPaths: ['AI Engineer', 'LLM Engineer', 'Generative AI Developer', 'AI Solutions Architect', 'Machine Learning Engineer'],
+    averageSalaryRange: '₹9 LPA – ₹25 LPA (India)',
+    thumbnailUrl: '/images/courses/ai-engineering.jpg',
+    iconUrl: '/images/icons/ai.svg',
     seo: {
-      metaTitle: "AI Engineering Course — ArivuOn Academy",
-      metaDescription:
-        "Learn to build production AI applications in 16 weeks. LLMs, RAG, AI agents, LangChain, fine-tuning. India's most advanced AI Engineering program.",
-      canonicalUrl: "https://academy.arivuon.in/courses/ai-engineering",
-      focusKeyword: "AI Engineering course India",
-      robots: "index, follow",
+      metaTitle: 'AI Engineering Course — Crack Leap',
+      metaDescription: 'Learn to build production AI applications in 16 weeks. LLMs, RAG, AI agents, LangChain, fine-tuning. India\'s most advanced AI Engineering program.',
+      canonicalUrl: 'https://arivuon.com/courses/ai-engineering',
+      focusKeyword: 'AI Engineering course India',
+      robots: 'index, follow',
     },
     schema: {
       schemaType: "Course",

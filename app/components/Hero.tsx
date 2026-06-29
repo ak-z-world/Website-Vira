@@ -236,7 +236,7 @@ const Hero = () => {
                   {/* Description */}
                   <p className="text-gray-600 leading-relaxed max-w-2xl text-sm xs:text-base sm:text-lg md:text-xl">
                     Transform your career with industry-focused training at
-                    <span className="font-semibold text-[#0E2A5A]"> ArivuOn Academy</span>.
+                    <span className="font-semibold text-[#0E2A5A]"> Crack Leap</span>.
                     Master Python, AI & ML, DevOps, and React with hands-on projects, expert mentorship, and placement support.
                   </p>
                 </div>
@@ -288,7 +288,7 @@ const Hero = () => {
                     {
                       icon: <Award className="w-4 h-4 xs:w-5 xs:h-5 text-[#1E3A8A]" />,
                       title: "Certification",
-                      subtitle: "ArivuOn Academy",
+                      subtitle: "Crack Leap",
                     },
                   ].map((feature, idx) => (
                     <div
@@ -331,7 +331,7 @@ const Hero = () => {
                       </div>
 
                       <span className="text-[10px] xs:text-xs sm:text-sm font-semibold text-[#1E3A8A] tracking-wide truncate">
-                        ArivuOn Academy Dashboard
+                        Crack Leap Dashboard
                       </span>
                     </div>
 
@@ -403,10 +403,10 @@ const Hero = () => {
 
                           <div className="text-right flex-shrink-0">
                             <div className="text-[11px] xs:text-xs sm:text-sm font-bold text-[#2563EB]">
-                              March 15, 2026
+                              July 15, 2026
                             </div>
                             <div className="text-[10px] xs:text-xs text-gray-500">
-                              Enroll before Mar 10
+                              Enroll before Jul 10
                             </div>
                           </div>
                         </div>
@@ -420,7 +420,7 @@ const Hero = () => {
                       href={`/contact?course=${activeTab}`}
                       className="w-full flex items-center justify-center gap-2 py-3 text-sm xs:text-base bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] hover:from-[#172554] hover:to-[#1D4ED8] text-white font-semibold rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
                     >
-                      Start Learning at ArivuOn
+                      Start Learning at Crack Leap
                       <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5" />
                     </Link>
                   </div>
@@ -441,7 +441,7 @@ const Hero = () => {
                   </div>
 
                   <div className="text-xs xs:text-xs sm:text-sm font-semibold text-[#0F172A] whitespace-nowrap">
-                    ArivuOn Academy
+                    Crack Leap
                   </div>
                 </div>
               </div>

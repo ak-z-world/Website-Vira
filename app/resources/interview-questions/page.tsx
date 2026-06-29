@@ -4,7 +4,7 @@ import { INTERVIEW_DATA } from './_data/interview-questions';
 import Breadcrumb from '../_components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Interview Questions by Role | ArivuOn Academy',
+  title: 'Interview Questions by Role | Crack Leap Academy',
   description:
     'Master 1000+ interview questions across 10 tech roles: Python, Django, React, Full-Stack, Backend, Frontend, DevOps, Data Science, ML Engineering, Cloud. Prepare for tech interviews at Amazon, Flipkart, Microsoft, Razorpay, and more.',
   keywords: [
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     'devops interview'
   ],
   openGraph: {
-    title: 'Interview Questions by Role | ArivuOn Academy',
+    title: 'Interview Questions by Role | Crack Leap Academy',
     description: 'Master interview questions for 10 in-demand tech roles',
     type: 'website',
     url: 'https://arivuon.academy/resources/interview-questions'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Interview Questions by Role | ArivuOn Academy',
+    title: 'Interview Questions by Role | Crack Leap Academy',
     description: 'Master 1000+ interview questions across 10 tech roles'
   },
   alternates: {

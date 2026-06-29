@@ -54,7 +54,7 @@ export async function generateMetadata({
       title: state.seo.metaTitle,
       description: state.seo.metaDescription,
       url: state.seo.canonicalUrl,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       images: state.seo.ogImage
         ? [{ url: state.seo.ogImage, width: 1200, height: 630 }]
         : [],

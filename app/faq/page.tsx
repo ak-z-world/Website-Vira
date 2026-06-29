@@ -9,13 +9,13 @@ export default function FAQPage() {
 
   const faqs = [
     { 
-      question: 'What is ArivuOn Academy?', 
-      answer: 'ArivuOn Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
+      question: 'What is Crack Leap Academy?', 
+      answer: 'Crack Leap Academy is an online software training platform that provides career-focused courses designed to help students build practical technical skills and prepare for the global job market.',
       category: 'general'
     },
     { 
       question: 'Are the courses online or offline?', 
-      answer: 'All courses at ArivuOn Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
+      answer: 'All courses at Crack Leap Academy are fully online. Students can learn from anywhere in the world through live sessions and structured digital learning materials.',
       category: 'courses'
     },
     { 
@@ -79,7 +79,7 @@ export default function FAQPage() {
       category: 'support'
     },
     { 
-      question: 'How can I contact ArivuOn Academy for support?', 
+      question: 'How can I contact Crack Leap Academy for support?', 
       answer: 'You can contact us through our official website, email, or designated communication channels for any academic or technical support.',
       category: 'support'
     },
@@ -130,7 +130,7 @@ export default function FAQPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                Find quick answers to common questions about courses, enrollment, and support at ArivuOn Academy.
+                Find quick answers to common questions about courses, enrollment, and support at Crack Leap Academy.
               </p>
             </div>
           </div>

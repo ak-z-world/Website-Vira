@@ -146,7 +146,7 @@ export default function ReactCoursePage() {
             "description": "Learn modern frontend development with React JS, JavaScript, components, hooks, state management and build real-world web applications.",
             "provider": {
               "@type": "EducationalOrganization",
-              "name": "ArivuOn Academy",
+              "name": "Crack Leap Academy",
               "url": "https://academy.arivuon.in"
             },
             "url": "https://academy.arivuon.in/courses/react-js",

@@ -7,7 +7,7 @@ const SITE_URL = "https://www.academy.arivuon.com";
 const PAGE_PATH = "/resources/tutorials";
 
 export function generateMetadata(): Metadata {
-  const title = "Free Programming Tutorials 2026 | Python, React, SQL & More — ArivuOn Academy";
+  const title = "Free Programming Tutorials 2026 | Python, React, SQL & More — Crack Leap Academy";
   const description =
     "In-depth, free tutorials covering Python, Django, React, JavaScript, SQL, PostgreSQL, AWS, Docker, Git & GitHub, and AI fundamentals. Real code, interview prep, and production best practices.";
 
@@ -21,14 +21,14 @@ export function generateMetadata(): Metadata {
       title,
       description,
       url: `${SITE_URL}${PAGE_PATH}`,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       type: "website",
       images: [
         {
           url: `${SITE_URL}/og/tutorials.png`,
           width: 1200,
           height: 630,
-          alt: "ArivuOn Academy Tutorials",
+          alt: "Crack Leap Academy Tutorials",
         },
       ],
     },
@@ -81,7 +81,7 @@ export default function TutorialsIndexPage() {
     url: `${SITE_URL}${PAGE_PATH}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
       url: SITE_URL,
     },
     hasPart: TUTORIALS_DATA.map((tutorial) => ({

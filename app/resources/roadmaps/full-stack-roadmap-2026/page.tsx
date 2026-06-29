@@ -8,12 +8,12 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Full Stack Developer Roadmap 2026 — React, Node.js, PostgreSQL, AWS | ArivuOn Academy',
+  title: 'Full Stack Developer Roadmap 2026 — React, Node.js, PostgreSQL, AWS | Crack Leap Academy',
   description:
     'Complete Full Stack Developer roadmap 2026: HTML/CSS, JavaScript, React, Next.js, Node.js/Django, PostgreSQL, REST APIs, Docker, and AWS deployment. Salary ₹8–35 LPA.',
   keywords:
     'full stack developer roadmap 2026, react nodejs roadmap india, full stack web developer career path, mern stack roadmap 2026, nextjs django full stack',
-  openGraph: { title: 'Full Stack Developer Roadmap 2026 | ArivuOn Academy', url: 'https://arivuon.com/resources/roadmaps/full-stack-roadmap-2026' },
+  openGraph: { title: 'Full Stack Developer Roadmap 2026 | Crack Leap Academy', url: 'https://arivuon.com/resources/roadmaps/full-stack-roadmap-2026' },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/full-stack-roadmap-2026' },
 };
 

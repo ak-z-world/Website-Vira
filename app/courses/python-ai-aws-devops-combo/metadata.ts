@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 
   // This exact phrase has near-ZERO competition — we rank #1 automatically.
   // Also competes for "Python DevOps course" which has 27K searches/month.
-  title: "Python + AI + AWS DevOps Combo Course | ArivuOn Academy",
+  title: "Python + AI + AWS DevOps Combo Course | Crack Leap Academy",
 
   description:
     "One program. Python, AI basics, AWS Cloud & DevOps. Earn ₹15–35 LPA. CI/CD, Docker, Terraform with live mentorship. The only combo course globally. Enroll now.",
 
-  applicationName: "ArivuOn Academy",
-  authors: [{ name: "ArivuOn Academy", url: "https://academy.arivuon.in" }],
-  creator: "ArivuOn Academy",
-  publisher: "ArivuOn Academy",
+  applicationName: "Crack Leap Academy",
+  authors: [{ name: "Crack Leap Academy", url: "https://academy.arivuon.in" }],
+  creator: "Crack Leap Academy",
+  publisher: "Crack Leap Academy",
   generator: "Next.js",
   category: "Education",
 
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     "full stack AI DevOps course",
     "Python AWS combo course online",
     "Python AI cloud course",
-    "ArivuOn Academy combo course",
-    "Python AI AWS DevOps ArivuOn",
+    "Crack Leap Academy combo course",
+    "Python AI AWS DevOps Crack Leap",
 
     // ── TIER 2: Capture all four individual audiences ─────────────────────
     // Python searchers who also want DevOps
@@ -164,24 +164,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
-    title: "Python + AI + AWS DevOps Combo Course | Only Program of Its Kind | ArivuOn Academy",
+    title: "Python + AI + AWS DevOps Combo Course | Only Program of Its Kind | Crack Leap Academy",
     description:
       "Master Python, AI basics, AWS Cloud and DevOps in one 12-week program. CI/CD, Docker, Terraform. ₹15–35 LPA career outcome. Live mentorship globally.",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     locale: "en_US",
     images: [
       {
         url: "https://academy.arivuon.in/og-image-combo.png",
         width: 1200,
         height: 630,
-        alt: "Python + AI + AWS DevOps Combo Course — ArivuOn Academy",
+        alt: "Python + AI + AWS DevOps Combo Course — Crack Leap Academy",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Python + AI + AWS DevOps Combo | ArivuOn Academy",
+    title: "Python + AI + AWS DevOps Combo | Crack Leap Academy",
     description:
       "The only course combining Python, AI, AWS Cloud and DevOps. Live mentorship, real deployments. Globally accessible. Enroll now.",
     images: ["https://academy.arivuon.in/og-image-combo.png"],
@@ -205,12 +205,12 @@ export const metadata: Metadata = {
 
     "subject":  "Python Programming, Artificial Intelligence, AWS Cloud Computing, DevOps Engineering, CI/CD",
     "topic":    "Python AI DevOps combo course, AWS training, full stack cloud developer, DevOps certification",
-    "abstract": "ArivuOn Academy's Combo Pack is the world's only program combining Python programming, AI fundamentals, AWS Cloud infrastructure, and DevOps engineering in a single 12-week course. Includes CI/CD with Jenkins, Docker containerization, Terraform IaC, and real AWS deployment projects.",
+    "abstract": "Crack Leap Academy's Combo Pack is the world's only program combining Python programming, AI fundamentals, AWS Cloud infrastructure, and DevOps engineering in a single 12-week course. Includes CI/CD with Jenkins, Docker containerization, Terraform IaC, and real AWS deployment projects.",
 
     "revisit-after": "3 days",
     "robots":        "index, follow, max-snippet:-1, max-image-preview:large",
 
-    "owner":          "ArivuOn Academy",
+    "owner":          "Crack Leap Academy",
     "url":            "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
     "identifier-URL": "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",
     "category":       "Education, Python, AI, Cloud Computing, DevOps, Technology Training",

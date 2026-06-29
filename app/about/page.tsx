@@ -51,7 +51,7 @@ export default function AboutPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight">
-              About <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">ArivuOn Academy</span>
+              About <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Crack Leap Academy</span>
             </h1>
 
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -95,7 +95,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600">
                 <p className="leading-relaxed">
-                  Founded in 2025 by industry veterans, ArivuOn Academy emerged from a critical insight:
+                  Founded in 2025 by industry veterans, Crack Leap Academy emerged from a critical insight:
                   traditional education fails to equip students with practical, industry-relevant skills.
                 </p>
                 <p className="leading-relaxed">
@@ -197,7 +197,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600">
-              The foundation of everything we build at ArivuOn Academy
+              The foundation of everything we build at Crack Leap Academy
             </p>
           </div>
 
@@ -246,7 +246,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Join thousands who've accelerated their careers with ArivuOn Academy's industry-leading programs.
+              Join thousands who've accelerated their careers with Crack Leap Academy's industry-leading programs.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

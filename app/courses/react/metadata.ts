@@ -11,15 +11,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://academy.arivuon.in"),
 
-  title: "React Course Online | Next.js, TypeScript & Frontend | ArivuOn Academy",
+  title: "React Course Online | Next.js, TypeScript & Frontend | Crack Leap Academy",
 
   description:
-    "Master React, Next.js, TypeScript & modern frontend. Earn ₹8–22 LPA. Real apps, live sessions, 1:1 mentorship. Globally accessible. Enroll at ArivuOn Academy.",
+    "Master React, Next.js, TypeScript & modern frontend. Earn ₹8–22 LPA. Real apps, live sessions, 1:1 mentorship. Globally accessible. Enroll at Crack Leap Academy.",
 
-  applicationName: "ArivuOn Academy",
-  authors: [{ name: "ArivuOn Academy", url: "https://academy.arivuon.in" }],
-  creator: "ArivuOn Academy",
-  publisher: "ArivuOn Academy",
+  applicationName: "Crack Leap Academy",
+  authors: [{ name: "Crack Leap Academy", url: "https://academy.arivuon.in" }],
+  creator: "Crack Leap Academy",
+  publisher: "Crack Leap Academy",
   generator: "Next.js",
   category: "Education",
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "JavaScript framework course",
     "TypeScript React course",
     "React developer training",
-    "ArivuOn Academy React",
+    "Crack Leap Academy React",
     "React JS training institute",
 
     // ── TIER 2: Long-tail, specific stack ─────────────────────────────────
@@ -158,26 +158,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://academy.arivuon.in/courses/react",
-    title: "React Course Online | Next.js, TypeScript & Modern Frontend | ArivuOn Academy",
+    title: "React Course Online | Next.js, TypeScript & Modern Frontend | Crack Leap Academy",
     description:
       "Master React, Next.js, TypeScript and modern UI development. Build real apps, 1:1 mentorship. Earn ₹8–22 LPA. Globally accessible training.",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     locale: "en_US",
     images: [
       {
         url: "https://academy.arivuon.in/og-image-react.png",
         width: 1200,
         height: 630,
-        alt: "React Course — ArivuOn Academy | Next.js TypeScript Frontend Training",
+        alt: "React Course — Crack Leap Academy | Next.js TypeScript Frontend Training",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "React Course Online | Next.js & TypeScript | ArivuOn Academy",
+    title: "React Course Online | Next.js & TypeScript | Crack Leap Academy",
     description:
-      "Build production React apps with Next.js, TypeScript, Tailwind. Live mentorship, real projects, globally accessible. Enroll at ArivuOn Academy.",
+      "Build production React apps with Next.js, TypeScript, Tailwind. Live mentorship, real projects, globally accessible. Enroll at Crack Leap Academy.",
     images: ["https://academy.arivuon.in/og-image-react.png"],
     creator: "@arivuonacademy",
     site: "@arivuonacademy",
@@ -199,12 +199,12 @@ export const metadata: Metadata = {
 
     "subject":  "React Development, Next.js, TypeScript, Frontend Engineering, JavaScript Frameworks",
     "topic":    "React course, Next.js training, TypeScript React, frontend development, UI engineering",
-    "abstract": "ArivuOn Academy React course teaches modern frontend development with React, Next.js App Router, TypeScript, Tailwind CSS, REST API integration, Redux state management, and production deployment. Globally accessible with live sessions and 1:1 mentorship.",
+    "abstract": "Crack Leap Academy React course teaches modern frontend development with React, Next.js App Router, TypeScript, Tailwind CSS, REST API integration, Redux state management, and production deployment. Globally accessible with live sessions and 1:1 mentorship.",
 
     "revisit-after": "3 days",
     "robots":        "index, follow, max-snippet:-1, max-image-preview:large",
 
-    "owner":          "ArivuOn Academy",
+    "owner":          "Crack Leap Academy",
     "url":            "https://academy.arivuon.in/courses/react",
     "identifier-URL": "https://academy.arivuon.in/courses/react",
     "category":       "Education, Frontend Development, React, JavaScript, Technology Training",

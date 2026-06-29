@@ -11,15 +11,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://academy.arivuon.in"),
 
-  title: "AWS DevOps Course Online | CI/CD, Jenkins & Terraform | ArivuOn Academy",
+  title: "AWS DevOps Course Online | CI/CD, Jenkins & Terraform | Crack Leap Academy",
 
   description:
-    "Master AWS DevOps, CI/CD, Jenkins, Terraform & Docker. Earn ₹12–30 LPA. Live sessions, real deployments, 1:1 mentorship. Enroll at ArivuOn Academy now.",
+    "Master AWS DevOps, CI/CD, Jenkins, Terraform & Docker. Earn ₹12–30 LPA. Live sessions, real deployments, 1:1 mentorship. Enroll at Crack Leap Academy now.",
 
-  applicationName: "ArivuOn Academy",
-  authors: [{ name: "ArivuOn Academy", url: "https://academy.arivuon.in" }],
-  creator: "ArivuOn Academy",
-  publisher: "ArivuOn Academy",
+  applicationName: "Crack Leap Academy",
+  authors: [{ name: "Crack Leap Academy", url: "https://academy.arivuon.in" }],
+  creator: "Crack Leap Academy",
+  publisher: "Crack Leap Academy",
   generator: "Next.js",
   category: "Education",
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Kubernetes course online",
     "DevOps engineer course",
     "cloud DevOps training",
-    "ArivuOn Academy DevOps",
+    "Crack Leap Academy DevOps",
 
     // ── TIER 2: Long-tail specific tools ──────────────────────────────────
     "AWS DevOps course with real projects",
@@ -170,26 +170,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://academy.arivuon.in/courses/devops",
-    title: "AWS DevOps Course Online | CI/CD, Jenkins & Terraform | ArivuOn Academy",
+    title: "AWS DevOps Course Online | CI/CD, Jenkins & Terraform | Crack Leap Academy",
     description:
       "Master AWS DevOps with real CI/CD pipelines, Jenkins, Terraform, Docker. Live sessions, 1:1 mentorship. Job-ready in 16 weeks. Enroll now.",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     locale: "en_US",
     images: [
       {
         url: "https://academy.arivuon.in/og-image-devops.png",
         width: 1200,
         height: 630,
-        alt: "AWS DevOps Course — ArivuOn Academy | CI/CD Jenkins Terraform Training",
+        alt: "AWS DevOps Course — Crack Leap Academy | CI/CD Jenkins Terraform Training",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "AWS DevOps Course Online | CI/CD & Cloud Engineering | ArivuOn Academy",
+    title: "AWS DevOps Course Online | CI/CD & Cloud Engineering | Crack Leap Academy",
     description:
-      "Master AWS DevOps, Jenkins, Terraform, Docker with live mentorship. Real deployments, placement support. Enroll at ArivuOn Academy.",
+      "Master AWS DevOps, Jenkins, Terraform, Docker with live mentorship. Real deployments, placement support. Enroll at Crack Leap Academy.",
     images: ["https://academy.arivuon.in/og-image-devops.png"],
     creator: "@arivuonacademy",
     site: "@arivuonacademy",
@@ -211,12 +211,12 @@ export const metadata: Metadata = {
 
     "subject":  "DevOps Engineering, AWS Cloud, CI/CD, Jenkins, Terraform, Docker, Kubernetes",
     "topic":    "DevOps course, AWS training, cloud engineering, CI/CD pipelines, automation",
-    "abstract": "ArivuOn Academy DevOps course teaches AWS Cloud, CI/CD with Jenkins and GitHub Actions, container orchestration with Docker, Infrastructure as Code with Terraform, and production deployment. Globally accessible with live mentorship.",
+    "abstract": "Crack Leap Academy DevOps course teaches AWS Cloud, CI/CD with Jenkins and GitHub Actions, container orchestration with Docker, Infrastructure as Code with Terraform, and production deployment. Globally accessible with live mentorship.",
 
     "revisit-after": "3 days",
     "robots":        "index, follow, max-snippet:-1, max-image-preview:large",
 
-    "owner":          "ArivuOn Academy",
+    "owner":          "Crack Leap Academy",
     "url":            "https://academy.arivuon.in/courses/devops",
     "identifier-URL": "https://academy.arivuon.in/courses/devops",
     "category":       "Education, DevOps, Cloud Computing, Technology Training",

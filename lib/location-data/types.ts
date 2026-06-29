@@ -1,5 +1,5 @@
 /**
- * ArivuOn Academy — Location Architecture Types
+ * Crack Leap Academy — Location Architecture Types
  * Production-grade TypeScript interfaces for the location data layer.
  * Scalable to 100,000+ pages across global markets.
  *
@@ -93,7 +93,7 @@ export interface GEOFields {
    * Maps geographic and institutional entities explicitly.
    */
   entityContext: {
-    organization: string;        // "ArivuOn Academy"
+    organization: string;        // "Crack Leap Academy"
     organizationType: string;    // "EdTech Institute"
     geographicScope: string;     // "Salem, Tamil Nadu, India"
     primarySubject?: string;     // "Programming & Software Development"
@@ -691,7 +691,7 @@ export interface LocationPage {
   // ── AEO ──
   aeo: AEOFields & {
     /** Unique value proposition — one sentence answering:
-     *  "Why learn [course] in [city] with ArivuOn?"
+     *  "Why learn [course] in [city] with Crack Leap?"
      *  This is the primary AEO extraction target.
      */
     uniqueValueProp: string;

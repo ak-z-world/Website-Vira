@@ -70,32 +70,24 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 lg:py-16">
 
         {/* ── MAIN GRID ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
 
           {/* BRAND */}
           <div className="sm:col-span-2 lg:col-span-2">
 
-            <Link href="/" className="inline-flex items-center gap-0 mb-5 group">
+            <Link href="/" className="inline-flex items-center gap-0 mb-0 group">
               <div className="relative flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition duration-500" />
                 <Image
-                  src="/logo_black.png"
-                  alt="ArivuOn Academy Logo"
+                  src="/name_logo.png"
+                  alt="Crack Leap Academy Logo"
                   width={200}
-                  height={80}
+                  height={100}
                   priority
-                  className="relative h-13 sm:h-18 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[2deg]"
+                  className="relative h-25 sm:h-35 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[2deg]"
                 />
               </div>
-              <div>
-                <div className="text-xl font-bold text-gray-900">
-                  ArivuOn
-                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent ml-1">
-                    Academy
-                  </span>
-                </div>
-                <div className="text-xs text-gray-500">Premium Tech Education</div>
-              </div>
+              
             </Link>
 
             <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
@@ -270,7 +262,7 @@ const Footer = () => {
               </div>
 
               <p className="text-xs text-gray-400 text-center lg:text-right">
-                © {new Date().getFullYear()} ArivuOn Academy. All rights reserved.
+                © {new Date().getFullYear()} Crack Leap Academy. All rights reserved.
               </p>
 
             </div>

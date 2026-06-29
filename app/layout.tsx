@@ -1,6 +1,6 @@
 // app/layout.tsx
 // ─────────────────────────────────────────────────────────────────────────────
-// ENTERPRISE SEO + GEO + AEO + AI DISCOVERY — ArivuOn Academy
+// ENTERPRISE SEO + GEO + AEO + AI DISCOVERY — Crack Leap Academy
 // Version: 3.0 (June 2026)
 //
 // Architecture covers:
@@ -43,7 +43,7 @@ import { GlobalProvider } from "./providers";
 // CONSTANTS — single source of truth; import from here in every page/layout
 // ════════════════════════════════════════════════════════════════════════════
 export const SITE_URL  = "https://academy.arivuon.in" as const;
-export const SITE_NAME = "ArivuOn Academy"             as const;
+export const SITE_NAME = "Crack Leap Academy"             as const;
 
 // ════════════════════════════════════════════════════════════════════════════
 // VIEWPORT — required as separate export in Next.js 14+
@@ -65,20 +65,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   // ── Title ──────────────────────────────────────────────────────────────
-  // Template auto-appends "| ArivuOn Academy" to every child page title.
+  // Template auto-appends "| Crack Leap Academy" to every child page title.
   // Child pages: export const metadata = { title: "Python Course" }
-  //   → renders: "Python Course | ArivuOn Academy"
+  //   → renders: "Python Course | Crack Leap Academy"
   title: {
-    default:  "ArivuOn Academy | Best Software Training Institute — Python, AI, DevOps, React",
-    template: "%s | ArivuOn Academy",
+    default:  "Crack Leap Academy | Best Software Training Institute — Python, AI, DevOps, React",
+    template: "%s | Crack Leap Academy",
   },
 
   // ── Description ────────────────────────────────────────────────────────
   // 158 chars, outcome-first, CTA at end. Structured for LLM extraction:
-  // WHO (ArivuOn Academy) + WHAT (Python, AI, AWS DevOps, React, Data Science)
+  // WHO (Crack Leap Academy) + WHAT (Python, AI, AWS DevOps, React, Data Science)
   // + HOW (live mentorship, real projects) + OUTCOME (₹8–40 LPA) + CTA.
   description:
-    "ArivuOn Academy — India's best software training institute for Python, AI, AWS DevOps, React & Data Science. Live mentorship, real projects, placement support. ₹8–40 LPA outcomes. Chennai, Salem & globally. Enroll now.",
+    "Crack Leap Academy — India's best software training institute for Python, AI, AWS DevOps, React & Data Science. Live mentorship, real projects, placement support. ₹8–40 LPA outcomes. Chennai, Salem & globally. Enroll now.",
 
   // ── Application info ───────────────────────────────────────────────────
   applicationName: SITE_NAME,
@@ -108,14 +108,14 @@ export const metadata: Metadata = {
   keywords: [
 
     // ── T1: Brand authority ───────────────────────────────────────────
-    "ArivuOn Academy",
-    "Arivuon Academy",
-    "ArivuOn",
+    "Crack Leap Academy",
+    "Crack Leap Academy",
+    "Crack Leap",
     "arivuon.in",
     "academy.arivuon.in",
-    "ArivuOn software training",
-    "ArivuOn Python course",
-    "ArivuOn DevOps course",
+    "Crack Leap software training",
+    "Crack Leap Python course",
+    "Crack Leap DevOps course",
 
     // ── T2: Core course + institute keywords ──────────────────────────
     "best software training institute",
@@ -474,7 +474,7 @@ export const metadata: Metadata = {
     siteName:    SITE_NAME,
     locale:      "en_US",
     alternateLocale: ["ar_AE", "ar_SA", "ar_BH", "ar_KW", "ar_QA", "en_IN", "en_GB", "en_AU", "en_SG"],
-    title:       "ArivuOn Academy | Best Software Training Institute — Python, AI, DevOps, React",
+    title:       "Crack Leap Academy | Best Software Training Institute — Python, AI, DevOps, React",
     description:
       "India's top online software training institute. Python, AI, AWS DevOps, React, Data Science. Live mentorship, real projects, placement support. ₹8–40 LPA salary outcomes. Chennai, Salem & globally accessible.",
     images: [
@@ -482,7 +482,7 @@ export const metadata: Metadata = {
         url:    `${SITE_URL}/og-image.png`,
         width:  1200,
         height: 630,
-        alt:    "ArivuOn Academy — Best Software Training Institute | Python, AI, DevOps, React, Data Science",
+        alt:    "Crack Leap Academy — Best Software Training Institute | Python, AI, DevOps, React, Data Science",
         type:   "image/png",
       },
     ],
@@ -493,12 +493,12 @@ export const metadata: Metadata = {
     card:        "summary_large_image",
     site:        "@arivuonacademy",
     creator:     "@arivuonacademy",
-    title:       "ArivuOn Academy | Best Python, AI, DevOps & React Training Institute",
+    title:       "Crack Leap Academy | Best Python, AI, DevOps & React Training Institute",
     description: "India's best software training institute. Python, AI, AWS DevOps, React. Live mentorship. Placement support. Globally accessible.",
     images: [
       {
         url:    `${SITE_URL}/og-image.png`,
-        alt:    "ArivuOn Academy — Best Software Training Institute",
+        alt:    "Crack Leap Academy — Best Software Training Institute",
         width:  1200,
         height: 630,
       },
@@ -532,7 +532,7 @@ export const metadata: Metadata = {
     "classification":
       "Education, Online Software Training, Tech Academy, Coding Institute",
     "abstract":
-      "ArivuOn Academy is a globally accessible online software training institute based in Tamil Nadu, India. It offers Python & Django, AWS DevOps Engineering, React with Next.js & TypeScript, Data Science & Machine Learning, and a flagship Python + AI + AWS DevOps Combo program. All courses include live instructor-led sessions, 1:1 mentorship, hands-on real-world projects, and active placement support. Graduates earn ₹8–40 LPA. Students enroll from India, UAE, Singapore, Africa, and worldwide.",
+      "Crack Leap Academy is a globally accessible online software training institute based in Tamil Nadu, India. It offers Python & Django, AWS DevOps Engineering, React with Next.js & TypeScript, Data Science & Machine Learning, and a flagship Python + AI + AWS DevOps Combo program. All courses include live instructor-led sessions, 1:1 mentorship, hands-on real-world projects, and active placement support. Graduates earn ₹8–40 LPA. Students enroll from India, UAE, Singapore, Africa, and worldwide.",
 
     // ── Ownership ───────────────────────────────────────────────────
     "owner":          SITE_NAME,
@@ -582,7 +582,7 @@ export const metadata: Metadata = {
 
     // ── Pinterest Rich Pin ───────────────────────────────────────────
     "pinterest:description":
-      "Learn Python, AI, DevOps, React and Data Science online with live mentorship. India's best software training institute — ArivuOn Academy.",
+      "Learn Python, AI, DevOps, React and Data Science online with live mentorship. India's best software training institute — Crack Leap Academy.",
 
     // ── Telegram ────────────────────────────────────────────────────
     "telegram:channel": "@arivuonacademy",
@@ -623,8 +623,8 @@ export function generateLocationMetadata({
   courseDisplay: string;
 }): Metadata {
   const pageUrl = `${SITE_URL}/locations/${country}/${state}/${city}/${course}`;
-  const title   = `${courseDisplay} in ${cityDisplay} | ArivuOn Academy`;
-  const desc    = `Best ${courseDisplay} in ${cityDisplay}, ${stateDisplay}. ArivuOn Academy offers live instructor-led ${courseDisplay} with 1:1 mentorship, real projects, and placement support. Enroll now.`;
+  const title   = `${courseDisplay} in ${cityDisplay} | Crack Leap Academy`;
+  const desc    = `Best ${courseDisplay} in ${cityDisplay}, ${stateDisplay}. Crack Leap Academy offers live instructor-led ${courseDisplay} with 1:1 mentorship, real projects, and placement support. Enroll now.`;
 
   return {
     title,
@@ -677,13 +677,13 @@ export function generateCourseMetadata({
       type:        "website",
       url:         pageUrl,
       siteName:    SITE_NAME,
-      title:       `${title} | ArivuOn Academy`,
+      title:       `${title} | Crack Leap Academy`,
       description,
       images: [{ url: image, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card:        "summary_large_image",
-      title:       `${title} | ArivuOn Academy`,
+      title:       `${title} | Crack Leap Academy`,
       description,
       images:      [image],
     },
@@ -717,7 +717,7 @@ const STRUCTURED_DATA = {
     // ────────────────────────────────────────────────────────────────────
     // 1. EducationalOrganization + Organization
     //    PURPOSE: Creates Google Knowledge Panel. Powers brand searches like
-    //    "ArivuOn Academy" showing the sidebar card on desktop.
+    //    "Crack Leap Academy" showing the sidebar card on desktop.
     //    ADDED: EducationEstablishment type for near-me classification.
     //    ADDED: slogan, foundingLocation, numberOfEmployees for Knowledge Panel.
     //    ADDED: GeoCoordinates for precise "near me" matching.
@@ -726,19 +726,19 @@ const STRUCTURED_DATA = {
       "@type": ["EducationalOrganization", "Organization", "EducationEstablishment"],
       "@id":   `${SITE_URL}/#organization`,
 
-      "name":       "ArivuOn Academy",
-      "legalName":  "ArivuOn Academy",
+      "name":       "Crack Leap Academy",
+      "legalName":  "Crack Leap Academy",
       "alternateName": [
-        "Arivuon Academy",
-        "ArivuOn",
-        "ArivuOn Global Academy",
-        "ArivuOn Software Training",
-        "ArivuOn Coding Institute",
-        "ArivuOn Python Training",
+        "Crack Leap Academy",
+        "Crack Leap",
+        "Crack Leap Global Academy",
+        "Crack Leap Software Training",
+        "Crack Leap Coding Institute",
+        "Crack Leap Python Training",
       ],
 
       "slogan":       "Learn. Build. Get Hired.",
-      "description":  "ArivuOn Academy is a globally accessible online software training institute offering Python, AI, AWS DevOps, React, and Data Science courses with live instructor-led sessions, 1:1 mentorship, real-world projects, and placement support. Established in 2024 and based in Tamil Nadu, India.",
+      "description":  "Crack Leap Academy is a globally accessible online software training institute offering Python, AI, AWS DevOps, React, and Data Science courses with live instructor-led sessions, 1:1 mentorship, real-world projects, and placement support. Established in 2024 and based in Tamil Nadu, India.",
       "foundingDate": "2024",
 
       "url":    SITE_URL,
@@ -749,7 +749,7 @@ const STRUCTURED_DATA = {
         "url":     `${SITE_URL}/assets/icons/logo2.png`,
         "width":   400,
         "height":  120,
-        "caption": "ArivuOn Academy Logo",
+        "caption": "Crack Leap Academy Logo",
       },
 
       "image": {
@@ -928,7 +928,7 @@ const STRUCTURED_DATA = {
       // ── Course catalog ───────────────────────────────────────────
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name":  "ArivuOn Academy Course Catalog",
+        "name":  "Crack Leap Academy Course Catalog",
         "itemListElement": [
           {
             "@type":       "Course",
@@ -1095,51 +1095,51 @@ const STRUCTURED_DATA = {
         // ── Brand / general ──────────────────────────────────────
         {
           "@type": "Question",
-          "name":  "What courses does ArivuOn Academy offer?",
+          "name":  "What courses does Crack Leap Academy offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "ArivuOn Academy offers five programs: (1) Python & Django Development — 12 weeks, (2) AWS DevOps Engineering — 16 weeks, (3) Python + AI + AWS DevOps Combo Pack — 12 weeks, (4) React Development with Next.js & TypeScript — 10 weeks, and (5) Data Science & Machine Learning — 14 weeks. All programs include live instructor-led sessions, 1:1 mentorship, real-world projects, and placement support.",
+            "text":  "Crack Leap Academy offers five programs: (1) Python & Django Development — 12 weeks, (2) AWS DevOps Engineering — 16 weeks, (3) Python + AI + AWS DevOps Combo Pack — 12 weeks, (4) React Development with Next.js & TypeScript — 10 weeks, and (5) Data Science & Machine Learning — 14 weeks. All programs include live instructor-led sessions, 1:1 mentorship, real-world projects, and placement support.",
           },
         },
         {
           "@type": "Question",
-          "name":  "Is ArivuOn Academy the best software training institute in India?",
+          "name":  "Is Crack Leap Academy the best software training institute in India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "ArivuOn Academy is one of India's top-rated online software training institutes with a 4.9/5 rating from 47+ students. It offers Python, AI, DevOps, React, and Data Science training with live mentorship, real-world projects, and a 65% average salary hike for graduates. Students from across India and globally — including UAE, Singapore, and the UK — have enrolled.",
+            "text":  "Crack Leap Academy is one of India's top-rated online software training institutes with a 4.9/5 rating from 47+ students. It offers Python, AI, DevOps, React, and Data Science training with live mentorship, real-world projects, and a 65% average salary hike for graduates. Students from across India and globally — including UAE, Singapore, and the UK — have enrolled.",
           },
         },
         {
           "@type": "Question",
-          "name":  "Is ArivuOn Academy available globally?",
+          "name":  "Is Crack Leap Academy available globally?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "Yes. ArivuOn Academy is globally accessible. Students from India, UAE, Bahrain, Kuwait, Saudi Arabia, Qatar, Oman, Singapore, Malaysia, Nigeria, Kenya, Ghana, Australia, UK, Canada, and worldwide can enroll. All classes are conducted live online with recorded access.",
+            "text":  "Yes. Crack Leap Academy is globally accessible. Students from India, UAE, Bahrain, Kuwait, Saudi Arabia, Qatar, Oman, Singapore, Malaysia, Nigeria, Kenya, Ghana, Australia, UK, Canada, and worldwide can enroll. All classes are conducted live online with recorded access.",
           },
         },
 
         // ── Fees / pricing ───────────────────────────────────────
         {
           "@type": "Question",
-          "name":  "What is the course fee at ArivuOn Academy?",
+          "name":  "What is the course fee at Crack Leap Academy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "All courses at ArivuOn Academy are priced at ₹10,000 (approximately $120 USD or 440 AED). Payments are accepted in INR, USD, EUR, AED, and KWD. This covers all live sessions, 1:1 mentorship, project support, and placement assistance.",
+            "text":  "All courses at Crack Leap Academy are priced at ₹10,000 (approximately $120 USD or 440 AED). Payments are accepted in INR, USD, EUR, AED, and KWD. This covers all live sessions, 1:1 mentorship, project support, and placement assistance.",
           },
         },
 
         // ── Outcomes / placement ─────────────────────────────────
         {
           "@type": "Question",
-          "name":  "Does ArivuOn Academy provide placement support?",
+          "name":  "Does Crack Leap Academy provide placement support?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "Yes. ArivuOn Academy provides career guidance, resume preparation, mock interviews, LinkedIn profile optimization, and active placement assistance for all graduates. Students achieve a 65% average salary hike after completing their course.",
+            "text":  "Yes. Crack Leap Academy provides career guidance, resume preparation, mock interviews, LinkedIn profile optimization, and active placement assistance for all graduates. Students achieve a 65% average salary hike after completing their course.",
           },
         },
         {
           "@type": "Question",
-          "name":  "What salary can I expect after completing a course at ArivuOn Academy?",
+          "name":  "What salary can I expect after completing a course at Crack Leap Academy?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":  "Python course graduates earn ₹8–25 LPA. DevOps engineers earn ₹12–30 LPA. Data Science professionals earn ₹12–40 LPA. The Python + AI + AWS DevOps Combo prepares engineers for ₹15–35 LPA roles. Salaries vary by experience and location.",
@@ -1149,7 +1149,7 @@ const STRUCTURED_DATA = {
         // ── Duration / format ────────────────────────────────────
         {
           "@type": "Question",
-          "name":  "How long are ArivuOn Academy courses?",
+          "name":  "How long are Crack Leap Academy courses?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":  "Python & Django: 12 weeks. AWS DevOps Engineering: 16 weeks. Python + AI + AWS DevOps Combo: 12 weeks. React Development: 10 weeks. Data Science & ML: 14 weeks. All courses include live sessions, session recordings, assignments, and 1:1 mentorship.",
@@ -1157,10 +1157,10 @@ const STRUCTURED_DATA = {
         },
         {
           "@type": "Question",
-          "name":  "Are ArivuOn Academy classes online or offline?",
+          "name":  "Are Crack Leap Academy classes online or offline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "ArivuOn Academy classes are fully online and live. Sessions are conducted via video conference with real-time instructor interaction. Recordings are provided for revision. Students worldwide can attend from any device.",
+            "text":  "Crack Leap Academy classes are fully online and live. Sessions are conducted via video conference with real-time instructor interaction. Recordings are provided for revision. Students worldwide can attend from any device.",
           },
         },
 
@@ -1170,7 +1170,7 @@ const STRUCTURED_DATA = {
           "name":  "Is there a Python course available in Salem, Tamil Nadu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "Yes. ArivuOn Academy, based in Tamil Nadu, offers Python courses accessible to students in Salem, Coimbatore, Madurai, Trichy, Erode, Vellore, Tirunelveli, and all cities and districts across Tamil Nadu. Classes are live online, so students join from home — no commute required.",
+            "text":  "Yes. Crack Leap Academy, based in Tamil Nadu, offers Python courses accessible to students in Salem, Coimbatore, Madurai, Trichy, Erode, Vellore, Tirunelveli, and all cities and districts across Tamil Nadu. Classes are live online, so students join from home — no commute required.",
           },
         },
         {
@@ -1178,30 +1178,30 @@ const STRUCTURED_DATA = {
           "name":  "What is the best software training institute in Tamil Nadu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "ArivuOn Academy is among Tamil Nadu's highest-rated online software training institutes, serving students in Chennai, Coimbatore, Madurai, Trichy, Salem, Erode, Vellore, Tirunelveli, and all 38 Tamil Nadu districts. It offers Python, AI, AWS DevOps, React, and Data Science programs with live mentorship and placement support.",
+            "text":  "Crack Leap Academy is among Tamil Nadu's highest-rated online software training institutes, serving students in Chennai, Coimbatore, Madurai, Trichy, Salem, Erode, Vellore, Tirunelveli, and all 38 Tamil Nadu districts. It offers Python, AI, AWS DevOps, React, and Data Science programs with live mentorship and placement support.",
           },
         },
         {
           "@type": "Question",
-          "name":  "Is ArivuOn Academy a good option for software training after engineering?",
+          "name":  "Is Crack Leap Academy a good option for software training after engineering?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "Yes. ArivuOn Academy is specifically designed for engineering graduates, BSc, BCA, and MCA students entering the IT industry. The curriculum covers industry-relevant skills (Python, Django, DevOps, React, Data Science) with real projects, making graduates job-ready within 10–16 weeks.",
+            "text":  "Yes. Crack Leap Academy is specifically designed for engineering graduates, BSc, BCA, and MCA students entering the IT industry. The curriculum covers industry-relevant skills (Python, Django, DevOps, React, Data Science) with real projects, making graduates job-ready within 10–16 weeks.",
           },
         },
 
         // ── Course-specific ──────────────────────────────────────
         {
           "@type": "Question",
-          "name":  "What is covered in the ArivuOn Academy Python course?",
+          "name":  "What is covered in the Crack Leap Academy Python course?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "The ArivuOn Academy Python course covers Python fundamentals, OOP, file handling, Django framework, REST APIs, PostgreSQL, deployment on AWS/Linux, and a complete capstone project. Duration: 12 weeks. Price: ₹10,000. Includes 1:1 mentorship and placement support.",
+            "text":  "The Crack Leap Academy Python course covers Python fundamentals, OOP, file handling, Django framework, REST APIs, PostgreSQL, deployment on AWS/Linux, and a complete capstone project. Duration: 12 weeks. Price: ₹10,000. Includes 1:1 mentorship and placement support.",
           },
         },
         {
           "@type": "Question",
-          "name":  "What does the AWS DevOps course at ArivuOn Academy cover?",
+          "name":  "What does the AWS DevOps course at Crack Leap Academy cover?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":  "The AWS DevOps Engineering course covers AWS EC2, S3, RDS, VPC, IAM, CI/CD pipelines with Jenkins, Docker containerization, Terraform infrastructure-as-code, GitHub Actions, and production deployment automation. Duration: 16 weeks. It qualifies graduates for DevOps Engineer roles earning ₹12–30 LPA.",
@@ -1212,45 +1212,45 @@ const STRUCTURED_DATA = {
           "name":  "What is the Python + AI + AWS DevOps Combo course?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "The Python + AI + AWS DevOps Combo Pack is ArivuOn Academy's flagship program combining Python programming, AI/ML fundamentals, AWS cloud, and DevOps engineering in one 12-week intensive course priced at ₹10,000. It is designed for freshers and career switchers targeting ₹15–35 LPA roles.",
+            "text":  "The Python + AI + AWS DevOps Combo Pack is Crack Leap Academy's flagship program combining Python programming, AI/ML fundamentals, AWS cloud, and DevOps engineering in one 12-week intensive course priced at ₹10,000. It is designed for freshers and career switchers targeting ₹15–35 LPA roles.",
           },
         },
 
         // ── Full stack ───────────────────────────────────────────
         {
           "@type": "Question",
-          "name":  "Does ArivuOn Academy offer a full stack development course?",
+          "name":  "Does Crack Leap Academy offer a full stack development course?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "Yes. ArivuOn Academy offers full stack training through two paths: (1) Python + Django (backend) combined with React + Next.js (frontend) for a complete full stack skill set, or (2) the combo course that adds AWS DevOps for deployment skills. Together these cover frontend, backend, database, and cloud deployment.",
+            "text":  "Yes. Crack Leap Academy offers full stack training through two paths: (1) Python + Django (backend) combined with React + Next.js (frontend) for a complete full stack skill set, or (2) the combo course that adds AWS DevOps for deployment skills. Together these cover frontend, backend, database, and cloud deployment.",
           },
         },
 
         // ── Trust / credibility ──────────────────────────────────
         {
           "@type": "Question",
-          "name":  "How is ArivuOn Academy rated by students?",
+          "name":  "How is Crack Leap Academy rated by students?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "ArivuOn Academy is rated 4.9 out of 5 by 47+ verified students. Reviews highlight the quality of live instruction, 1:1 mentorship, real-world project work, and active placement support.",
+            "text":  "Crack Leap Academy is rated 4.9 out of 5 by 47+ verified students. Reviews highlight the quality of live instruction, 1:1 mentorship, real-world project work, and active placement support.",
           },
         },
         {
           "@type": "Question",
-          "name":  "Does ArivuOn Academy provide a certificate after course completion?",
+          "name":  "Does Crack Leap Academy provide a certificate after course completion?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "Yes. ArivuOn Academy issues a course completion certificate upon successful completion of the program, assessments, and capstone project. Certificates are verifiable and can be shared on LinkedIn.",
+            "text":  "Yes. Crack Leap Academy issues a course completion certificate upon successful completion of the program, assessments, and capstone project. Certificates are verifiable and can be shared on LinkedIn.",
           },
         },
 
         // ── AI / freshers ────────────────────────────────────────
         {
           "@type": "Question",
-          "name":  "Which software course is best for freshers at ArivuOn Academy?",
+          "name":  "Which software course is best for freshers at Crack Leap Academy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":  "For freshers, ArivuOn Academy recommends the Python & Django Development course or the Python + AI + AWS DevOps Combo Pack. Both start from fundamentals and build to production-ready skills. No prior programming experience is required.",
+            "text":  "For freshers, Crack Leap Academy recommends the Python & Django Development course or the Python + AI + AWS DevOps Combo Pack. Both start from fundamentals and build to production-ready skills. No prior programming experience is required.",
           },
         },
       ],
@@ -1268,7 +1268,7 @@ const STRUCTURED_DATA = {
     {
       "@type": "ItemList",
       "@id":   `${SITE_URL}/#programs`,
-      "name":  "ArivuOn Academy Training Programs",
+      "name":  "Crack Leap Academy Training Programs",
       "itemListElement": [
         {
           "@type":  "ListItem",
@@ -1452,19 +1452,19 @@ const STRUCTURED_DATA = {
         {
           "@type": "HowToStep",
           "name":  "Learn Python Fundamentals",
-          "text":  "Start with Python syntax, data types, functions, OOP (Object Oriented Programming), and file handling. ArivuOn Academy covers these in weeks 1–4 of the Python course with live sessions and daily practice assignments.",
+          "text":  "Start with Python syntax, data types, functions, OOP (Object Oriented Programming), and file handling. Crack Leap Academy covers these in weeks 1–4 of the Python course with live sessions and daily practice assignments.",
           "url":   `${SITE_URL}/courses/python`,
         },
         {
           "@type": "HowToStep",
           "name":  "Master Django Web Development",
-          "text":  "Build web applications with Django — models, views, templates, forms, authentication, and REST APIs with Django REST Framework. Weeks 5–8 of the ArivuOn Python course.",
+          "text":  "Build web applications with Django — models, views, templates, forms, authentication, and REST APIs with Django REST Framework. Weeks 5–8 of the Crack Leap Python course.",
           "url":   `${SITE_URL}/courses/python`,
         },
         {
           "@type": "HowToStep",
           "name":  "Work on Real-World Projects",
-          "text":  "Build at least two production-grade projects: an e-commerce backend and a REST API service connected to a PostgreSQL database. ArivuOn Academy guides you through project builds with 1:1 mentorship.",
+          "text":  "Build at least two production-grade projects: an e-commerce backend and a REST API service connected to a PostgreSQL database. Crack Leap Academy guides you through project builds with 1:1 mentorship.",
           "url":   `${SITE_URL}/courses/python`,
         },
         {
@@ -1476,7 +1476,7 @@ const STRUCTURED_DATA = {
         {
           "@type": "HowToStep",
           "name":  "Prepare Resume and Apply for Jobs",
-          "text":  "Work with ArivuOn Academy's placement team to build a job-ready resume, optimise your LinkedIn profile, and practice mock interviews. Placement support begins in week 11 and continues post-graduation.",
+          "text":  "Work with Crack Leap Academy's placement team to build a job-ready resume, optimise your LinkedIn profile, and practice mock interviews. Placement support begins in week 11 and continues post-graduation.",
           "url":   `${SITE_URL}/courses/python`,
         },
       ],
@@ -1509,13 +1509,13 @@ const STRUCTURED_DATA = {
         {
           "@type": "HowToStep",
           "name":  "Master AWS Cloud Services",
-          "text":  "Learn EC2, S3, RDS, VPC, IAM, CloudWatch, Route 53, and Load Balancers on AWS. ArivuOn Academy's DevOps course covers these in weeks 1–6 with hands-on labs.",
+          "text":  "Learn EC2, S3, RDS, VPC, IAM, CloudWatch, Route 53, and Load Balancers on AWS. Crack Leap Academy's DevOps course covers these in weeks 1–6 with hands-on labs.",
           "url":   `${SITE_URL}/courses/devops`,
         },
         {
           "@type": "HowToStep",
           "name":  "Learn Docker and Containerization",
-          "text":  "Build Docker images, manage containers, use Docker Compose for multi-service apps, and understand container networking. Weeks 7–9 of the ArivuOn DevOps course.",
+          "text":  "Build Docker images, manage containers, use Docker Compose for multi-service apps, and understand container networking. Weeks 7–9 of the Crack Leap DevOps course.",
           "url":   `${SITE_URL}/courses/devops`,
         },
         {
@@ -1527,13 +1527,13 @@ const STRUCTURED_DATA = {
         {
           "@type": "HowToStep",
           "name":  "Learn Terraform Infrastructure as Code",
-          "text":  "Provision AWS infrastructure using Terraform — EC2, RDS, VPCs, security groups — all through code. Weeks 14–15 of the ArivuOn DevOps course.",
+          "text":  "Provision AWS infrastructure using Terraform — EC2, RDS, VPCs, security groups — all through code. Weeks 14–15 of the Crack Leap DevOps course.",
           "url":   `${SITE_URL}/courses/devops`,
         },
         {
           "@type": "HowToStep",
           "name":  "Apply for DevOps Roles with Placement Support",
-          "text":  "ArivuOn Academy's placement team assists with resume building, mock interviews, and job referrals. DevOps graduates typically receive offers in the ₹12–30 LPA range.",
+          "text":  "Crack Leap Academy's placement team assists with resume building, mock interviews, and job referrals. DevOps graduates typically receive offers in the ₹12–30 LPA range.",
           "url":   `${SITE_URL}/courses/devops`,
         },
       ],
@@ -1606,7 +1606,7 @@ function SeoHeadTags() {
       <meta name="bingbot"              content="index, follow" />  {/* Bing Copilot */}
 
       {/* ── Copyright ─────────────────────────────────────────────────── */}
-      <meta name="copyright" content={`© ${new Date().getFullYear()} ArivuOn Academy`} />
+      <meta name="copyright" content={`© ${new Date().getFullYear()} Crack Leap Academy`} />
     </>
   );
 }

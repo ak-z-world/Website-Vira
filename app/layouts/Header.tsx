@@ -186,11 +186,11 @@ const Header = () => {
             <Link
               href="/"
               className="flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] rounded-lg"
-              aria-label="ArivuOn Academy Home"
+              aria-label="Crack Leap Academy Home"
             >
               <Image
-                src="/logo_black.png"
-                alt="ArivuOn Academy Logo"
+                src="/cl_logo.png"
+                alt="Crack Leap Academy Logo"
                 width={240}
                 height={64}
                 priority
@@ -198,18 +198,7 @@ const Header = () => {
               />
             </Link>
 
-            {/* ── NEW: CENTER BADGE (Mobile Only) ── */}
-            <div className="absolute left-1/2 -translate-x-1/2 lg:hidden flex items-center pointer-events-none">
-              <div className="flex items-center gap-1.5 px-3 py-1 bg-[#EFF6FF] border border-[#2563EB]/20 rounded-full shadow-sm">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563EB] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#2563EB]"></span>
-                </span>
-                <span className="text-[10px] font-bold text-[#1E3A8A] uppercase tracking-wider">
-                  Admissions Open
-                </span>
-              </div>
-            </div>
+            
 
             {/* ── 2. DESKTOP NAV LINKS ── */}
             <div className="hidden lg:flex flex-1 justify-center px-8">

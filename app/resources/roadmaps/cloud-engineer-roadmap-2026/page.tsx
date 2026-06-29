@@ -8,13 +8,13 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Cloud Engineer Roadmap 2026 — AWS, GCP, Azure, Terraform, Networking | ArivuOn Academy',
+  title: 'Cloud Engineer Roadmap 2026 — AWS, GCP, Azure, Terraform, Networking | Crack Leap Academy',
   description:
     'Complete Cloud Engineer roadmap 2026: AWS core services, networking, IAM, Terraform IaC, multi-cloud strategy, cost optimization, cloud security, and architecture certifications. Salary ₹10–50 LPA.',
   keywords:
     'cloud engineer roadmap 2026, aws cloud engineer roadmap india, gcp azure multi cloud roadmap, terraform cloud architecture, cloud solutions architect roadmap 2026',
   openGraph: {
-    title: 'Cloud Engineer Roadmap 2026 | ArivuOn Academy',
+    title: 'Cloud Engineer Roadmap 2026 | Crack Leap Academy',
     url: 'https://arivuon.com/resources/roadmaps/cloud-engineer-roadmap-2026',
   },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/cloud-engineer-roadmap-2026' },

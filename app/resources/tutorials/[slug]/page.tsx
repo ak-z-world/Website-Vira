@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: tutorial.seo.title,
       description: tutorial.seo.description,
       url,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       type: "article",
       images: [
         {
@@ -151,11 +151,11 @@ export default async function TutorialPage({ params }: PageProps) {
     url,
     author: {
       "@type": "Organization",
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
     },
     publisher: {
       "@type": "Organization",
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
     },
   };
 
