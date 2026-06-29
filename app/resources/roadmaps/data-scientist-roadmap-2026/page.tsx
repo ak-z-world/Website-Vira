@@ -7,10 +7,10 @@ import RelatedResources from '../../_components/RelatedResources';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Data Scientist Roadmap 2026 — Python, ML, Statistics, MLOps | ArivuOn Academy',
+  title: 'Data Scientist Roadmap 2026 — Python, ML, Statistics, MLOps | Crack Leap Academy',
   description: 'Complete Data Scientist roadmap 2026: statistics, Python, Pandas, Scikit-learn, deep learning, MLOps, and business communication. Salary ₹8–35 LPA in India.',
   keywords: 'data scientist roadmap 2026, data science career path india, machine learning roadmap, python pandas sklearn roadmap, how to become data scientist india',
-  openGraph: { title: 'Data Scientist Roadmap 2026 | ArivuOn Academy', url: 'https://arivuon.com/resources/roadmaps/data-scientist-roadmap-2026' },
+  openGraph: { title: 'Data Scientist Roadmap 2026 | Crack Leap Academy', url: 'https://arivuon.com/resources/roadmaps/data-scientist-roadmap-2026' },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/data-scientist-roadmap-2026' },
 };
 

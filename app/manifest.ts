@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'ArivuOn Academy',
-    short_name: 'ArivuOn',
-    description: 'Master Python, AI, DevOps, and React with ArivuOn Academy.',
+    name: 'Crack Leap Academy',
+    short_name: 'Crack Leap',
+    description: 'Master Python, AI, DevOps, and React with Crack Leap Academy.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

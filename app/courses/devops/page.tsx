@@ -192,7 +192,7 @@ overflow-hidden
             "description": "Learn AWS DevOps with hands-on projects including CI/CD pipelines, Docker, Terraform, and cloud deployment.",
             "provider": {
               "@type": "EducationalOrganization",
-              "name": "ArivuOn Academy",
+              "name": "Crack Leap Academy",
               "url": "https://academy.arivuon.in"
             },
             "url": "https://academy.arivuon.in/courses/aws-devops",

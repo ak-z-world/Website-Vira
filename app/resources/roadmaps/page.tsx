@@ -7,13 +7,13 @@ import { Terminal, CloudCog, Brain, Layers, Monitor, Server, BarChart, Cpu, Clou
 import { breadcrumbSchema } from '../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Developer Roadmaps 2026 — Python, AWS, AI, Full Stack, DevOps | ArivuOn Academy',
+  title: 'Developer Roadmaps 2026 — Python, AWS, AI, Full Stack, DevOps | Crack Leap Academy',
   description:
     'Free developer roadmaps 2026 with month-by-month learning plans. Python, AWS DevOps, AI Engineer, Full Stack, Frontend, Backend, Data Science, ML, Cloud, and Cybersecurity roadmaps.',
   keywords:
     'developer roadmap 2026, python developer roadmap, aws devops roadmap, ai engineer roadmap, full stack developer roadmap, data scientist roadmap india',
   openGraph: {
-    title: 'Developer Roadmaps 2026 | ArivuOn Academy',
+    title: 'Developer Roadmaps 2026 | Crack Leap Academy',
     description: 'Month-by-month career roadmaps for Python, AWS, AI, Full Stack, DevOps developers.',
     url: 'https://arivuon.com/resources/roadmaps',
   },
@@ -190,7 +190,7 @@ export default function RoadmapsPage() {
               'Follow the month-by-month plan without skipping phases.',
               'Build every project listed — employers evaluate portfolios, not just certifications.',
               'Practice interview questions in parallel from Month 3 onwards.',
-              'Join the ArivuOn Discord to get feedback on your projects.',
+              'Join the Crack Leap Discord to get feedback on your projects.',
             ].map((step, i) => (
               <li key={i} className="flex gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center">

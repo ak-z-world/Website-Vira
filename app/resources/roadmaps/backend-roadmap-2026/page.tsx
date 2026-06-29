@@ -7,10 +7,10 @@ import RelatedResources from '../../_components/RelatedResources';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Backend Developer Roadmap 2026 — APIs, Databases, Microservices | ArivuOn Academy',
+  title: 'Backend Developer Roadmap 2026 — APIs, Databases, Microservices | Crack Leap Academy',
   description: 'Backend developer roadmap 2026: REST APIs, PostgreSQL, Redis, Kafka, microservices, Docker, Kubernetes, and system design. Salary ₹8–40 LPA in India.',
   keywords: 'backend developer roadmap 2026, api developer roadmap india, microservices roadmap, postgresql redis backend, django fastapi backend roadmap',
-  openGraph: { title: 'Backend Developer Roadmap 2026 | ArivuOn Academy', url: 'https://arivuon.com/resources/roadmaps/backend-roadmap-2026' },
+  openGraph: { title: 'Backend Developer Roadmap 2026 | Crack Leap Academy', url: 'https://arivuon.com/resources/roadmaps/backend-roadmap-2026' },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/backend-roadmap-2026' },
 };
 

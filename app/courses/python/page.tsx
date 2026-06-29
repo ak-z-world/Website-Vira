@@ -111,7 +111,7 @@ export default function PythonDjangoCoursePage() {
 
             provider: {
               "@type": "Organization",
-              name: "ArivuOn Academy",
+              name: "Crack Leap Academy",
               url: "https://academy.arivuon.in",
             },
 

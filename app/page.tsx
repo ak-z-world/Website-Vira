@@ -8,10 +8,10 @@ import Features from "./components/Features";
 
 export const metadata: Metadata = {
   title:
-    "ArivuOn Academy | Best Python, AI & DevOps Training Institute",
+    "Crack Leap Academy | Best Python, AI & DevOps Training Institute",
 
   description:
-    "ArivuOn Academy is a global software training institute offering industry-focused Python, AI, AWS DevOps, and React courses. Learn with real-world projects, expert mentorship, and career-focused training designed for students worldwide.",
+    "Crack Leap Academy is a global software training institute offering industry-focused Python, AI, AWS DevOps, and React courses. Learn with real-world projects, expert mentorship, and career-focused training designed for students worldwide.",
 
   keywords: [
     "Python training institute",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "learn programming online",
     "global software training",
     "Python DevOps bootcamp",
-    "ArivuOn Academy",
+    "Crack Leap Academy",
   ],
 
   alternates: {
@@ -33,17 +33,17 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "ArivuOn Academy | Best Python, AI & DevOps Training Institute",
+      "Crack Leap Academy | Best Python, AI & DevOps Training Institute",
     description:
-      "Learn Python, AI, AWS DevOps, and React with industry-ready training at ArivuOn Academy. Real-world projects and mentorship for students worldwide.",
+      "Learn Python, AI, AWS DevOps, and React with industry-ready training at Crack Leap Academy. Real-world projects and mentorship for students worldwide.",
     url: "https://academy.arivuon.in",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ArivuOn Academy Software Training",
+        alt: "Crack Leap Academy Software Training",
       },
     ],
     locale: "en_US",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "ArivuOn Academy | Global Tech Training",
+    title: "Crack Leap Academy | Global Tech Training",
     description:
       "Master Python, AI, AWS DevOps and React with real-world projects and mentorship.",
     images: ["/og-image.png"],
@@ -69,11 +69,11 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": "ArivuOn Academy",
+            "name": "Crack Leap Academy",
             "url": "https://academy.arivuon.in",
             "logo": "https://academy.arivuon.in/logo.png",
             "description":
-              "ArivuOn Academy is a global software training institute providing Python, AI, AWS DevOps, and React training programs with real-world projects and mentorship.",
+              "Crack Leap Academy is a global software training institute providing Python, AI, AWS DevOps, and React training programs with real-world projects and mentorship.",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Software Training Courses",

@@ -60,7 +60,7 @@ export async function generateMetadata({
       title: city.seo.metaTitle,
       description: city.seo.metaDescription,
       url: city.seo.canonicalUrl,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       images: city.seo.ogImage
         ? [{ url: city.seo.ogImage, width: 1200, height: 630 }]
         : [],
@@ -120,7 +120,7 @@ export default async function CityHubRoutePage({
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: `ArivuOn Academy ${city.name}`,
+    name: `Crack Leap Academy ${city.name}`,
     description: city.seo.metaDescription,
     url: city.seo.canonicalUrl,
     telephone: city.phone ?? undefined,

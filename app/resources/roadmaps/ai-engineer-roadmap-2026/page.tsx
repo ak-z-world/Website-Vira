@@ -8,13 +8,13 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Engineer Roadmap 2026 — LLMs, RAG, MLOps, Python | ArivuOn Academy',
+  title: 'AI Engineer Roadmap 2026 — LLMs, RAG, MLOps, Python | Crack Leap Academy',
   description:
     'Complete AI Engineer roadmap 2026: Python, machine learning, deep learning, transformers, LLMs, RAG systems, LangChain, vector databases, and production AI deployment. Salary ₹15–60 LPA.',
   keywords:
     'ai engineer roadmap 2026, how to become ai engineer, llm engineer roadmap, machine learning roadmap, genai engineer career path india, langchain rag roadmap',
   openGraph: {
-    title: 'AI Engineer Roadmap 2026 | ArivuOn Academy',
+    title: 'AI Engineer Roadmap 2026 | Crack Leap Academy',
     url: 'https://arivuon.com/resources/roadmaps/ai-engineer-roadmap-2026',
   },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/ai-engineer-roadmap-2026' },

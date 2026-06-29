@@ -6,13 +6,13 @@ import { UserCheck, Target, MapPin, RefreshCw, Code2, Unlock, Map, Terminal, Bra
 import { breadcrumbSchema, webPageSchema } from './_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Free Developer Resources 2026 — Roadmaps, Projects, Interview Prep | ArivuOn Academy',
+  title: 'Free Developer Resources 2026 — Roadmaps, Projects, Interview Prep | Crack Leap Academy',
   description:
     'Explore 100+ free tech career resources: developer roadmaps 2026, project ideas, 1000+ interview questions, and in-depth tutorials for Python, React, AWS, DevOps, AI, and more.',
   keywords:
     'developer resources, programming roadmaps 2026, python interview questions, react projects, aws devops roadmap, ai engineer roadmap, tech career guide India',
   openGraph: {
-    title: 'Free Developer Resources 2026 | ArivuOn Academy',
+    title: 'Free Developer Resources 2026 | Crack Leap Academy',
     description:
       'Roadmaps, projects, interview questions, and tutorials for Python, React, AWS, DevOps, AI/ML developers.',
     url: 'https://arivuon.com/resources',
@@ -161,12 +161,12 @@ export default function ResourcesPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-16">
 
-        {/* What is ArivuOn Resources */}
+        {/* What is Crack Leap Resources */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are ArivuOn Resources?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Crack Leap Resources?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              ArivuOn Academy's resource library is a comprehensive, free knowledge hub for software developers,
+              Crack Leap Academy's resource library is a comprehensive, free knowledge hub for software developers,
               data scientists, DevOps engineers, and AI practitioners at every stage of their career.
               Every resource is written by experienced developers who have worked at top Indian and global tech companies.
             </p>
@@ -231,7 +231,7 @@ export default function ResourcesPage() {
 
         {/* Why Use Our Resources */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Developers Trust ArivuOn Resources</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Developers Trust Crack Leap Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {

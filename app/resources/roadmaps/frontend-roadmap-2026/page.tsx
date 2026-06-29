@@ -8,10 +8,10 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Frontend Developer Roadmap 2026 — React, TypeScript, Next.js | ArivuOn Academy',
+  title: 'Frontend Developer Roadmap 2026 — React, TypeScript, Next.js | Crack Leap Academy',
   description: 'Complete frontend developer roadmap 2026: HTML/CSS, JavaScript, TypeScript, React, Next.js 15, performance optimization, accessibility, and testing. Salary ₹6–30 LPA.',
   keywords: 'frontend developer roadmap 2026, react developer roadmap, nextjs roadmap india, javascript typescript roadmap 2026, frontend engineer career path',
-  openGraph: { title: 'Frontend Developer Roadmap 2026 | ArivuOn Academy', url: 'https://arivuon.com/resources/roadmaps/frontend-roadmap-2026' },
+  openGraph: { title: 'Frontend Developer Roadmap 2026 | Crack Leap Academy', url: 'https://arivuon.com/resources/roadmaps/frontend-roadmap-2026' },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/frontend-roadmap-2026' },
 };
 

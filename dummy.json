@@ -6,7 +6,7 @@
     "title": "Monolith vs Microservices in 2026 — The Honest Guide to When Each Is Right",
     "excerpt": "Every startup wants microservices. Most should not have them. This is the technical breakdown of when microservices actually make sense — and the expensive mistakes teams make by choosing the wrong architecture.",
     "coverImage": "/blog/microservices-monolith-2026.png",
-    "coverImageAlt": "Monolith vs Microservices Architecture 2026 — ArivuOn Academy",
+    "coverImageAlt": "Monolith vs Microservices Architecture 2026 — Crack Leap Academy",
     "category": "DevOps",
     "tags": ["Microservices", "Architecture", "System Design", "Backend", "DevOps", "Scalability"],
     "publishedAt": "2026-03-22",
@@ -14,8 +14,8 @@
     "readingTime": 9,
     "featured": false,
     "seo": {
-      "metaTitle": "Monolith vs Microservices 2026 — When to Use Each | ArivuOn Academy",
-      "metaDescription": "Honest guide to monolith vs microservices in 2026. When microservices make sense, when they don't, modular monolith pattern, and real trade-offs — ArivuOn Academy.",
+      "metaTitle": "Monolith vs Microservices 2026 — When to Use Each | Crack Leap Academy",
+      "metaDescription": "Honest guide to monolith vs microservices in 2026. When microservices make sense, when they don't, modular monolith pattern, and real trade-offs — Crack Leap Academy.",
       "keywords": [
         "monolith vs microservices 2026",
         "when to use microservices",
@@ -111,7 +111,7 @@
     "title": "TypeScript in 2026 — Why Every JavaScript Developer Must Learn It Now",
     "excerpt": "TypeScript is used in 78% of professional JavaScript projects. It caught 68% of runtime bugs before deployment in large codebases. If you are still writing plain JavaScript for production, this guide explains what you are missing.",
     "coverImage": "/blog/typescript-guide-2026.png",
-    "coverImageAlt": "TypeScript Complete Guide 2026 — ArivuOn Academy",
+    "coverImageAlt": "TypeScript Complete Guide 2026 — Crack Leap Academy",
     "category": "React",
     "tags": ["TypeScript", "JavaScript", "Frontend", "React", "Node.js", "Career"],
     "publishedAt": "2026-03-20",
@@ -119,8 +119,8 @@
     "readingTime": 9,
     "featured": false,
     "seo": {
-      "metaTitle": "TypeScript Complete Guide 2026 — For JavaScript Developers | ArivuOn Academy",
-      "metaDescription": "Learn TypeScript in 2026. Types, interfaces, generics, utility types and real-world React patterns — complete guide for JavaScript developers by ArivuOn Academy.",
+      "metaTitle": "TypeScript Complete Guide 2026 — For JavaScript Developers | Crack Leap Academy",
+      "metaDescription": "Learn TypeScript in 2026. Types, interfaces, generics, utility types and real-world React patterns — complete guide for JavaScript developers by Crack Leap Academy.",
       "keywords": [
         "typescript guide 2026",
         "learn typescript for beginners",
@@ -223,7 +223,7 @@
     "title": "PostgreSQL Performance Optimization in 2026 — Fix Slow Queries Before They Kill Your App",
     "excerpt": "Slow queries are the number one cause of production performance issues. This guide gives you the exact tools to find, diagnose, and fix slow PostgreSQL queries in real applications.",
     "coverImage": "/blog/postgresql-performance-2026.png",
-    "coverImageAlt": "PostgreSQL Performance Optimization 2026 — ArivuOn Academy",
+    "coverImageAlt": "PostgreSQL Performance Optimization 2026 — Crack Leap Academy",
     "category": "Python",
     "tags": ["PostgreSQL", "Database", "Backend", "Performance", "Django", "SQL"],
     "publishedAt": "2026-03-18",
@@ -231,8 +231,8 @@
     "readingTime": 10,
     "featured": false,
     "seo": {
-      "metaTitle": "PostgreSQL Performance Optimization 2026 — Fix Slow Queries | ArivuOn Academy",
-      "metaDescription": "PostgreSQL performance guide 2026. EXPLAIN ANALYZE, index strategies, Django N+1 prevention, connection pooling and query optimization — ArivuOn Academy.",
+      "metaTitle": "PostgreSQL Performance Optimization 2026 — Fix Slow Queries | Crack Leap Academy",
+      "metaDescription": "PostgreSQL performance guide 2026. EXPLAIN ANALYZE, index strategies, Django N+1 prevention, connection pooling and query optimization — Crack Leap Academy.",
       "keywords": [
         "postgresql performance optimization 2026",
         "postgres slow query fix",
@@ -331,7 +331,7 @@
     "title": "Fine-Tuning LLMs in 2026 — When It Makes Sense and How to Do It Right",
     "excerpt": "Everyone talks about fine-tuning. Few understand when it actually beats RAG, prompt engineering, or a bigger context window. This guide covers when fine-tuning is worth it and the exact process for Python developers.",
     "coverImage": "/blog/fine-tuning-llms-2026.png",
-    "coverImageAlt": "Fine-Tuning LLMs Guide 2026 — ArivuOn Academy",
+    "coverImageAlt": "Fine-Tuning LLMs Guide 2026 — Crack Leap Academy",
     "category": "AI",
     "tags": ["LLM", "Fine-Tuning", "Python", "AI Engineering", "Machine Learning", "GPT"],
     "publishedAt": "2026-03-15",
@@ -339,8 +339,8 @@
     "readingTime": 10,
     "featured": false,
     "seo": {
-      "metaTitle": "Fine-Tuning LLMs 2026 — When to Fine-Tune vs RAG vs Prompting | ArivuOn Academy",
-      "metaDescription": "When does fine-tuning LLMs actually beat RAG? Complete guide to fine-tuning GPT-4o, Llama 3, and open models in 2026 — ArivuOn Academy.",
+      "metaTitle": "Fine-Tuning LLMs 2026 — When to Fine-Tune vs RAG vs Prompting | Crack Leap Academy",
+      "metaDescription": "When does fine-tuning LLMs actually beat RAG? Complete guide to fine-tuning GPT-4o, Llama 3, and open models in 2026 — Crack Leap Academy.",
       "keywords": [
         "fine tuning llm 2026",
         "when to fine tune vs rag",
@@ -389,7 +389,7 @@
         "type": "codeBlock",
         "language": "python",
         "title": "Fine-Tune GPT-4o Mini — Upload Dataset and Start Training",
-        "code": "from openai import OpenAI\nimport json\n\nclient = OpenAI()\n\n# 1. Prepare your training data (minimum 10 examples, recommended 50+)\ntraining_data = [\n    {\n        \"messages\": [\n            {\"role\": \"system\",  \"content\": \"You are ArivuOn Academy's course advisor. Reply concisely in 2-3 sentences.\"},\n            {\"role\": \"user\",    \"content\": \"What is the best course for a Python beginner?\"},\n            {\"role\": \"assistant\",\"content\": \"Start with our Python & Django course — it covers Python fundamentals, web development with Django, and REST API creation. It is designed for complete beginners and takes 12 weeks with live mentorship. Enroll at academy.arivuon.in/courses/python.\"}\n        ]\n    },\n    # ... add 50+ more examples for best results\n]\n\n# Save as JSONL\nwith open(\"training.jsonl\", \"w\") as f:\n    for item in training_data:\n        f.write(json.dumps(item) + \"\\n\")\n\n# 2. Upload training file\nwith open(\"training.jsonl\", \"rb\") as f:\n    file_response = client.files.create(file=f, purpose=\"fine-tune\")\n\n# 3. Start fine-tuning job\njob = client.fine_tuning.jobs.create(\n    training_file=file_response.id,\n    model=\"gpt-4o-mini-2024-07-18\",\n    hyperparameters={\"n_epochs\": 3}\n)\nprint(f\"Fine-tuning job started: {job.id}\")\n# Training takes 10-60 minutes depending on dataset size\n\n# 4. Use your fine-tuned model\nresponse = client.chat.completions.create(\n    model=job.fine_tuned_model,  # Your custom model ID\n    messages=[{\"role\": \"user\", \"content\": \"Which course should I take?\"}]\n)"
+        "code": "from openai import OpenAI\nimport json\n\nclient = OpenAI()\n\n# 1. Prepare your training data (minimum 10 examples, recommended 50+)\ntraining_data = [\n    {\n        \"messages\": [\n            {\"role\": \"system\",  \"content\": \"You are Crack Leap Academy's course advisor. Reply concisely in 2-3 sentences.\"},\n            {\"role\": \"user\",    \"content\": \"What is the best course for a Python beginner?\"},\n            {\"role\": \"assistant\",\"content\": \"Start with our Python & Django course — it covers Python fundamentals, web development with Django, and REST API creation. It is designed for complete beginners and takes 12 weeks with live mentorship. Enroll at academy.arivuon.in/courses/python.\"}\n        ]\n    },\n    # ... add 50+ more examples for best results\n]\n\n# Save as JSONL\nwith open(\"training.jsonl\", \"w\") as f:\n    for item in training_data:\n        f.write(json.dumps(item) + \"\\n\")\n\n# 2. Upload training file\nwith open(\"training.jsonl\", \"rb\") as f:\n    file_response = client.files.create(file=f, purpose=\"fine-tune\")\n\n# 3. Start fine-tuning job\njob = client.fine_tuning.jobs.create(\n    training_file=file_response.id,\n    model=\"gpt-4o-mini-2024-07-18\",\n    hyperparameters={\"n_epochs\": 3}\n)\nprint(f\"Fine-tuning job started: {job.id}\")\n# Training takes 10-60 minutes depending on dataset size\n\n# 4. Use your fine-tuned model\nresponse = client.chat.completions.create(\n    model=job.fine_tuned_model,  # Your custom model ID\n    messages=[{\"role\": \"user\", \"content\": \"Which course should I take?\"}]\n)"
       },
       {
         "type": "heading2",
@@ -422,7 +422,7 @@
     "title": "GitHub Actions CI/CD in 2026 — From Zero to Automated Production Deployment",
     "excerpt": "GitHub Actions overtook Jenkins as the most-used CI/CD tool globally. Zero infrastructure, deeply GitHub-integrated, free for public repos. This is the complete guide from first workflow to production deployment.",
     "coverImage": "/blog/github-actions-cicd-2026.png",
-    "coverImageAlt": "GitHub Actions CI/CD Complete Guide 2026 — ArivuOn Academy",
+    "coverImageAlt": "GitHub Actions CI/CD Complete Guide 2026 — Crack Leap Academy",
     "category": "DevOps",
     "tags": ["GitHub Actions", "CI/CD", "DevOps", "Docker", "AWS", "Automation"],
     "publishedAt": "2026-03-12",
@@ -430,8 +430,8 @@
     "readingTime": 10,
     "featured": false,
     "seo": {
-      "metaTitle": "GitHub Actions CI/CD Guide 2026 — Build to Production Pipeline | ArivuOn Academy",
-      "metaDescription": "Complete GitHub Actions tutorial 2026. Build CI/CD pipelines for Python Django, Docker and AWS ECS deployment. Zero infrastructure required — ArivuOn Academy.",
+      "metaTitle": "GitHub Actions CI/CD Guide 2026 — Build to Production Pipeline | Crack Leap Academy",
+      "metaDescription": "Complete GitHub Actions tutorial 2026. Build CI/CD pipelines for Python Django, Docker and AWS ECS deployment. Zero infrastructure required — Crack Leap Academy.",
       "keywords": [
         "github actions tutorial 2026",
         "github actions cicd pipeline",
@@ -520,7 +520,7 @@
     "title": "Docker Production Best Practices in 2026 — Security, Size, and Orchestration",
     "excerpt": "Most developers know docker run. Production Docker is completely different — multi-stage builds, non-root users, health checks, secrets management, and orchestration. This guide closes the gap.",
     "coverImage": "/blog/docker-production-guide-2026.png",
-    "coverImageAlt": "Docker Production Best Practices 2026 — ArivuOn Academy",
+    "coverImageAlt": "Docker Production Best Practices 2026 — Crack Leap Academy",
     "category": "DevOps",
     "tags": ["Docker", "DevOps", "Kubernetes", "Security", "CI/CD", "Production"],
     "publishedAt": "2026-03-08",
@@ -528,8 +528,8 @@
     "readingTime": 10,
     "featured": false,
     "seo": {
-      "metaTitle": "Docker Production Best Practices 2026 — Security & Optimization | ArivuOn Academy",
-      "metaDescription": "Production Docker guide 2026. Multi-stage builds, non-root security, health checks, secrets management and Kubernetes deployment — ArivuOn Academy.",
+      "metaTitle": "Docker Production Best Practices 2026 — Security & Optimization | Crack Leap Academy",
+      "metaDescription": "Production Docker guide 2026. Multi-stage builds, non-root security, health checks, secrets management and Kubernetes deployment — Crack Leap Academy.",
       "keywords": [
         "docker production best practices 2026",
         "docker multi stage build tutorial",
@@ -621,7 +621,7 @@
     "title": "Next.js 15 in 2026 — React Server Components, Server Actions and the Full Stack Stack",
     "excerpt": "Next.js 15 with React 19 changes how full stack JavaScript is built. Server Actions replace API routes for mutations. Partial Prerendering is stable. This is what every React developer must know in 2026.",
     "coverImage": "/blog/nextjs-15-fullstack-2026.png",
-    "coverImageAlt": "Next.js 15 Full Stack Guide 2026 — ArivuOn Academy",
+    "coverImageAlt": "Next.js 15 Full Stack Guide 2026 — Crack Leap Academy",
     "category": "React",
     "tags": ["Next.js", "React", "TypeScript", "Full Stack", "Server Actions", "Frontend"],
     "publishedAt": "2026-03-05",
@@ -629,8 +629,8 @@
     "readingTime": 10,
     "featured": false,
     "seo": {
-      "metaTitle": "Next.js 15 Full Stack Guide 2026 — Server Actions, React 19 & TypeScript | ArivuOn Academy",
-      "metaDescription": "Complete Next.js 15 guide for 2026. React Server Components, Server Actions, App Router, TypeScript patterns and Vercel deployment — ArivuOn Academy.",
+      "metaTitle": "Next.js 15 Full Stack Guide 2026 — Server Actions, React 19 & TypeScript | Crack Leap Academy",
+      "metaDescription": "Complete Next.js 15 guide for 2026. React Server Components, Server Actions, App Router, TypeScript patterns and Vercel deployment — Crack Leap Academy.",
       "keywords": [
         "nextjs 15 guide 2026",
         "next js react server components",

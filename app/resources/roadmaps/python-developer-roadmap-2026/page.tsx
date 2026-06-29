@@ -8,13 +8,13 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Python Developer Roadmap 2026 — Complete Month-by-Month Guide | ArivuOn Academy',
+  title: 'Python Developer Roadmap 2026 — Complete Month-by-Month Guide | Crack Leap Academy',
   description:
     'Complete Python developer roadmap 2026 with month-by-month plan. Learn Python, Django, FastAPI, PostgreSQL, Redis, Docker, AWS, and land a ₹8–30 LPA Python developer job.',
   keywords:
     'python developer roadmap 2026, how to learn python, python career path, python backend developer roadmap, django fastapi roadmap, python jobs india',
   openGraph: {
-    title: 'Python Developer Roadmap 2026 | ArivuOn Academy',
+    title: 'Python Developer Roadmap 2026 | Crack Leap Academy',
     description: 'Step-by-step Python developer roadmap with 12-month plan, projects, and interview prep.',
     url: 'https://arivuon.com/resources/roadmaps/python-developer-roadmap-2026',
   },
@@ -256,7 +256,7 @@ const RELATED = [
   {
     title: 'Python Developer Course',
     href: '/courses/python',
-    description: 'Structured Python course with mentorship from ArivuOn instructors.',
+    description: 'Structured Python course with mentorship from Crack Leap instructors.',
     category: 'Course',
     icon: '🎓',
   },
@@ -742,7 +742,7 @@ export default function PythonRoadmapPage() {
               { category: '📖 Books', items: ['Fluent Python by Luciano Ramalho (best Python book)', 'Python Tricks by Dan Bader (Pythonic patterns)', 'Two Scoops of Django by Feldroy (best practices)', 'Architecture Patterns with Python by Harry Percival', 'Clean Code adapted for Python by Alan Gauld'] },
               { category: '🎓 Free Courses', items: ['CS50P: Introduction to Programming with Python (Harvard)', 'Python for Everybody (University of Michigan — Coursera)', 'Django for Beginners / Django for APIs (official book)', 'FastAPI Official Documentation (excellent tutorials)', 'Real Python website (best free Python tutorials)'] },
               { category: '🧪 Practice Platforms', items: ['LeetCode (algorithmic problems in Python)', 'Exercism Python track (idiomatic Python exercises)', 'HackerRank Python challenges', 'Project Euler (mathematical programming)', 'Kaggle (data science and Python competitions)'] },
-              { category: '🏆 Communities', items: ['Python subreddit (r/Python, r/learnpython)', 'Django forum (forum.djangoproject.com)', 'ArivuOn Discord (Indian developers community)', 'Python Discord server', 'Twitter/X: follow @gvanrossum, @pybites, @realpython'] },
+              { category: '🏆 Communities', items: ['Python subreddit (r/Python, r/learnpython)', 'Django forum (forum.djangoproject.com)', 'Crack Leap Discord (Indian developers community)', 'Python Discord server', 'Twitter/X: follow @gvanrossum, @pybites, @realpython'] },
             ].map(section => (
               <div key={section.category} className="bg-white border border-gray-200 rounded-xl p-5">
                 <h3 className="font-bold text-gray-900 mb-3">{section.category}</h3>

@@ -177,7 +177,7 @@ export default function DataScienceCoursePage() {
                         "description": "Become a Data Scientist by learning Python, Data Analysis, Machine Learning, Deep Learning, and real-world data projects.",
                         "provider": {
                             "@type": "EducationalOrganization",
-                            "name": "ArivuOn Academy",
+                            "name": "Crack Leap Academy",
                             "url": "https://academy.arivuon.in"
                         },
                         "url": "https://academy.arivuon.in/courses/data-science",

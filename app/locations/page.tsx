@@ -71,7 +71,7 @@ export async function generateMetadata({
       title: locationPage.seo.metaTitle,
       description: locationPage.seo.metaDescription,
       url: locationPage.seo.canonicalUrl,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       images: locationPage.seo.ogImage
         ? [{ url: locationPage.seo.ogImage, width: 1200, height: 630 }]
         : [],
@@ -139,7 +139,7 @@ export default async function LocationCourseRoutePage({
     url: locationPage.seo.canonicalUrl,
     provider: {
       "@type": "EducationalOrganization",
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
       url: "https://www.arivuon.com",
       address: {
         "@type": "PostalAddress",

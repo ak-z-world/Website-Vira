@@ -8,13 +8,13 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Engineer Roadmap 2026 — Ethical Hacking, Cloud Security, SOC | ArivuOn Academy',
+  title: 'Cybersecurity Engineer Roadmap 2026 — Ethical Hacking, Cloud Security, SOC | Crack Leap Academy',
   description:
     'Complete Cybersecurity Engineer roadmap 2026: networking fundamentals, Linux security, ethical hacking, web app security, SOC operations, cloud security (AWS), and certifications CEH/OSCP/AWS Security. Salary ₹8–45 LPA in India.',
   keywords:
     'cybersecurity roadmap 2026, ethical hacking roadmap india, oscp roadmap, cloud security engineer roadmap, soc analyst roadmap, how to become cybersecurity engineer india',
   openGraph: {
-    title: 'Cybersecurity Engineer Roadmap 2026 | ArivuOn Academy',
+    title: 'Cybersecurity Engineer Roadmap 2026 | Crack Leap Academy',
     url: 'https://arivuon.com/resources/roadmaps/cyber-security-roadmap-2026',
   },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/cyber-security-roadmap-2026' },

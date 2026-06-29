@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://academy.arivuon.in"),
 
   // 60 chars exactly — "Data Science" first because it has 3x more searches.
-  title: "Data Science Course Online | Python, AI & ML | ArivuOn Academy",
+  title: "Data Science Course Online | Python, AI & ML | Crack Leap Academy",
 
   description:
-    "Master Data Science, Python, Machine Learning & AI. Earn ₹12–40 LPA. Pandas, NumPy, scikit-learn, real datasets. Live mentorship. Enroll at ArivuOn Academy.",
+    "Master Data Science, Python, Machine Learning & AI. Earn ₹12–40 LPA. Pandas, NumPy, scikit-learn, real datasets. Live mentorship. Enroll at Crack Leap Academy.",
 
-  applicationName: "ArivuOn Academy",
-  authors: [{ name: "ArivuOn Academy", url: "https://academy.arivuon.in" }],
-  creator: "ArivuOn Academy",
-  publisher: "ArivuOn Academy",
+  applicationName: "Crack Leap Academy",
+  authors: [{ name: "Crack Leap Academy", url: "https://academy.arivuon.in" }],
+  creator: "Crack Leap Academy",
+  publisher: "Crack Leap Academy",
   generator: "Next.js",
   category: "Education",
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "deep learning course online",
     "Data Science and AI course",
     "Data Science with Python",
-    "ArivuOn Academy Data Science",
+    "Crack Leap Academy Data Science",
     "data analyst course online",
 
     // ── TIER 2: Specific tools and skills ─────────────────────────────────
@@ -182,24 +182,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://academy.arivuon.in/courses/datasci",
-    title: "Data Science Course Online | Python, AI & Machine Learning | ArivuOn Academy",
+    title: "Data Science Course Online | Python, AI & Machine Learning | Crack Leap Academy",
     description:
       "Master Data Science with Python, Pandas, scikit-learn, and deep learning. Real datasets, 1:1 mentorship. Earn ₹12–40 LPA. Globally accessible training.",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     locale: "en_US",
     images: [
       {
         url: "https://academy.arivuon.in/og-image-datasci.png",
         width: 1200,
         height: 630,
-        alt: "Data Science Course — ArivuOn Academy | Python AI Machine Learning Training",
+        alt: "Data Science Course — Crack Leap Academy | Python AI Machine Learning Training",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Data Science Course | Python, AI & ML | ArivuOn Academy",
+    title: "Data Science Course | Python, AI & ML | Crack Leap Academy",
     description:
       "Master Data Science, Machine Learning and AI with Python. Real projects, live mentorship. ₹12–40 LPA salary outcome. Globally accessible. Enroll now.",
     images: ["https://academy.arivuon.in/og-image-datasci.png"],
@@ -223,12 +223,12 @@ export const metadata: Metadata = {
 
     "subject":  "Data Science, Machine Learning, Artificial Intelligence, Python, Deep Learning, Data Analytics",
     "topic":    "Data Science course, ML training, AI course, Python data analysis, scikit-learn, neural networks",
-    "abstract": "ArivuOn Academy Data Science course teaches Python for data analysis, statistical modeling, machine learning with scikit-learn, deep learning with PyTorch, and real-world dataset projects. Includes data visualization, model deployment, and career guidance. Globally accessible with live mentorship.",
+    "abstract": "Crack Leap Academy Data Science course teaches Python for data analysis, statistical modeling, machine learning with scikit-learn, deep learning with PyTorch, and real-world dataset projects. Includes data visualization, model deployment, and career guidance. Globally accessible with live mentorship.",
 
     "revisit-after": "3 days",
     "robots":        "index, follow, max-snippet:-1, max-image-preview:large",
 
-    "owner":          "ArivuOn Academy",
+    "owner":          "Crack Leap Academy",
     "url":            "https://academy.arivuon.in/courses/datasci",
     "identifier-URL": "https://academy.arivuon.in/courses/datasci",
     "category":       "Education, Data Science, Machine Learning, AI, Python, Technology Training",

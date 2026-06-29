@@ -16,20 +16,20 @@ export const metadata: Metadata = {
   // Rule: Primary keyword first. Brand last. 58 chars — fits Google perfectly.
   // Competitor titles start with brand name — ours starts with the keyword.
   // That is why we rank above them for keyword searches.
-  title: "Python Course Online | Django, REST API & Backend | ArivuOn Academy",
+  title: "Python Course Online | Django, REST API & Backend | Crack Leap Academy",
 
   // ── Description ───────────────────────────────────────────────────────────
   // Rule: Lead with outcome. Include salary signal. CTA in last 10 words.
   // 158 chars — fills Google's snippet without truncation.
   description:
-    "Master Python, Django & REST APIs with live mentorship. Earn ₹8–25 LPA. Real projects, 1:1 sessions, global certification. Enroll at ArivuOn Academy today.",
+    "Master Python, Django & REST APIs with live mentorship. Earn ₹8–25 LPA. Real projects, 1:1 sessions, global certification. Enroll at Crack Leap Academy today.",
 
-  applicationName: "ArivuOn Academy",
+  applicationName: "Crack Leap Academy",
 
-  authors: [{ name: "ArivuOn Academy", url: "https://academy.arivuon.in" }],
+  authors: [{ name: "Crack Leap Academy", url: "https://academy.arivuon.in" }],
 
-  creator: "ArivuOn Academy",
-  publisher: "ArivuOn Academy",
+  creator: "Crack Leap Academy",
+  publisher: "Crack Leap Academy",
   generator: "Next.js",
   category: "Education",
 
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     "Python full stack course",
     "Python certification course",
     "Python REST API course",
-    "ArivuOn Academy Python",
+    "Crack Leap Academy Python",
 
     // ── TIER 2: Long-tail — lower competition, faster ranking ──────────────
     "Python Django REST API course online",
@@ -188,26 +188,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://academy.arivuon.in/courses/python",
-    title: "Python Course Online | Django & Backend Development | ArivuOn Academy",
+    title: "Python Course Online | Django & Backend Development | Crack Leap Academy",
     description:
       "Master Python, Django, REST APIs and backend development with 1:1 mentorship and real deployment projects. Earn ₹8–25 LPA. Enroll now.",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     locale: "en_US",
     images: [
       {
         url: "https://academy.arivuon.in/og-image-python.png",
         width: 1200,
         height: 630,
-        alt: "Python & Django Course — ArivuOn Academy | Learn Python Online",
+        alt: "Python & Django Course — Crack Leap Academy | Learn Python Online",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Python Course Online | Django, REST APIs & Backend | ArivuOn Academy",
+    title: "Python Course Online | Django, REST APIs & Backend | Crack Leap Academy",
     description:
-      "Master Python & Django with live sessions, real projects, 1:1 mentorship. Globally accessible. Enroll at ArivuOn Academy.",
+      "Master Python & Django with live sessions, real projects, 1:1 mentorship. Globally accessible. Enroll at Crack Leap Academy.",
     images: ["https://academy.arivuon.in/og-image-python.png"],
     creator: "@arivuonacademy",
     site: "@arivuonacademy",
@@ -233,7 +233,7 @@ export const metadata: Metadata = {
     // Subject and topic classification
     "subject":      "Python Programming, Django, REST API Development, Backend Engineering",
     "topic":        "Python course, Django training, backend developer, software engineering",
-    "abstract":     "ArivuOn Academy Python course teaches Python programming, Django framework, REST API development, PostgreSQL database, and cloud deployment through live mentorship and real-world projects.",
+    "abstract":     "Crack Leap Academy Python course teaches Python programming, Django framework, REST API development, PostgreSQL database, and cloud deployment through live mentorship and real-world projects.",
     "description":  "Globally accessible Python training for beginners to professionals. Learn Python, Django, REST APIs with live sessions and 1:1 mentorship.",
 
     // Indexing and revisit
@@ -241,7 +241,7 @@ export const metadata: Metadata = {
     "robots":        "index, follow, max-snippet:-1, max-image-preview:large",
 
     // Ownership and identification
-    "owner":          "ArivuOn Academy",
+    "owner":          "Crack Leap Academy",
     "url":            "https://academy.arivuon.in/courses/python",
     "identifier-URL": "https://academy.arivuon.in/courses/python",
     "category":       "Education, Online Learning, Technology Training",

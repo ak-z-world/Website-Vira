@@ -44,19 +44,19 @@ export async function generateMetadata({
         title: post.seo.metaTitle,
         description: post.seo.metaDescription,
         keywords: post.seo.keywords,
-        authors: [{ name: "ArivuOn Academy", url: BASE_URL }],
-        creator: "ArivuOn Academy",
-        publisher: "ArivuOn Academy",
+        authors: [{ name: "Crack Leap Academy", url: BASE_URL }],
+        creator: "Crack Leap Academy",
+        publisher: "Crack Leap Academy",
         alternates: { canonical: `${BASE_URL}/blog/${post.slug}` },
         openGraph: {
             type: "article",
             url: `${BASE_URL}/blog/${post.slug}`,
             title: post.seo.metaTitle,
             description: post.seo.metaDescription,
-            siteName: "ArivuOn Academy",
+            siteName: "Crack Leap Academy",
             publishedTime: new Date(post.publishedAt).toISOString(),
             modifiedTime: new Date(post.updatedAt).toISOString(),
-            authors: ["ArivuOn Academy"],
+            authors: ["Crack Leap Academy"],
             section: post.category,
             tags: post.tags,
             images: [{
@@ -538,7 +538,7 @@ export default async function BlogPostPage({
                                             Ready to go deeper?
                                         </p>
                                         <h3 className="text-2xl font-extrabold text-white mb-2">
-                                            Learn {post.category} with ArivuOn Academy
+                                            Learn {post.category} with Crack Leap Academy
                                         </h3>
                                         <div className="flex items-center justify-center gap-3 mt-1 mb-5">
                                             <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9952A]/60" />
@@ -564,7 +564,7 @@ export default async function BlogPostPage({
                                     A
                                 </div>
                                 <div>
-                                    <p className="font-bold text-[#0D1B3E] text-sm">ArivuOn Academy</p>
+                                    <p className="font-bold text-[#0D1B3E] text-sm">Crack Leap Academy</p>
                                     <p className="text-slate-500 text-xs mt-0.5">
                                         Tech Education Team · Python, DevOps &amp; Cloud ·{" "}
                                         <Link href="/" className="text-[#C9952A] hover:underline">

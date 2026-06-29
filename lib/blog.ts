@@ -139,13 +139,13 @@ export function generateArticleJsonLd(post: BlogPost, baseUrl: string) {
     dateModified: formatDateISO(post.updatedAt),
     author: {
       "@type": "Organization",
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
       url: baseUrl,
     },
     publisher: {
       "@type": "EducationalOrganization",
       "@id": `${baseUrl}/#organization`,
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
       logo: {
         "@type": "ImageObject",
         url: `${baseUrl}/logo.png`,

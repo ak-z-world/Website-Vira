@@ -13,7 +13,7 @@ import {
 
 const BASE_URL = "https://academy.arivuon.in";
 
-// ─── DESIGN TOKENS (extracted from ArivuOn logo) ─────────────────────────────
+// ─── DESIGN TOKENS (extracted from Crack Leap logo) ─────────────────────────────
 // Gold primary  : #C9952A  ← logo gold text
 // Gold bright   : #E8C060  ← logo ring highlight
 // Gold pale bg  : #FBF3DC  ← ultra-light gold tint for bg
@@ -24,26 +24,26 @@ const BASE_URL = "https://academy.arivuon.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Blog | DevOps, Python & Cloud Engineering Insights | ArivuOn Academy",
+  title: "Blog | DevOps, Python & Cloud Engineering Insights | Crack Leap Academy",
   description:
-    "In-depth guides on Python, DevOps, AWS, CI/CD, and software engineering careers. Practical knowledge from ArivuOn Academy — trusted by learners worldwide.",
+    "In-depth guides on Python, DevOps, AWS, CI/CD, and software engineering careers. Practical knowledge from Crack Leap Academy — trusted by learners worldwide.",
   keywords: [
     "devops tutorials", "python programming guides", "aws cloud tutorials",
     "software engineering blog", "cicd pipeline tutorial",
-    "tech career advice india", "ArivuOn Academy blog",
+    "tech career advice india", "Crack Leap Academy blog",
   ],
   alternates: { canonical: `${BASE_URL}/blog` },
   openGraph: {
     type: "website",
     url: `${BASE_URL}/blog`,
-    title: "Blog | DevOps, Python & Cloud Engineering | ArivuOn Academy",
+    title: "Blog | DevOps, Python & Cloud Engineering | Crack Leap Academy",
     description: "Practical guides on Python, DevOps, AWS, and software engineering careers.",
-    siteName: "ArivuOn Academy",
+    siteName: "Crack Leap Academy",
     images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ArivuOn Academy Blog | Python, DevOps & Cloud",
+    title: "Crack Leap Academy Blog | Python, DevOps & Cloud",
     description: "Practical engineering guides — Python, DevOps, AWS.",
     images: [`${BASE_URL}/og-image.png`],
   },
@@ -56,13 +56,13 @@ function BlogListingJsonLd({ posts }: { posts: BlogPost[] }) {
     "@context": "https://schema.org",
     "@type": "Blog",
     "@id": `${BASE_URL}/blog`,
-    name: "ArivuOn Academy Blog",
+    name: "Crack Leap Academy Blog",
     description: "In-depth guides on Python, DevOps, AWS, and software engineering careers.",
     url: `${BASE_URL}/blog`,
     publisher: {
       "@type": "EducationalOrganization",
       "@id": `${BASE_URL}/#organization`,
-      name: "ArivuOn Academy",
+      name: "Crack Leap Academy",
     },
     blogPost: posts.slice(0, 10).map((post) => ({
       "@type": "BlogPosting",
@@ -276,7 +276,7 @@ export default function BlogPage() {
             {/* Gold pill badge */}
             <span className="inline-flex items-center gap-2 bg-[#C9952A]/10 border border-[#C9952A]/25 text-[#E8C060] text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E8C060] inline-block animate-pulse" />
-              ArivuOn Academy — Knowledge Hub
+              Crack Leap Academy — Knowledge Hub
             </span>
 
             <h1 className="text-4xl md:text-[52px] font-extrabold text-white leading-tight mb-5 tracking-tight">

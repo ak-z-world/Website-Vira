@@ -196,7 +196,7 @@ export default function PythonAiAwsComboPage() {
                         "description": "Comprehensive combo program covering Python programming, Artificial Intelligence fundamentals, and DevOps tools like AWS, Jenkins, Terraform and CI/CD with real-world projects.",
                         "provider": {
                             "@type": "EducationalOrganization",
-                            "name": "ArivuOn Academy",
+                            "name": "Crack Leap Academy",
                             "url": "https://academy.arivuon.in"
                         },
                         "url": "https://academy.arivuon.in/courses/python-ai-aws-devops-combo",

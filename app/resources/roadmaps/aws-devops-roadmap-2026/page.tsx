@@ -8,13 +8,13 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AWS DevOps Engineer Roadmap 2026 — CI/CD, Kubernetes, Terraform | ArivuOn Academy',
+  title: 'AWS DevOps Engineer Roadmap 2026 — CI/CD, Kubernetes, Terraform | Crack Leap Academy',
   description:
     'Complete AWS DevOps Engineer roadmap 2026: Linux, AWS core services, Terraform, Docker, Kubernetes, CI/CD pipelines, monitoring, and SRE practices. Salary ₹10–50 LPA.',
   keywords:
     'aws devops roadmap 2026, devops engineer roadmap india, kubernetes roadmap, terraform aws guide, cicd pipeline 2026, site reliability engineer roadmap',
   openGraph: {
-    title: 'AWS DevOps Engineer Roadmap 2026 | ArivuOn Academy',
+    title: 'AWS DevOps Engineer Roadmap 2026 | Crack Leap Academy',
     url: 'https://arivuon.com/resources/roadmaps/aws-devops-roadmap-2026',
   },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/aws-devops-roadmap-2026' },

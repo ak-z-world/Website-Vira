@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 
 const BASE_URL = 'https://arivuon.com';
-const SITE_NAME = 'ArivuOn Academy';
+const SITE_NAME = 'Crack Leap Academy';
 
 export function generateResourceMetadata({
   title,

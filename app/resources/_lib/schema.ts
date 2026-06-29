@@ -20,7 +20,7 @@ export function articleSchema({
   description,
   url,
   dateModified,
-  organization = 'ArivuOn Academy',
+  organization = 'Crack Leap Academy',
 }: {
   title: string;
   description: string;
@@ -65,7 +65,7 @@ export function courseSchema({
   name,
   description,
   url,
-  provider = 'ArivuOn Academy',
+  provider = 'Crack Leap Academy',
 }: {
   name: string;
   description: string;
@@ -103,7 +103,7 @@ export function webPageSchema({
     url,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'ArivuOn Academy',
+      name: 'Crack Leap Academy',
       url: 'https://arivuon.com',
     },
   };

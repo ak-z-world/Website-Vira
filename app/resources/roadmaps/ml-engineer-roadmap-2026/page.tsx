@@ -8,13 +8,13 @@ import TableOfContents from '../../_components/TableOfContents';
 import { faqSchema, articleSchema, breadcrumbSchema } from '../../_lib/schema';
 
 export const metadata: Metadata = {
-  title: 'ML Engineer Roadmap 2026 — MLOps, PyTorch, Kubernetes, Feature Stores | ArivuOn Academy',
+  title: 'ML Engineer Roadmap 2026 — MLOps, PyTorch, Kubernetes, Feature Stores | Crack Leap Academy',
   description:
     'Complete ML Engineer roadmap 2026: ML fundamentals, PyTorch, feature stores, model serving, MLOps pipelines, Kubernetes-based ML, LLM deployment, and production monitoring. Salary ₹15–60 LPA in India.',
   keywords:
     'ml engineer roadmap 2026, mlops roadmap india, machine learning engineer career path, pytorch mlops kubernetes, feature store mlflow roadmap, llm deployment engineer',
   openGraph: {
-    title: 'ML Engineer Roadmap 2026 | ArivuOn Academy',
+    title: 'ML Engineer Roadmap 2026 | Crack Leap Academy',
     url: 'https://arivuon.com/resources/roadmaps/ml-engineer-roadmap-2026',
   },
   alternates: { canonical: 'https://arivuon.com/resources/roadmaps/ml-engineer-roadmap-2026' },

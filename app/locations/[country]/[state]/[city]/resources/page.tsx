@@ -47,7 +47,7 @@ export async function generateMetadata({
       title: country.seo.metaTitle,
       description: country.seo.metaDescription,
       url: country.seo.canonicalUrl,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       images: country.seo.ogImage
         ? [{ url: country.seo.ogImage, width: 1200, height: 630 }]
         : [],

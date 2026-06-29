@@ -633,7 +633,7 @@ export const TUTORIALS_DATA: Tutorial[] = [
       {
         title: "A basic function-based view",
         description: "Returning an HTTP response from a simple view function.",
-        code: "from django.http import HttpResponse\n\ndef home(request):\n    return HttpResponse(\"Welcome to ArivuOn\")",
+        code: "from django.http import HttpResponse\n\ndef home(request):\n    return HttpResponse(\"Welcome to Crack Leap\")",
         language: "python",
       },
       {
@@ -1007,7 +1007,7 @@ export const TUTORIALS_DATA: Tutorial[] = [
       {
         title: "A simple functional component",
         description: "The most basic building block of a React application.",
-        code: "function Welcome() {\n  return <h1>Welcome to ArivuOn</h1>;\n}\n\nexport default Welcome;",
+        code: "function Welcome() {\n  return <h1>Welcome to Crack Leap</h1>;\n}\n\nexport default Welcome;",
         language: "jsx",
       },
       {

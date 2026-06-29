@@ -47,7 +47,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `Free IT Training Resources in ${city.name} | ArivuOn Academy`;
+  const title = `Free IT Training Resources in ${city.name} | Crack Leap Academy`;
   const description = `Download free study materials, cheat sheets and practice sets for Python, Full-Stack, Data Science and AI courses in ${city.name}.`;
   const canonicalUrl = `${city.seo.canonicalUrl}/resources`;
 
@@ -61,7 +61,7 @@ export async function generateMetadata({
       title,
       description,
       url: canonicalUrl,
-      siteName: "ArivuOn Academy",
+      siteName: "Crack Leap Academy",
       images: city.seo.ogImage
         ? [{ url: city.seo.ogImage, width: 1200, height: 630 }]
         : [],

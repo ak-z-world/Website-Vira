@@ -26,7 +26,7 @@ export async function POST(req) {
   });
 
     await transporter.sendMail({
-      from: `"ArivuOn Academy Website" <${process.env.EMAIL_USER}>`,
+      from: `"Crack Leap Academy Website" <${process.env.EMAIL_USER}>`,
       to: process.env.RECEIVER_EMAIL,
       replyTo: email,
       subject: `New Contact Form Submission - ${name}`,
