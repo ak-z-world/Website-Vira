@@ -5,6 +5,7 @@ import Stats from "./components/Stats";
 import Features from "./components/Features";
 // import Testimonials from './components/Testimonials';
 // import Cta from './components/Cta';
+import HeroV2 from './components/Hero'
 
 export const metadata: Metadata = {
   title:

@@ -38,6 +38,10 @@ import "@/app/globals.css";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import { GlobalProvider } from "./providers";
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600','700','800'] })
+
 
 // ════════════════════════════════════════════════════════════════════════════
 // CONSTANTS — single source of truth; import from here in every page/layout

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 @import "tailwindcss";
+@import '../styles/neo2.css';
 
 @theme {
   --font-sans: 'Inter', sans-serif;
@@ -16,6 +17,103 @@
   --animate-float-delay-2: float 5s ease-in-out 2s infinite;
 }
 
+/* ===========================================
+   HERO TYPOGRAPHY
+=========================================== */
+
+.hero-title {
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+
+  /*
+      Minimum : 52px
+      Ideal   : 7vw
+      Maximum : 98px
+  */
+  font-size: clamp(3.25rem, 7vw, 6.125rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 1.3vw, 1.35rem);
+  line-height: 1.9;
+  color: #4B5563;
+}
+
+.hero-badge {
+  font-size: clamp(.85rem, .95vw, .95rem);
+}
+
+.hero-btn {
+  height: 60px;
+  padding-inline: 34px;
+  font-size: 1rem;
+  border-radius: 18px;
+}
+
+@media (min-width:1600px){
+
+    .hero-title{
+
+        font-size:110px;
+
+    }
+
+}
+
+@media (min-width:1920px){
+
+    .hero-title{
+
+        font-size:120px;
+
+    }
+
+}
+
+@media (max-width:1280px){
+
+    .hero-title{
+
+        font-size:72px;
+
+    }
+
+}
+
+@media (max-width:1024px){
+
+    .hero-title{
+
+        font-size:62px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero-title{
+
+        font-size:54px;
+
+        line-height:1;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .hero-title{
+
+        font-size:44px;
+
+        line-height:1.05;
+
+    }
+
+}
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
