@@ -1,6 +1,5 @@
 "use client";
 import { useGlobal } from "@/app/providers";
-import Head from "next/head";
 import {
     Code2,
     Layout,

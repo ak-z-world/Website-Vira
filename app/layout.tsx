@@ -69,18 +69,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   // ── Title ──────────────────────────────────────────────────────────────
-  // Template auto-appends "| Crack Leap Academy" to every child page title.
-  // Child pages: export const metadata = { title: "Python Course" }
-  //   → renders: "Python Course | Crack Leap Academy"
+
   title: {
     default:  "Crack Leap Academy | Best Software Training Institute — Python, AI, DevOps, React",
     template: "%s | Crack Leap Academy",
   },
 
   // ── Description ────────────────────────────────────────────────────────
-  // 158 chars, outcome-first, CTA at end. Structured for LLM extraction:
-  // WHO (Crack Leap Academy) + WHAT (Python, AI, AWS DevOps, React, Data Science)
-  // + HOW (live mentorship, real projects) + OUTCOME (₹8–40 LPA) + CTA.
+
   description:
     "Crack Leap Academy — India's best software training institute for Python, AI, AWS DevOps, React & Data Science. Live mentorship, real projects, placement support. ₹8–40 LPA outcomes. Chennai, Salem & globally. Enroll now.",
 
@@ -1597,17 +1593,17 @@ function SeoHeadTags() {
       {/* ── AI Crawler explicit robot meta tags ───────────────────────── */}
       {/* These complement the metadata.robots field and robots.txt.       */}
       {/* Some AI crawlers check meta tags before robots.txt.              */}
-      <meta name="googlebot"            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="Google-Extended"      content="index, follow" />  {/* Gemini AI training */}
-      <meta name="GPTBot"               content="index, follow" />  {/* ChatGPT training */}
-      <meta name="OAI-SearchBot"        content="index, follow" />  {/* ChatGPT SearchGPT */}
-      <meta name="ClaudeBot"            content="index, follow" />  {/* Claude / Anthropic */}
-      <meta name="anthropic-ai"         content="index, follow" />  {/* Anthropic crawler */}
-      <meta name="PerplexityBot"        content="index, follow" />  {/* Perplexity AI */}
-      <meta name="CCBot"                content="index, follow" />  {/* Common Crawl (LLM source) */}
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="Google-Extended" content="index, follow" />  {/* Gemini AI training */}
+      <meta name="GPTBot" content="index, follow" />  {/* ChatGPT training */}
+      <meta name="OAI-SearchBot" content="index, follow" />  {/* ChatGPT SearchGPT */}
+      <meta name="ClaudeBot" content="index, follow" />  {/* Claude / Anthropic */}
+      <meta name="anthropic-ai" content="index, follow" />  {/* Anthropic crawler */}
+      <meta name="PerplexityBot" content="index, follow" />  {/* Perplexity AI */}
+      <meta name="CCBot" content="index, follow" />  {/* Common Crawl (LLM source) */}
       <meta name="meta-externalagent"   content="index, follow" />  {/* Meta AI */}
-      <meta name="cohere-ai"            content="index, follow" />  {/* Cohere AI */}
-      <meta name="bingbot"              content="index, follow" />  {/* Bing Copilot */}
+      <meta name="cohere-ai" content="index, follow" />  {/* Cohere AI */}
+      <meta name="bingbot" content="index, follow" />  {/* Bing Copilot */}
 
       {/* ── Copyright ─────────────────────────────────────────────────── */}
       <meta name="copyright" content={`© ${new Date().getFullYear()} Crack Leap Academy`} />
@@ -1631,9 +1627,9 @@ export default function RootLayout({
       <head>
 
         {/* ── Favicon ─────────────────────────────────────────────────── */}
-        <link rel="icon"             href="/favicon.ico" />
-        <link rel="icon"             href="/icon-32.png"          type="image/png" sizes="32x32" />
-        <link rel="icon"             href="/icon-16.png"          type="image/png" sizes="16x16" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon-32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/icon-16.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
         {/* ── Non-Metadata-API tags + AI bot directives ───────────────── */}
