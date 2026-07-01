@@ -39,6 +39,7 @@ import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import { GlobalProvider } from "./providers";
 import { Poppins } from 'next/font/google'
+import ChatWidget from './components/chatbot/ChatWidget';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600','700','800'] })
 
@@ -1670,6 +1671,7 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <ChatWidget />
           <Footer />
         </GlobalProvider>
 

@@ -2,7 +2,12 @@
 
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @theme {
+  /* Your Existing VIRA Typography & Colors */
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Poppins', sans-serif;
   
@@ -14,6 +19,28 @@
   --animate-float: float 5s ease-in-out infinite;
   --animate-float-delay: float 5s ease-in-out 1s infinite;
   --animate-float-delay-2: float 5s ease-in-out 2s infinite;
+
+  /* ADDED: Chatbot Neomorphic Colors */
+  --color-bot-bg: #f4f5f9;
+  --color-bot-primary: #7c3aed;
+  --color-bot-primary-light: #ede9fe;
+
+  /* ADDED: Chatbot Neomorphic Shadows */
+  --shadow-neo-flat: 6px 6px 12px #d1d5db, -6px -6px 12px #ffffff;
+  --shadow-neo-pressed: inset 6px 6px 12px #d1d5db, inset -6px -6px 12px #ffffff;
+  --shadow-neo-sm: 3px 3px 6px #d1d5db, -3px -3px 6px #ffffff;
+}
+
+/* Custom Scrollbar for the Chat Window to match the clean design */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
 }
 
 /* ===========================================
@@ -21,9 +48,10 @@
 =========================================== */
 
 .hero-title {
-  font-weight: 800;
+  font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.05em;
+  margin-left: 10;
 
   /*
       Minimum : 52px
@@ -37,10 +65,12 @@
   font-size: clamp(1.05rem, 1.3vw, 1.35rem);
   line-height: 1.9;
   color: #4B5563;
+  margin-left: 10;
 }
 
 .hero-badge {
   font-size: clamp(.85rem, .95vw, .95rem);
+  margin-left: 10;
 }
 
 .hero-btn {
@@ -236,6 +266,19 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+}
+
+/* app/globals.css */
+@layer utilities {
+  .shadow-neo {
+    box-shadow: 6px 6px 12px #d1d5db, -6px -6px 12px #ffffff;
+  }
+  .shadow-neo-inset {
+    box-shadow: inset 4px 4px 8px #d1d5db, inset -4px -4px 8px #ffffff;
+  }
+  .bg-neo {
+    background-color: #f3f4f6; /* Soft gray/white background matching the shadows */
   }
 }
 

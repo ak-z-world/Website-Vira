@@ -165,7 +165,7 @@ const Header = () => {
     <>
       <header
         className={`
-          sticky top-0 z-50 w-full pt-4 px-4 sm:px-6 lg:px-8
+          fixed top-0 z-50 w-full pt-4 px-4 sm:px-6 lg:px-8
           transition-all duration-300 ease-in-out
           ${isScrolled ? 'pt-2' : 'pt-6'}
         `}
