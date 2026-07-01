@@ -1,319 +1,167 @@
-"use client";
+import React from 'react';
+import Image from 'next/image';
 
-import {
-  Video,
-  Users,
-  Briefcase,
-  FileCode,
-  ShieldCheck,
-  Zap,
-  Award,
-  Clock,
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
-
-import Link from "next/link";
-import { useState } from "react";
-
-interface Feature {
-  id: number;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  benefits: string[];
-}
-
-export default function Features() {
-  const [activeFeature, setActiveFeature] = useState(1);
-
-  const features: Feature[] = [
+export default function WhyChooseUs() {
+  const features = [
     {
       id: 1,
-      icon: <Video />,
-      title: "Live Interactive Sessions",
-      description:
-        "Attend real-time expert sessions with instant doubt solving.",
-      benefits: [
-        "Live mentor interaction",
-        "Recorded access",
-        "Peer coding",
-        "Live debugging",
-      ],
+      title: 'Industry Expert Mentorship',
+      description: 'Learn from professionals working in top tech companies.',
+      // User/Mentor Icon
+      icon: (
+        <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+      ),
     },
     {
       id: 2,
-      icon: <Users />,
-      title: "1:1 Mentorship",
-      description:
-        "Dedicated mentor support with career guidance & progress reviews.",
-      benefits: [
-        "Personal mentor",
-        "Weekly reviews",
-        "Career roadmap",
-        "Interview preparation",
-      ],
+      title: 'Hands-on Projects',
+      description: 'Build real-world projects and boost your portfolio.',
+      // Code/Tools Icon
+      icon: (
+        <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+        </svg>
+      ),
     },
     {
       id: 3,
-      icon: <FileCode />,
-      title: "Real-World Projects",
-      description:
-        "Build production-level applications used in real companies.",
-      benefits: [
-        "Portfolio ready",
-        "GitHub projects",
-        "Deployment training",
-        "Industry architecture",
-      ],
+      title: 'Placement Assistance',
+      description: 'Resume, mock interviews & job placement support.',
+      // Rocket/Briefcase Icon
+      icon: (
+        <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      ),
     },
     {
       id: 4,
-      icon: <Award />,
-      title: "Crack Leap Certification",
-      description:
-        "Industry-recognized certification to boost hiring potential.",
-      benefits: [
-        "Verified certificate",
-        "LinkedIn proof",
-        "Global validity",
-        "Skill recognition",
-      ],
+      title: 'Flexible Learning',
+      description: 'Live classes, recordings and doubt support.',
+      // Cloud/Sync Icon
+      icon: (
+        <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+        </svg>
+      ),
+    },
+    {
+      id: 5,
+      title: 'Certification Program',
+      description: 'Earn globally recognized certificates.',
+      // Certificate/Award Icon
+      icon: (
+        <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+        </svg>
+      ),
     },
   ];
 
-  const learningMethods = [
-    { icon: <Clock />, text: "Flexible Learning" },
-    { icon: <ShieldCheck />, text: "100% Practical Training" },
-    { icon: <Sparkles />, text: "Modern Tools & AI" },
-  ];
-
   return (
-    <section className="relative bg-white py-16 sm:py-1 md:py-5 overflow-hidden">
+    <>
+    <div className="w-full bg-[#f0f4f8] py-16 px-4 md:px-8 lg:px-12 font-sans flex flex-col items-center">
+      
+      {/* Centered Heading */}
+      <h2 className="text-2xl md:text-3xl font-bold text-[#1e1b4b] mb-12 text-center drop-shadow-sm">
+        Why Choose Crack Leap Academy?
+      </h2>
 
-      {/* VISIBLE NEBULA BACKGROUND */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-2xl"></div>
-
-      {/* GRID EFFECT */}
-      <div className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, #2563EB 1px, transparent 0)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* HEADER */}
-        <div className="text-center mb-14">
-
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full
-          bg-blue-50 border border-blue-200 text-blue-700 font-semibold mb-4">
-
-            <Zap className="w-4 h-4"/>
-            Crack Leap Learning System
-
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-
-            Experience Modern  
-            <span className="text-blue-600"> Tech Education</span>
-
-          </h2>
-
-          <p className="text-gray-600 mt-4 max-w-xl mx-auto">
-            Built for career acceleration with real-world training and expert mentorship.
-          </p>
-
-        </div>
-
-
-        {/* LEARNING METHODS */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-14">
-
-          {learningMethods.map((method, index) => (
-
-            <div
-              key={index}
-              className="group bg-white border border-gray-200 rounded-xl p-5
-              hover:border-blue-500 hover:shadow-lg
-              transition-all duration-300 hover:-translate-y-1"
-            >
-
-              <div className="flex items-center gap-3">
-
-                <div className="w-10 h-10 flex items-center justify-center
-                bg-blue-50 text-blue-600 rounded-lg
-                group-hover:scale-110 transition">
-
-                  {method.icon}
-
-                </div>
-
-                <span className="font-semibold text-gray-800">
-                  {method.text}
-                </span>
-
+      {/* Responsive Grid 
+          - 1 column on standard mobile
+          - 2 columns on large mobile/small tablets
+          - 3 columns on standard laptops
+          - 5 columns on large desktop screens to match Figma
+      */}
+      <div className="w-full max-w-[100rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
+        
+        {features.map((feature) => (
+          <div
+            key={feature.id}
+            // Extruded Neomorphic Card Base
+            className="bg-[#f0f4f8] rounded-[2rem] p-6 lg:p-8 flex flex-col items-start shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff] transition-transform duration-300 hover:-translate-y-2 h-full"
+          >
+            
+            <div className="flex flex-row xl:flex-col items-center xl:items-start gap-4 mb-4 xl:mb-6">
+              
+              {/* Recessed Icon Container (Inset Shadow) */}
+              <div className="w-14 h-14 rounded-2xl flex-shrink-0 bg-[#f0f4f8] flex items-center justify-center shadow-[inset_4px_4px_8px_#d1d9e6,inset_-4px_-4px_8px_#ffffff]">
+                {feature.icon}
               </div>
 
+              {/* Title */}
+              <h3 className="text-[17px] font-bold text-[#2d2a5d] leading-tight">
+                {feature.title}
+              </h3>
+              
             </div>
 
-          ))}
-
-        </div>
-
-
-        {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-2 gap-10">
-
-          {/* FEATURE LIST */}
-          <div className="grid sm:grid-cols-2 gap-5 ">
-
-            {features.map((feature) => {
-
-              const isActive = feature.id === activeFeature;
-
-              return (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveFeature(feature.id)}
-
-                  className={`relative p-6 rounded-xl border text-left transition-all cursor-pointer duration-300
-
-                  ${
-                    isActive
-                      ? "border-blue-600 shadow-lg scale-[1.02]"
-                      : "border-gray-200 hover:border-blue-400 hover:shadow-md"
-                  }
-
-                  bg-white
-                  `}
-                >
-
-                  {/* ACTIVE GLOW */}
-                  {isActive && (
-                    <div className="absolute inset-0 rounded-xl border border-blue-500 animate-pulse"/>
-                  )}
-
-                  <div className="flex items-start gap-4">
-
-                    <div className={`w-12 h-12 flex items-center justify-center rounded-lg
-transition-all duration-300
-
-${
-  isActive
-    ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md scale-110"
-    : "bg-blue-50 text-blue-600 group-hover:bg-blue-100"
-}`}>
-
-                      {feature.icon}
-
-                    </div>
-
-                    <div>
-
-                      <h3 className={`font-bold text-lg
-                      ${isActive ? "text-blue-600" : "text-gray-900"}`}>
-
-                        {feature.title}
-
-                      </h3>
-
-                      <p className="text-gray-600 text-sm mt-1">
-                        {feature.description}
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </button>
-              );
-            })}
+            {/* Description */}
+            <p className="text-sm text-slate-500 leading-relaxed mt-auto">
+              {feature.description}
+            </p>
 
           </div>
-
-
-          {/* DETAILS PANEL */}
-          <div className="
-  bg-white
-  border border-blue-200
-  rounded-2xl
-
-  p-6 sm:p-7 md:p-8
-
-  shadow-lg
-
-  h-fit
-  self-start
-">
-
-            <div className="flex items-center gap-4 mb-5">
-
-              <div className="w-14 h-14 flex items-center justify-center rounded-lg
-              bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-
-                {features[activeFeature - 1].icon}
-
-              </div>
-
-              <div>
-
-                <h3 className="text-xl font-bold text-gray-900">
-                  {features[activeFeature - 1].title}
-                </h3>
-
-                <p className="text-gray-600 text-sm">
-                  {features[activeFeature - 1].description}
-                </p>
-
-              </div>
-
-            </div>
-
-
-            {/* BENEFITS */}
-            <div className="space-y-3 mb-6">
-
-              {features[activeFeature - 1].benefits.map((benefit, index) => (
-
-                <div key={index} className="flex items-center gap-3">
-
-                  <CheckCircle className="w-5 h-5 text-blue-600"/>
-
-                  <span className="text-gray-700">{benefit}</span>
-
-                </div>
-
-              ))}
-
-            </div>
-
-
-            {/* CTA */}
-            <Link
-              href="/contact"
-              className="flex items-center justify-center gap-2
-              bg-gradient-to-r from-blue-600 to-indigo-600
-              text-white font-semibold py-3 rounded-lg
-              hover:scale-[1.02] transition"
-            >
-
-              Start Learning
-              <ArrowRight className="w-4 h-4"/>
-
-            </Link>
-
-          </div>
-
-        </div>
+        ))}
 
       </div>
+    </div>
+    <div className="w-full bg-[#f0f4f8] py-4 px-4 md:px-8 lg:px-8 font-sans flex justify-center">
+      
+      {/* Banner Container - Added explicit height (260px-280px) and separated horizontal/vertical padding to squeeze it vertically */}
+      <div className="relative w-full max-w-[90rem] h-auto md:h-[280px] lg:h-[260px] rounded-[2.5rem] bg-gradient-to-r from-[#8B75FF] via-[#A892FF] to-[#D5C6FF] overflow-hidden flex flex-col md:flex-row items-center justify-between py-6 px-6 md:px-8 lg:px-12 shadow-[10px_10px_30px_rgba(139,117,255,0.2)]">
+        
+        {/* Left Content (Text & Button) */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left z-10 w-full md:w-[50%] lg:w-3/5">
+          
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-[1.25] mb-4">
+            Take the Leap Towards Your<br className="hidden" /> Dream Tech Career
+          </h2>
+          
+          <p className="text-white/95 text-sm md:text-base lg:text-lg mb-8 max-w-md font-medium">
+            Join our free webinar and talk to our experts.
+          </p>
+          
+          {/* Action Button - Updated to "Contact Us" */}
+          <button className="flex items-center justify-center gap-2 bg-[#f8f9fc] text-[#8B75FF] px-8 py-3.5 rounded-2xl font-bold text-sm md:text-base shadow-[0px_8px_20px_rgba(0,0,0,0.1),inset_2px_2px_4px_#ffffff] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0px_12px_25px_rgba(0,0,0,0.15)] group">
+            Contact Us
+            {/* Arrow Icon */}
+            <svg 
+              className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
 
-    </section>
+        </div>
+
+        {/* Right Content (3D Illustration) */}
+        <div className="relative w-full md:w-[45%] lg:w-2/5 h-64 md:h-80 lg:h-96 mt-10 md:mt-0 z-10 flex items-center justify-center">
+          
+          {/* UPDATE THIS PATH:
+            Change the src to match the exact file name and location of your image 
+            (e.g., '/assets/images/cta-illustration.png')
+          */}
+          <div className="relative w-full h-full max-w-[500px]">
+            <Image
+              src="/assets/icons/cta.png" 
+              alt="Tech Career Illustration"
+              fill
+              className="object-contain object-center md:object-right drop-shadow-2xl"
+              priority
+            />
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+    </>
   );
 }

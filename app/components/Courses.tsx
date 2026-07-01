@@ -1,503 +1,154 @@
-"use client";
+import React from 'react';
+import Image from 'next/image';
 
-import { useEffect, useRef, useState } from "react";
-import {
-  Code2,
-  CloudCog,
-  Cpu,
-  Clock,
-  ArrowRight,
-  Zap,
-  Brain,
-} from "lucide-react";
-import Link from "next/link";
-
-interface Course {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  duration: string;
-  price: string;
-  badge?: string;
-}
-
-export default function Courses() {
-
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-
-  }, []);
-
-  const courses: Course[] = [
+export default function TopPrograms() {
+  const courses = [
     {
       id: 1,
-      title: "Python & Django Development",
-      description:
-        "Build production-grade applications using Python, Django.",
-      icon: <Code2 className="w-6 h-6" />,
-      duration: "12 Weeks",
-      price: "₹10,000",
-      badge: "Most Popular",
+      title: 'Python & Django',
+      duration: '6 Weeks',
+      projects: '20+ Projects',
+      // Mapped to the laptop illustration based on your expected design
+      image: '/assets/icons/image10.png', 
+      placement: 'Placement Support',
+      package: '₹12 LPA Avg Package',
+      tech: [
+        { name: 'Python', path: '/assets/icons/python.png' },
+        { name: 'Django', path: '/assets/icons/django.png' },
+      ],
     },
     {
       id: 2,
-      title: "DevOps Engineering",
-      description:
-        "Master Docker, CI/CD pipelines and AWS Cloud deployment.",
-      icon: <CloudCog className="w-6 h-6" />,
-      duration: "16 Weeks",
-      price: "₹10,000",
-      badge: "High Demand",
+      title: 'DevOps Engineering',
+      duration: '6 Weeks',
+      projects: '25+ Projects',
+      // Mapped to the server/cloud illustration
+      image: '/assets/icons/image11.png', 
+      placement: 'Placement Support',
+      package: '₹16 LPA Avg Package',
+      tech: [
+        { name: 'AWS', path: '/assets/icons/aws.png' },
+        { name: 'Docker', path: '/assets/icons/docker.png' },
+        { name: 'Kubernetes', path: '/assets/icons/kubernets.png' },
+      ],
     },
     {
       id: 3,
-      title: "React Development",
-      description:
-        "Build scalable frontend applications using React, Next.js and TypeScript.",
-      icon: <Cpu className="w-6 h-6" />,
-      duration: "10 Weeks",
-      price: "₹10,000",
-      badge: "Trending",
+      title: 'React Development',
+      duration: '6 Weeks',
+      projects: '15+ Projects',
+      // Mapped to the UI/browser windows illustration
+      image: '/assets/icons/image12.png', 
+      placement: 'Placement Support',
+      package: '₹10 LPA Avg Package',
+      tech: [
+        { name: 'React', path: '/assets/icons/react.png' },
+      ],
     },
   ];
 
   return (
+    <div className="min-h-screen bg-[#f0f4f8] p-4 md:p-8 lg:p-12 font-sans flex flex-col items-center justify-center">
+      
+      {/* Main Container */}
+      <div className="w-full max-w-[100rem] relative bg-[#f0f4f8] p-6 lg:p-10 rounded-3xl md:rounded-[3rem] shadow-[10px_10px_20px_#d1d9e6,-10px_-10px_20px_#ffffff]">
+        
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 md:mb-10 ml-2">
+          Top Programs
+        </h2>
 
-    <section
-      ref={ref}
-      id="courses"
-      className="relative overflow-hidden bg-white py-16 sm:py-20 md:py-24 lg:py-28"
-    >
-
-      {/* Nebula background glow */}
-      <div className="absolute inset-0 pointer-events-none">
-
-        <div className="
-          absolute
-          top-0 left-0
-          w-[500px]
-          h-[500px]
-          bg-blue-600/10
-          rounded-full
-          blur-[10px]
-        "/>
-
-        <div className="
-          absolute
-          bottom-0 right-0
-          w-[500px]
-          h-[500px]
-          bg-indigo-600/10
-          rounded-full
-          blur-[10px]
-        "/>
-
-      </div>
-
-      {/* Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <div
-          className={`text-center mb-14 transition-all duration-700 ${visible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-            }`}
-        >
-
-          {/* Badge */}
-          <div className="
-            inline-flex items-center gap-3
-            px-5 py-2
-            rounded-full
-            bg-blue-50
-            border border-blue-100
-            mb-6
-          ">
-            <Brain className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-semibold text-blue-700">
-              Crack Leap Programs
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h2 className="
-      font-bold
-      text-gray-900
-      leading-tight
-      tracking-tight
-      text-3xl
-      sm:text-4xl
-      md:text-5xl
-      lg:text-6xl
-    ">
-            Industry-Focused{" "}
-
-            <span className="
-        block
-        mt-2
-        bg-gradient-to-r
-        from-blue-600
-        to-indigo-600
-        bg-clip-text
-        text-transparent
-      ">
-              Tech Programs
-            </span>
-          </h2>
-
-          {/* Description */}
-          <p className="
-            text-gray-600
-            text-base sm:text-lg
-            max-w-2xl mx-auto mt-2
-          ">
-            Master real-world technologies with expert mentorship,
-            production projects and career-focused learning.
-          </p>
-
-        </div>
-
-
-        {/* Courses grid */}
-        <div className="
-grid
-grid-cols-1
-sm:grid-cols-2
-lg:grid-cols-3
-gap-6 sm:gap-8 lg:gap-10
-">
-
-          {courses.map((course, index) => (
-
+        {/* Grid Layout: Fully responsive
+          - 1 column on mobile
+          - 2 columns on tablet
+          - 3 columns on large screens
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
+          
+          {courses.map((course) => (
             <div
               key={course.id}
-              className="
-group
-relative
-overflow-hidden
-
-rounded-2xl
-
-bg-white/80
-backdrop-blur-xl
-
-border border-[#E6ECFF]
-
-p-6 sm:p-7 lg:p-8
-
-transition-all duration-500 ease-out
-
-hover:-translate-y-3
-hover:shadow-[0_25px_60px_rgba(37,99,235,0.18)]
-
-will-change-transform
-"
+              // Neomorphic card body with a slightly tighter padding to match the design
+              className="bg-[#f0f4f8] rounded-[2rem] p-3 flex flex-col xl:flex-row items-center xl:items-stretch gap-4 xl:gap-5 shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff] transition-all duration-300 hover:-translate-y-1"
             >
-
-              {/* Quantum glow background */}
-              <div className="
-absolute
-inset-0
-opacity-0
-group-hover:opacity-100
-transition-opacity duration-700
-">
-
-                <div className="
-absolute
--top-20
--left-20
-w-40
-h-40
-bg-blue-500/20
-rounded-full
-blur-3xl
-animate-pulse
-"/>
-
-                <div className="
-absolute
--bottom-20
--right-20
-w-40
-h-40
-bg-indigo-500/20
-rounded-full
-blur-3xl
-animate-pulse
-"/>
-
+              
+              {/* Left Side: Soft Tinted Image Area */}
+              <div className="w-full xl:w-[45%] h-48 xl:h-auto min-h-[160px] rounded-[1.5rem] bg-gradient-to-br from-[#e8ecf5] to-[#f4f7fb] relative flex-shrink-0 flex items-center justify-center overflow-hidden">
+                <div className="relative w-full h-60 p-2">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    fill
+                    className="object-contain drop-shadow-md scale-[0.9]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
               </div>
 
+              {/* Right Side: Course Content */}
+              <div className="flex flex-col justify-center w-full xl:w-[55%] py-3 pr-2">
+                
+                <h3 className="text-lg font-bold text-slate-800 mb-3 text-center xl:text-left leading-tight">
+                  {course.title}
+                </h3>
 
-              {/* Animated gradient border */}
-              <div className="
-absolute inset-0
-rounded-2xl
-opacity-0
-group-hover:opacity-100
-transition duration-700
-pointer-events-none
-">
-
-                <div className="
-absolute inset-0
-rounded-2xl
-border
-border-blue-400/40
-animate-pulse
-"/>
-
-              </div>
-
-
-              {/* Badge */}
-              {course.badge && (
-
-                <div className="
-absolute
-top-4 right-4
-z-20
-
-px-3 py-1
-
-text-xs font-semibold
-
-bg-gradient-to-r
-from-blue-600
-to-indigo-600
-
-text-white
-
-rounded-full
-
-shadow-md
-
-animate-fade-in
-">
-
-                  {course.badge}
-
+                {/* Actual Tech Image Icons */}
+                <div className="flex justify-center xl:justify-start gap-2 sm:gap-3 mb-4">
+                  {course.tech.map((techItem, index) => (
+                    <div 
+                      key={index} 
+                      className="w-10 h-10 rounded-full bg-[#f0f4f8] flex items-center justify-center shadow-[4px_4px_8px_#d1d9e6,-4px_-4px_8px_#ffffff]"
+                      title={techItem.name}
+                    >
+                      <div className="relative w-15  h-15 ">
+                        <Image 
+                          src={techItem.path} 
+                          alt={techItem.name} 
+                          fill 
+                          className="object-contain" 
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
-              )}
-
-
-              {/* Icon */}
-              <div className="
-relative z-10
-
-w-14 h-14 sm:w-16 sm:h-16
-
-flex items-center justify-center
-
-rounded-xl
-
-bg-gradient-to-br
-from-blue-50
-to-indigo-50
-
-text-blue-600
-
-mb-5
-
-transition-all duration-500
-
-group-hover:scale-110
-group-hover:rotate-3
-
-shadow-sm
-group-hover:shadow-md
-">
-
-                <div className="animate-float-slow">
-
-                  {course.icon}
-
+                {/* Duration & Projects */}
+                <div className="flex justify-center xl:justify-start items-center gap-2 text-xs sm:text-sm text-slate-500 font-medium mb-5">
+                  <span>{course.duration}</span>
+                  <span className="w-1 h-1 rounded-full bg-slate-400"></span>
+                  <span>{course.projects}</span>
                 </div>
 
-              </div>
+                {/* Badges Container */}
+                <div className="flex flex-wrap justify-center xl:justify-start gap-2 sm:gap-3 mt-auto">
+                  
+                  {/* Placement Support Badge */}
+                  <div className="flex items-center gap-1.5 bg-[#f0f4f8] px-3 py-1.5 rounded-full shadow-[3px_3px_6px_#d1d9e6,-3px_-3px_6px_#ffffff]">
+                    <svg className="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span className="text-[10px] sm:text-xs font-semibold text-slate-600 whitespace-nowrap">
+                      {course.placement}
+                    </span>
+                  </div>
 
-
-              {/* Title */}
-              <h3 className="
-relative z-10
-
-text-xl sm:text-2xl
-
-font-bold
-
-text-gray-900
-
-mb-3
-
-transition-all duration-300
-
-group-hover:text-blue-600
-">
-
-                {course.title}
-
-              </h3>
-
-
-              {/* Description */}
-              <p className="
-relative z-10
-
-text-gray-600
-
-text-sm sm:text-base
-
-mb-6
-
-leading-relaxed
-">
-
-                {course.description}
-
-              </p>
-
-
-              {/* Details */}
-              <div className="
-relative z-10
-
-flex items-center justify-between
-
-mb-7
-
-text-sm
-">
-
-                <div className="
-flex items-center gap-2
-
-text-gray-500
-">
-
-                  <Clock className="w-4 h-4" />
-
-                  <span className="font-medium">
-                    {course.duration}
-                  </span>
+                  {/* Salary Package Badge */}
+                  <div className="flex items-center gap-1.5 bg-[#f0f4f8] px-3 py-1.5 rounded-full shadow-[3px_3px_6px_#d1d9e6,-3px_-3px_6px_#ffffff]">
+                    <svg className="w-3.5 h-3.5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <span className="text-[10px] sm:text-xs font-semibold text-slate-600 whitespace-nowrap">
+                      {course.package}
+                    </span>
+                  </div>
 
                 </div>
-
-                <div className="
-text-base
-
-font-bold
-
-bg-gradient-to-r
-from-blue-600
-to-indigo-600
-
-bg-clip-text
-text-transparent
-">
-
-                  {course.price}
-
-                </div>
-
               </div>
-
-
-              {/* CTA */}
-              <Link
-                href="/contact"
-                className="
-relative z-10
-
-flex items-center justify-center gap-2
-
-py-3.5
-
-rounded-xl
-
-font-semibold
-
-text-white
-
-bg-gradient-to-r
-from-blue-600
-to-indigo-600
-
-transition-all duration-300
-
-hover:scale-[1.05]
-hover:shadow-lg
-
-active:scale-[0.98]
-"
-              >
-
-                Enroll Now
-
-                <ArrowRight className="
-w-4 h-4
-
-transition-transform duration-300
-
-group-hover:translate-x-1
-"/>
-
-              </Link>
-
-
-              {/* subtle neural dots */}
-              <div className="
-absolute inset-0
-pointer-events-none
-opacity-0
-group-hover:opacity-100
-transition duration-700
-">
-
-                <div className="
-absolute
-top-6 left-6
-w-1.5 h-1.5
-bg-blue-400
-rounded-full
-animate-ping
-"/>
-
-                <div className="
-absolute
-bottom-8 right-10
-w-1.5 h-1.5
-bg-indigo-400
-rounded-full
-animate-ping
-delay-300
-"/>
-
-              </div>
-
 
             </div>
-
           ))}
 
         </div>
-
       </div>
-
-    </section>
+    </div>
   );
 }

@@ -1,232 +1,121 @@
-"use client";
+import React from 'react';
+import Image from 'next/image';
 
-import {
-  Target,
-  Brain,
-  Globe,
-  TrendingUp,
-  CheckCircle,
-} from "lucide-react";
-
-interface FeatureItem {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const Stats = () => {
-
-  const features: FeatureItem[] = [
+export default function TransformationJourney() {
+  const steps = [
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Industry-Focused Curriculum",
-      description:
-        "Designed based on real-world industry requirements and modern tech stacks.",
+      id: 1,
+      title: 'Student',
+      subtitle: 'Start Your Journey',
+      image: '/assets/icons/image13.png',
+      footerText: '₹0 LPA',
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Hands-on Project Learning",
-      description:
-        "Build real production-level applications with mentor guidance.",
+      id: 2,
+      title: 'Learner',
+      subtitle: 'Learn In-Demand Skills',
+      image: '/assets/icons/image14.png',
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Globally Recognized Certification",
-      description:
-        "Crack Leap certifications recognized by startups and global companies.",
+      id: 3,
+      title: 'Builder',
+      subtitle: 'Build Real Projects',
+      image: '/assets/icons/image15.png',
+    },
+    {
+      id: 4,
+      title: 'Developer',
+      subtitle: 'Work on Live Projects',
+      image: '/assets/icons/image16.png',
+    },
+    {
+      id: 5,
+      title: 'Software Engineer',
+      subtitle: 'Get Hired & Grow',
+      image: '/assets/icons/image17.png',
     },
   ];
 
+  // Total steps used for generating the progress dots
+  const totalSteps = steps.length;
+
   return (
-    <section className="relative pb-16 sm:pb-20 md:pb-24 lg:pb-30 bg-white overflow-hidden">
+    <div className="min-h-screen bg-[#f0f4f8] p-4 md:p-10 font-sans flex flex-col items-center justify-center overflow-hidden">
+      
+      <div className="w-full max-w-[90rem] relative bg-[#f0f4f8] p-6 lg:p-10 rounded-3xl md:rounded-[3rem] shadow-[10px_10px_20px_#d1d9e6,-10px_-10px_20px_#ffffff]">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 md:mb-12 ml-2 md:ml-4 text-center md:text-left">
+          Your Transformation Journey
+        </h2>
 
-      {/* subtle background glow */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100/10 rounded-full blur-1xl"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-100/10 rounded-full blur-1xl"></div>
+        <div className="relative grid grid-cols-1 md:grid-cols-5 gap-4 lg:gap-6 w-full items-stretch z-0">
+          
+          {/* Dashed Connecting Line */}
+          <div className="hidden md:block absolute top-1/2 left-0 w-full border-t-2 border-dashed border-gray-400 -z-10 transform -translate-y-4"></div>
 
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 lg:mb-16">
-
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 border border-blue-100 mb-4">
-            <TrendingUp className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-semibold text-blue-700">
-              Crack Leap Advantage
-            </span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-
-            Why Choose{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Crack Leap
-            </span>
-
-          </h2>
-
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            We provide industry-aligned training, hands-on experience, and mentorship
-            to help you build a successful career in modern technology.
-          </p>
-
-        </div>
-
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-
-          {features.map((feature, index) => (
-
+          {steps.map((step) => (
             <div
-              key={index}
-              className="
-              group
-              relative
-              bg-white
-              border border-gray-200
-              rounded-2xl
-              p-6 sm:p-7
-              transition-all duration-300
-              hover:-translate-y-2
-              hover:shadow-xl
-              hover:border-blue-400
-              "
+              key={step.id}
+              className="relative z-10 bg-[#f0f4f8] rounded-2xl md:rounded-3xl p-4 lg:p-6 flex flex-row md:flex-col justify-between items-center md:items-stretch shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff] transition-transform duration-300 hover:-translate-y-1 md:hover:-translate-y-2"
             >
-
-              {/* icon */}
-              <div className="
-              w-12 h-12
-              flex items-center justify-center
-              rounded-xl
-              bg-blue-50
-              text-blue-600
-              mb-4
-              group-hover:scale-110
-              transition
-              ">
-                {feature.icon}
-              </div>
-
-
-              {/* title */}
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition">
-                {feature.title}
-              </h3>
-
-
-              {/* description */}
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                {feature.description}
-              </p>
-
-
-              {/* hover glow */}
-              <div className="
-              absolute inset-0
-              rounded-2xl
-              opacity-0 group-hover:opacity-100
-              transition duration-500
-              pointer-events-none
-              border border-blue-400/20
-              ">
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
-
-
-
-        {/* CTA */}
-        <div className="mt-14 sm:mt-16">
-
-          <div className="
-          bg-gradient-to-r from-blue-600 to-indigo-600
-          rounded-2xl
-          p-6 sm:p-8 md:p-10
-          text-white
-          ">
-
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-
-              <div>
-
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                  Start Your Tech Career Today
-                </h3>
-
-                <p className="text-blue-100 text-sm sm:text-base">
-                  Limited seats available. Join the upcoming Crack Leap batch.
-                </p>
-
-                <div className="flex flex-wrap gap-4 mt-4 text-sm">
-
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-300"/>
-                    Placement Support
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-300"/>
-                    Mentor Guidance
-                  </div>
-
+              
+              {/* Header */}
+              <div className="flex items-center md:items-start gap-3 lg:gap-4 md:mb-4 w-full md:w-auto">
+                <div className="w-10 h-10 rounded-full flex-shrink-0 bg-[#f0f4f8] flex items-center justify-center text-gray-700 font-bold text-lg shadow-[inset_3px_3px_6px_#d1d9e6,inset_-3px_-3px_6px_#ffffff]">
+                  {step.id}
                 </div>
-
+                <div className="flex flex-col">
+                  <h3 className="text-base lg:text-lg font-bold text-slate-800 leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-1">
+                    {step.subtitle}
+                  </p>
+                </div>
               </div>
 
+              {/* Image */}
+              <div className="hidden md:block w-full h-32 lg:h-40 relative flex-grow my-2">
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  fill
+                  className="object-contain"
+                  priority={step.id === 1}
+                />
+              </div>
 
-              {/* buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-
-                <a
-                  href="/contact"
-                  className="
-                  px-6 py-3
-                  bg-white
-                  text-blue-600
-                  font-semibold
-                  rounded-xl
-                  text-center
-                  hover:bg-blue-50
-                  transition
-                  "
-                >
-                  Apply Now
-                </a>
-
-                <a
-                  href="/contact"
-                  className="
-                  px-6 py-3
-                  border border-white
-                  text-white
-                  font-semibold
-                  rounded-xl
-                  text-center
-                  hover:bg-white/10
-                  transition
-                  "
-                >
-                  Book Free Demo
-                </a>
-
+              {/* Footer */}
+              <div className="mt-0 md:mt-4 flex items-center justify-end md:justify-center min-h-[24px] w-full md:w-auto">
+                {step.footerText ? (
+                  <span className="text-sm font-semibold text-gray-400 whitespace-nowrap">
+                    {step.footerText}
+                  </span>
+                ) : (
+                  /* Dynamic Step-by-Step Progress Indicator */
+                  <div className="flex gap-1.5 items-center">
+                    {Array.from({ length: totalSteps }).map((_, index) => {
+                      const stepNumber = index + 1;
+                      const isActive = stepNumber <= step.id;
+                      
+                      return (
+                        <div
+                          key={stepNumber}
+                          className={`h-1.5 md:h-2 rounded-full transition-all duration-300 ${
+                            isActive
+                              ? 'w-4 md:w-6 bg-[#6366f1] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.2)]' // Active step (Indigo)
+                              : 'w-1.5 md:w-2 bg-[#d1d9e6] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.5)]' // Inactive step (Neomorphic inset)
+                          }`}
+                        />
+                      );
+                    })}
+                  </div>
+                )}
               </div>
 
             </div>
-
-          </div>
-
+          ))}
         </div>
-
-
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Stats;
+}

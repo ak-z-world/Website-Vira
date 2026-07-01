@@ -5,7 +5,41 @@ import { ArrowRight, PlayCircle, Rocket } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-[#F5F7FF] flex  overflow-hidden pt-24 pb-12 lg:pt-0 lg:pb-0 font-sans">
+    <section
+  className="
+    relative
+    w-full
+
+    min-h-[100svh]
+    lg:min-h-screen
+
+    bg-[#F5F7FF]
+
+    flex
+    items-center
+
+    overflow-hidden
+
+    px-4
+    sm:px-6
+    md:px-8
+    lg:px-10
+    xl:px-12
+    2xl:px-16
+
+    pt-24
+    sm:pt-28
+    md:pt-32
+    lg:pt-0
+
+    pb-12
+    sm:pb-16
+    md:pb-20
+    lg:pb-0
+
+    font-sans
+  "
+>
       {/* ── Light Theme Ambient Glows ── */}
       <div className="absolute top-0 left-[-10%] w-[40rem] h-[40rem] bg-[#4F46E5]/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -14,17 +48,41 @@ export default function Hero() {
       {/* ───────────────────────── Main Container ───────────────────────── */}
       <div className="w-full  relative z-10">
         {/* ───────────────────────── Hero Grid ───────────────────────── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr]  px-12 gap-10 xl:gap-16 min-h-[88vh]">
+       <div
+  className="
+    grid
+    grid-cols-1
+    lg:grid-cols-2
+    items-center
+    max-w-[1400px]
+    mx-auto
+    w-full
+    gap-12
+    lg:gap-14
+    xl:gap-16
+    px-4
+    sm:px-6
+    md:px-8
+    lg:px-10
+    xl:px-12
+    py-10       /* Base padding for mobile */
+    lg:py-35    /* Replaces the min-h. Adjust to py-12 or py-20 as needed */
+  "
+>
           {/* ═════════════════════ LEFT CONTENT ═════════════════════ */}
           <div
-            className="
+  className="
     flex
     flex-col
     justify-center
 
     w-full
+    max-w-xl
+    sm:max-w-2xl
+    lg:max-w-none
 
-    lg:pr-10
+    mx-auto
+    lg:mx-0
 
     items-center
     lg:items-start
@@ -32,67 +90,133 @@ export default function Hero() {
     text-center
     lg:text-left
 
-    mx-auto
-    lg:mx-0
-  ">
+    px-4
+    sm:px-6
+    md:px-8
+    lg:px-0
+
+    py-8
+    sm:py-10
+    md:py-12
+    lg:py-0
+
+    gap-5
+    sm:gap-6
+    md:gap-7
+
+    lg:pr-8
+    xl:pr-10
+    2xl:pr-16
+  "
+>
             {/* Badge */}
 
             <div
-              className="
+  className="
     hero-badge
     inline-flex
     items-center
-    gap-1
-    px-2
+    justify-center
+    sm:justify-start
+
+    gap-2
+    sm:gap-3
+
+    px-3
+    sm:px-4
+    md:px-5
+
     py-2
+    sm:py-2.5
+
     rounded-full
+
     bg-white
     border
     border-gray-200
-    shadow-[0_12px_40px_rgba(31,41,55,.08)]
-    mb-8
-  ">
-              <Rocket className="w-6 h-6  text-amber-500 shrink-0" />
 
-              <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
-                1000+ Students Already Transformed
-              </span>
-            </div>
+    shadow-[0_12px_40px_rgba(31,41,55,.08)]
+
+    mb-6
+    sm:mb-8
+
+    max-w-full
+    w-fit
+  "
+>
+  <Rocket className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-amber-500 shrink-0" />
+
+  <span
+    className="
+      text-xs
+      sm:text-sm
+      md:text-base
+
+      font-medium
+      text-gray-700
+
+      leading-tight
+
+      text-center
+      sm:text-left
+
+      break-words
+    "
+  >
+    1000+ Students Already Transformed
+  </span>
+</div>
 
             {/* Heading */}
 
             <h1
-              className="
+  className="
     hero-title
     text-[#111827]
-
     w-full
-  
+    font-bold
 
-    leading-[0.92]
-    tracking-[-0.055em]
-  ">
-              <span className="block">Become a</span>
+    /* 📱 Mobile First (Base) */
+    text-5xl
+    leading-[1.1]
+    tracking-[-0.02em]
 
-              <span className="block">Job-Ready</span>
+    /* 📱 Small Tablets */
+    sm:text-6xl
+    sm:leading-none
+    sm:tracking-[-0.03em]
 
-              <span
-                className="
+    /* 💻 Laptops (Restoring your original tight spacing) */
+    md:text-7xl
+    md:leading-[0.92]
+    md:tracking-[-0.055em]
+
+    /* 🖥️ Large Desktops */
+    lg:text-[4.5rem]
+    xl:text-[5.5rem]
+  "
+>
+  <span className="block">Become a</span>
+  <span className="block">Job-Ready</span>
+  <span
+    className="
       block
-
       bg-gradient-to-r
       from-[#C88CFB]
       to-[#9362F3]
-
       bg-clip-text
       text-transparent
-
       text-[0.88em]
-      leading-[1.5]
-    ">
-                Software Engineer
-              </span>
-            </h1>
+      
+      /* Mobile spacing for the gradient text */
+      leading-[1.3]
+      md:leading-[1.5]
+      pb-2
+    "
+  >
+    Software Engineer
+  </span>
+</h1>
 
             {/* Paragraph */}
 
@@ -187,9 +311,9 @@ export default function Hero() {
           </div>
 
           {/* ══ RIGHT COLUMN: Hero Image ══ */}
-          <div className="w-full flex justify-center lg:justify-end items-center mt-8 lg:mt-0 relative">
+          <div className="w-full flex justify-center lg:justify-end items-center mt-0 lg:mt-0 relative">
             {/* Wrapper container: Keeps absolute floating elements tethered to the main image */}
-            <div className="relative w-full max-w-[620px] sm:max-w-md lg:max-w-lg xl:max-w-[800px] mt-25 mr-35">
+            <div className="relative w-full max-w-[620px] sm:max-w-md lg:max-w-lg xl:max-w-[800px] mt--15 mr-15">
               {/* Main Dashboard Image */}
               <img
                 src="/assets/hero.png"
