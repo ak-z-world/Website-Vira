@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
     {
       id: 3,
       title: 'Placement Assistance',
-      description: 'Resume, mock interviews & job placement support.',
+      description: 'Resume & mock interviews.',
       // Rocket/Briefcase Icon
       icon: (
         <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
