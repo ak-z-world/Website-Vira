@@ -197,7 +197,7 @@ export default function Hero() {
   "
 >
   <span className="block">Become a</span>
-  <span className="block">Job-Ready</span>
+  <span className="block">Job Ready</span>
   <span
     className="
       block

@@ -1,9 +1,13 @@
 "use client";
 
-import { Users, Target, Award, Globe, Crown, Cpu, CheckCircle, Sparkles, ArrowRight, ChevronRight, Zap, Rocket } from 'lucide-react';
+import React from 'react';
+import Image from 'next/image';
+import { 
+  Users, Target, Award, Globe, Crown, Cpu, CheckCircle, 
+  Sparkles, ArrowRight, ChevronRight, Zap, Rocket 
+} from 'lucide-react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
-// import Testimonials from '../components/Testimonials';
 
 export default function AboutPage() {
   const values = [
@@ -33,245 +37,241 @@ export default function AboutPage() {
     }
   ];
 
+  const features = [
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Industry-First Approach',
+      desc: 'Our curriculum is designed with industry experts and updated with real-world trends.'
+    },
+    {
+      icon: <Cpu className="w-6 h-6" />,
+      title: 'Learn by Building',
+      desc: 'Hands-on projects and case studies are at the core of our teaching methodology.'
+    },
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: 'Future Ready Learning',
+      desc: 'We equip learners with the skills, mindset, and confidence to thrive in tomorrow\'s tech world.'
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="min-h-screen bg-[#F8F9FE] font-sans text-slate-800 pb-20 overflow-hidden">
+      
       {/* Hero Section */}
-      <section className="relative pt-10 pb-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-tr from-blue-50 to-transparent rounded-full blur-3xl opacity-50" />
-
-        <div className="section-padding relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
-              <Sparkles className="w-4 h-4 text-blue-500" />
-              <span className="text-sm font-semibold text-blue-600">Premium Tech Education</span>
-            </div>
-
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight">
-              About <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Crack Leap Academy</span>
-            </h1>
-
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We're redefining tech education through immersive, industry-aligned programs that bridge
-              the gap between theoretical knowledge and real-world application.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105"
-              >
-                Start Learning Journey
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/courses"
-                className="inline-flex items-center justify-center gap-3 bg-white border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
-              >
-                Explore Programs
-                <ChevronRight className="w-5 h-5" />
-              </Link>
-            </div>
+      <section className="relative max-w-7xl mx-auto px-6 pt-20 pb-24 lg:flex lg:items-center lg:justify-between">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="lg:w-1/2 z-10"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-[4px_4px_10px_#e6e9f5,-4px_-4px_10px_#ffffff] mb-8 border border-white">
+            <Crown className="w-4 h-4 text-[#6366F1]" />
+            <span className="text-sm font-semibold text-[#6366F1]">Premium Tech Education</span>
           </div>
-        </div>
-      </section>
+          
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 leading-tight">
+            About <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]">Crack Leap</span>
+          </h1>
+          
+          <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+            We're redefining tech education through immersive, industry-aligned programs that bridge the gap between theoretical knowledge and real-world application.
+          </p>
 
-      {/* Our Story */}
-      <section className="py-8 bg-gray-50">
-        <div className="section-padding">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 mb-6">
-                <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-600 rounded-full" />
-                <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Our Evolution</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
-                Redefining <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                  Tech Education
-                </span>
-              </h2>
-              <div className="space-y-6 text-gray-600">
-                <p className="leading-relaxed">
-                  Founded in 2025 by industry veterans, Crack Leap Academy emerged from a critical insight:
-                  traditional education fails to equip students with practical, industry-relevant skills.
-                </p>
-                <p className="leading-relaxed">
-                  Starting with a single Python and Devops course in a modest classroom, we've evolved into a
-                  comprehensive training ecosystem. Our growth is fueled by relentless focus on
-                  project-based learning and continuous curriculum innovation.
-                </p>
-                <p className="leading-relaxed">
-                  Today, we stand as a beacon of excellence in tech education, preparing students
-                  not just for jobs, but for impactful careers in technology.
-                </p>
-              </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <button className="px-8 py-4 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white rounded-2xl font-bold flex items-center gap-2 shadow-[4px_8px_20px_rgba(99,102,241,0.3)] hover:shadow-[6px_10px_24px_rgba(99,102,241,0.4)] transition-all duration-300 hover:-translate-y-1">
+              Start Your Learning Journey
+              <ArrowRight className="w-5 h-5" />
+            </button>
+            <button className="px-8 py-4 bg-white text-slate-700 rounded-2xl font-bold flex items-center gap-2 shadow-[6px_6px_16px_#e6e9f5,-6px_-6px_16px_#ffffff] hover:shadow-[inset_4px_4px_10px_#e6e9f5,inset_-4px_-4px_10px_#ffffff] transition-all duration-300">
+              Explore Programs
+              <ArrowRight className="w-5 h-5 text-slate-400" />
+            </button>
+          </div>
+        </motion.div>
 
-            </div>
-
-            <div className="relative flex justify-center items-center perspective-[1200px]">
-
-  {/* Outer energy field */}
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-    className="absolute w-[600px] h-[600px] rounded-full border border-blue-400/20"
-  />
-
-  {/* Inner rotating ring */}
-  <motion.div
-    animate={{ rotate: -360 }}
-    transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-    className="absolute w-[480px] h-[480px] rounded-full border border-blue-500/30"
-  />
-
-  {/* Glow core */}
-  <div className="absolute w-80 h-80 bg-blue-500/20 rounded-full blur-3xl" />
-
-  {/* Main holographic console */}
-  <motion.div
-    initial={{ opacity: 0, scale: 0.85, rotateX: 10 }}
-    animate={{ opacity: 1, scale: 1, rotateX: 0 }}
-    transition={{ duration: 1.2 }}
-    whileHover={{ scale: 1.05, rotateX: 4, rotateY: 4 }}
-    className="relative bg-black/70 backdrop-blur-xl border border-blue-500/40 rounded-3xl shadow-[0_0_60px_rgba(255,122,30,0.25)] overflow-hidden"
-  >
-
-    {/* Animated grid background */}
-    <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,122,30,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,122,30,0.3)_1px,transparent_1px)] bg-[size:40px_40px]" />
-
-    {/* Scanner beam */}
-    <motion.div
-      animate={{ x: ["-100%", "100%"] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-      className="absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent blur-md"
-    />
-
-    {/* Certificate hologram */}
-    <motion.div
-      animate={{ y: [0, -12, 0] }}
-      transition={{ duration: 6, repeat: Infinity }}
-      className="relative p-10"
-    >
-      <img
-        src="/certificate.png"
-        alt="Certificate"
-        className="w-[420px] rounded-2xl shadow-[0_0_40px_rgba(255,122,30,0.35)]"
-      />
-    </motion.div>
-
-  </motion.div>
-
-  {/* Floating particles */}
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-    className="absolute w-[700px] h-[700px] pointer-events-none"
-  >
-    <div className="absolute top-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full blur-sm" />
-    <div className="absolute bottom-10 right-1/4 w-2 h-2 bg-blue-500 rounded-full blur-sm" />
-    <div className="absolute left-10 top-1/3 w-2 h-2 bg-blue-300 rounded-full blur-sm" />
-    <div className="absolute right-10 top-1/4 w-2 h-2 bg-blue-400 rounded-full blur-sm" />
-  </motion.div>
-
-</div>
-
-
+        {/* Hero 3D Asset Placeholder (REPLACED WITH ACTUAL IMAGE) */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:w-1/2 mt-26 lg:mt-0 relative flex justify-end"
+        >
+          {/* Main container preserving aspect ratio and size */}
+          <div className="w-full max-w-[550px] aspect-square relative">
             
+            {/* The Actual Image - Using fill to fit the container */}
+            <Image
+              src="/assets/icons/image9.png" // Your provided asset path
+              alt="Crack Leap Hero 3D Illustration"
+              fill // Makes image fill the parent relative container
+              className="object-cover" // Ensures the entire image is visible within the aspect ratio
+              priority // Tells Next.js to load this image early (as it is in the hero)
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" // Defines responsive image sizes
+            />
+
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-8 bg-white">
-        <div className="section-padding">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-4">
-              <span className="text-sm font-semibold text-blue-600">Our Principles</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
-              Core <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                Values
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              The foundation of everything we build at Crack Leap Academy
-            </p>
+      {/* Evolution Section */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="flex gap-1">
+            <div className="w-1 h-4 bg-[#6366F1] rounded-full"></div>
+            <div className="w-1 h-4 bg-[#8B5CF6] rounded-full opacity-50"></div>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="group relative bg-white border border-gray-100 rounded-2xl p-8 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center mb-6 relative`}>
-                  <div className="text-white">{value.icon}</div>
+          <span className="text-sm font-bold text-[#6366F1] uppercase tracking-wider">Our Evolution</span>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5">
+            <h2 className="text-4xl font-bold text-slate-900 mb-12 leading-tight">
+              Redefining Tech Education for a Better Tomorrow
+            </h2>
+            
+            <div className="space-y-10">
+              {features.map((feature, idx) => (
+                <div key={idx} className="flex gap-6 group">
+                  <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-[6px_6px_16px_#e6e9f5,-6px_-6px_16px_#ffffff] text-[#6366F1] shrink-0 group-hover:shadow-[inset_4px_4px_10px_#e6e9f5,inset_-4px_-4px_10px_#ffffff] transition-all duration-300">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
+                    <p className="text-slate-500 leading-relaxed">{feature.desc}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              ))}
+            </div>
+          </div>
+          
+          <div className="lg:col-span-7 relative">
+            <div className="bg-white rounded-[40px] p-4 shadow-[12px_12px_36px_#e6e9f5,-12px_-12px_36px_#ffffff] border border-white relative overflow-hidden">
+              <div className="relative w-full h-[450px] bg-[#F8F9FE] rounded-[32px] overflow-hidden shadow-inner flex items-center justify-center">
+                {/* 3D Arrow Illustration */}
+                <Image 
+                  src="/assets/icons/image19.png" 
+                  alt="Upward Growth Arrow" 
+                  fill
+                  className="object-cover object-center scale-110"
+                />
               </div>
-            ))}
+
+              {/* Floating Stat Card */}
+              <div className="absolute bottom-12 left-10 bg-white/90 backdrop-blur-md rounded-3xl p-6 shadow-[8px_8px_24px_rgba(0,0,0,0.05)] border border-white/50 z-10 w-64">
+                <p className="text-sm font-semibold text-slate-600 mb-4">Empowering Learners Worldwide</p>
+                <p className="text-4xl font-extrabold text-[#6366F1] mb-2">10K+</p>
+                <p className="text-sm text-slate-500 mb-4">Learners Trusted Us</p>
+                <div className="flex items-center">
+                  {/* Mock Avatars */}
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className={`w-8 h-8 rounded-full border-2 border-white bg-slate-200 ${i !== 1 ? '-ml-3' : ''} shadow-sm overflow-hidden`}>
+                       <div className="w-full h-full bg-gradient-to-br from-indigo-200 to-purple-200" />
+                    </div>
+                  ))}
+                  <div className="w-8 h-8 rounded-full border-2 border-white bg-[#F8F9FE] flex items-center justify-center -ml-3 shadow-[inset_2px_2px_4px_#e6e9f5] z-10">
+                    <span className="text-xs font-bold text-[#6366F1]">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Principles Section */}
+      <section className="max-w-7xl mx-auto px-6 py-20 flex flex-col items-center">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="flex gap-1">
+            <div className="w-1 h-4 bg-[#6366F1] rounded-full"></div>
+            <div className="w-1 h-4 bg-[#8B5CF6] rounded-full opacity-50"></div>
+          </div>
+          <span className="text-sm font-bold text-[#6366F1] uppercase tracking-wider">Our Principles</span>
+        </div>
+        
+        <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
+          The Core of Everything We Do
+        </h2>
 
-      {/* <Testimonials/> */}
-
-
-
-
-      {/* CTA */}
-      <section className="relative py-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-100 to-transparent rounded-full blur-3xl opacity-50" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-100 to-transparent rounded-full blur-3xl opacity-50" />
-
-        <div className="section-padding relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
-              <Rocket className="w-4 h-4 text-blue-500" />
-              <span className="text-sm font-semibold text-blue-600">Ready to Transform?</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+          {values.map((val, idx) => (
+            <div 
+              key={idx} 
+              className="bg-white rounded-[32px] p-8 shadow-[8px_8px_24px_#e6e9f5,-8px_-8px_24px_#ffffff] border border-white hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-[#F8F9FE] flex items-center justify-center shadow-[inset_4px_4px_10px_#e6e9f5,inset_-4px_-4px_10px_#ffffff] text-[#6366F1] mb-8">
+                {val.icon}
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{val.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{val.description}</p>
             </div>
+          ))}
+        </div>
+      </section>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
-              Begin Your <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                Tech Journey
-              </span> Today
+      {/* CTA Section */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <div className="relative bg-white rounded-[40px] shadow-[12px_12px_36px_#e6e9f5,-12px_-12px_36px_#ffffff] border border-white overflow-hidden flex flex-col md:flex-row items-center min-h-[350px]">
+          
+          {/* Background Portal Image */}
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src="/assets/icons/image8.png" 
+              alt="Portal" 
+              fill
+              className="object-cover md:object-right object-center opacity-80"
+            />
+          </div>
+
+          <div className="relative z-10 p-12 md:w-3/5">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4 leading-tight">
+              Ready to Transform <br/> Your Career?
             </h2>
-
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Join thousands who've accelerated their careers with Crack Leap Academy's industry-leading programs.
+            <p className="text-slate-600 mb-10 max-w-md">
+              Join thousands of learners who have accelerated their careers with ArivuOn Academy's industry-leading programs.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-10 py-5 rounded-2xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
-              >
+            
+            <div className="flex flex-wrap gap-4">
+              <button className="px-8 py-3.5 bg-[#6366F1] text-white rounded-xl font-bold flex items-center gap-2 shadow-[4px_6px_16px_rgba(99,102,241,0.3)] hover:bg-[#4f46e5] transition-colors">
                 Enroll Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-white border border-gray-200 text-gray-700 font-semibold px-10 py-5 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
-              >
-                Schedule Consultation
-                <ChevronRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="px-8 py-3.5 bg-white text-slate-700 rounded-xl font-bold flex items-center gap-2 shadow-[4px_4px_12px_#e6e9f5,-4px_-4px_12px_#ffffff] hover:shadow-[inset_2px_2px_6px_#e6e9f5,inset_-2px_-2px_6px_#ffffff] transition-all">
+                Schedule a Consultation
+              </button>
             </div>
-
-            <p className="mt-6 text-sm text-gray-500">
-              Next batch starts in 2 weeks • Limited seats available
-            </p>
           </div>
         </div>
       </section>
+
+      {/* Bottom Benefits Bar */}
+      <section className="max-w-7xl mx-auto px-6 mt-8">
+        <div className="bg-white rounded-[32px] p-6 shadow-[8px_8px_24px_#e6e9f5,-8px_-8px_24px_#ffffff] border border-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <BenefitItem icon={<Cpu />} title="Practical Learning" desc="Real-world projects & case studies" />
+            <BenefitItem icon={<Award />} title="Certified Programs" desc="Industry-recognized certifications" />
+            <BenefitItem icon={<Users />} title="Expert Mentorship" desc="Learn from industry professionals" />
+            <BenefitItem icon={<CheckCircle />} title="Dedicated Support" desc="Guidance at every step" />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// Sub-component for the bottom benefits row
+function BenefitItem({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) {
+  return (
+    <div className="flex items-center gap-4 p-3 rounded-2xl bg-[#F8F9FE] shadow-[inset_2px_2px_6px_#e6e9f5,inset_-2px_-2px_6px_#ffffff] border border-transparent hover:border-white transition-colors">
+      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-[4px_4px_10px_#e6e9f5,-4px_-4px_10px_#ffffff] text-[#6366F1] shrink-0">
+        {icon}
+      </div>
+      <div>
+        <h4 className="font-bold text-slate-900 text-sm">{title}</h4>
+        <p className="text-xs text-slate-500 font-medium mt-0.5">{desc}</p>
+      </div>
     </div>
   );
 }

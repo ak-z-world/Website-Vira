@@ -26,7 +26,7 @@ import Link from "next/link";
 export default function PythonAiAwsComboPage() {
     const { t, price, originalPrice } = useGlobal();
     const courseDetails = {
-        title: "Python + AI + AWS DevOps Engineering (Combo Pack)",
+        title: "Python AI AWS DevOps Engineering (Combo Pack)",
         subtitle:
             "Build intelligent Django applications and deploy them to AWS with CI/CD and Infrastructure as Code.",
         description: t("courses.pythonDevopsCombo.courseDetails.description"),
@@ -191,7 +191,7 @@ export default function PythonAiAwsComboPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Course",
-                        "name": "Python + AI + AWS DevOps Combo Course",
+                        "name": "Python AI AWS DevOps Combo Course",
                         "description": "Comprehensive combo program covering Python programming, Artificial Intelligence fundamentals, and DevOps tools like AWS, Jenkins, Terraform and CI/CD with real-world projects.",
                         "provider": {
                             "@type": "EducationalOrganization",
@@ -265,7 +265,7 @@ export default function PythonAiAwsComboPage() {
                                     <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
                                         <TrendingUp className="w-4 h-4 text-blue-500" />
                                         <span className="text-sm font-semibold text-blue-600">
-                                            High-Demand Python + AI + DevOps Career
+                                            High-Demand Python AI DevOps Career
                                         </span>
                                     </div>
 
@@ -277,11 +277,11 @@ export default function PythonAiAwsComboPage() {
                                         </span>
 
                                         <span className="block bg-gradient-to-r from-[#EFBF04] to-[#856A00] bg-clip-text text-transparent">
-                                            + AI (Basics)
+                                            AI (Basics)
                                         </span>
 
                                         <span className="block bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                            + AWS DevOps
+                                            AWS DevOps
                                         </span>
 
                                     </h1>
@@ -418,7 +418,7 @@ export default function PythonAiAwsComboPage() {
                                 <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900">
                                     Master the{" "}
                                     <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                        Modern AI + DevOps Stack
+                                        Modern AI DevOps Stack
                                     </span>
                                 </h2>
                             </div>
@@ -481,7 +481,7 @@ export default function PythonAiAwsComboPage() {
                                 </h2>
 
                                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                                    Comprehensive curriculum designed to make you Python + AI + DevOps ready
+                                    Comprehensive curriculum designed to make you Python AI DevOps ready
                                 </p>
                             </div>
 
@@ -546,7 +546,7 @@ export default function PythonAiAwsComboPage() {
                                     <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                                         Become a{" "}
                                         <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                            Python + AI + DevOps Engineer
+                                            Python AI DevOps Engineer
                                         </span>
                                     </h2>
 
@@ -621,7 +621,7 @@ export default function PythonAiAwsComboPage() {
                             <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-gray-900">
                                 Launch Your{" "}
                                 <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                                    Python + AI + DevOps
+                                    Python AI Basics DevOps
                                 </span>{" "}
                                 Career
                             </h2>
