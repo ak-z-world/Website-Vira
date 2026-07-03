@@ -12,7 +12,11 @@ import {
   Library,
   Map,
   MessageSquare,
-  Briefcase
+  Briefcase,
+  Home,
+  Grid,
+  Info,
+  ChevronRight
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -71,12 +75,13 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
+  // Combined standard V1 icons mapped to visual design matches
   const navItems: NavItem[] = [
-    { label: 'Home', href: '/', icon: null },
+    { label: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
     {
       label: 'Courses',
       href: '/courses',
-      icon: <BookOpen className="w-4 h-4" />,
+      icon: <Grid className="w-4 h-4" />,
       dropdown: [
         {
           label: 'Python & Django',
@@ -142,7 +147,7 @@ const Header = () => {
       ]
     },
     { label: 'About', href: '/about', icon: <Users className="w-4 h-4" /> },
-    { label: 'Contact', href: '/contact', icon: <Calendar className="w-4 h-4" /> },
+    { label: 'Contact', href: '/contact', icon: <MessageSquare className="w-4 h-4" /> },
   ];
 
   const isActive = (path: string) => {
@@ -163,46 +168,42 @@ const Header = () => {
 
   return (
     <>
+      {/* Desktop Header */}
       <header
         className={`
-          fixed top-0 z-50 w-full pt-4 px-4 sm:px-6 lg:px-8
-          transition-all duration-300 ease-in-out
-          ${isScrolled ? 'pt-2' : 'pt-6'}
+          fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out px-4 sm:px-6 lg:px-8
+          ${isScrolled ? 'pt-3' : 'pt-6'}
         `}
       >
         <div
           className={`
-            max-w-7xl mx-auto
-            bg-white/80 backdrop-blur-xl
-            border border-[#E2E8F0]
-            transition-all duration-300 ease-in-out
-            rounded-2xl
-            ${isScrolled ? 'shadow-[0_8px_30px_rgb(0,0,0,0.04)] py-2' : 'shadow-sm py-3'}
+            max-w-7xl mx-auto bg-[#F4F5FA] border border-white/60
+            rounded-[28px] transition-all duration-500 ease-in-out
+            shadow-[12px_12px_24px_#dcdde3,-12px_-12px_24px_#ffffff]
+            ${isScrolled ? 'py-2 px-4' : 'py-3.5 px-6'}
           `}
         >
-          <nav className="relative flex items-center justify-between px-6">
-
-            {/* ── 1. LOGO ── */}
+          <nav className="flex items-center justify-between">
+            
+            {/* ── 1. LOGO CARD ── */}
             <Link
               href="/"
-              className="flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] rounded-lg"
+              className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#F4F5FA] shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff,inset_1px_1px_2px_#ffffff] border border-white/40 focus:outline-none shrink-0"
               aria-label="Crack Leap Academy Home"
             >
               <Image
                 src="/cl_logo.png"
                 alt="Crack Leap Academy Logo"
-                width={240}
-                height={64}
+                width={40}
+                height={40}
                 priority
-                className="h-12 sm:h-14 w-auto object-contain"
+                className="w-8 h-8 object-contain"
               />
             </Link>
 
-            
-
             {/* ── 2. DESKTOP NAV LINKS ── */}
-            <div className="hidden lg:flex flex-1 justify-center px-8">
-              <ul className="flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-2">
+              <ul className="flex items-center gap-3 bg-[#EEF0F6] px-4 py-2 rounded-2xl shadow-[inset_3px_3px_6px_#d1d3dc,inset_-3px_-3px_6px_#ffffff]">
                 {navItems.map((item) => {
                   const isItemActive = isActive(item.href);
                   const displayLabel = item.label === 'Courses' ? 'Programs' : item.label;
@@ -212,63 +213,60 @@ const Header = () => {
                       {item.dropdown ? (
                         <>
                           <button
-                            onClick={item.label === 'Courses' ? toggleCoursesDropdown : undefined}
+                            onClick={item.label === 'Courses' ? toggleCoursesDropdown : toggleResourcesDropdown}
                             className={`
-                              flex items-center gap-1.5 px-4 py-2.5
-                              font-medium text-sm rounded-full transition-all duration-300 ease-out
-                              focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]
+                              flex items-center gap-2 px-5 py-2.5 font-bold text-sm rounded-xl transition-all duration-300
                               ${isItemActive
-                                ? 'bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] text-[#FFFFFF] shadow-sm'
-                                : 'text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFF]'
+                                ? 'bg-[#F4F5FA] text-[#8B5CF6] shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff]'
+                                : 'text-slate-600 hover:text-[#8B5CF6]'
                               }
                             `}
-                            aria-expanded={item.label === 'Courses' ? isCoursesOpen : undefined}
-                            aria-haspopup="menu"
                           >
+                            <span className="opacity-80">{item.icon}</span>
                             {displayLabel}
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 group-hover:rotate-180 ${isItemActive ? 'text-[#FFFFFF]/80' : 'text-[#64748B]'}`} />
+                            <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 opacity-70" />
                           </button>
 
-                          {/* Desktop Mega Menu Dropdown */}
-                          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                            <div className="bg-[#FFFFFF] border border-[#E2E8F0] rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] overflow-hidden w-[600px]">
-                              <div className="p-6 grid grid-cols-2 gap-x-6 gap-y-4 relative bg-[#FFFFFF]">
+                          {/* Mega Dropdown Menu Panel */}
+                          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+                            <div className="bg-[#F4F5FA] border border-white/80 rounded-[28px] shadow-[14px_14px_36px_#c8c9ce,-14px_-14px_36px_#ffffff] overflow-hidden w-[560px] p-4">
+                              <div className="grid grid-cols-2 gap-3 p-2">
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link
                                     key={dropdownItem.label}
                                     href={dropdownItem.href}
-                                    className="flex items-start gap-4 p-3 rounded-xl hover:bg-[#F8FAFF] transition-colors duration-200 group/link focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]"
+                                    className="flex items-start gap-3 p-3.5 rounded-2xl transition-all duration-200 text-left hover:bg-[#EEF0F6] hover:shadow-[inset_2px_2px_5px_#d1d3dc,inset_-2px_-2px_5px_#ffffff] group/link"
                                   >
                                     {dropdownItem.icon && (
-                                      <div className="mt-0.5 flex shrink-0 items-center justify-center w-10 h-10 rounded-lg bg-[#EFF6FF] text-[#2563EB] group-hover/link:bg-[#2563EB] group-hover/link:text-[#FFFFFF] transition-colors duration-200">
+                                      <div className="mt-0.5 flex shrink-0 items-center justify-center w-9 h-9 rounded-xl bg-[#F4F5FA] text-[#8B5CF6] shadow-[2px_2px_6px_#dcdde3,-2px_-2px_6px_#ffffff] group-hover/link:shadow-inner">
                                         {dropdownItem.icon}
                                       </div>
                                     )}
                                     <div className="flex flex-col">
                                       <div className="flex items-center gap-2">
-                                        <span className="text-sm font-semibold text-[#334155] group-hover/link:text-[#1E3A8A] transition-colors">
+                                        <span className="text-sm font-bold text-slate-800 group-hover/link:text-[#8B5CF6]">
                                           {dropdownItem.label}
                                         </span>
                                         {dropdownItem.badge && (
-                                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EFF6FF] text-[#2563EB] border border-[#2563EB]/10 tracking-wide uppercase">
+                                          <span className="text-[9px] font-extrabold px-2 py-0.5 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] border border-[#8B5CF6]/20 uppercase">
                                             {dropdownItem.badge}
                                           </span>
                                         )}
                                       </div>
-                                      <span className="text-xs text-[#64748B] mt-1 line-clamp-2">
+                                      <span className="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
                                         {dropdownItem.description}
                                       </span>
                                     </div>
                                   </Link>
                                 ))}
                               </div>
-                              <div className="bg-[#F8FAFF] px-6 py-4 border-t border-[#E2E8F0] flex justify-between items-center">
-                                <span className="text-sm text-[#64748B] font-medium">Explore all {displayLabel.toLowerCase()}</span>
+                              <div className="bg-[#EEF0F6] px-5 py-3.5 mt-2 rounded-2xl shadow-[inset_2px_2px_4px_#d1d3dc,inset_-2px_-2px_4px_#ffffff] flex justify-between items-center">
+                                <span className="text-xs text-slate-500 font-bold">Explore all options</span>
                                 <Link
                                   href={item.href}
-                                  className="text-sm font-semibold text-[#2563EB] hover:text-[#1E3A8A] flex items-center gap-1 transition-colors"
+                                  className="text-xs font-extrabold text-[#8B5CF6] flex items-center gap-1 hover:underline"
                                 >
-                                  View catalog <ArrowRight className="w-4 h-4" />
+                                  View catalog <ArrowRight className="w-3.5 h-3.5" />
                                 </Link>
                               </div>
                             </div>
@@ -278,14 +276,13 @@ const Header = () => {
                         <Link
                           href={item.href}
                           className={`
-                            flex items-center gap-1.5 px-4 py-2.5
-                            text-sm font-medium rounded-full transition-all duration-300 ease-out
-                            focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]
+                            flex items-center gap-2 px-5 py-2.5 text-sm font-bold rounded-xl transition-all duration-300
                             ${isItemActive
-                              ? 'bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] text-[#FFFFFF] shadow-sm'
-                              : 'text-[#64748B] hover:text-[#1E3A8A] hover:bg-[#F8FAFF]'}
+                              ? 'bg-[#F4F5FA] text-[#8B5CF6] shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff]'
+                              : 'text-slate-600 hover:text-[#8B5CF6]'}
                           `}
                         >
+                          <span className="opacity-80">{item.icon}</span>
                           {item.label}
                         </Link>
                       )}
@@ -295,21 +292,21 @@ const Header = () => {
               </ul>
             </div>
 
-            {/* ── 3. CTA & MOBILE TOGGLE ── */}
-            <div className="flex items-center shrink-0 gap-4">
+            {/* ── 3. CTA BUTTON & MOBILE TOGGLE ── */}
+            <div className="flex items-center gap-4">
               <Link
                 href="/contact"
-                className="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] hover:from-[#2563EB] hover:to-[#1E3A8A] text-[#FFFFFF] text-sm font-semibold rounded-full shadow-[0_4px_14px_0_rgba(37,99,235,0.2)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.3)] transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#2563EB]"
+                className="hidden lg:inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white text-sm font-extrabold rounded-2xl shadow-[4px_6px_16px_rgba(139,92,246,0.25)] hover:shadow-[inset_2px_2px_5px_rgba(0,0,0,0.15)] transition-all duration-300 border-t border-white/20 active:scale-98"
               >
                 Book Free Career Session
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
+              {/* Neomorphic Hamburger Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 rounded-full border border-[#E2E8F0] text-[#334155] hover:bg-[#F8FAFF] hover:text-[#1E3A8A] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]"
+                className="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-[#F4F5FA] shadow-[3px_3px_8px_#dcdde3,-3px_-3px_8px_#ffffff] text-slate-700 active:shadow-[inset_2px_2px_5px_#dcdde3,inset_-2px_-2px_5px_#ffffff] border border-white/40 transition-all"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                aria-expanded={isMenuOpen}
               >
                 {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -319,83 +316,93 @@ const Header = () => {
         </div>
       </header>
 
-      {/* ── MOBILE FULLSCREEN DRAWER ── */}
+      {/* ── MOBILE FULLSCREEN NEOMORPHIC DRAWER ── */}
       <div
         className={`
-          fixed inset-0 z-40 bg-[#FFFFFF] transition-transform duration-500 ease-in-out lg:hidden
-          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+          fixed inset-0 z-40 bg-[#F4F5FA] transition-all duration-500 ease-in-out lg:hidden pt-24 px-6 pb-6 overflow-y-auto flex flex-col
+          ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}
         `}
-        aria-hidden={!isMenuOpen}
       >
-        <div className="h-full w-full flex flex-col pt-24 px-6 pb-6 overflow-y-auto">
-          <nav className="flex-1 space-y-2">
+        <div className="w-full max-w-md mx-auto flex flex-col flex-grow">
+          
+          {/* Top Notch Styling matching image_ccbc8f.jpg container format */}
+          <div className="w-16 h-1.5 bg-slate-300 rounded-full mx-auto mb-8 shadow-inner"></div>
+
+          <nav className="flex-1 space-y-4">
             {navItems.map((item) => {
               const isItemActive = isActive(item.href);
               const displayLabel = item.label === 'Courses' ? 'Programs' : item.label;
+              const isExpanded = item.label === 'Courses' ? isCoursesOpen : isResourcesMenuExpanded;
 
               return (
-                <div key={item.label} className="border-b border-[#E2E8F0]/50 last:border-0 pb-2 mb-2">
+                <div key={item.label} className="w-full">
                   {item.dropdown ? (
-                    <div>
+                    <div className="w-full">
+                      {/* Dropdown Expand Toggle Header */}
                       <button
                         onClick={item.label === 'Courses' ? toggleCoursesDropdown : toggleResourcesDropdown}
                         className={`
-                          flex items-center justify-between w-full py-4 text-left font-semibold text-lg transition-colors
-                          ${isItemActive ? 'text-[#2563EB]' : 'text-[#334155] hover:text-[#1E3A8A]'}
+                          flex items-center justify-between w-full p-4 font-bold text-base rounded-2xl transition-all border border-white/40
+                          ${isItemActive || isExpanded
+                            ? 'bg-[#F4F5FA] text-[#8B5CF6] shadow-[inset_3px_3px_6px_#d1d3dc,inset_-3px_-3px_6px_#ffffff]'
+                            : 'bg-[#F4F5FA] text-slate-700 shadow-[4px_4px_12px_#dcdde3,-4px_-4px_12px_#ffffff]'
+                          }
                         `}
                       >
                         <span className="flex items-center gap-3">
-                          {item.icon && <span className="text-[#64748B]">{item.icon}</span>}
+                          <span className="text-slate-400">{item.icon}</span>
                           {displayLabel}
                         </span>
-                        <ChevronDown
-                          className={`w-5 h-5 text-[#64748B] transition-transform duration-300
-                            ${(item.label === 'Courses' && isCoursesOpen) || (item.label === 'Resources' && isResourcesMenuExpanded) ? 'rotate-180' : ''}
+                        <ChevronRight
+                          className={`w-4 h-4 text-slate-400 transition-transform duration-300
+                            ${isExpanded ? 'rotate-90 text-[#8B5CF6]' : ''}
                           `}
                         />
                       </button>
 
+                      {/* Dropdown Items Body */}
                       <div
                         className={`
                           grid transition-all duration-300 ease-in-out overflow-hidden
-                          ${(item.label === 'Courses' && isCoursesOpen) || (item.label === 'Resources' && isResourcesMenuExpanded)
-                            ? 'grid-rows-[1fr] opacity-100 pb-4'
-                            : 'grid-rows-[0fr] opacity-0'
-                          }
+                          ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}
                         `}
                       >
-                        <div className="min-h-0 flex flex-col gap-1 pl-4 border-l-2 border-[#EFF6FF] ml-2">
+                        <div className="min-h-0 flex flex-col gap-2 p-2 bg-[#EEF0F6] rounded-2xl shadow-[inset_2px_2px_5px_#d1d3dc,inset_-2px_-2px_5px_#ffffff]">
                           {item.dropdown.map((sub) => (
                             <Link
                               key={sub.label}
                               href={sub.href}
                               onClick={() => setIsMenuOpen(false)}
-                              className="flex flex-col py-3 px-4 rounded-xl hover:bg-[#F8FAFF] active:bg-[#EFF6FF] transition-colors"
+                              className="flex flex-col p-3 rounded-xl hover:bg-[#F4F5FA] active:shadow-inner transition-all"
                             >
                               <div className="flex items-center gap-2">
-                                <span className="text-sm font-medium text-[#334155]">{sub.label}</span>
+                                <span className="text-sm font-bold text-slate-800">{sub.label}</span>
                                 {sub.badge && (
-                                  <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#EFF6FF] text-[#2563EB] border border-[#2563EB]/10 uppercase tracking-wider">
+                                  <span className="text-[8px] font-extrabold px-1.5 py-0.5 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] uppercase tracking-wider">
                                     {sub.badge}
                                   </span>
                                 )}
                               </div>
-                              <span className="text-xs text-[#64748B] mt-0.5">{sub.description}</span>
+                              <span className="text-xs text-slate-500 mt-0.5 font-medium">{sub.description}</span>
                             </Link>
                           ))}
                         </div>
                       </div>
                     </div>
                   ) : (
+                    /* Simple Link Row */
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className={`
-                        flex items-center gap-3 w-full py-4 font-semibold text-lg transition-colors
-                        ${isItemActive ? 'text-[#2563EB]' : 'text-[#334155] hover:text-[#1E3A8A]'}
+                        flex items-center gap-3 w-full p-4 font-bold text-base rounded-2xl transition-all border border-white/40
+                        ${isItemActive 
+                          ? 'bg-[#F4F5FA] text-[#8B5CF6] shadow-[inset_3px_3px_6px_#d1d3dc,inset_-3px_-3px_6px_#ffffff]' 
+                          : 'bg-[#F4F5FA] text-slate-700 shadow-[4px_4px_12px_#dcdde3,-4px_-4px_12px_#ffffff]'
+                        }
                       `}
                     >
-                      {item.icon && <span className="text-[#64748B]">{item.icon}</span>}
+                      <span className="text-slate-400">{item.icon}</span>
                       {displayLabel}
                     </Link>
                   )}
@@ -404,16 +411,23 @@ const Header = () => {
             })}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-[#E2E8F0]">
+          {/* Bottom Actions Frame */}
+          <div className="mt-8 space-y-6 pt-6 border-t border-slate-200">
             <Link
               href="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="flex justify-center items-center gap-2 w-full py-4 bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] text-[#FFFFFF] rounded-full font-semibold text-base shadow-[0_4px_14px_0_rgba(37,99,235,0.2)] active:scale-95 transition-all"
+              className="flex justify-center items-center gap-2 w-full py-4 bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white rounded-2xl font-extrabold text-base shadow-[4px_6px_16px_rgba(139,92,246,0.25)] active:scale-98 transition-all border-t border-white/20"
             >
               Book Free Career Session
               <ArrowRight className="w-5 h-5" />
             </Link>
+
+            {/* Micro Neomorphic Copy Footer inside drawer */}
+            <p className="text-[10px] font-bold text-slate-400 tracking-wide text-center uppercase">
+              © 2026 ArivuOn Academy. All rights reserved.
+            </p>
           </div>
+          
         </div>
       </div>
     </>
