@@ -346,19 +346,39 @@ export default function DataScienceCoursePage() {
             </div>
           </section>
 
-          {/* 1.5 TECH BANNER (NEWLY ADDED) */}
-          <div className="mb-16">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-4 px-8 border-y border-violet-100">
-              <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+          {/* 1.5 TECH BANNER */}
+          <div className="w-full mb-8 px-4">
+            <div className="max-w-6xl mx-auto bg-[#F8F9FE] shadow-[6px_6px_12px_#d9dbe6,-6px_-6px_12px_#ffffff] rounded-2xl py-4 px-6 md:px-8 border border-white flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+              {/* Left Label */}
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider text-center md:text-left shrink-0">
                 Built with industry-leading technologies
               </span>
-              <div className="flex flex-wrap justify-center gap-6 md:gap-10">
-                {tools.slice(0, 5).map((tool, idx) => (
+
+              {/* Tech Items Container - Forced to single line via md:flex-nowrap and overflow-x-auto handles extreme edge cases */}
+              <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-3 md:gap-4 overflow-x-auto no-scrollbar w-full md:w-auto py-1">
+                {[
+                  { name: "Python 3.11+", src: "/assets/icons/python.png" },
+                  { name: "Django 4.2+", src: "/assets/icons/django.png" },
+                  { name: "PostgreSQL", src: "/assets/icons/image1.png" },
+                  { name: "Git & GitHub", src: "/assets/icons/git.png" },
+                  { name: "TensorFlow", src: "/assets/icons/tensor.png" },
+                ].map((tech, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2 font-semibold text-slate-600">
-                    <div className="text-violet-500">{tool.icon}</div>
-                    {tool.name}
+                    className="bg-[#F8F9FE] shadow-[4px_4px_8px_#d9dbe6,-4px_-4px_8px_#ffffff] border border-white/80 rounded-full px-4 py-1.5 flex items-center gap-2 font-semibold text-slate-600 shrink-0 text-xs md:text-sm hover:-translate-y-0.5 transition-transform duration-200 cursor-default">
+                    <div className="relative w-5 h-5 flex items-center justify-center">
+                      <Image
+                        src={tech.src}
+                        alt={tech.name}
+                        width={25}
+                        height={25}
+                        className="object-contain"
+                        priority
+                      />
+                    </div>
+                    <span className="text-slate-600 font-medium tracking-tight whitespace-nowrap">
+                      {tech.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -366,38 +386,28 @@ export default function DataScienceCoursePage() {
           </div>
 
           {/* 2. STATS BAR */}
-          <section
-            className={`${neoCard} flex flex-wrap md:flex-nowrap justify-between items-center py-6 px-10 mb-20 divide-y md:divide-y-0 md:divide-x divide-violet-100/50`}>
-            <div className="flex-1 text-center py-4 md:py-2">
-              <div className="text-3xl font-extrabold text-violet-600 mb-1">
-                10+
-              </div>
-              <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-                Real Projects
-              </div>
-            </div>
-            <div className="flex-1 text-center py-4 md:py-2">
-              <div className="text-3xl font-extrabold text-violet-600 mb-1">
-                100+
-              </div>
-              <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-                Hours of Learning
-              </div>
-            </div>
-            <div className="flex-1 text-center py-4 md:py-2">
-              <div className="text-3xl font-extrabold text-violet-600 mb-1">
-                1:1
-              </div>
-              <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-                Mentorship
-              </div>
-            </div>
-            <div className="flex-1 text-center py-4 md:py-2">
-              <div className="text-3xl font-extrabold text-violet-600 mb-1">
-                94%
-              </div>
-              <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
-                Placement Assistance
+          <section className="w-full mb-16 px-4">
+            <div className="max-w-6xl mx-auto bg-[#b68ee8]/40 shadow-[12px_12px_24px_#d9dbe6,-12px_-12px_24px_#ffffff] rounded-3xl border border-white/60 p-1">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 py-6 divide-x divide-violet-200/40">
+                {[
+                  { val: "10+", label: "Real Projects" },
+                  { val: "100+", label: "Hours of Learning" },
+                  { val: "1:1", label: "Mentorship" },
+                  { val: "94%", label: "Placement Assistance" },
+                ].map((stat, idx) => (
+                  <div
+                    key={idx}
+                    className="text-center px-4 flex flex-col justify-center items-center group">
+                    {/* Exact clean typography scaling for values */}
+                    <div className="text-3xl lg:text-4xl font-extrabold text-violet-600 mb-1 tracking-tight group-hover:scale-105 transition-transform duration-300">
+                      {stat.val}
+                    </div>
+                    {/* Subtle text styling matching image 2 */}
+                    <div className="text-[10px] lg:text-xs font-medium text-slate-400 tracking-normal whitespace-nowrap">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
