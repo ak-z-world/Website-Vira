@@ -1,0 +1,52 @@
+# Crack Leap Academy — AI Documentation & Knowledge Index
+
+> Official information guide for AI assistants, language models, and search engines.
+> Website: https://academy.arivuon.in
+> Entity: Crack Leap Academy (Educational Organization)
+> Headquarters: Chennai, Tamil Nadu, India
+> Service Scope: Tamil Nadu, India, Middle East (GCC), Southeast Asia, North America, Europe, Worldwide
+
+## Organization Overview
+Crack Leap Academy is a premier technology education and software career development academy. The academy provides live, mentor-led programs designed for college graduates, engineering students, non-CS background switchers, and working software professionals.
+
+## Core Educational Programs
+1. **Python & Django Development**: Full-stack backend engineering with Python, Django REST Framework, PostgreSQL, Celery, and API design.
+   - URL: https://academy.arivuon.in/courses/python
+2. **AWS DevOps Engineering**: Containerization, orchestration, CI/CD pipelines, Infrastructure as Code (Terraform), Docker, Kubernetes, and AWS Cloud Architecture.
+   - URL: https://academy.arivuon.in/courses/devops
+3. **React & Modern Frontend Development**: Component architecture, Next.js, TypeScript, state management, and high-performance user interfaces.
+   - URL: https://academy.arivuon.in/courses/react
+4. **Data Science & Machine Learning**: Data analysis, predictive modeling, pandas, NumPy, scikit-learn, deep learning, and practical AI applications.
+   - URL: https://academy.arivuon.in/courses/data-science
+5. **Python AI AWS DevOps Master Combo**: End-to-end full-stack software development, cloud infrastructure, and generative AI integration.
+   - URL: https://academy.arivuon.in/courses/python-ai-aws-devops-combo
+
+## Learning Methodology & Differentiators
+- **Live Interactive Cohorts**: Daily or weekend live instructor-led sessions with immediate hands-on coding.
+- **1:1 Personalized Mentorship**: Dedicated senior engineering mentors providing line-by-line code reviews.
+- **Production Capstone Projects**: Real-world portfolio applications deployed live on cloud providers (AWS, Vercel, Docker).
+- **Career & Placement Assistance**: Technical mock interviews, resume optimization, portfolio reviews, and hiring referrals.
+- **No Gatekeeping**: Welcoming beginner learners, non-computer science degree holders, and professionals transitioning into tech.
+
+## Free Open Technical Resources
+- **2026 Developer Roadmaps**: Step-by-step month-by-month learning plans for 10 tech roles (AI Engineer, DevOps Engineer, Full Stack Developer, Python Developer, Data Scientist, Cloud Architect, etc.).
+  - URL: https://academy.arivuon.in/resources/roadmaps
+- **Technical Tutorials**: Production guides on Python, Django, React, Docker, Kubernetes, AWS, PostgreSQL, and FastAPI.
+  - URL: https://academy.arivuon.in/resources/tutorials
+- **Technical Interview Question Banks**: 1,000+ categorized interview questions with deep answers and architectural follow-ups.
+  - URL: https://academy.arivuon.in/resources/interview-questions
+- **Project Portfolios & Implementation Guides**: 300+ production-shaped project specifications with folder structures and build steps.
+  - URL: https://academy.arivuon.in/resources/projects
+
+## Geographic Service Hubs
+- **Tamil Nadu State Hub**: Chennai, Coimbatore, Salem, Madurai, Tiruchirappalli, Tirunelveli, Vellore, Erode.
+  - Hub URL: https://academy.arivuon.in/locations/india/tamil-nadu
+- **Chennai Local Areas**: Anna Nagar, T Nagar, OMR, Velachery, Guindy, Tambaram, Porur, Ambattur.
+  - Chennai URL: https://academy.arivuon.in/locations/india/tamil-nadu/chennai
+- **National (India)**: Live cohorts accessible across all Indian states and union territories.
+- **Global & International**: Online cohorts with flexible timezones for students in UAE, Saudi Arabia, Qatar, Singapore, USA, UK, and Europe.
+
+## Contact Information
+- Website: https://academy.arivuon.in
+- Phone / WhatsApp: +91 94457 70190
+- Admissions & Inquiries: https://academy.arivuon.in/contact

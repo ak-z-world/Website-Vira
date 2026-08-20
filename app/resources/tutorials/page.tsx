@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "../_components/Breadcrumb";
 import { TUTORIALS_DATA } from "./_data/tutorials";
+import { SITE_URL } from "@/lib/seo";
 
-const SITE_URL = "https://www.academy.arivuon.com";
 const PAGE_PATH = "/resources/tutorials";
 
 export function generateMetadata(): Metadata {
@@ -44,13 +44,13 @@ export function generateMetadata(): Metadata {
 function difficultyBadgeClasses(difficulty: string) {
   switch (difficulty) {
     case "Beginner":
-      return "bg-green-50 text-green-700 border border-green-200";
+      return "bg-emerald-50 text-emerald-700 border border-emerald-200";
     case "Intermediate":
       return "bg-amber-50 text-amber-700 border border-amber-200";
     case "Advanced":
-      return "bg-red-50 text-red-700 border border-red-200";
+      return "bg-rose-50 text-rose-700 border border-rose-200";
     default:
-      return "bg-blue-50 text-blue-700 border border-blue-200";
+      return "bg-violet-50 text-violet-700 border border-violet-200";
   }
 }
 
@@ -103,14 +103,15 @@ export default function TutorialsIndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#F8F9FE] text-slate-800">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 border-b border-gray-100">
-          <div className="max-w-6xl mx-auto px-6 py-14">
+        <section className="relative pt-12 sm:pt-14 pb-12 overflow-hidden border-b border-slate-200/60">
+          <div className="absolute top-10 left-1/4 w-72 h-72 bg-[#8B5CF6]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <Breadcrumb items={breadcrumbItems} />
 
             <div className="mt-6 max-w-3xl">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold uppercase tracking-wide">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F5FA] border border-white/80 shadow-[2px_2px_5px_#dcdde3,-2px_-2px_5px_#ffffff] text-[#8B5CF6] text-xs font-bold uppercase tracking-wider">
                 <svg
                   className="w-3.5 h-3.5"
                   viewBox="0 0 24 24"
@@ -123,10 +124,10 @@ export default function TutorialsIndexPage() {
                 10 Complete Tutorials
               </span>
 
-              <h1 className="mt-4 text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+              <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 Programming Tutorials
               </h1>
-              <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+              <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
                 Deep, practical, no-fluff tutorials covering the languages and
                 tools shaping software in 2026 — real code examples, production
                 best practices, and interview-ready explanations for every topic.
@@ -136,17 +137,17 @@ export default function TutorialsIndexPage() {
         </section>
 
         {/* Tutorial Grid */}
-        <section className="max-w-6xl mx-auto px-6 py-14">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {TUTORIALS_DATA.map((tutorial) => (
               <Link
                 key={tutorial.slug}
                 href={`/resources/tutorials/${tutorial.slug}`}
-                className="group flex flex-col bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all"
+                className="group flex flex-col bg-[#F4F5FA] border border-white/80 rounded-2xl p-6 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] hover:shadow-[8px_8px_18px_#d0d2dc,-8px_-8px_18px_#ffffff] hover:-translate-y-0.5 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
-                    className="w-11 h-11 rounded-lg flex items-center justify-center"
+                    className="w-11 h-11 rounded-xl flex items-center justify-center shadow-[inset_2px_2px_4px_#d1d3dc,inset_-2px_-2px_4px_#ffffff]"
                     style={{ backgroundColor: `${tutorial.color}15` }}
                   >
                     <svg
@@ -160,7 +161,7 @@ export default function TutorialsIndexPage() {
                     </svg>
                   </div>
                   <span
-                    className={`text-xs font-semibold px-2.5 py-1 rounded-full ${difficultyBadgeClasses(
+                    className={`text-xs font-bold px-2.5 py-1 rounded-full ${difficultyBadgeClasses(
                       tutorial.difficulty
                     )}`}
                   >
@@ -168,17 +169,17 @@ export default function TutorialsIndexPage() {
                   </span>
                 </div>
 
-                <h2 className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">
+                <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#8B5CF6] transition-colors leading-snug">
                   {tutorial.title}
                 </h2>
-                <p className="mt-2 text-sm text-gray-600 leading-relaxed flex-1">
+                <p className="mt-2 text-sm text-slate-600 font-medium leading-relaxed flex-1">
                   {tutorial.tagline}
                 </p>
 
-                <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                <div className="mt-5 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-medium text-slate-500">
                   <span className="flex items-center gap-1.5">
                     <svg
-                      className="w-3.5 h-3.5"
+                      className="w-3.5 h-3.5 text-[#8B5CF6]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -199,7 +200,7 @@ export default function TutorialsIndexPage() {
                   </span>
                 </div>
 
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:gap-2.5 transition-all">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[#8B5CF6] group-hover:gap-2.5 transition-all">
                   Read tutorial →
                 </span>
               </Link>

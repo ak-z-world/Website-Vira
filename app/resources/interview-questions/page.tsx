@@ -94,7 +94,7 @@ export default function InterviewQuestionsIndex() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#8B5CF6] transition-colors">
                     {role.title}
                   </h3>
 
@@ -105,7 +105,7 @@ export default function InterviewQuestionsIndex() {
 
                   {/* Badge */}
                   <div className="inline-flex items-center">
-                    <span className="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full border border-blue-200">
+                    <span className="bg-[#8B5CF6]/10 text-[#8B5CF6] text-xs font-bold px-3 py-1 rounded-full border border-violet-200">
                       {role.totalQuestions} questions
                     </span>
                   </div>
@@ -143,7 +143,7 @@ export default function InterviewQuestionsIndex() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="text-4xl font-bold text-blue-600 mb-4">1</div>
+            <div className="text-4xl font-bold text-[#8B5CF6] mb-4">1</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Choose Your Role
             </h3>
@@ -152,7 +152,7 @@ export default function InterviewQuestionsIndex() {
             </p>
           </div>
           <div>
-            <div className="text-4xl font-bold text-blue-600 mb-4">2</div>
+            <div className="text-4xl font-bold text-[#8B5CF6] mb-4">2</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Filter by Difficulty
             </h3>
@@ -161,7 +161,7 @@ export default function InterviewQuestionsIndex() {
             </p>
           </div>
           <div>
-            <div className="text-4xl font-bold text-blue-600 mb-4">3</div>
+            <div className="text-4xl font-bold text-[#8B5CF6] mb-4">3</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Master Each Topic
             </h3>
@@ -193,7 +193,7 @@ export default function InterviewQuestionsIndex() {
                   'API design and best practices'
                 ].map((item) => (
                   <li key={item} className="flex items-start">
-                    <span className="text-blue-600 font-bold mr-3">→</span>
+                    <span className="text-[#8B5CF6] font-bold mr-3">→</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
@@ -213,7 +213,7 @@ export default function InterviewQuestionsIndex() {
                   'Real-world trade-offs and decisions'
                 ].map((item) => (
                   <li key={item} className="flex items-start">
-                    <span className="text-blue-600 font-bold mr-3">→</span>
+                    <span className="text-[#8B5CF6] font-bold mr-3">→</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}

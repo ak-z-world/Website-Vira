@@ -19,19 +19,19 @@ const DIFFICULTIES = [
 const DIFFICULTY_COLORS: Record<string, { bg: string; text: string; border: string }> =
   {
     Beginner: {
-      bg: 'bg-green-50',
-      text: 'text-green-700',
-      border: 'border-green-200'
+      bg: 'bg-emerald-50',
+      text: 'text-emerald-700',
+      border: 'border-emerald-200'
     },
     Intermediate: {
-      bg: 'bg-yellow-50',
-      text: 'text-yellow-700',
-      border: 'border-yellow-200'
+      bg: 'bg-amber-50',
+      text: 'text-amber-700',
+      border: 'border-amber-200'
     },
     Advanced: {
-      bg: 'bg-red-50',
-      text: 'text-red-700',
-      border: 'border-red-200'
+      bg: 'bg-rose-50',
+      text: 'text-rose-700',
+      border: 'border-rose-200'
     },
     Scenario: {
       bg: 'bg-purple-50',
@@ -39,9 +39,9 @@ const DIFFICULTY_COLORS: Record<string, { bg: string; text: string; border: stri
       border: 'border-purple-200'
     },
     'System Design': {
-      bg: 'bg-blue-50',
-      text: 'text-blue-700',
-      border: 'border-blue-200'
+      bg: 'bg-violet-50',
+      text: 'text-violet-700',
+      border: 'border-violet-200'
     }
   };
 
@@ -68,21 +68,21 @@ export default function QuestionFilter({
   return (
     <div className="max-w-7xl mx-auto">
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-3 mb-12">
+      <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-10">
         {DIFFICULTIES.map((difficulty) => {
           const isActive = activeDifficulty === difficulty;
           return (
             <button
               key={difficulty}
               onClick={() => setActiveDifficulty(difficulty)}
-              className={`px-4 py-2 rounded-lg font-semibold transition-all ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 isActive
-                  ? 'bg-blue-600 text-white border border-blue-600'
-                  : 'bg-white text-gray-700 border border-gray-200 hover:border-gray-300'
+                  ? 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white shadow-md'
+                  : 'bg-[#F4F5FA] text-slate-700 border border-white/80 shadow-[2px_2px_5px_#dcdde3,-2px_-2px_5px_#ffffff] hover:text-[#8B5CF6]'
               }`}
             >
               {difficulty}{' '}
-              <span className="text-xs font-normal ml-1">({counts[difficulty]})</span>
+              <span className="text-xs font-semibold ml-1 opacity-80">({counts[difficulty]})</span>
             </button>
           );
         })}
@@ -92,7 +92,7 @@ export default function QuestionFilter({
       <div className="space-y-4">
         {filteredQuestions.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No questions found.</p>
+            <p className="text-slate-500 text-base">No questions found.</p>
           </div>
         ) : (
           filteredQuestions.map((question) => {
@@ -119,23 +119,23 @@ function QuestionCard({ question, colors }: QuestionCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+    <div className="bg-[#F4F5FA] border border-white/80 rounded-2xl p-6 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] hover:shadow-[8px_8px_18px_#d0d2dc,-8px_-8px_18px_#ffffff] transition-all">
       {/* Question Header */}
       <div className="flex items-start gap-4 mb-4">
         <div className="flex-1">
-          <p className="text-lg font-bold text-gray-900 mb-3">
-            Q{question.id}: {question.question}
+          <p className="text-base sm:text-lg font-bold text-slate-900 mb-3 leading-snug">
+            <span className="text-[#8B5CF6] mr-1.5">Q{question.id}:</span> {question.question}
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5">
             {/* Difficulty Badge */}
             <span
-              className={`inline-block text-xs font-semibold px-3 py-1 rounded-full border ${colors.bg} ${colors.text} ${colors.border}`}
+              className={`inline-block text-xs font-bold px-3 py-1 rounded-full border ${colors.bg} ${colors.text} ${colors.border}`}
             >
               {question.difficulty}
             </span>
 
             {/* Category Chip */}
-            <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">
+            <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
               {question.category}
             </span>
           </div>
@@ -144,7 +144,9 @@ function QuestionCard({ question, colors }: QuestionCardProps) {
         {/* Expand Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex-shrink-0 text-gray-500 hover:text-gray-700 transition-colors text-2xl"
+          className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-bold shadow-[2px_2px_5px_#dcdde3,-2px_-2px_5px_#ffffff] transition-all ${
+            isExpanded ? 'bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] text-white' : 'bg-[#F4F5FA] text-slate-600 hover:text-[#8B5CF6]'
+          }`}
           aria-label={isExpanded ? 'Collapse answer' : 'Expand answer'}
         >
           {isExpanded ? '▼' : '▶'}
@@ -153,16 +155,16 @@ function QuestionCard({ question, colors }: QuestionCardProps) {
 
       {/* Answer (Expandable) */}
       {isExpanded && (
-        <div className="mt-6 pt-6 border-t border-gray-200 space-y-4">
-          <div className="text-gray-700 leading-relaxed">
+        <div className="mt-4 pt-4 border-t border-slate-200/60 space-y-4">
+          <div className="text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
             <p>{question.answer}</p>
           </div>
 
           {/* Follow-up Question */}
           {question.followUp && (
-            <div className="mt-4 pl-4 border-l-2 border-blue-300 bg-blue-50 p-4 rounded">
-              <p className="text-sm text-gray-600 italic">
-                <span className="font-semibold text-gray-900">Follow-up:</span>{' '}
+            <div className="mt-4 pl-4 border-l-2 border-[#8B5CF6] bg-[#8B5CF6]/10 p-4 rounded-r-xl">
+              <p className="text-xs sm:text-sm text-slate-700 italic">
+                <span className="font-bold text-slate-900 not-italic">Follow-up:</span>{' '}
                 {question.followUp}
               </p>
             </div>

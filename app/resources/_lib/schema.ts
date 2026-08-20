@@ -1,4 +1,5 @@
 // resources/_lib/schema.ts
+import { SITE_URL, SITE_NAME, ORGANIZATION_ID } from '@/lib/seo';
 
 export function faqSchema(faqs: { question: string; answer: string }[]) {
   return {
@@ -20,7 +21,7 @@ export function articleSchema({
   description,
   url,
   dateModified,
-  organization = 'Crack Leap Academy',
+  organization = SITE_NAME,
 }: {
   title: string;
   description: string;
@@ -28,22 +29,21 @@ export function articleSchema({
   dateModified: string;
   organization?: string;
 }) {
+  const fullUrl = url.startsWith('http') ? url : `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'TechArticle',
     headline: title,
     description,
-    url,
-    dateModified,
+    url: fullUrl,
+    dateModified: dateModified || new Date().toISOString(),
     author: {
       '@type': 'Organization',
       name: organization,
-      url: 'https://arivuon.com',
+      url: SITE_URL,
     },
     publisher: {
-      '@type': 'EducationalOrganization',
-      name: organization,
-      url: 'https://arivuon.com',
+      '@id': ORGANIZATION_ID,
     },
   };
 }
@@ -56,7 +56,7 @@ export function breadcrumbSchema(items: { label: string; href: string }[]) {
       '@type': 'ListItem',
       position: idx + 1,
       name: item.label,
-      item: `https://arivuon.com${item.href}`,
+      item: item.href.startsWith('http') ? item.href : `${SITE_URL}${item.href.startsWith('/') ? '' : '/'}${item.href}`,
     })),
   };
 }
@@ -65,23 +65,22 @@ export function courseSchema({
   name,
   description,
   url,
-  provider = 'Crack Leap Academy',
+  provider = SITE_NAME,
 }: {
   name: string;
   description: string;
   url: string;
   provider?: string;
 }) {
+  const fullUrl = url.startsWith('http') ? url : `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name,
     description,
-    url,
+    url: fullUrl,
     provider: {
-      '@type': 'EducationalOrganization',
-      name: provider,
-      url: 'https://arivuon.com',
+      '@id': ORGANIZATION_ID,
     },
   };
 }
@@ -95,16 +94,17 @@ export function webPageSchema({
   description: string;
   url: string;
 }) {
+  const fullUrl = url.startsWith('http') ? url : `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: title,
     description,
-    url,
+    url: fullUrl,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Crack Leap Academy',
-      url: 'https://arivuon.com',
+      name: SITE_NAME,
+      url: SITE_URL,
     },
   };
 }

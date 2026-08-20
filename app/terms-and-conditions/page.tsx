@@ -1,7 +1,6 @@
 'use client';
 
-import { Shield, FileText, CheckCircle, Users, Globe, Clock, Mail, AlertCircle } from 'lucide-react';
-import Link from 'next/link';
+import { Shield, FileText, CheckCircle, Users, Globe, Clock, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function TermsPage() {
@@ -22,64 +21,62 @@ export default function TermsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="min-h-screen bg-[#F8F9FE] text-slate-800">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full blur-3xl opacity-60" />
+      <section className="relative pt-12 sm:pt-16 pb-10 overflow-hidden">
+        <div className="absolute top-10 left-1/4 w-72 h-72 bg-[#8B5CF6]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-[#6366F1]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="section-padding relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-indigo-600/10 border border-orange-200 rounded-full px-4 py-2 mb-6">
-                <Shield className="w-4 h-4 text-blue-500" />
-                <span className="text-sm font-semibold text-indigo-600">Legal Policies</span>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Terms & <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Conditions</span>
-              </h1>
-
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                By enrolling in our courses, you agree to abide by the following terms and conditions.
-              </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-[#F4F5FA] border border-white/80 rounded-full px-4 py-2 mb-6 shadow-[3px_3px_8px_#dcdde3,-3px_-3px_8px_#ffffff]">
+              <Shield className="w-4 h-4 text-[#8B5CF6]" />
+              <span className="text-xs sm:text-sm font-bold text-[#8B5CF6]">Legal Policies</span>
             </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 leading-tight">
+              Terms & <span className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">Conditions</span>
+            </h1>
+
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
+              By enrolling in our courses, you agree to abide by the following transparent terms and conditions.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
+      <section className="pb-20">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-4 gap-8">
               {/* Sidebar Navigation */}
               <div className="lg:col-span-1">
-                <div className="sticky top-24 space-y-2">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100/30 border border-orange-200 rounded-2xl p-4 mb-6">
-                    <h3 className="font-bold text-gray-900 mb-3">Quick Navigation</h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Jump to specific sections
+                <div className="sticky top-24 space-y-3">
+                  <div className="bg-[#F4F5FA] border border-white/80 rounded-2xl p-4 shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff]">
+                    <h3 className="font-bold text-slate-900 text-sm mb-1">Quick Navigation</h3>
+                    <p className="text-xs text-slate-500 font-medium">
+                      Jump directly to sections
                     </p>
                   </div>
 
-                  <div className="bg-white border border-gray-100 rounded-2xl p-2 shadow-sm">
+                  <div className="bg-[#F4F5FA] border border-white/80 rounded-2xl p-2 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff]">
                     {sections.map((section) => (
                       <button
                         key={section.id}
                         onClick={() => setActiveSection(section.id)}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl mb-1 transition-all duration-300 ${activeSection === section.id
-                            ? 'bg-gradient-to-r from-orange-50 to-orange-100 text-indigo-600'
-                            : 'text-gray-700 hover:bg-gray-50'
-                          }`}
+                        className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl mb-1 text-left transition-all duration-300 ${
+                          activeSection === section.id
+                            ? 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white shadow-md font-bold'
+                            : 'text-slate-600 hover:text-[#8B5CF6] font-medium'
+                        }`}
                       >
-                        <div className={`p-2 rounded-lg ${activeSection === section.id ? 'bg-orange-100' : 'bg-gray-100'
-                          }`}>
-                          <div className={`${activeSection === section.id ? 'text-indigo-600' : 'text-gray-500'}`}>
-                            {section.icon}
-                          </div>
+                        <div className={`p-1.5 rounded-lg ${
+                          activeSection === section.id ? 'bg-white/20 text-white' : 'text-[#8B5CF6]'
+                        }`}>
+                          {section.icon}
                         </div>
-                        <span className="font-medium text-sm">{section.title}</span>
+                        <span className="text-xs sm:text-sm">{section.title}</span>
                       </button>
                     ))}
                   </div>
@@ -88,35 +85,31 @@ export default function TermsPage() {
 
               {/* Content Area */}
               <div className="lg:col-span-3">
-                <div className="bg-white border border-gray-100 rounded-3xl shadow-lg overflow-hidden">
+                <div className="bg-[#F4F5FA] border border-white/80 rounded-3xl shadow-[10px_10px_24px_#dcdde3,-10px_-10px_24px_#ffffff] overflow-hidden">
                   {/* Content Header */}
-                  <div className="border-b border-gray-100 p-6 md:p-8">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                          Crack Leap Academy Terms & Conditions
-                        </h2>
-                        <p className="text-gray-600 mt-2">
-                          Welcome to Crack Leap Academy! We thank you for choosing us as your learning partner for professional software training.
-                        </p>
-                      </div>
-                    </div>
+                  <div className="border-b border-slate-200/60 p-6 sm:p-8">
+                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">
+                      Crack Leap Academy Terms & Conditions
+                    </h2>
+                    <p className="text-slate-600 text-sm font-medium mt-2 leading-relaxed">
+                      Welcome to Crack Leap Academy. We thank you for choosing us as your career learning partner for professional software training.
+                    </p>
                   </div>
 
                   {/* Content Sections */}
-                  <div className="p-6 md:p-8 space-y-8">
+                  <div className="p-6 sm:p-8 space-y-6">
                     {/* Overview Section */}
                     {activeSection === 'overview' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl border border-orange-200">
-                          <Shield className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-4 p-6 bg-white/70 rounded-2xl border border-white/80 shadow-sm">
+                          <Shield className="w-6 h-6 text-[#8B5CF6] mt-1 flex-shrink-0" />
                           <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Welcome to Crack Leap Academy</h3>
-                            <p className="text-gray-700 leading-relaxed">
-                              We thank you for choosing us as your learning partner for professional software training. Our mission is to empower students worldwide with career-oriented training and practical skills to prepare them for the competitive global job market.
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Welcome to Crack Leap Academy</h3>
+                            <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                              Our mission is to empower students worldwide with career-oriented training, real-world project portfolios, and practical skills to prepare them for the global technology job market.
                             </p>
-                            <p className="text-gray-700 leading-relaxed mt-4">
-                              By enrolling in our courses, you agree to abide by the following terms and conditions.
+                            <p className="text-slate-600 text-sm leading-relaxed font-medium mt-3">
+                              By enrolling in any of our courses, workshops, or bootcamps, you agree to abide by the policies and expectations detailed below.
                             </p>
                           </div>
                         </div>
@@ -125,237 +118,185 @@ export default function TermsPage() {
 
                     {/* Placement Assistance Section */}
                     {activeSection === 'placement' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                              <Users className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center text-white shadow-md">
+                              <Users className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Placement Assistance</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Placement Assistance</h3>
                           </div>
-
-                          <div className="space-y-4">
-                            <div className="p-4 bg-blue-50 rounded-xl">
-                              <p className="text-gray-700">
-                                Crack Leap Academy provides career guidance and placement assistance but does not guarantee job placement. Placement assistance includes resume building support, portfolio development, and mock interview preparation to improve employability.
-                              </p>
-                            </div>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Crack Leap Academy provides dedicated career guidance and placement preparation but does not guarantee job offers. Career assistance includes resume optimization, GitHub portfolio reviews, technical mock interviews, and recruiter interview referrals.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Refund Policy Section */}
                     {activeSection === 'refund' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                              <CheckCircle className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md">
+                              <CheckCircle className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Refund & Cancellation Policy</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Refund & Cancellation Policy</h3>
                           </div>
-
-                          <div className="p-4 bg-green-50 rounded-xl">
-                            <p className="text-gray-700">
-                              For detailed information, please refer to our refund policy. Refund requests must be submitted directly through official communication channels within the specified timeframe.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Refund requests must be formally submitted to our support team before course batch commencement according to our standard refund schedule. Once access to premium live batches and repository content is provisioned, refunds are handled per the batch timeline policy.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Student Behavior Section */}
                     {activeSection === 'conduct' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                              <AlertCircle className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-red-600 flex items-center justify-center text-white shadow-md">
+                              <AlertCircle className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Student Behavior</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Student Behavior & Code of Conduct</h3>
                           </div>
-
-                          <div className="p-4 bg-red-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Students are expected to maintain professional and respectful behavior in all online classes and communications. Disruptive behavior in virtual sessions may result in disciplinary action, including removal from the course without a refund.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Students are expected to maintain professional, inclusive, and respectful conduct in all live classes, discussion forums, and community channels. Disruptive behavior may result in warnings or suspension without a refund.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Punctuality Section */}
                     {activeSection === 'punctuality' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center">
-                              <Clock className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-md">
+                              <Clock className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Punctuality</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Session Punctuality</h3>
                           </div>
-
-                          <div className="p-4 bg-yellow-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Students must attend scheduled online sessions on time. Repeated lateness or absence may lead to warnings from the trainer.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Students must attend scheduled online sessions promptly. Recorded sessions are provided for revision, but live interactive participation is strongly encouraged for optimal concept mastery.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Online Facilities Section */}
                     {activeSection === 'facilities' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                              <Globe className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center text-white shadow-md">
+                              <Globe className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Use of Online Facilities</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Use of Online Facilities & IP</h3>
                           </div>
-
-                          <div className="p-4 bg-purple-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Students are encouraged to use the provided learning platforms responsibly. Unauthorized recording, sharing of course materials, or misuse of academy resources is strictly prohibited.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            All proprietary curriculum materials, source code templates, and video lessons are the intellectual property of Crack Leap Academy. Redistribution, unauthorized screen sharing, or public hosting of materials is strictly prohibited.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Course Attendance Section */}
                     {activeSection === 'attendance' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                              <Clock className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center text-white shadow-md">
+                              <Clock className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Course Attendance</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Course Attendance & Milestone Submissions</h3>
                           </div>
-
-                          <div className="p-4 bg-blue-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Regular participation in online sessions is required to successfully complete the course. In case of unavoidable circumstances such as technical issues or instructor availability, postponed sessions will be rescheduled.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            To qualify for graduation certificates and career referral consideration, students must maintain at least 80% attendance and submit all major hands-on project milestones on schedule.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Data Protection Section */}
                     {activeSection === 'privacy' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                              <Shield className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md">
+                              <Shield className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Data Protection</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Data Protection & Privacy</h3>
                           </div>
-
-                          <div className="p-4 bg-green-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Crack Leap Academy ensures the confidentiality of personal data. Information collected during enrollment will be used solely for educational, administrative, and promotional purposes in accordance with applicable international data protection standards.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Student personal data is encrypted and handled in accordance with modern international data protection standards. Your contact details are never sold or shared with unauthorized third parties.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Global Access Section */}
                     {activeSection === 'global' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
-                              <Globe className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center text-white shadow-md">
+                              <Globe className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Global Access & Payments</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Global Access & Supported Currencies</h3>
                           </div>
-
-                          <div className="p-4 bg-indigo-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Crack Leap Academy offers fully online learning accessible from anywhere in the world. Course fees may be paid in accepted currencies based on the student's country and available payment options.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Crack Leap Academy serves learners globally. Courses can be enrolled using multiple international currencies including INR, USD, EUR, AED, and KWD with secure payment gateways.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Public Holidays Section */}
                     {activeSection === 'holidays' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                              <Clock className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-md">
+                              <Clock className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Public Holidays</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Public Holidays</h3>
                           </div>
-
-                          <div className="p-4 bg-orange-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Online classes may not be conducted on major public holidays unless otherwise informed in advance for special sessions.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Classes are typically paused during major national holidays. Any rescheduled sessions will be communicated in advance via your cohort learning channel.
+                          </p>
                         </div>
                       </div>
                     )}
 
                     {/* Resume Building Section */}
                     {activeSection === 'resume' && (
-                      <div className="animate-in fade-in duration-300">
-                        <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center">
-                              <FileText className="w-7 h-7 text-white" />
+                      <div className="space-y-4">
+                        <div className="p-6 bg-white/70 border border-white/80 rounded-2xl shadow-sm">
+                          <div className="flex items-center gap-3.5 mb-4">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center text-white shadow-md">
+                              <FileText className="w-6 h-6" />
                             </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900">Resume and Portfolio Building</h3>
-                            </div>
+                            <h3 className="text-xl font-bold text-slate-900">Resume & Portfolio Support</h3>
                           </div>
-
-                          <div className="p-4 bg-cyan-50 rounded-xl">
-                            <p className="text-gray-700">
-                              Crack Leap Academy assists students in developing professional resumes and portfolios to enhance career opportunities.
-                            </p>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Mentors assist learners in crafting ATS-compliant resumes, setting up live project deployments on AWS/Vercel, and preparing tailored portfolio talking points for technical recruiter interviews.
+                          </p>
                         </div>
                       </div>
                     )}
                   </div>
 
                   {/* Agreement Section */}
-                  <div className="border-t border-gray-100 p-6 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100/30">
+                  <div className="border-t border-slate-200/60 p-6 sm:p-8 bg-[#F4F5FA]">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center flex-shrink-0 shadow-md">
+                        <CheckCircle className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Your Agreement</h3>
-                        <p className="text-gray-700">
-                          By enrolling in Crack Leap Academy, you acknowledge that you have read, understood, and agreed to these terms and conditions.
+                        <h3 className="text-base font-bold text-slate-900 mb-1">Your Enrollment Agreement</h3>
+                        <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
+                          By completing enrollment with Crack Leap Academy, you confirm that you have read, understood, and agreed to these terms and conditions.
                         </p>
                       </div>
                     </div>

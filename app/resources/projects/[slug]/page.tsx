@@ -43,12 +43,12 @@ const DIFFICULTY_BADGE: Record<string, string> = {
   Beginner: 'bg-green-50 text-green-700 border border-green-200',
   Intermediate: 'bg-yellow-50 text-yellow-700 border border-yellow-200',
   Advanced: 'bg-red-50 text-red-700 border border-red-200',
-  'All Levels': 'bg-blue-50 text-blue-700 border border-blue-200',
+  'All Levels': 'bg-violet-50 text-violet-700 border border-violet-200',
 };
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col hover:border-blue-300 hover:shadow-sm transition-all duration-150">
+    <div className="bg-white border border-gray-200 rounded-xl p-5 flex flex-col hover:border-violet-300 hover:shadow-sm transition-all duration-150">
       <div className="flex items-start justify-between gap-2 mb-2">
         <h3 className="font-bold text-gray-900 text-sm leading-snug">{project.name}</h3>
         <span className={`flex-shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap ${DIFFICULTY_BADGE[project.difficulty]}`}>
@@ -63,7 +63,7 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="pt-3 border-t border-gray-100 space-y-1">
         <div className="flex items-center gap-1.5 text-xs text-gray-500">
-          <svg className="w-3.5 h-3.5 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3.5 h-3.5 flex-shrink-0 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span>{project.estimatedTime}</span>
@@ -104,7 +104,7 @@ function ImplementationGuideCard({ guide }: { guide: ImplementationGuide }) {
           <div className="space-y-2">
             {guide.keyFiles.map((kf) => (
               <div key={kf.file} className="flex gap-3 p-3 bg-gray-50 border border-gray-200 rounded-lg">
-                <code className="text-blue-700 font-mono text-xs flex-shrink-0 mt-0.5 leading-relaxed">{kf.file}</code>
+                <code className="text-violet-700 font-mono text-xs flex-shrink-0 mt-0.5 leading-relaxed">{kf.file}</code>
                 <span className="text-gray-600 text-xs leading-relaxed">{kf.purpose}</span>
               </div>
             ))}
@@ -117,7 +117,7 @@ function ImplementationGuideCard({ guide }: { guide: ImplementationGuide }) {
           <ol className="space-y-2">
             {guide.steps.map((step, i) => (
               <li key={i} className="flex gap-3 text-sm text-gray-600">
-                <span className="flex-shrink-0 w-5 h-5 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center">
+                <span className="flex-shrink-0 w-5 h-5 bg-[#8B5CF6] text-white text-xs font-bold rounded-full flex items-center justify-center">
                   {i + 1}
                 </span>
                 <span className="leading-relaxed">{step}</span>
@@ -333,11 +333,11 @@ export default async function ProjectCategoryPage({ params }: Props) {
           <h2 className="text-2xl font-bold text-gray-900 mb-5">Interview Talking Points</h2>
           <div className="space-y-3">
             {cat.interviewTalkingPoints.map((point, i) => (
-              <div key={i} className="flex gap-4 p-4 bg-blue-50 border border-blue-200 rounded-xl">
-                <svg className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={i} className="flex gap-4 p-4 bg-[#8B5CF6]/10 border border-violet-200 rounded-xl">
+                <svg className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <p className="text-blue-800 text-sm leading-relaxed">{point}</p>
+                <p className="text-slate-800 text-sm leading-relaxed">{point}</p>
               </div>
             ))}
           </div>

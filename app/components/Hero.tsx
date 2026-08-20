@@ -1,7 +1,10 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, PlayCircle, Rocket } from "lucide-react";
+
 
 export default function Hero() {
   return (
@@ -231,167 +234,184 @@ export default function Hero() {
             </p>
 
             {/* Buttons */}
-
             <div
               className="
-    flex
-    flex-col
-    sm:flex-row
-    items-center
-    lg:items-start
-    gap-5
-    mt-10
-  ">
-              <button
+                flex
+                flex-col
+                sm:flex-row
+                items-stretch
+                sm:items-center
+                lg:items-start
+                w-full
+                sm:w-auto
+                gap-4
+                sm:gap-5
+                mt-8
+                sm:mt-10
+              "
+            >
+              <Link
+                href="/courses"
                 className="
-    hero-btn
-    flex
-    items-center
-    gap-2
-    text-white
-    font-semibold
-    transition-all
-    duration-300
-    px-6 
-    py-3
-    rounded-xl
-
-    /* Exact Soft Lavender from your image */
-    bg-[#c562f3]
-    
-    /* Subtle inner border for edge lighting */
-    border border-white/20
-
-    /* NEOMORPHISM: Light shadow top-left, Dark shadow bottom-right */
-    shadow-[4px_4px_10px_rgba(88,60,200,0.7),-4px_-4px_10px_rgba(255,255,255,0.35)]
-
-    /* Hover State: Expands the light/shadow to look like it's lifting */
-    hover:shadow-[6px_6px_14px_rgba(88,60,200,0.8),-6px_-6px_14px_rgba(255,255,255,0.45)]
-    hover:-translate-y-[1px]
-
-    /* Active State: True Neomorphic press (shadows go inside) */
-    active:shadow-[inset_5px_5px_10px_rgba(88,60,200,0.9),inset_-4px_-4px_10px_rgba(255,255,255,0.3)]
-    active:translate-y-[2px]
-  ">
+                  hero-btn
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2.5
+                  text-white
+                  font-bold
+                  transition-all
+                  duration-300
+                  px-7
+                  py-3.5
+                  rounded-2xl
+                  bg-gradient-to-r
+                  from-[#8B5CF6]
+                  to-[#6366F1]
+                  border-t
+                  border-white/30
+                  shadow-[4px_6px_18px_rgba(139,92,246,0.35)]
+                  hover:shadow-[6px_10px_24px_rgba(139,92,246,0.45)]
+                  hover:-translate-y-0.5
+                  active:scale-98
+                "
+              >
                 Start Learning
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
 
-              <button
+              <Link
+                href="/about"
                 className="
-      hero-btn
-      flex
-      items-center
-      gap-2
-      text-[#111827]
-      font-semibold
-      transition-all
-      duration-300
-      
-      /* Ultra-Realistic Soft Lavender Styling */
-      bg-gradient-to-b 
-      from-[#F9F8FC] 
-      to-[#E8E4F2]
-      border 
-      border-white/80
-      shadow-[0_12px_24px_rgba(124,58,237,0.15),inset_0_2px_3px_rgba(255,255,255,1),inset_0_-3px_4px_rgba(124,58,237,0.1)]
-      
-      /* Hover State: Enhanced light and lift */
-      hover:shadow-[0_16px_32px_rgba(124,58,237,0.2),inset_0_2px_4px_rgba(255,255,255,1),inset_0_-3px_5px_rgba(124,58,237,0.15)]
-      hover:-translate-y-[1px]
-      
-      /* Active State: Realistic physical press down */
-      active:shadow-[inset_0_4px_8px_rgba(124,58,237,0.2),inset_0_-2px_4px_rgba(255,255,255,0.6)]
-      active:translate-y-[2px]
-    ">
-                <PlayCircle className="w-5 h-5 text-[#4F46E5]" />
-                Watch Success Stories
-              </button>
+                  hero-btn
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2.5
+                  text-slate-800
+                  font-bold
+                  transition-all
+                  duration-300
+                  px-7
+                  py-3.5
+                  rounded-2xl
+                  bg-[#F4F5FA]
+                  border
+                  border-white/80
+                  shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff]
+                  hover:shadow-[6px_6px_14px_#d0d2dc,-6px_-6px_14px_#ffffff]
+                  hover:text-[#8B5CF6]
+                  hover:-translate-y-0.5
+                  active:shadow-[inset_3px_3px_6px_#d1d3dc,inset_-3px_-3px_6px_#ffffff]
+                "
+              >
+                <PlayCircle className="w-5 h-5 text-[#8B5CF6]" />
+                Explore Programs
+              </Link>
             </div>
           </div>
 
           {/* ══ RIGHT COLUMN: Hero Image ══ */}
-          <div className="w-full flex justify-center lg:justify-end items-center mt-0 lg:mt-0 relative">
+          <div className="w-full flex justify-center lg:justify-end items-center mt-6 lg:mt-0 relative overflow-hidden sm:overflow-visible">
             {/* Wrapper container: Keeps absolute floating elements tethered to the main image */}
-            <div className="relative w-full max-w-[620px] sm:max-w-md lg:max-w-lg xl:max-w-[800px] mt--15 mr-15">
+            <div className="relative w-full max-w-[620px] sm:max-w-md lg:max-w-lg xl:max-w-[760px] mt-0">
               {/* Main Dashboard Image */}
-              <img
+              <Image
                 src="/assets/hero.png"
                 alt="Academy Dashboard Presentation"
+                width={800}
+                height={550}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                 className="w-full h-auto object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite] relative z-10"
-                loading="lazy"
               />
 
               {/* ══ LEFT SIDE ICONS ══ */}
               {/* Python */}
-              <div className="absolute top-[12%] -left-[2%] md:-left-[10%] w-12 h-12 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_5s_ease-in-out_infinite_0.2s]">
-                <img
+              <div className="hidden sm:flex absolute top-[12%] left-0 md:-left-[8%] w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_5s_ease-in-out_infinite_0.2s]">
+                <Image
                   src="/assets/icons/python.png"
                   alt="Python"
+                  width={40}
+                  height={40}
                   className="w-6 h-6 md:w-10 md:h-10 object-contain"
                 />
               </div>
 
               {/* React */}
-              <div className="absolute top-[30%] -left-[5%] md:-left-[12%] w-10 h-10 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_7s_ease-in-out_infinite_1.5s]">
-                <img
+              <div className="hidden sm:flex absolute top-[30%] left-0 md:-left-[10%] w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_7s_ease-in-out_infinite_1.5s]">
+                <Image
                   src="/assets/icons/react.png"
                   alt="React"
+                  width={32}
+                  height={32}
                   className="w-5 h-5 md:w-8 md:h-8 object-contain"
                 />
               </div>
 
               {/* Tensor */}
-              <div className="absolute top-[45%] -left-[5%] md:-left-[12%] w-10 h-10 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_7s_ease-in-out_infinite_1.5s]">
-                <img
+              <div className="hidden sm:flex absolute top-[45%] left-0 md:-left-[10%] w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_7s_ease-in-out_infinite_1.5s]">
+                <Image
                   src="/assets/icons/tensor.png"
                   alt="Tensor"
+                  width={32}
+                  height={32}
                   className="w-5 h-5 md:w-8 md:h-8 object-contain"
                 />
               </div>
 
               {/* Cloud */}
-              <div className="absolute top-[75%] -left-[5%] md:-left-[12%] w-10 h-10 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_7s_ease-in-out_infinite_1.5s]">
-                <img
+              <div className="hidden sm:flex absolute top-[75%] left-0 md:-left-[10%] w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_7s_ease-in-out_infinite_1.5s]">
+                <Image
                   src="/assets/icons/cloud.png"
                   alt="Cloud"
+                  width={32}
+                  height={32}
                   className="w-5 h-5 md:w-8 md:h-8 object-contain"
                 />
               </div>
 
               {/* ══ RIGHT SIDE ICONS ══ */}
               {/* AWS */}
-              <div className="absolute top-[5%] -right-[2%] md:-right-[8%] w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_6.5s_ease-in-out_infinite_0.8s]">
-                <img
+              <div className="hidden sm:flex absolute top-[5%] right-0 md:-right-[6%] w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_6.5s_ease-in-out_infinite_0.8s]">
+                <Image
                   src="/assets/icons/aws.png"
                   alt="AWS"
+                  width={32}
+                  height={32}
                   className="w-6 h-6 md:w-8 md:h-8 object-contain"
                 />
               </div>
 
               {/* Docker */}
-              <div className="absolute top-[32%] -right-[6%] md:-right-[15%] w-14 h-14 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_5.5s_ease-in-out_infinite_2.1s]">
-                <img
+              <div className="hidden sm:flex absolute top-[32%] right-0 md:-right-[12%] w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_5.5s_ease-in-out_infinite_2.1s]">
+                <Image
                   src="/assets/icons/docker.png"
                   alt="Docker"
+                  width={40}
+                  height={40}
                   className="w-7 h-7 md:w-10 md:h-10 object-contain"
                 />
               </div>
 
-              {/* React */}
-              <div className="absolute top-[62%] -right-[8%] md:-right-[18%] w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_6s_ease-in-out_infinite_1.2s]">
-                <img
+              {/* Kubernetes */}
+              <div className="hidden sm:flex absolute top-[62%] right-0 md:-right-[14%] w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_6s_ease-in-out_infinite_1.2s]">
+                <Image
                   src="/assets/icons/kubernets.png"
-                  alt="React"
+                  alt="Kubernetes"
+                  width={32}
+                  height={32}
                   className="w-6 h-6 md:w-8 md:h-8 object-contain"
                 />
               </div>
 
               {/* Git */}
-              <div className="absolute bottom-[8%] -right-[4%] md:-right-[10%] w-10 h-10 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_4.8s_ease-in-out_infinite_0.5s]">
-                <img
+              <div className="hidden sm:flex absolute bottom-[8%] right-0 md:-right-[8%] w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-full items-center justify-center shadow-xl border border-gray-100 z-20 animate-[float_4.8s_ease-in-out_infinite_0.5s]">
+                <Image
                   src="/assets/icons/git.png"
                   alt="Git"
+                  width={28}
+                  height={28}
                   className="w-5 h-5 md:w-7 md:h-7 object-contain"
                 />
               </div>

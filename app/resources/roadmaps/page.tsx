@@ -62,7 +62,7 @@ const ROADMAPS = [
     description: 'Become a T-shaped full stack developer. HTML to React frontend, Node.js/Django backend, databases, REST/GraphQL APIs, authentication, and cloud deployment.',
     href: '/resources/roadmaps/full-stack-roadmap-2026',
     badge: 'Full Stack',
-    badgeColor: 'bg-blue-50 text-blue-700',
+    badgeColor: 'bg-violet-50 text-violet-700',
     tags: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
     readTime: '24 min read',
     difficulty: 'All Levels' as const,
@@ -150,13 +150,13 @@ export default function RoadmapsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }}
       />
 
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] text-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <Breadcrumb items={breadcrumbs.map(b => ({ ...b }))} />
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
             Developer Roadmaps 2026
           </h1>
-          <p className="text-blue-100 text-lg max-w-2xl">
+          <p className="text-violet-100 text-lg max-w-2xl">
             Month-by-month learning plans for 10 high-demand tech roles. Know exactly what to learn,
             when to learn it, and what projects to build.
           </p>
@@ -177,7 +177,7 @@ export default function RoadmapsPage() {
           ))}
         </div>
 
-        <section className="mt-16 bg-blue-50 border border-blue-200 rounded-2xl p-8">
+        <section className="mt-16 bg-[#F4F5FA] border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] rounded-2xl p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">How to Use These Roadmaps</h2>
           <p className="text-gray-600 mb-4">
             Each roadmap is designed as a complete learning system, not just a list of topics. 
@@ -193,7 +193,7 @@ export default function RoadmapsPage() {
               'Join the Crack Leap Discord to get feedback on your projects.',
             ].map((step, i) => (
               <li key={i} className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center">
+                <span className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] text-white text-xs font-bold rounded-full flex items-center justify-center">
                   {i + 1}
                 </span>
                 {step}

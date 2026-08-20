@@ -3,25 +3,27 @@ import { notFound } from "next/navigation";
 import { countries } from "@/lib/location-data/countries";
 import { states } from "@/lib/location-data/states";
 import { cities } from "@/lib/location-data/cities";
-import { isPublishableCity } from "@/lib/location-data/types";
-import { CityResourcesPage } from "@/app/components/location/CityResourcesPage";
+import { courses } from "@/lib/location-data/courses";
+import { StatePage } from "@/app/components/location/StatePage";
+import { SITE_URL } from "@/lib/seo";
 
-export const revalidate = 604800;
+export const revalidate = 604800; // 1 week
 
 interface Params {
   country: string;
   state: string;
-  city: string;
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return cities
-    .filter(isPublishableCity)
-    .map((city) => ({
-      country: city.countrySlug,
-      state: city.stateSlug,
-      city: city.slug,
-    }));
+  const publishedCountries = countries.filter(
+    (c) => c.rolloutPhase === "phase-1" && c.activeStateSlugs.length > 0,
+  );
+
+  return publishedCountries.flatMap((country) =>
+    states
+      .filter((s) => country.activeStateSlugs.includes(s.slug))
+      .map((s) => ({ country: country.slug, state: s.slug })),
+  );
 }
 
 export async function generateMetadata({
@@ -29,81 +31,74 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const {
-    country: countrySlug,
-    state: stateSlug,
-    city: citySlug,
-  } = await params;
-
-  const country = countries.find((c) => c.slug === countrySlug);
-  const city = cities.find(
-    (c) =>
-      c.slug === citySlug &&
-      c.stateSlug === stateSlug &&
-      c.countrySlug === countrySlug,
-  );
-
-  if (!country || !city) {
-    return {};
-  }
-
-  const title = `Free IT Training Resources in ${city.name} | Crack Leap Academy`;
-  const description = `Download free study materials, cheat sheets and practice sets for Python, Full-Stack, Data Science and AI courses in ${city.name}.`;
-  const canonicalUrl = `${city.seo.canonicalUrl}/resources`;
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonicalUrl,
-      siteName: "Crack Leap Academy",
-      images: city.seo.ogImage
-        ? [{ url: city.seo.ogImage, width: 1200, height: 630 }]
-        : [],
-      locale: country.locale.replace("-", "_"),
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: city.seo.ogImage ? [city.seo.ogImage] : [],
-    },
-  };
-}
-
-export default async function CityResourcesRoutePage({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
-  const {
-    country: countrySlug,
-    state: stateSlug,
-    city: citySlug,
-  } = await params;
+  const { country: countrySlug, state: stateSlug } = await params;
 
   const country = countries.find((c) => c.slug === countrySlug);
   const state = states.find(
     (s) => s.slug === stateSlug && s.countrySlug === countrySlug,
   );
-  const city = cities.find(
-    (c) =>
-      c.slug === citySlug &&
-      c.stateSlug === stateSlug &&
-      c.countrySlug === countrySlug,
+
+  if (!country || !state) {
+    return {};
+  }
+
+  const canonicalUrl = `${SITE_URL}/locations/${country.slug}/${state.slug}`;
+
+  return {
+    title: state.seo.metaTitle,
+    description: state.seo.metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: state.seo.hreflang
+        ? Object.fromEntries(Object.entries(state.seo.hreflang))
+        : undefined,
+    },
+    openGraph: {
+      title: state.seo.metaTitle,
+      description: state.seo.metaDescription,
+      url: canonicalUrl,
+      siteName: "Crack Leap Academy",
+      images: state.seo.ogImage
+        ? [{ url: state.seo.ogImage, width: 1200, height: 630, alt: state.seo.metaTitle }]
+        : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: state.seo.metaTitle }],
+      locale: country.locale.replace("-", "_"),
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: state.seo.metaTitle,
+      description: state.seo.metaDescription,
+      images: state.seo.ogImage ? [state.seo.ogImage] : [`${SITE_URL}/og-image.png`],
+    },
+  };
+}
+
+export default async function StateRoutePage({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { country: countrySlug, state: stateSlug } = await params;
+
+  const country = countries.find((c) => c.slug === countrySlug);
+  const state = states.find(
+    (s) => s.slug === stateSlug && s.countrySlug === countrySlug,
   );
 
-  if (!country || !state || !city || !isPublishableCity(city)) {
+  if (!country || !state || state.activeCitySlugs.length === 0) {
     notFound();
   }
 
-  const canonicalUrl = `${city.seo.canonicalUrl}/resources`;
+  const activeCities = cities.filter((c) =>
+    state.activeCitySlugs.includes(c.slug),
+  );
+
+  const citiesWithCourses = activeCities.map((city) => {
+    const availableCourses = courses.filter((course) =>
+      city.activeCoursesSlugs.includes(course.slug),
+    );
+    return { city, courses: availableCourses };
+  });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -113,37 +108,25 @@ export default async function CityResourcesRoutePage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.arivuon.com",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Locations",
-        item: "https://www.arivuon.com/locations",
+        item: `${SITE_URL}/locations`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: country.name,
-        item: `https://www.arivuon.com/locations/${country.slug}`,
+        item: `${SITE_URL}/locations/${country.slug}`,
       },
       {
         "@type": "ListItem",
         position: 4,
         name: state.name,
-        item: `https://www.arivuon.com/locations/${country.slug}/${state.slug}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        name: city.name,
-        item: city.seo.canonicalUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 6,
-        name: "Resources",
-        item: canonicalUrl,
+        item: `${SITE_URL}/locations/${country.slug}/${state.slug}`,
       },
     ],
   };
@@ -154,7 +137,11 @@ export default async function CityResourcesRoutePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <CityResourcesPage country={country} state={state} city={city} />
+      <StatePage
+        state={state}
+        country={country}
+        citiesWithCourses={citiesWithCourses}
+      />
     </>
   );
 }

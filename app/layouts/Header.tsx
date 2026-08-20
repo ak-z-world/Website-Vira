@@ -229,7 +229,8 @@ const Header = () => {
 
                           {/* Mega Dropdown Menu Panel */}
                           <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
-                            <div className="bg-[#F4F5FA] border border-white/80 rounded-[28px] shadow-[14px_14px_36px_#c8c9ce,-14px_-14px_36px_#ffffff] overflow-hidden w-[560px] p-4">
+                            <div className="bg-[#F4F5FA] border border-white/80 rounded-[28px] shadow-[14px_14px_36px_#c8c9ce,-14px_-14px_36px_#ffffff] overflow-hidden w-[560px] max-w-[calc(100vw-2rem)] p-4">
+
                               <div className="grid grid-cols-2 gap-3 p-2">
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link

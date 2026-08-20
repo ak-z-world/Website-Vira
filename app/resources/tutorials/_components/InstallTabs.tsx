@@ -29,8 +29,8 @@ export default function InstallTabs({ installation }: InstallTabsProps) {
               aria-pressed={isActive}
               className={
                 isActive
-                  ? "px-5 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white transition-colors"
-                  : "px-5 py-2 rounded-lg text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors"
+                  ? "px-5 py-2 rounded-xl text-sm font-bold bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white shadow-md transition-all"
+                  : "px-5 py-2 rounded-xl text-sm font-semibold bg-[#F4F5FA] border border-white/80 text-slate-600 shadow-[2px_2px_5px_#dcdde3,-2px_-2px_5px_#ffffff] hover:text-[#8B5CF6] transition-all"
               }
             >
               {step.os}
@@ -39,14 +39,14 @@ export default function InstallTabs({ installation }: InstallTabsProps) {
         })}
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <div className="bg-[#F4F5FA] border border-white/80 rounded-2xl p-6 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff]">
         <ol className="space-y-4 mb-6">
           {active.steps.map((stepText, idx) => (
             <li key={idx} className="flex gap-4">
-              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-semibold flex items-center justify-center">
+              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#F4F5FA] shadow-[inset_2px_2px_4px_#d1d3dc,inset_-2px_-2px_4px_#ffffff] text-[#8B5CF6] text-sm font-bold flex items-center justify-center">
                 {idx + 1}
               </span>
-              <span className="text-gray-700 leading-relaxed pt-0.5">{stepText}</span>
+              <span className="text-slate-700 font-medium leading-relaxed pt-0.5">{stepText}</span>
             </li>
           ))}
         </ol>

@@ -27,10 +27,10 @@ const breadcrumbs = [
 ];
 
 const DIFFICULTY_COLORS: Record<string, string> = {
-  'All Levels': 'bg-blue-50 text-blue-700 border border-blue-200',
-  Beginner: 'bg-green-50 text-green-700 border border-green-200',
-  Intermediate: 'bg-yellow-50 text-yellow-700 border border-yellow-200',
-  Advanced: 'bg-red-50 text-red-700 border border-red-200',
+  'All Levels': 'bg-violet-50 text-violet-700 border border-violet-200',
+  Beginner: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
+  Intermediate: 'bg-amber-50 text-amber-700 border border-amber-200',
+  Advanced: 'bg-rose-50 text-rose-700 border border-rose-200',
 };
 
 export default function ProjectsIndexPage() {
@@ -100,7 +100,7 @@ export default function ProjectsIndexPage() {
 
         {/* What are these projects */}
         <section className="mb-12">
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-7">
+          <div className="bg-[#F4F5FA] border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] rounded-2xl p-7">
             <h2 className="text-xl font-bold text-gray-900 mb-3">How to Use These Project Lists</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
               Every project on this site is production-shaped — not a tutorial clone. Each category contains
@@ -125,7 +125,7 @@ export default function ProjectsIndexPage() {
               <Link
                 key={cat.slug}
                 href={`/resources/projects/${cat.slug}`}
-                className="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-400 hover:shadow-lg transition-all duration-200"
+                className="group flex flex-col bg-white border border-gray-200 rounded-2xl p-6 hover:border-violet-400 hover:shadow-lg transition-all duration-200"
               >
                 {/* Icon + Title */}
                 <div className="flex items-center gap-3 mb-4">
@@ -144,7 +144,7 @@ export default function ProjectsIndexPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 text-base group-hover:text-blue-600 transition-colors leading-snug">
+                    <h3 className="font-bold text-gray-900 text-base group-hover:text-[#8B5CF6] transition-colors leading-snug">
                       {cat.title}
                     </h3>
                     <span className="text-xs text-gray-400 font-medium">{cat.projects.length} projects</span>
@@ -189,7 +189,7 @@ export default function ProjectsIndexPage() {
                 </div>
 
                 {/* Hover arrow */}
-                <div className="mt-3 flex items-center gap-1 text-blue-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-3 flex items-center gap-1 text-[#8B5CF6] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   <span>Browse projects</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

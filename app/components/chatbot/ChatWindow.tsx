@@ -36,9 +36,9 @@ export default function ChatWindow({
   }, [messages, isTyping]);
 
   return (
-    <div className="fixed bottom-20 right-6 w-96 h-[600px] max-h-[80vh] bg-bot-bg shadow-neo-flat rounded-2xl flex flex-col overflow-hidden z-50">
+    <div className="fixed bottom-20 right-4 sm:right-6 w-[calc(100vw-2rem)] max-w-sm sm:w-96 h-[540px] max-h-[75vh] bg-[#F4F5FA] shadow-[12px_12px_28px_#dcdde3,-12px_-12px_28px_#ffffff] border border-white/80 rounded-3xl flex flex-col overflow-hidden z-50">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 bg-bot-bg shadow-sm z-10">
+      <div className="flex items-center justify-between p-4 bg-[#F4F5FA] border-b border-slate-200/60 z-10">
         <div className="flex items-center gap-3">
           <Image
             src="/assets/icons/bot_image.png"

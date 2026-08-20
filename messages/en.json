@@ -255,7 +255,7 @@
       "averageSalary": "Average Salary",
       "jobGrowth": "Job Growth Rate",
       "industryDemand": "Market Demand",
-      "ctaTitle": "Start Your AWS DevOps Career",
+      "ctaTitle": "Ready to Launch Your DevOps Engineering Career?",
       "projects": {
         "cicd": {
           "title": "End-to-End CI/CD Pipeline",
@@ -395,6 +395,88 @@
         "monitoring": "Implement Monitoring and Logging using CloudWatch",
         "bestPractices": "Apply Industry-Level DevOps Best Practices",
         "projectExperience": "Gain Real-World DevOps Project Experience"
+      }
+    },
+    "dataScience": {
+      "title": "Data Science & AI Development",
+      "subtitle": "Master Data Science, Machine Learning, and AI. Build intelligent applications using real-world datasets.",
+      "description": "Become an expert in Data Science using Python, ML, Deep Learning, NLP, and Computer Vision.",
+      "tagline": "High-Demand Course",
+      "heroText": "Master Data Science, Machine Learning, and AI. Build intelligent applications using real-world datasets.",
+      "curriculumTitle": "What You'll Learn",
+      "curriculumDesc": "A structured path from Python fundamentals to building advanced Data Science applications.",
+      "careerTitle": "Career Outcomes",
+      "careerSubtitle": "What graduates achieve",
+      "toolsTitle": "Tools & Technologies",
+      "toolsSubtitle": "You'll work with the best",
+      "ctaTitle": "Ready to Start Your Data Science Journey?",
+      "ctaDesc": "Join the next batch and build real-world intelligent applications with confidence.",
+      "courseDetails": {
+        "duration": "6 Weeks",
+        "level": "Beginner to Professional",
+        "nextBatch": "March 10, 2026",
+        "seatsLeft": "8 Available"
+      },
+      "modules": {
+        "python": {
+          "title": "Python Programming",
+          "duration": "3 Weeks",
+          "topics": {
+            "intro": "Introduction to Python",
+            "libraries": "Library functions",
+            "datatypes": "Datatypes & Operators",
+            "control": "Control statements",
+            "functions": "Functions",
+            "oop": "Object-Oriented Programming"
+          }
+        },
+        "fundamentals": {
+          "title": "Data Science Fundamentals",
+          "duration": "3 Weeks",
+          "topics": {
+            "analysis": "Data Analysis",
+            "numpy": "NumPy Fundamentals",
+            "pandas": "Pandas for Data Processing",
+            "stats": "Statistics",
+            "viz": "Data Visualization with Seaborn"
+          }
+        },
+        "machineLearning": {
+          "title": "AI & Machine Learning",
+          "duration": "2 Weeks",
+          "topics": {
+            "ml": "Machine Learning",
+            "dl": "Deep Learning",
+            "nlp": "Natural Language Processing",
+            "cv": "Computer Vision"
+          }
+        },
+        "tools": {
+          "title": "Tools & Deployment",
+          "duration": "1 Week",
+          "topics": {
+            "jupyter": "Jupyter Notebook",
+            "training": "Model Training",
+            "projects": "Real-world AI Projects",
+            "deployment": "Deployment"
+          }
+        }
+      },
+      "benefits": {
+        "certification": "Industry Recognized Certification",
+        "hours": "120+ Hours of Learning",
+        "projects": "10+ Real-world Projects",
+        "mentorship": "1:1 Expert Mentorship"
+      },
+      "outcomes": {
+        "datasets": "Analyze real-world datasets",
+        "mlModels": "Build Machine Learning models",
+        "deepLearning": "Build Deep Learning systems",
+        "nlpApps": "Create NLP applications",
+        "cvApps": "Build Computer Vision apps",
+        "deploy": "Deploy AI models",
+        "libraries": "Work with Pandas and NumPy",
+        "jobReady": "Become job-ready Data Scientist"
       }
     },
     "pythonDevopsCombo": {

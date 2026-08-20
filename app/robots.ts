@@ -1,5 +1,6 @@
 // app/robots.ts
 import { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
 
 // ─── PATH CONSTANTS ───────────────────────────────────────────────────────────
 
@@ -13,7 +14,7 @@ const ALWAYS_BLOCK = [
   "/auth/",
 ];
 
-// Public content paths that search engines should index
+// Public content paths that search engines and AI answer engines should index
 const PUBLIC_ALLOW = [
   "/",
   "/courses/",
@@ -27,13 +28,15 @@ const PUBLIC_ALLOW = [
   "/about",
   "/contact",
   "/faq",
+  "/privacy-policy",
+  "/terms-and-conditions",
 ];
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       // ═══════════════════════════════════════════════════════════════════════
-      // TIER 1 — PRIMARY SEARCH ENGINES (Full access, specific blocks)
+      // TIER 1 — PRIMARY SEARCH ENGINES (Full access)
       // ═══════════════════════════════════════════════════════════════════════
 
       {
@@ -43,13 +46,7 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: "Googlebot-Image",
-        allow: [
-          "/",
-          "/*.png",
-          "/*.jpg",
-          "/*.webp",
-          "/*.svg",
-        ],
+        allow: ["/", "/*.png", "/*.jpg", "/*.webp", "/*.svg"],
         disallow: ["/api/", "/_next/"],
       },
       {
@@ -58,62 +55,83 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
       {
-        userAgent: "Storebot-Google",
-        allow: "/courses/",
-        disallow: ALWAYS_BLOCK,
-      },
-      {
         userAgent: "Bingbot",
         allow: PUBLIC_ALLOW,
         disallow: ALWAYS_BLOCK,
       },
       {
-        userAgent: "Slurp",
-        allow: "/",
+        userAgent: "Applebot",
+        allow: PUBLIC_ALLOW,
         disallow: ALWAYS_BLOCK,
       },
       {
         userAgent: "DuckDuckBot",
-        allow: "/",
-        disallow: ALWAYS_BLOCK,
-      },
-      {
-        userAgent: "Baiduspider",
-        allow: "/",
-        disallow: ALWAYS_BLOCK,
-      },
-      {
-        userAgent: "Baiduspider-render",
-        allow: "/",
+        allow: PUBLIC_ALLOW,
         disallow: ALWAYS_BLOCK,
       },
       {
         userAgent: "YandexBot",
-        allow: "/",
-        disallow: ALWAYS_BLOCK,
-      },
-      {
-        userAgent: "YandexImages",
-        allow: "/",
-        disallow: ["/api/", "/_next/"],
-      },
-      {
-        userAgent: "Applebot",
-        allow: "/",
+        allow: PUBLIC_ALLOW,
         disallow: ALWAYS_BLOCK,
       },
 
       // ═══════════════════════════════════════════════════════════════════════
-      // TIER 2 — SOCIAL PREVIEW BOTS (Allow — link previews)
+      // TIER 2 — AI SEARCH & ANSWER ENGINES (AEO / GEO Optimization)
+      // Enable discovery in Google AI Overviews, Perplexity, ChatGPT Search, Claude
       // ═══════════════════════════════════════════════════════════════════════
 
       {
-        userAgent: "facebot",
-        allow: "/",
-        disallow: ["/api/", "/_next/"],
+        userAgent: "OAI-SearchBot",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
       },
+      {
+        userAgent: "ChatGPT-User",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+      {
+        userAgent: "GPTBot",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+      {
+        userAgent: "ClaudeBot",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+      {
+        userAgent: "Claude-Web",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+      {
+        userAgent: "Google-Extended",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+      {
+        userAgent: "Applebot-Extended",
+        allow: PUBLIC_ALLOW,
+        disallow: ALWAYS_BLOCK,
+      },
+
+      // ═══════════════════════════════════════════════════════════════════════
+      // TIER 3 — SOCIAL PREVIEW BOTS (Link previews)
+      // ═══════════════════════════════════════════════════════════════════════
+
       {
         userAgent: "Twitterbot",
+        allow: "/",
+        disallow: ["/api/", "/_next/"],
+      },
+      {
+        userAgent: "facebookexternalhit",
         allow: "/",
         disallow: ["/api/", "/_next/"],
       },
@@ -142,95 +160,18 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/_next/"],
       },
-      {
-        userAgent: "Pinterest",
-        allow: "/",
-        disallow: ["/api/", "/_next/"],
-      },
-      {
-        userAgent: "redditbot",
-        allow: "/",
-        disallow: ["/api/", "/_next/"],
-      },
 
       // ═══════════════════════════════════════════════════════════════════════
-      // TIER 3 — AI TRAINING BOTS (BLOCK ALL)
-      // ═══════════════════════════════════════════════════════════════════════
-
-      { userAgent: "GPTBot", disallow: "/" },
-      { userAgent: "ChatGPT-User", disallow: "/" },
-      { userAgent: "OAI-SearchBot", disallow: "/" },
-      { userAgent: "anthropic-ai", disallow: "/" },
-      { userAgent: "Claude-Web", disallow: "/" },
-      { userAgent: "ClaudeBot", disallow: "/" },
-      { userAgent: "Google-Extended", disallow: "/" },
-      { userAgent: "Gemini", disallow: "/" },
-      { userAgent: "CCBot", disallow: "/" },
-      { userAgent: "FacebookBot", disallow: "/" },
-      { userAgent: "meta-externalagent", disallow: "/" },
-      { userAgent: "Bytespider", disallow: "/" },
-      { userAgent: "PerplexityBot", disallow: "/" },
-      { userAgent: "YouBot", disallow: "/" },
-      { userAgent: "cohere-ai", disallow: "/" },
-      { userAgent: "Omgilibot", disallow: "/" },
-      { userAgent: "omgili", disallow: "/" },
-      { userAgent: "Diffbot", disallow: "/" },
-      { userAgent: "ImagesiftBot", disallow: "/" },
-      { userAgent: "img2dataset", disallow: "/" },
-      { userAgent: "Timpibot", disallow: "/" },
-      { userAgent: "AI2Bot", disallow: "/" },
-      { userAgent: "Ai2Bot-Dolma", disallow: "/" },
-      { userAgent: "iaskspider", disallow: "/" },
-      { userAgent: "magpie-crawler", disallow: "/" },
-      { userAgent: "Scrapy", disallow: "/" },
-      { userAgent: "DataForSeoBot", disallow: "/" },
-      { userAgent: "PanguBot", disallow: "/" },
-      { userAgent: "Kangaroo Bot", disallow: "/" },
-      { userAgent: "wp_is_mobile", disallow: "/" },
-
-      // ═══════════════════════════════════════════════════════════════════════
-      // TIER 4 — SEO TOOL SCRAPERS (BLOCK)
-      // ═══════════════════════════════════════════════════════════════════════
-
-      { userAgent: "SemrushBot", disallow: "/" },
-      { userAgent: "SemrushBot-SA", disallow: "/" },
-      { userAgent: "SemrushBot-CT", disallow: "/" },
-      { userAgent: "AhrefsBot", disallow: "/" },
-      { userAgent: "MJ12bot", disallow: "/" },
-      { userAgent: "DotBot", disallow: "/" },
-      { userAgent: "BLEXBot", disallow: "/" },
-      { userAgent: "PetalBot", disallow: "/" },
-      { userAgent: "serpstatbot", disallow: "/" },
-      { userAgent: "SEOkicks", disallow: "/" },
-      { userAgent: "seoscanbot", disallow: "/" },
-      { userAgent: "sistrix", disallow: "/" },
-      { userAgent: "seobilitybot", disallow: "/" },
-      { userAgent: "RyteBot", disallow: "/" },
-      { userAgent: "SiteAuditBot", disallow: "/" },
-      { userAgent: "MegaIndex", disallow: "/" },
-      { userAgent: "opensiteexplorer", disallow: "/" },
-
-      // ═══════════════════════════════════════════════════════════════════════
-      // TIER 5 — DEFAULT RULE (catch-all)
+      // TIER 4 — DEFAULT CATCH-ALL RULE
       // ═══════════════════════════════════════════════════════════════════════
 
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/api/",
-          "/_next/",
-          "/admin/",
-          "/private/",
-          "/dashboard/",
-          "/checkout/",
-          "/auth/",
-          "/404",
-          "/500",
-        ],
+        disallow: ALWAYS_BLOCK,
       },
     ],
 
-    sitemap: "https://academy.arivuon.in/sitemap.xml",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

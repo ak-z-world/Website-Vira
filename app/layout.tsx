@@ -38,17 +38,9 @@ import "@/app/globals.css";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import { GlobalProvider } from "./providers";
-import { Poppins } from 'next/font/google'
 import ChatWidget from './components/chatbot/ChatWidget';
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600','700','800'] })
-
-
-// ════════════════════════════════════════════════════════════════════════════
-// CONSTANTS — single source of truth; import from here in every page/layout
-// ════════════════════════════════════════════════════════════════════════════
-export const SITE_URL  = "https://academy.arivuon.in" as const;
-export const SITE_NAME = "Crack Leap Academy"             as const;
 
 // ════════════════════════════════════════════════════════════════════════════
 // VIEWPORT — required as separate export in Next.js 14+
@@ -58,7 +50,7 @@ export const viewport: Viewport = {
   width:        "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor:   "#0D1B3E",
+  themeColor:   "#F8F9FE",
 };
 
 // ════════════════════════════════════════════════════════════════════════════
@@ -606,90 +598,8 @@ export const metadata: Metadata = {
 //
 // This prevents metadata restructuring for 10+ years of location expansion.
 // ════════════════════════════════════════════════════════════════════════════
-export function generateLocationMetadata({
-  country,
-  state,
-  city,
-  course,
-  cityDisplay,
-  stateDisplay,
-  courseDisplay,
-}: {
-  country: string;
-  state: string;
-  city: string;
-  course: string;
-  cityDisplay: string;
-  stateDisplay: string;
-  courseDisplay: string;
-}): Metadata {
-  const pageUrl = `${SITE_URL}/locations/${country}/${state}/${city}/${course}`;
-  const title   = `${courseDisplay} in ${cityDisplay} | Crack Leap Academy`;
-  const desc    = `Best ${courseDisplay} in ${cityDisplay}, ${stateDisplay}. Crack Leap Academy offers live instructor-led ${courseDisplay} with 1:1 mentorship, real projects, and placement support. Enroll now.`;
+// Metadata helper functions are in @/lib/seo
 
-  return {
-    title,
-    description: desc,
-    alternates:  { canonical: pageUrl },
-    openGraph: {
-      type:        "website",
-      url:         pageUrl,
-      siteName:    SITE_NAME,
-      title,
-      description: desc,
-      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: title }],
-    },
-    twitter: {
-      card:        "summary_large_image",
-      title,
-      description: desc,
-      images:      [`${SITE_URL}/og-image.png`],
-    },
-  };
-}
-
-// ════════════════════════════════════════════════════════════════════════════
-// FUTURE-READY: generateCourseMetadata()
-// Use in: /app/courses/[slug]/page.tsx
-// ════════════════════════════════════════════════════════════════════════════
-export function generateCourseMetadata({
-  slug,
-  title,
-  description,
-  price = "10000",
-  duration,
-  imageUrl,
-}: {
-  slug:        string;
-  title:       string;
-  description: string;
-  price?:      string;
-  duration?:   string;
-  imageUrl?:   string;
-}): Metadata {
-  const pageUrl = `${SITE_URL}/courses/${slug}`;
-  const image   = imageUrl ?? `${SITE_URL}/og-image.png`;
-
-  return {
-    title,
-    description,
-    alternates: { canonical: pageUrl },
-    openGraph: {
-      type:        "website",
-      url:         pageUrl,
-      siteName:    SITE_NAME,
-      title:       `${title} | Crack Leap Academy`,
-      description,
-      images: [{ url: image, width: 1200, height: 630, alt: title }],
-    },
-    twitter: {
-      card:        "summary_large_image",
-      title:       `${title} | Crack Leap Academy`,
-      description,
-      images:      [image],
-    },
-  };
-}
 
 // ════════════════════════════════════════════════════════════════════════════
 // JSON-LD STRUCTURED DATA — @graph architecture
@@ -1664,7 +1574,7 @@ export default function RootLayout({
 
       </head>
 
-      <body className="min-h-screen flex flex-col bg-gradient-to-b from-white to-orange-50/30">
+      <body className="min-h-screen flex flex-col bg-[#F8F9FE] text-slate-800 antialiased selection:bg-violet-200">
 
         <GlobalProvider>
           <Header />

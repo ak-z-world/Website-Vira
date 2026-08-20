@@ -81,21 +81,21 @@ export default function ChatWidget() {
     <>
       {/* Floating Action Button & Text Prompt */}
       {!isOpen && (
-        <div className="fixed bottom-6 right-6 flex items-center gap-4 z-50">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center gap-3 sm:gap-4 z-50">
           
           {/* High-Visibility Text Bubble */}
           <div
-            className="hidden sm:flex items-center gap-2 bg-white border border-gray-200 px-5 py-2.5 rounded-full shadow-xl hover:shadow-2xl transition-shadow animate-float cursor-pointer"
+            className="hidden sm:flex items-center gap-2 bg-[#F4F5FA] border border-white/80 px-4 py-2 rounded-full shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] hover:shadow-[6px_6px_12px_#d0d2dc,-6px_-6px_12px_#ffffff] transition-all animate-float cursor-pointer"
             onClick={() => setIsOpen(true)}>
             
             {/* Pulsing Green Online Indicator */}
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
 
-            <span className="text-sm font-medium text-gray-800">
-              Chat with <span className="text-bot-primary font-bold">Aura</span>{" "}
+            <span className="text-xs sm:text-sm font-semibold text-slate-700">
+              Chat with <span className="text-[#8B5CF6] font-bold">Aura</span>{" "}
               ✨
             </span>
           </div>
@@ -103,10 +103,10 @@ export default function ChatWidget() {
           {/* High-Visibility Bot Button */}
           <button
             onClick={() => setIsOpen(true)}
-            className="w-20 h-20 bg-white border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-[1.75rem] flex items-center justify-center group">
+            aria-label="Open chat with Aura"
+            className="w-14 h-14 sm:w-16 sm:h-16 bg-[#F4F5FA] border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] hover:shadow-[8px_8px_18px_#d0d2dc,-8px_-8px_18px_#ffffff] hover:-translate-y-0.5 transition-all duration-300 rounded-2xl flex items-center justify-center group">
             
-            {/* The Purple Inner Button (Unchanged) */}
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-bot-primary to-purple-400 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform overflow-hidden p-1.5">
+            <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform overflow-hidden p-1.5">
               <Image
                 src="/assets/icons/bot_image.png"
                 alt="Aura AI Assistant"

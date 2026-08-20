@@ -6,8 +6,7 @@ import RelatedResources from "../../_components/RelatedResources";
 import TableOfContents from "../../_components/TableOfContents";
 import { TUTORIALS_DATA } from "../_data/tutorials";
 import InstallTabs from "../_components/InstallTabs";
-
-const SITE_URL = "https://www.academy.arivuon.com";
+import { SITE_URL } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -67,7 +66,7 @@ function difficultyBadgeClasses(difficulty: string) {
     case "Advanced":
       return "bg-red-50 text-red-700 border border-red-200";
     default:
-      return "bg-blue-50 text-blue-700 border border-blue-200";
+      return "bg-violet-50 text-violet-700 border border-violet-200";
   }
 }
 
@@ -300,7 +299,7 @@ export default async function TutorialPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 What is {tutorial.title.replace(" Tutorial 2026", "")}?
               </h2>
-              <div className="border-l-4 border-blue-600 bg-blue-50 px-6 py-5 rounded-r-xl">
+              <div className="border-l-4 border-[#8B5CF6] bg-[#8B5CF6]/10 px-6 py-5 rounded-r-xl">
                 <p className="text-gray-800 leading-relaxed">{tutorial.whatIsIt}</p>
               </div>
             </section>
@@ -435,7 +434,7 @@ export default async function TutorialPage({ params }: PageProps) {
               </h2>
               <div className="overflow-x-auto rounded-xl border border-gray-200">
                 <table className="w-full text-sm">
-                  <thead className="bg-blue-600 text-white">
+                  <thead className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white">
                     <tr>
                       <th className="text-left px-5 py-3 font-semibold">Company</th>
                       <th className="text-left px-5 py-3 font-semibold">Use Case</th>
@@ -469,7 +468,7 @@ export default async function TutorialPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Comparison</h2>
               <div className="overflow-x-auto rounded-xl border border-gray-200">
                 <table className="w-full text-sm">
-                  <thead className="bg-blue-600 text-white">
+                  <thead className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white">
                     <tr>
                       <th className="text-left px-5 py-3 font-semibold">Feature</th>
                       <th className="text-left px-5 py-3 font-semibold">
@@ -521,11 +520,11 @@ export default async function TutorialPage({ params }: PageProps) {
                 {tutorial.interviewQuestions.map((qa, idx) => (
                   <details
                     key={qa.question}
-                    className="group bg-white border border-gray-200 rounded-xl p-5 open:border-blue-300"
+                    className="group bg-white border border-gray-200 rounded-xl p-5 open:border-violet-300"
                   >
-                    <summary className="cursor-pointer list-none flex items-start justify-between gap-4 font-semibold text-gray-900">
+                    <summary className="cursor-pointer font-semibold text-gray-900 list-none flex items-center justify-between">
                       <span>
-                        <span className="text-blue-600 mr-2">Q{idx + 1}.</span>
+                        <span className="text-[#8B5CF6] mr-2">Q{idx + 1}.</span>
                         {qa.question}
                       </span>
                       <span className="text-gray-400 group-open:rotate-45 transition-transform flex-shrink-0 text-xl leading-none">

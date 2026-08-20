@@ -3,18 +3,26 @@ import { notFound } from "next/navigation";
 import { countries } from "@/lib/location-data/countries";
 import { states } from "@/lib/location-data/states";
 import { cities } from "@/lib/location-data/cities";
-import { CountryPage } from "@/app/components/location/CountryPage";
+import { isPublishableCity } from "@/lib/location-data/types";
+import { CityResourcesPage } from "@/app/components/location/CityResourcesPage";
+import { SITE_URL } from "@/lib/seo";
 
-export const revalidate = 604800;
+export const revalidate = 604800; // 1 week
 
 interface Params {
   country: string;
+  state: string;
+  city: string;
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return countries
-    .filter((c) => c.rolloutPhase === "phase-1" && c.activeStateSlugs.length > 0)
-    .map((c) => ({ country: c.slug }));
+  return cities
+    .filter(isPublishableCity)
+    .map((city) => ({
+      country: city.countrySlug,
+      state: city.stateSlug,
+      city: city.slug,
+    }));
 }
 
 export async function generateMetadata({
@@ -22,69 +30,79 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { country: countrySlug } = await params;
-  const country = countries.find((c) => c.slug === countrySlug);
+  const {
+    country: countrySlug,
+    state: stateSlug,
+    city: citySlug,
+  } = await params;
 
-  if (!country) {
+  const country = countries.find((c) => c.slug === countrySlug);
+  const city = cities.find(
+    (c) =>
+      c.slug === citySlug &&
+      c.stateSlug === stateSlug &&
+      c.countrySlug === countrySlug,
+  );
+
+  if (!country || !city) {
     return {};
   }
 
+  const title = `Free IT Training Resources in ${city.name} | Crack Leap Academy`;
+  const description = `Download free study materials, cheat sheets and practice sets for Python, Full-Stack, Data Science and AI courses in ${city.name}.`;
+  const canonicalUrl = `${SITE_URL}/locations/${countrySlug}/${stateSlug}/${citySlug}/resources`;
+
   return {
-    title: country.seo.metaTitle,
-    description: country.seo.metaDescription,
+    title,
+    description,
     alternates: {
-      canonical: country.seo.canonicalUrl,
-      languages: country.seo.hreflang
-        ? Object.fromEntries(
-            Object.entries(country.seo.hreflang).map(([locale, url]) => [
-              locale,
-              url,
-            ]),
-          )
-        : undefined,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: country.seo.metaTitle,
-      description: country.seo.metaDescription,
-      url: country.seo.canonicalUrl,
+      title,
+      description,
+      url: canonicalUrl,
       siteName: "Crack Leap Academy",
-      images: country.seo.ogImage
-        ? [{ url: country.seo.ogImage, width: 1200, height: 630 }]
-        : [],
+      images: city.seo.ogImage
+        ? [{ url: city.seo.ogImage, width: 1200, height: 630, alt: title }]
+        : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: title }],
       locale: country.locale.replace("-", "_"),
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: country.seo.metaTitle,
-      description: country.seo.metaDescription,
-      images: country.seo.ogImage ? [country.seo.ogImage] : [],
+      title,
+      description,
+      images: city.seo.ogImage ? [city.seo.ogImage] : [`${SITE_URL}/og-image.png`],
     },
   };
 }
 
-export default async function CountryRoutePage({
+export default async function CityResourcesRoutePage({
   params,
 }: {
   params: Promise<Params>;
 }) {
-  const { country: countrySlug } = await params;
+  const {
+    country: countrySlug,
+    state: stateSlug,
+    city: citySlug,
+  } = await params;
+
   const country = countries.find((c) => c.slug === countrySlug);
-
-  if (!country || country.activeStateSlugs.length === 0) {
-    notFound();
-  }
-
-  const activeStates = states.filter((s) =>
-    country.activeStateSlugs.includes(s.slug),
+  const state = states.find(
+    (s) => s.slug === stateSlug && s.countrySlug === countrySlug,
+  );
+  const city = cities.find(
+    (c) =>
+      c.slug === citySlug &&
+      c.stateSlug === stateSlug &&
+      c.countrySlug === countrySlug,
   );
 
-  const statesWithCities = activeStates.map((state) => {
-    const activeCities = cities.filter((c) =>
-      state.activeCitySlugs.includes(c.slug),
-    );
-    return { state, cities: activeCities };
-  });
+  if (!country || !state || !city) {
+    notFound();
+  }
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -94,19 +112,37 @@ export default async function CountryRoutePage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.arivuon.com",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Locations",
-        item: "https://www.arivuon.com/locations",
+        item: `${SITE_URL}/locations`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: country.name,
-        item: country.seo.canonicalUrl,
+        item: `${SITE_URL}/locations/${country.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: state.name,
+        item: `${SITE_URL}/locations/${country.slug}/${state.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: city.name,
+        item: `${SITE_URL}/locations/${country.slug}/${state.slug}/${city.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: `Resources in ${city.name}`,
+        item: `${SITE_URL}/locations/${country.slug}/${state.slug}/${city.slug}/resources`,
       },
     ],
   };
@@ -117,7 +153,7 @@ export default async function CountryRoutePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <CountryPage country={country} statesWithCities={statesWithCities} />
+      <CityResourcesPage city={city} country={country} state={state} />
     </>
   );
 }

@@ -1,5 +1,5 @@
-// resources/_components/Breadcrumb.tsx
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 interface BreadcrumbItem {
   label: string;
@@ -8,23 +8,21 @@ interface BreadcrumbItem {
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+    <nav aria-label="Breadcrumb" className="flex items-center flex-wrap gap-2 text-xs sm:text-sm text-slate-500 mb-6 py-2 px-4 rounded-xl bg-white/70 shadow-sm border border-white/60">
       {items.map((item, idx) => (
-        <span key={item.href} className="flex items-center gap-2">
+        <span key={item.href + idx} className="flex items-center gap-2">
           {idx < items.length - 1 ? (
             <>
               <Link
                 href={item.href}
-                className="hover:text-blue-600 transition-colors"
+                className="hover:text-[#8B5CF6] font-medium transition-colors"
               >
                 {item.label}
               </Link>
-              <svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             </>
           ) : (
-            <span className="text-gray-900 font-medium">{item.label}</span>
+            <span className="text-slate-900 font-bold">{item.label}</span>
           )}
         </span>
       ))}

@@ -101,7 +101,7 @@ export default function FAQPage() {
     ? faqs 
     : faqs.filter(faq => faq.category === activeCategory);
 
- const toggleFAQ = (index: number) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -111,55 +111,53 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="min-h-screen bg-[#F8F9FE] text-slate-800">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-60" />
+      <section className="relative pt-12 sm:pt-16 pb-10 overflow-hidden">
+        <div className="absolute top-10 left-1/4 w-72 h-72 bg-[#8B5CF6]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-[#6366F1]/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="section-padding relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
-                <HelpCircle className="w-4 h-4 text-blue-500" />
-                <span className="text-sm font-semibold text-blue-600">Quick Answers</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Frequently Asked <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Questions</span>
-              </h1>
-              
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                Find quick answers to common questions about courses, enrollment, and support at Crack Leap Academy.
-              </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-[#F4F5FA] border border-white/80 rounded-full px-4 py-2 mb-6 shadow-[3px_3px_8px_#dcdde3,-3px_-3px_8px_#ffffff]">
+              <HelpCircle className="w-4 h-4 text-[#8B5CF6]" />
+              <span className="text-xs sm:text-sm font-bold text-[#8B5CF6]">Quick Answers</span>
             </div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 leading-tight">
+              Frequently Asked <span className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">Questions</span>
+            </h1>
+            
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
+              Find quick, clear answers to common questions about our programs, curriculum, enrollment, and support at Crack Leap Academy.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-8 bg-white">
+      <section className="pb-20">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             {/* Categories Filter */}
             <div className="mb-12">
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center">
                 {categories.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-300 ${
                       activeCategory === category.id
-                        ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/25'
-                        : 'bg-white border border-gray-200 text-gray-700 hover:border-blue-300 hover:shadow-lg'
+                        ? 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white shadow-[4px_6px_16px_rgba(139,92,246,0.35)] -translate-y-0.5'
+                        : 'bg-[#F4F5FA] border border-white/80 text-slate-600 shadow-[3px_3px_7px_#dcdde3,-3px_-3px_7px_#ffffff] hover:text-[#8B5CF6] hover:shadow-[5px_5px_10px_#d0d2dc,-5px_-5px_10px_#ffffff]'
                     }`}
                   >
-                    <span className="text-blue-500">{category.icon}</span>
+                    <span className={activeCategory === category.id ? 'text-white' : 'text-[#8B5CF6]'}>{category.icon}</span>
                     <span>{category.name}</span>
-                    <span className={`text-sm px-2 py-0.5 rounded-full ${
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${
                       activeCategory === category.id
                         ? 'bg-white/20 text-white'
-                        : 'bg-gray-100 text-gray-600'
+                        : 'bg-[#e8eaf2] text-slate-500'
                     }`}>
                       {category.count}
                     </span>
@@ -169,50 +167,47 @@ export default function FAQPage() {
             </div>
 
             {/* FAQ Grid */}
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-5 sm:gap-6">
               {filteredFaqs.map((faq, index) => (
                 <div 
                   key={index} 
-                  className="bg-white border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-[#F4F5FA] border border-white/80 rounded-2xl shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] hover:shadow-[8px_8px_18px_#d0d2dc,-8px_-8px_18px_#ffffff] transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full text-left p-6 md:p-8"
+                    className="w-full text-left p-6 sm:p-7"
+                    aria-expanded={openIndex === index}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-                            <div className="text-blue-500">
-                              {getCategoryIcon(faq.category)}
-                            </div>
+                          <div className="w-9 h-9 rounded-xl bg-[#F4F5FA] shadow-[inset_2px_2px_4px_#d1d3dc,inset_-2px_-2px_4px_#ffffff] flex items-center justify-center flex-shrink-0 text-[#8B5CF6]">
+                            {getCategoryIcon(faq.category)}
                           </div>
                           <div>
-                            <div className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <div className="text-[11px] font-bold text-[#8B5CF6] uppercase tracking-wider">
                               {faq.category}
                             </div>
                           </div>
                         </div>
                         
-                        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
+                        <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-2 leading-snug">
                           {faq.question}
                         </h3>
                         
                         <div className={`overflow-hidden transition-all duration-300 ${
-                          openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                          openIndex === index ? 'max-h-96 opacity-100 mt-3 pt-3 border-t border-slate-200/60' : 'max-h-0 opacity-0'
                         }`}>
-                          <div className="pt-4 border-t border-gray-100">
-                            <p className="text-gray-600 leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
+                          <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                            {faq.answer}
+                          </p>
                         </div>
                       </div>
                       
-                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 shadow-[3px_3px_6px_#dcdde3,-3px_-3px_6px_#ffffff] ${
                         openIndex === index 
-                          ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white rotate-180' 
-                          : 'bg-gray-100 text-gray-500'
+                          ? 'bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] text-white rotate-180' 
+                          : 'bg-[#F4F5FA] text-slate-600'
                       }`}>
                         <ChevronDown className="w-4 h-4" />
                       </div>
@@ -222,48 +217,41 @@ export default function FAQPage() {
               ))}
             </div>
 
-           
-
             {/* Still Have Questions Section */}
-            <div className="mt-16">
-              <div className="bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-3xl p-8 md:p-12">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200 rounded-full px-4 py-2 mb-6">
-                    <Sparkles className="w-4 h-4 text-blue-500" />
-                    <span className="text-sm font-semibold text-blue-600">Need More Help?</span>
-                  </div>
-                  
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    Still Have <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Questions?</span>
-                  </h2>
-                  
-                  <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-                    Can't find the answer you're looking for? Our support team is here to help you with any questions about courses, enrollment, or technical issues.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a 
-                      href="mailto:info@arivuon.in"
-                      className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
-                    >
-                      <Mail className="w-5 h-5" />
-                      Email Support
-                    </a>
-                    <a 
-                      href="tel:+9194457 70160"
-                      className="inline-flex items-center justify-center gap-3 bg-white border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300"
-                    >
-                      <Phone className="w-5 h-5" />
-                      Call Support
-                    </a>
-                  </div>
-                  
-                  <div className="mt-8 text-sm text-gray-500">
-                    <p>Average response time: 2-4 hours during business hours</p>
-                  </div>
+            <div className="mt-16 sm:mt-20">
+              <div className="bg-[#F4F5FA] border border-white/80 shadow-[10px_10px_24px_#dcdde3,-10px_-10px_24px_#ffffff] rounded-3xl p-8 sm:p-12 text-center">
+                <div className="inline-flex items-center gap-2 bg-[#F4F5FA] border border-white/80 rounded-full px-4 py-2 mb-6 shadow-[inset_2px_2px_4px_#d1d3dc,inset_-2px_-2px_4px_#ffffff]">
+                  <Sparkles className="w-4 h-4 text-[#8B5CF6]" />
+                  <span className="text-xs sm:text-sm font-bold text-[#8B5CF6]">Need More Help?</span>
+                </div>
+                
+                <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 text-slate-900 tracking-tight">
+                  Still Have <span className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">Questions?</span>
+                </h2>
+                
+                <p className="text-slate-600 max-w-xl mx-auto mb-8 text-sm sm:text-base font-medium leading-relaxed">
+                  Can't find the answer you're looking for? Our academic counseling team is ready to assist you with any questions.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="mailto:info@arivuon.in"
+                    className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white font-bold px-7 py-3.5 rounded-2xl shadow-[4px_6px_18px_rgba(139,92,246,0.35)] hover:shadow-[6px_10px_24px_rgba(139,92,246,0.45)] hover:-translate-y-0.5 transition-all text-sm"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Email Support
+                  </a>
+                  <a 
+                    href="tel:+919445770160"
+                    className="inline-flex items-center justify-center gap-2.5 bg-[#F4F5FA] border border-white/80 text-slate-800 font-bold px-7 py-3.5 rounded-2xl shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] hover:shadow-[6px_6px_14px_#d0d2dc,-6px_-6px_14px_#ffffff] hover:text-[#8B5CF6] hover:-translate-y-0.5 transition-all text-sm"
+                  >
+                    <Phone className="w-4 h-4 text-[#8B5CF6]" />
+                    Call Us: +91 94457 70160
+                  </a>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>

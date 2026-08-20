@@ -48,12 +48,12 @@ export default function TopPrograms() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f0f4f8] p-4 md:p-8 lg:p-12 font-sans flex flex-col items-center justify-center">
+    <section className="w-full bg-[#F4F5FA] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans flex flex-col items-center justify-center">
       
       {/* Main Container */}
-      <div className="w-full max-w-[100rem] relative bg-[#f0f4f8] p-6 lg:p-10 rounded-3xl md:rounded-[3rem] shadow-[10px_10px_20px_#d1d9e6,-10px_-10px_20px_#ffffff]">
+      <div className="w-full max-w-[90rem] relative bg-[#F4F5FA] p-6 sm:p-8 lg:p-10 rounded-[28px] md:rounded-[3rem] shadow-[10px_10px_24px_#dcdde3,-10px_-10px_24px_#ffffff] border border-white/60">
         
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 md:mb-10 ml-2">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-8 sm:mb-10 ml-2 tracking-tight">
           Top Programs
         </h2>
 
@@ -64,16 +64,11 @@ export default function TopPrograms() {
             <div
               key={course.id}
               // Neomorphic card body
-              className="bg-[#f0f4f8] rounded-[2rem] p-3 flex flex-col sm:flex-row items-center sm:items-stretch gap-4 sm:gap-5 shadow-[6px_6px_14px_#d1d9e6,-6px_-6px_14px_#ffffff] transition-transform duration-300 hover:-translate-y-1"
+              className="bg-[#F4F5FA] rounded-[2rem] p-3.5 sm:p-4 flex flex-col sm:flex-row items-center sm:items-stretch gap-4 sm:gap-5 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] border border-white/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[10px_10px_20px_#d0d2dc,-10px_-10px_20px_#ffffff]"
             >
               
               {/* Left Side: Soft Lavender Image Area matching the target image */}
-              <div className="w-full sm:w-[45%] h-48 sm:h-auto min-h-[160px] rounded-[1.5rem] bg-gradient-to-br from-[#e0e4ff] to-[#f0f3ff] relative flex-shrink-0 flex items-center justify-center overflow-hidden">
-                
-                {/* 
-                  Removed the dark inset shadow that was causing the grey "bucket" effect. 
-                  Using full height (h-full) and uniform padding (p-3) so the image sits perfectly in the lavender box.
-                */}
+              <div className="w-full sm:w-[45%] h-48 sm:h-auto min-h-[160px] rounded-[1.5rem] bg-gradient-to-br from-[#e8eafc] to-[#f4f5fa] relative flex-shrink-0 flex items-center justify-center overflow-hidden border border-white/60">
                 <div className="relative w-full h-full p-3 md:p-4">
                   <Image
                     src={course.image}
@@ -83,7 +78,6 @@ export default function TopPrograms() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
-                
               </div>
 
               {/* Right Side: Course Content */}
@@ -98,11 +92,10 @@ export default function TopPrograms() {
                   {course.tech.map((techItem, index) => (
                     <div 
                       key={index} 
-                      className="w-13 h-13 rounded-full bg-[#f0f4f8] flex items-center justify-center shadow-[3px_3px_6px_#d1d9e6,-3px_-3px_6px_#ffffff]"
+                      className="w-10 h-10 rounded-xl bg-[#F4F5FA] flex items-center justify-center shadow-[3px_3px_6px_#dcdde3,-3px_-3px_6px_#ffffff] border border-white/60"
                       title={techItem.name}
                     >
-                      {/* Fixed valid Tailwind sizing for the icon image */}
-                      <div className="relative w-15 h-15">
+                      <div className="relative w-6 h-6">
                         <Image 
                           src={techItem.path} 
                           alt={techItem.name} 
@@ -115,9 +108,9 @@ export default function TopPrograms() {
                 </div>
 
                 {/* Duration & Projects Text */}
-                <div className="flex justify-center sm:justify-start items-center gap-2 text-[12px] sm:text-[13px] text-slate-500 font-medium mb-5">
+                <div className="flex justify-center sm:justify-start items-center gap-2 text-[12px] sm:text-[13px] text-slate-500 font-semibold mb-4">
                   <span>{course.duration}</span>
-                  <span className="w-1 h-1 rounded-full bg-slate-400"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
                   <span>{course.projects}</span>
                 </div>
 
@@ -125,21 +118,21 @@ export default function TopPrograms() {
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-auto">
                   
                   {/* Placement Support Badge */}
-                  <div className="flex items-center gap-1.5 bg-[#f0f4f8] px-2.5 py-1.5 rounded-full shadow-[3px_3px_6px_#d1d9e6,-3px_-3px_6px_#ffffff]">
-                    <svg className="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <div className="flex items-center gap-1.5 bg-[#F4F5FA] px-2.5 py-1.5 rounded-full shadow-[3px_3px_6px_#dcdde3,-3px_-3px_6px_#ffffff] border border-white/60">
+                    <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <span className="text-[10px] font-semibold text-slate-600 whitespace-nowrap">
+                    <span className="text-[10px] font-bold text-slate-600 whitespace-nowrap">
                       {course.placement}
                     </span>
                   </div>
 
                   {/* Salary Package Badge */}
-                  <div className="flex items-center gap-1.5 bg-[#f0f4f8] px-2.5 py-1.5 rounded-full shadow-[3px_3px_6px_#d1d9e6,-3px_-3px_6px_#ffffff]">
-                    <svg className="w-3.5 h-3.5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <div className="flex items-center gap-1.5 bg-[#F4F5FA] px-2.5 py-1.5 rounded-full shadow-[3px_3px_6px_#dcdde3,-3px_-3px_6px_#ffffff] border border-white/60">
+                    <svg className="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                     </svg>
-                    <span className="text-[10px] font-semibold text-slate-600 whitespace-nowrap">
+                    <span className="text-[10px] font-bold text-slate-600 whitespace-nowrap">
                       {course.package}
                     </span>
                   </div>
@@ -152,6 +145,6 @@ export default function TopPrograms() {
 
         </div>
       </div>
-    </div>
+    </section>
   );
 }

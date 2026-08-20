@@ -459,9 +459,9 @@ export default function PythonRoadmapPage() {
                     ))}
                   </ul>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <p className="text-blue-700 font-semibold text-sm mb-1">🛠️ Project</p>
-                      <p className="text-blue-600 text-sm">{m.project}</p>
+                    <div className="bg-violet-50 border border-violet-200 rounded-lg p-4">
+                      <p className="text-violet-700 font-semibold text-sm mb-1">🛠️ Project</p>
+                      <p className="text-violet-600 text-sm">{m.project}</p>
                     </div>
                     <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                       <p className="text-amber-700 font-semibold text-sm mb-1">🎯 Milestone</p>
@@ -555,26 +555,31 @@ export default function PythonRoadmapPage() {
           </p>
           <div className="space-y-4">
             {[
-              { level: 'Beginner', color: 'green', projects: ['CLI expense tracker (CSV file storage)', 'Password generator and manager', 'Web scraper with BeautifulSoup and requests', 'Simple calculator with error handling', 'Contact book with JSON persistence'] },
-              { level: 'Intermediate', color: 'blue', projects: ['Blog API with Django REST Framework + JWT auth', 'Task management API with Celery email notifications', 'Real-time chat with Django Channels + WebSockets', 'E-commerce REST API with payments integration', 'URL shortener with click analytics and Redis caching'] },
-              { level: 'Advanced', color: 'purple', projects: ['Microservices e-commerce platform (Django + FastAPI + Kafka)', 'ML model serving API with FastAPI + Docker + monitoring', 'Multi-tenant SaaS backend with subscription billing', 'GitHub Actions CI/CD pipeline deploying to AWS ECS', 'Real-time analytics dashboard with PostgreSQL + Redis Streams'] },
+              { level: 'Beginner', time: '1-2 Months', projects: [{name: 'CLI Expense Tracker', stack: 'Python', desc: 'CSV storage, budget analysis'}, {name: 'Password Manager', stack: 'Cryptography', desc: 'Secure AES encryption'}] },
+              { level: 'Intermediate', time: '3-4 Months', projects: [{name: 'Blog API', stack: 'Django/DRF', desc: 'JWT Auth, permissions'}, {name: 'Task Manager', stack: 'Celery', desc: 'Background jobs'}] },
+              { level: 'Advanced', time: '5-6 Months', projects: [{name: 'SaaS Backend', stack: 'FastAPI/Redis', desc: 'Multi-tenancy, billing'}] },
             ].map(tier => (
               <div key={tier.level} className="border border-gray-200 rounded-xl overflow-hidden">
-                <div className={`px-5 py-3 ${tier.level === 'Beginner' ? 'bg-green-600' : tier.level === 'Intermediate' ? 'bg-blue-600' : 'bg-purple-600'} text-white`}>
-                  <h3 className="font-bold">{tier.level} Projects</h3>
+                <div className={`px-5 py-3 ${tier.level === 'Beginner' ? 'bg-emerald-600' : tier.level === 'Intermediate' ? 'bg-indigo-600' : 'bg-purple-600'} text-white`}>
+                  <span className="font-bold text-sm">{tier.level} Portfolio</span>
+                  <span className="text-xs opacity-80 ml-2">({tier.time})</span>
                 </div>
-                <ul className="divide-y divide-gray-100">
-                  {tier.projects.map(proj => (
-                    <li key={proj} className="flex items-center gap-3 px-5 py-3 text-gray-600 text-sm hover:bg-gray-50">
-                      <span className="text-green-500">→</span> {proj}
-                    </li>
+                <div className="p-5 space-y-4">
+                  {tier.projects.map((p) => (
+                    <div key={p.name} className="border-b border-gray-100 last:border-0 pb-4 last:pb-0">
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <h4 className="font-semibold text-gray-900 text-sm">{p.name}</h4>
+                        <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-mono">{p.stack}</span>
+                      </div>
+                      <p className="text-gray-600 text-xs leading-relaxed">{p.desc}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
-          <div className="mt-4">
-            <Link href="/resources/projects/python-projects" className="inline-flex items-center gap-2 text-blue-600 font-medium text-sm hover:underline">
+          <div className="mt-6 text-center">
+            <Link href="/resources/projects/python-projects" className="inline-flex items-center gap-2 text-[#8B5CF6] font-medium text-sm hover:underline">
               View 30+ Python project ideas with full implementation guides →
             </Link>
           </div>
@@ -593,7 +598,7 @@ export default function PythonRoadmapPage() {
               { round: 'Round 5', title: 'HR & Behavioral', desc: 'Tell me about yourself, conflict resolution, biggest technical challenge, salary expectations. Practice STAR format answers.', duration: '30 minutes' },
             ].map((round, idx) => (
               <div key={idx} className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
-                <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 bg-violet-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {idx + 1}
                 </div>
                 <div>
@@ -606,8 +611,8 @@ export default function PythonRoadmapPage() {
               </div>
             ))}
           </div>
-          <div className="mt-5">
-            <Link href="/resources/interview-questions/python-developer" className="inline-flex items-center gap-2 text-blue-600 font-medium text-sm hover:underline">
+          <div className="mt-6 text-center">
+            <Link href="/resources/interview-questions/python-developer" className="inline-flex items-center gap-2 text-[#8B5CF6] font-medium text-sm hover:underline">
               Practice 150+ Python interview questions with detailed answers →
             </Link>
           </div>
@@ -666,7 +671,7 @@ export default function PythonRoadmapPage() {
             ].map(career => (
               <div key={career.role} className="p-5 bg-white border border-gray-200 rounded-xl">
                 <h3 className="font-bold text-gray-900 mb-1">{career.role}</h3>
-                <p className="text-blue-600 text-xs font-medium mb-2">{career.companies}</p>
+                <p className="text-[#8B5CF6] text-xs font-medium mb-2">{career.companies}</p>
                 <p className="text-gray-500 text-sm">{career.description}</p>
               </div>
             ))}
@@ -749,7 +754,7 @@ export default function PythonRoadmapPage() {
                 <ul className="space-y-2">
                   {section.items.map(item => (
                     <li key={item} className="text-sm text-gray-600 flex gap-2">
-                      <span className="text-blue-500 flex-shrink-0">→</span>
+                      <span className="text-[#8B5CF6] flex-shrink-0">→</span>
                       {item}
                     </li>
                   ))}

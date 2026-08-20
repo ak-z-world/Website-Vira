@@ -1,8 +1,6 @@
 // resources/_lib/metadata.ts
 import type { Metadata } from 'next';
-
-const BASE_URL = 'https://arivuon.com';
-const SITE_NAME = 'Crack Leap Academy';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 
 export function generateResourceMetadata({
   title,
@@ -17,14 +15,14 @@ export function generateResourceMetadata({
   keywords?: string[];
   type?: 'article' | 'website';
 }): Metadata {
-  const url = `${BASE_URL}${path}`;
+  const url = path.startsWith('http') ? path : `${SITE_URL}${path.startsWith('/') ? '' : '/'}${path}`;
   const fullTitle = `${title} | ${SITE_NAME}`;
 
   return {
     title: fullTitle,
     description,
     keywords: keywords.join(', '),
-    authors: [{ name: SITE_NAME, url: BASE_URL }],
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
     creator: SITE_NAME,
     publisher: SITE_NAME,
     robots: {
@@ -47,7 +45,7 @@ export function generateResourceMetadata({
       description,
       images: [
         {
-          url: `${BASE_URL}/og-resources.png`,
+          url: `${SITE_URL}/og-resources.png`,
           width: 1200,
           height: 630,
           alt: title,
@@ -58,7 +56,7 @@ export function generateResourceMetadata({
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [`${BASE_URL}/og-resources.png`],
+      images: [`${SITE_URL}/og-resources.png`],
     },
     alternates: {
       canonical: url,

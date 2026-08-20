@@ -1,8 +1,22 @@
-// app/resources/page.tsx
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ResourceCard from './_components/ResourceCard';
-import { UserCheck, Target, MapPin, RefreshCw, Code2, Unlock, Map, Terminal, Brain, Lightbulb, MessageSquare, BookOpen } from 'lucide-react';
+import Image from 'next/image';
+import { 
+  Search, 
+  SlidersHorizontal, 
+  ArrowRight, 
+  Bookmark,
+  ShieldCheck,
+  Star,
+  ThumbsUp,
+  Users,
+  CheckCircle2,
+  MonitorPlay,
+  FileCode2,
+  Map,
+  MessageSquare,
+  Sparkles
+} from 'lucide-react';
 import { breadcrumbSchema, webPageSchema } from './_lib/schema';
 
 export const metadata: Metadata = {
@@ -15,106 +29,82 @@ export const metadata: Metadata = {
     title: 'Free Developer Resources 2026 | Crack Leap Academy',
     description:
       'Roadmaps, projects, interview questions, and tutorials for Python, React, AWS, DevOps, AI/ML developers.',
-    url: 'https://arivuon.com/resources',
+    url: 'https://academy.arivuon.in/resources',
     type: 'website',
   },
-  alternates: { canonical: 'https://arivuon.com/resources' },
+  alternates: { canonical: 'https://academy.arivuon.in/resources' },
 };
 
 const FEATURED_RESOURCES = [
   {
-    title: 'Python Developer Roadmap 2026',
-    description:
-      'Step-by-step guide from Python basics to senior developer. Month-by-month plan covering syntax, OOP, Django, FastAPI, testing, and cloud deployment.',
-    href: '/resources/roadmaps/python-developer-roadmap-2026',
+    title: 'Frontend Developer Roadmap 2026',
+    description: 'A complete step-by-step roadmap to become a frontend developer in 2026. Updated and beginner friendly.',
+    href: '/resources/roadmaps/frontend-developer-roadmap-2026',
     badge: 'Roadmap',
-    badgeColor: 'bg-green-50 text-green-700',
-    tags: ['Python', 'Backend', 'Django', 'FastAPI'],
-    readTime: '20 min read',
-    difficulty: 'All Levels' as const,
-    icon: <Terminal className="w-6 h-6" />,
-    featured: true,
+    badgeColor: 'text-emerald-600 bg-emerald-50 border border-emerald-200',
+    stats: '12 modules • 540+ enrolled',
+    image: '/assets/icons/image12.png'
   },
   {
-    title: 'AI Engineer Roadmap 2026',
-    description:
-      'Complete learning path for AI Engineers: Python, ML fundamentals, deep learning, LLMs, RAG systems, vector databases, and production AI deployment.',
-    href: '/resources/roadmaps/ai-engineer-roadmap-2026',
-    badge: 'Roadmap',
-    badgeColor: 'bg-purple-50 text-purple-700',
-    tags: ['AI/ML', 'LLMs', 'Python', 'PyTorch'],
-    readTime: '25 min read',
-    difficulty: 'All Levels' as const,
-    icon: <Brain className="w-6 h-6" />,
-    featured: true,
+    title: 'Python & Django Backend Project Guide',
+    description: 'Build production-ready REST APIs, authentication, and database schemas with real-world architecture.',
+    href: '/resources/projects/python-django-fullstack',
+    badge: 'Project Guide',
+    badgeColor: 'text-indigo-600 bg-indigo-50 border border-indigo-200',
+    stats: '8 Steps • 3.2k saves',
+    image: '/assets/icons/image15.png'
   },
   {
-    title: '150+ Python Interview Questions & Answers',
-    description:
-      'Complete Python interview preparation covering data structures, OOP, decorators, generators, async programming, and system design for 2026 hiring.',
-    href: '/resources/interview-questions/python-developer',
-    badge: 'Interview Prep',
-    badgeColor: 'bg-orange-50 text-orange-700',
-    tags: ['Python', 'Interview', 'Data Structures', 'OOP'],
-    readTime: '35 min read',
-    difficulty: 'All Levels' as const,
-    icon: <MessageSquare className="w-6 h-6" />,
-    featured: true,
+    title: 'Top 100 React & Next.js Interview Q&A',
+    description: 'Most asked React and Next.js questions in top tech interviews with answers, code snippets, and explanations.',
+    href: '/resources/interview-questions/react',
+    badge: 'Interview Guide',
+    badgeColor: 'text-[#8B5CF6] bg-[#8B5CF6]/10 border border-[#8B5CF6]/20',
+    stats: '100 Qs • 4.8k saves',
+    image: '/assets/icons/image17.png'
   },
 ];
 
 const CATEGORY_CARDS = [
   {
-    icon: <Map className="w-7 h-7" />,
-    title: 'Developer Roadmaps',
-    description: '10 career roadmaps with month-by-month learning plans for 2026.',
-    href: '/resources/roadmaps',
-    count: '10 roadmaps',
-    color: 'from-blue-500 to-blue-700',
-    bg: 'from-blue-50 to-blue-100',
-    border: 'border-blue-200',
-    items: ['Python Developer', 'AWS DevOps', 'AI Engineer', 'Full Stack', 'Frontend', 'Backend', 'Data Scientist', 'ML Engineer', 'Cloud Engineer', 'Cybersecurity'],
-  },
-  {
-    icon: <Lightbulb className="w-7 h-7" />,
-    title: 'Project Ideas',
-    description: '300+ project ideas across 10 technology stacks with implementation guides.',
-    href: '/resources/projects',
-    count: '300+ projects',
-    color: 'from-emerald-500 to-emerald-700',
-    bg: 'from-emerald-50 to-emerald-100',
-    border: 'border-emerald-200',
-    items: ['Python Projects', 'Django Projects', 'React Projects', 'AI/ML Projects', 'DevOps Projects', 'AWS Projects', 'Full Stack', 'Data Science', 'Cloud Projects', 'Mobile'],
-  },
-  {
-    icon: <MessageSquare className="w-7 h-7" />,
-    title: 'Interview Questions',
-    description: '1000+ interview questions for 10 tech roles with detailed answers.',
-    href: '/resources/interview-questions',
-    count: '1000+ questions',
-    color: 'from-orange-500 to-orange-700',
-    bg: 'from-orange-50 to-orange-100',
-    border: 'border-orange-200',
-    items: ['Python Developer', 'Django Developer', 'React Developer', 'Full Stack', 'Backend', 'Frontend', 'DevOps', 'Data Scientist', 'ML Engineer', 'Cloud Engineer'],
-  },
-  {
-    icon: <BookOpen className="w-7 h-7" />,
+    icon: <FileCode2 className="w-6 h-6 text-[#6366F1]" />,
+    iconBg: 'bg-[#6366F1]/10',
     title: 'Tutorials & Guides',
-    description: 'In-depth tutorials for 10 technologies from basics to production.',
+    description: 'Step-by-step learning guides for Python, AWS, DevOps, React, and Data Science.',
     href: '/resources/tutorials',
-    count: '10 tutorials',
-    color: 'from-violet-500 to-violet-700',
-    bg: 'from-violet-50 to-violet-100',
-    border: 'border-violet-200',
-    items: ['Python', 'Django', 'React', 'JavaScript', 'SQL & PostgreSQL', 'AWS', 'Docker', 'Git & GitHub', 'AI Fundamentals', 'DevOps Tools'],
+    count: '120+ Resources',
+  },
+  {
+    icon: <MonitorPlay className="w-6 h-6 text-emerald-600" />,
+    iconBg: 'bg-emerald-500/10',
+    title: 'Project Ideas',
+    description: 'Handpicked project ideas to build your portfolio and boost your resume.',
+    href: '/resources/projects',
+    count: '65+ Resources',
+  },
+  {
+    icon: <Map className="w-6 h-6 text-amber-600" />,
+    iconBg: 'bg-amber-500/10',
+    title: 'Career Roadmaps',
+    description: 'Structured, step-by-step learning pathways to guide your developer journey in 2026.',
+    href: '/resources/roadmaps',
+    count: '20+ Roadmaps',
+  },
+  {
+    icon: <MessageSquare className="w-6 h-6 text-[#8B5CF6]" />,
+    iconBg: 'bg-[#8B5CF6]/10',
+    title: 'Interview Questions',
+    description: 'Role-based interview preparation guides, scenario questions, and system design tips.',
+    href: '/resources/interview-questions',
+    count: '800+ Questions',
   },
 ];
 
 const STATS = [
   { label: 'Free Resources', value: '100+' },
-  { label: 'Interview Questions', value: '1,200+' },
-  { label: 'Project Ideas', value: '300+' },
-  { label: 'Words of Content', value: '500K+' },
+  { label: 'Community Saved', value: '1,200+' },
+  { label: 'Tools & Guides', value: '300+' },
+  { label: 'Learners Helped', value: '50,000+' },
 ];
 
 export default function ResourcesPage() {
@@ -127,174 +117,265 @@ export default function ResourcesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ title: 'Developer Resources Hub 2026', description: 'Free roadmaps, projects, interview questions, and tutorials for developers.', url: 'https://arivuon.com/resources' })) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ title: 'Developer Resources Hub 2026', description: 'Free roadmaps, projects, interview questions, and tutorials for developers.', url: 'https://academy.arivuon.in/resources' })) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }}
       />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-600 text-white py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-500/30 border border-blue-400/40 px-4 py-1.5 rounded-full text-sm font-medium text-blue-100 mb-6">
-            <span>📚</span> Free Developer Resources — Updated for 2026
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-            Everything You Need to<br />
-            <span className="text-yellow-300">Land Your Dream Dev Job</span>
-          </h1>
-          <p className="text-blue-100 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
-            Roadmaps, project ideas, 1,200+ interview questions, and step-by-step tutorials — all free,
-            all written by industry practitioners. Built for Indian developers targeting top tech companies.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
-            {STATS.map((s) => (
-              <div key={s.label} className="bg-white/10 border border-white/20 rounded-xl p-4 text-center">
-                <div className="text-2xl font-extrabold text-yellow-300">{s.value}</div>
-                <div className="text-blue-100 text-xs mt-1">{s.label}</div>
+      <div className="min-h-screen bg-[#F4F5FA] text-slate-800 font-sans selection:bg-purple-100 overflow-hidden relative pb-20">
+        
+        {/* Soft Ambient Glows */}
+        <div className="absolute top-0 left-[-10%] w-[40rem] h-[40rem] bg-[#6366F1]/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-20 right-[-5%] w-[40rem] h-[40rem] bg-[#8B5CF6]/10 rounded-full blur-[100px] pointer-events-none" />
+
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 relative z-10">
+
+          {/* 1. HERO SECTION */}
+          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="space-y-6 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] border border-white/60 text-xs sm:text-sm font-semibold text-[#8B5CF6]">
+                <Sparkles className="w-4 h-4 text-[#8B5CF6]" /> 
+                All-in-One Free Developer Resources
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+                Everything You Need to <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366F1] via-[#8B5CF6] to-[#c562f3]">
+                  Land Your Dream Tech Job
+                </span>
+              </h1>
+              
+              <p className="text-base sm:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
+                Curated guides, cheat sheets, code snippets, hands-on project ideas, and career roadmaps — designed to accelerate your growth.
+              </p>
 
-      <main className="max-w-6xl mx-auto px-4 py-16">
+              {/* Neomorphic Search Bar */}
+              <div className="flex items-center gap-3 max-w-lg mx-auto lg:mx-0">
+                <div className="flex-1 flex items-center bg-[#F4F5FA] rounded-2xl p-2 shadow-[inset_4px_4px_10px_#dcdde3,inset_-4px_-4px_10px_#ffffff] border border-white/40">
+                  <Search className="w-5 h-5 text-slate-400 ml-3" />
+                  <input 
+                    type="text" 
+                    placeholder="Search roadmaps, projects, interview Qs..." 
+                    className="w-full bg-transparent border-none outline-none px-4 py-2.5 text-slate-700 placeholder:text-slate-400 font-medium text-sm"
+                  />
+                </div>
+                <button className="p-3.5 bg-[#F4F5FA] rounded-2xl shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] border border-white/40 text-slate-600 hover:text-[#8B5CF6] active:shadow-inner transition-all">
+                  <SlidersHorizontal className="w-5 h-5" />
+                </button>
+              </div>
 
-        {/* What is Crack Leap Resources */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Crack Leap Resources?</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Crack Leap Academy's resource library is a comprehensive, free knowledge hub for software developers,
-              data scientists, DevOps engineers, and AI practitioners at every stage of their career.
-              Every resource is written by experienced developers who have worked at top Indian and global tech companies.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Unlike generic tutorials, our resources are designed to be <strong>immediately actionable</strong> —
-              with real project ideas you can add to your portfolio, interview questions asked at companies like
-              Google, Amazon, Flipkart, and Razorpay, and career roadmaps built for the 2026 job market.
-            </p>
-          </div>
-        </section>
+              {/* Stats Row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+                {STATS.map((stat, idx) => (
+                  <div key={idx} className="flex flex-col p-3 bg-[#F4F5FA] rounded-2xl shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] border border-white/50 text-center lg:text-left">
+                    <span className="text-xl sm:text-2xl font-extrabold text-[#8B5CF6]">{stat.value}</span>
+                    <span className="text-xs font-semibold text-slate-500 mt-0.5">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-        {/* Category Overview */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse by Category</h2>
-          <p className="text-gray-500 mb-8">Choose your focus area and dive in.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {CATEGORY_CARDS.map((cat) => (
-              <div key={cat.href} className={`bg-gradient-to-br ${cat.bg} border ${cat.border} rounded-2xl p-7 hover:shadow-md transition-all duration-200`}>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{cat.icon}</span>
+            {/* Right Side Hero 3D Asset */}
+            <div className="relative h-[320px] sm:h-[420px] lg:h-[480px] w-full flex justify-center items-center">
+              <div className="relative w-full max-w-[500px] aspect-square">
+                <Image 
+                  src="/assets/icons/image23.png"
+                  alt="Developer Resources Illustration"
+                  fill
+                  className="object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* 2. ABOUT RESOURCES CARD */}
+          <section className="mb-20">
+            <div className="bg-[#F4F5FA] rounded-[36px] shadow-[12px_12px_28px_#dcdde3,-12px_-12px_28px_#ffffff] border border-white/60 p-6 sm:p-10 relative overflow-hidden">
+              <div className="grid md:grid-cols-12 gap-8 items-center relative z-10">
+                <div className="md:col-span-8 space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">What Are Crack Leap Resources?</h2>
+                  <p className="text-slate-600 leading-relaxed font-medium max-w-3xl text-sm sm:text-base">
+                    Crack Leap Resources is your dedicated hub for high-quality, free learning materials created by senior software engineers. Whether you are preparing for coding interviews, building portfolio projects, or following structured career roadmaps, everything here is designed to turn theory into practice.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-4 sm:gap-6 pt-2">
+                    {[
+                      { text: '100% Free & Open' },
+                      { text: 'Beginner to Advanced' },
+                      { text: 'Interview-Tested' },
+                      { text: 'Updated for 2026' },
+                    ].map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-700 bg-white/80 px-3 py-1.5 rounded-xl shadow-sm border border-white">
+                        <CheckCircle2 className="w-4 h-4 text-[#8B5CF6]" />
+                        {feature.text}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="md:col-span-4 flex justify-center">
+                   <div className="w-32 h-32 sm:w-40 sm:h-40 relative">
+                      <Image
+                        src="/assets/icons/image24.png"
+                        alt="3D Folder Icon"
+                        fill
+                        className="object-contain drop-shadow-lg"
+                      />
+                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 3. BROWSE BY CATEGORY */}
+          <section className="mb-20">
+            <div className="mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Browse by Category</h2>
+              <p className="text-slate-500 font-medium text-sm sm:text-base">Select a learning track to find dedicated resources.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {CATEGORY_CARDS.map((cat, idx) => (
+                <Link 
+                  key={idx} 
+                  href={cat.href} 
+                  className="bg-[#F4F5FA] rounded-[28px] p-6 sm:p-8 shadow-[8px_8px_20px_#dcdde3,-8px_-8px_20px_#ffffff] border border-white/60 group flex items-start justify-between hover:shadow-[12px_12px_28px_#d0d2dc,-12px_-12px_28px_#ffffff] transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="flex gap-4 sm:gap-5">
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-[inset_2px_2px_4px_#d1d3dc,inset_-2px_-2px_4px_#ffffff] border border-white/40 ${cat.iconBg}`}>
+                      {cat.icon}
+                    </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-lg">{cat.title}</h3>
-                      <span className="text-xs font-semibold text-gray-500">{cat.count}</span>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-1 sm:mb-2 group-hover:text-[#8B5CF6] transition-colors">{cat.title}</h3>
+                      <p className="text-xs sm:text-sm text-slate-500 font-medium mb-3 leading-relaxed max-w-[260px]">{cat.description}</p>
+                      <span className="inline-flex items-center text-xs font-bold text-[#8B5CF6] bg-white px-3 py-1 rounded-xl shadow-[2px_2px_5px_#dcdde3,-2px_-2px_5px_#ffffff]">
+                        {cat.count}
+                      </span>
                     </div>
                   </div>
-                  <Link
-                    href={cat.href}
-                    className={`bg-gradient-to-r ${cat.color} text-white text-xs font-bold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity`}
-                  >
-                    Browse →
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#F4F5FA] flex items-center justify-center text-slate-400 shadow-[3px_3px_8px_#dcdde3,-3px_-3px_8px_#ffffff] group-hover:bg-[#8B5CF6] group-hover:text-white transition-all">
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* 4. FEATURED RESOURCES */}
+          <section className="mb-20">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Featured Resources</h2>
+                <p className="text-slate-500 font-medium text-sm sm:text-base">Editor's top picks for fast career progress.</p>
+              </div>
+              <Link href="/resources/roadmaps" className="text-[#8B5CF6] font-bold text-sm hover:underline flex items-center gap-1">
+                View All Roadmaps <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {FEATURED_RESOURCES.map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className="bg-[#F4F5FA] rounded-[28px] p-6 sm:p-7 shadow-[8px_8px_20px_#dcdde3,-8px_-8px_20px_#ffffff] border border-white/60 flex flex-col h-full relative group hover:shadow-[12px_12px_28px_#d0d2dc,-12px_-12px_28px_#ffffff] transition-all duration-300"
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <span className={`px-3 py-1 text-xs font-extrabold rounded-full ${item.badgeColor}`}>
+                      {item.badge}
+                    </span>
+                    <button className="text-slate-400 hover:text-[#8B5CF6] transition-colors" aria-label="Save resource">
+                      <Bookmark className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-[#8B5CF6] transition-colors">
+                    <Link href={item.href} className="before:absolute before:inset-0">
+                      {item.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed mb-8 relative z-10">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-auto flex justify-between items-end">
+                    <div className="text-xs font-bold text-slate-400">
+                      {item.stats}
+                    </div>
+                    <div className="w-16 h-16 relative transform group-hover:scale-110 transition-transform duration-300">
+                       <Image 
+                         src={item.image}
+                         alt={`${item.title} icon`}
+                         fill
+                         className="object-contain drop-shadow-md"
+                       />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* 5. TRUST / FEATURES ROW */}
+          <section className="mb-20 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-10">Why Developers Choose Crack Leap</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+              {[
+                { icon: <ShieldCheck className="w-6 h-6" />, title: 'Curated by Experts', desc: 'Quality-checked by senior software engineers' },
+                { icon: <Star className="w-6 h-6" />, title: 'Up-to-Date 2026', desc: 'Regularly updated with latest industry tools' },
+                { icon: <ThumbsUp className="w-6 h-6" />, title: 'Community Approved', desc: 'Used by thousands of active learners' },
+                { icon: <Users className="w-6 h-6" />, title: 'Beginner Friendly', desc: 'Structured approach with practical examples' },
+              ].map((feat, idx) => (
+                <div key={idx} className="flex flex-col items-center p-4 bg-[#F4F5FA] rounded-2xl shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] border border-white/50">
+                  <div className="w-12 h-12 rounded-xl bg-white text-[#8B5CF6] flex items-center justify-center mb-3 shadow-[2px_2px_6px_#dcdde3,-2px_-2px_6px_#ffffff]">
+                    {feat.icon}
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-sm mb-1">{feat.title}</h3>
+                  <p className="text-xs text-slate-500 font-medium">{feat.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* 6. GRADIENT CTA SECTION */}
+          <section className="relative rounded-[36px] overflow-hidden bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] shadow-[12px_14px_32px_rgba(139,92,246,0.3)] border border-white/20">
+            <div className="grid md:grid-cols-2 gap-8 items-center p-8 sm:p-12 lg:p-16 relative z-10">
+              <div className="space-y-6 text-center md:text-left">
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                  Ready to Accelerate <br/> Your Career?
+                </h2>
+                <p className="text-white/90 font-medium max-w-md mx-auto md:mx-0 text-sm sm:text-base leading-relaxed">
+                  Browse our structured roadmaps or explore full-stack programs with live mentorship and placement assistance.
+                </p>
+                
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                  <Link href="/resources/roadmaps" className="px-7 py-3.5 bg-white text-[#8B5CF6] font-extrabold rounded-2xl transition-all shadow-md hover:bg-slate-50 active:scale-98 text-sm">
+                    Explore Roadmaps
+                  </Link>
+                  <Link href="/courses" className="px-7 py-3.5 bg-[#8B5CF6]/30 text-white border border-white/40 font-extrabold rounded-2xl transition-all hover:bg-[#8B5CF6]/50 active:scale-98 text-sm">
+                    View All Courses
                   </Link>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">{cat.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {cat.items.slice(0, 5).map((item) => (
-                    <span key={item} className="text-xs text-gray-600 bg-white/70 border border-white/80 px-2 py-0.5 rounded-full">
-                      {item}
-                    </span>
-                  ))}
-                  {cat.items.length > 5 && (
-                    <span className="text-xs text-gray-500 bg-white/70 border border-white/80 px-2 py-0.5 rounded-full">
-                      +{cat.items.length - 5} more
-                    </span>
-                  )}
-                </div>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Featured Resources */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Resources</h2>
-          <p className="text-gray-500 mb-8">Most popular resources this month.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {FEATURED_RESOURCES.map((resource) => (
-              <ResourceCard key={resource.href} {...resource} />
-            ))}
-          </div>
-        </section>
-
-        {/* Why Use Our Resources */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Developers Trust Crack Leap Resources</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <UserCheck className="w-6 h-6 text-blue-600" />,
-                title: 'Written by Practitioners',
-                desc: 'All content created by developers who have worked in production systems at real companies.'
-              },
-              {
-                icon: <Target className="w-6 h-6 text-blue-600" />,
-                title: 'Job-Focused',
-                desc: 'Every resource is built around getting hired. We cover what companies actually ask in 2026.'
-              },
-              {
-                icon: <MapPin className="w-6 h-6 text-blue-600" />,
-                title: 'India-Relevant',
-                desc: 'Salary data, company names, and career advice tailored to the Indian tech job market.'
-              },
-              {
-                icon: <RefreshCw className="w-6 h-6 text-blue-600" />,
-                title: 'Updated for 2026',
-                desc: 'Roadmaps and interview questions updated quarterly to reflect current hiring trends.'
-              },
-              {
-                icon: <Code2 className="w-6 h-6 text-blue-600" />,
-                title: 'Code-First Approach',
-                desc: 'Every tutorial includes working code examples, not just theory.'
-              },
-              {
-                icon: <Unlock className="w-6 h-6 text-blue-600" />,
-                title: 'Completely Free',
-                desc: 'All 100+ resources are free. No email required, no paywalls.'
-              },
-            ].map((feat) => (
-              <div key={feat.title} className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:border-blue-300 transition-colors group">
-                <div className="flex-shrink-0 p-2 bg-blue-50/50 rounded-lg group-hover:bg-blue-50 transition-colors">
-                  {feat.icon}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">{feat.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{feat.desc}</p>
-                </div>
+              
+              <div className="flex justify-center relative min-h-[220px] sm:min-h-[280px]">
+                 <div className="relative w-[260px] sm:w-[320px] h-[260px] sm:h-[320px]">
+                   <Image 
+                     src="/assets/icons/image25.png" 
+                     alt="3D Rocket Launch Illustration"
+                     fill
+                     className="object-contain drop-shadow-2xl animate-[float_5s_ease-in-out_infinite]"
+                   />
+                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
 
-        {/* CTA */}
-        <section className="bg-gradient-to-r from-blue-800 to-blue-600 rounded-2xl p-8 sm:p-12 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Accelerate Your Career?</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            Start with a roadmap to understand your path, then build projects and prepare for interviews.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/resources/roadmaps" className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-3 rounded-xl transition-colors">
-              View All Roadmaps →
-            </Link>
-            <Link href="/resources/interview-questions" className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-3 rounded-xl transition-colors">
-              Interview Prep
-            </Link>
-          </div>
-        </section>
-
-      </main>
+        </main>
+      </div>
     </>
   );
 }

@@ -5,17 +5,13 @@ import {
   Quote,
   Award,
   TrendingUp,
-  Zap,
   Brain,
   ChevronLeft,
   ChevronRight,
-  PlayCircle,
-  ExternalLink,
   Calendar,
-  Briefcase,
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 interface Testimonial {
   id: number;
@@ -50,16 +46,11 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "Crack Leap Academy transformed my career completely. The Python course was incredibly comprehensive - from Django to FastAPI to real ML projects. Within 3 months of completing the course, I received offers from 5 companies including Google.",
+        "Crack Leap Academy transformed my career completely. The Python course was incredibly comprehensive - from Django to FastAPI to real ML projects. Within 3 months of completing the course, I received offers from top tech companies.",
       rating: 5,
       salaryIncrease: "180%",
       placementTime: "3 months",
       course: "Python Full Stack",
-      videoUrl: "#",
-      socialLinks: {
-        linkedin: "#",
-        github: "#",
-      },
     },
     {
       id: 2,
@@ -69,16 +60,11 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "The DevOps program at Crack Leap Academy is top-notch. The hands-on labs with Kubernetes, AWS, and CI/CD pipelines prepared me perfectly for real-world scenarios. My mentor helped me land my dream job at AWS with a massive salary hike.",
+        "The DevOps program at Crack Leap Academy is top-notch. The hands-on labs with Kubernetes, AWS, and CI/CD pipelines prepared me perfectly for real-world scenarios. My mentor helped me land my dream role with a massive salary hike.",
       rating: 5,
       salaryIncrease: "220%",
       placementTime: "2 months",
       course: "DevOps Engineering",
-      videoUrl: "#",
-      socialLinks: {
-        linkedin: "#",
-        portfolio: "#",
-      },
     },
     {
       id: 3,
@@ -88,169 +74,81 @@ const Testimonials = () => {
       image:
         "https://api.dicebear.com/7.x/avataaars/svg?seed=Anjali&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content:
-        "I came from a non-tech background, but Crack Leap Academy made the transition smooth. The React course covered everything from basics to advanced concepts. Today, I lead a team at Microsoft building cutting-edge React applications.",
+        "I came from a non-tech background, but Crack Leap Academy made the transition smooth. The React course covered everything from fundamentals to advanced state architecture. Today, I lead a team building cutting-edge web applications.",
       rating: 5,
       salaryIncrease: "250%",
       placementTime: "4 months",
       course: "React Development",
-      videoUrl: "#",
-      socialLinks: {
-        linkedin: "#",
-        github: "#",
-        portfolio: "#",
-      },
-    },
-    {
-      id: 4,
-      name: "Vikram Singh",
-      role: "Full Stack Developer",
-      company: "TCS Digital",
-      image:
-        "https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      content:
-        "The 1:1 mentorship at Crack Leap Academy was game-changing. My mentor helped me build a portfolio that stood out. I went from ₹6 LPA to ₹18 LPA in just 6 months. The placement team was incredibly supportive throughout.",
-      rating: 5,
-      salaryIncrease: "200%",
-      placementTime: "6 months",
-      course: "Python Full Stack",
-      socialLinks: {
-        linkedin: "#",
-      },
-    },
-    {
-      id: 5,
-      name: "Neha Reddy",
-      role: "Cloud Engineer",
-      company: "Infosys",
-      image:
-        "https://api.dicebear.com/7.x/avataaars/svg?seed=Neha&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      content:
-        "As a working professional, the flexible schedule was crucial. The weekend batches and recorded sessions helped me upskill without leaving my job. The certification opened doors to better opportunities.",
-      rating: 5,
-      salaryIncrease: "150%",
-      placementTime: "5 months",
-      course: "DevOps Engineering",
-      socialLinks: {
-        linkedin: "#",
-        github: "#",
-      },
-    },
-    {
-      id: 6,
-      name: "Arun Kumar",
-      role: "Product Manager",
-      company: "Wipro",
-      image:
-        "https://api.dicebear.com/7.x/avataaars/svg?seed=Arun&backgroundType=gradientLinear&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      content:
-        "The React program helped me transition from a designer to a developer. The project-based learning approach gave me confidence to build real applications. Crack Leap Academy truly cares about student success.",
-      rating: 5,
-      salaryIncrease: "170%",
-      placementTime: "3 months",
-      course: "React Development",
-      videoUrl: "#",
-      socialLinks: {
-        linkedin: "#",
-        portfolio: "#",
-      },
     },
   ];
 
-  // Auto-play testimonials
   useEffect(() => {
-    if (!autoPlay) return;
-
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
+    let interval: NodeJS.Timeout;
+    if (autoPlay) {
+      interval = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      }, 6000);
+    }
     return () => clearInterval(interval);
   }, [autoPlay, testimonials.length]);
 
   const goToPrevious = () => {
-    setAutoPlay(false);
     setActiveIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
   };
 
   const goToNext = () => {
-    setAutoPlay(false);
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
   const goToTestimonial = (index: number) => {
-    setAutoPlay(false);
     setActiveIndex(index);
   };
 
   const activeTestimonial = testimonials[activeIndex];
 
   return (
-    <section
-      id="testimonials"
-      className="relative py-24 md:py-32 overflow-hidden"
-    >
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-orange-50/20 to-white"></div>
+    <section className="py-20 bg-[#F8F9FE] relative overflow-hidden text-slate-800">
+      {/* Background Decorative Blobs */}
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#6366F1]/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-tr from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
-      </div>
-
-      {/* Animated Quote Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #FF7A1E 1px, transparent 0)`,
-            backgroundSize: "50px 50px",
-          }}
-        ></div>
-      </div>
-
-      <div className="section-padding relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100 backdrop-blur-sm px-6 py-3 rounded-2xl border border-orange-200/50 mb-6">
-            <TrendingUp className="w-5 h-5 text-[#FF7A1E]" />
-            {/* <span className="text-sm font-semibold text-gray-900">
-              Career Transformations
-            </span> */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 bg-[#F4F5FA] border border-white/80 rounded-full px-4 py-2 mb-4 shadow-[3px_3px_8px_#dcdde3,-3px_-3px_8px_#ffffff]">
+            <Brain className="w-4 h-4 text-[#8B5CF6]" />
+            <span className="text-xs sm:text-sm font-bold text-[#8B5CF6]">
+              Real Student Outcomes
+            </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Crack Leap Academy
-            </span>{" "}
-            <span className="bg-gradient-to-r from-[#FF7A1E] to-[#FF9A3E] bg-clip-text text-transparent">
-              Success Stories
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            Loved by Learners, <br />
+            <span className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">
+              Hired by Industry Leaders
             </span>
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Hear from our alumni who transformed their careers and achieved
-            their dream jobs through Crack Leap Academy's industry-focused training
-            programs.
+          <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
+            Discover how students from non-tech and beginner backgrounds transformed into high-earning software professionals.
           </p>
         </div>
 
         {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
-          
-          <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-            <div className="text-3xl font-bold text-[#FF7A1E] mb-2">5,000+</div>
-            <div className="text-sm text-gray-600">Career Transformations</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+          <div className="bg-[#F4F5FA] p-6 rounded-2xl border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] text-center">
+            <div className="text-3xl font-extrabold text-[#8B5CF6] mb-2">5,000+</div>
+            <div className="text-sm font-medium text-slate-600">Career Transformations</div>
           </div>
-          <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-            <div className="text-3xl font-bold text-[#FF7A1E] mb-2">2.5x</div>
-            <div className="text-sm text-gray-600">Average Salary Hike</div>
+          <div className="bg-[#F4F5FA] p-6 rounded-2xl border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] text-center">
+            <div className="text-3xl font-extrabold text-[#8B5CF6] mb-2">2.5x</div>
+            <div className="text-sm font-medium text-slate-600">Average Salary Hike</div>
           </div>
-          <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-            <div className="text-3xl font-bold text-[#FF7A1E] mb-2">4.9/5</div>
-            <div className="text-sm text-gray-600">Student Satisfaction</div>
+          <div className="bg-[#F4F5FA] p-6 rounded-2xl border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff] text-center">
+            <div className="text-3xl font-extrabold text-[#8B5CF6] mb-2">4.9/5</div>
+            <div className="text-sm font-medium text-slate-600">Student Satisfaction</div>
           </div>
         </div>
 
@@ -260,101 +158,99 @@ const Testimonials = () => {
             {/* Navigation Arrows */}
             <button
               onClick={goToPrevious}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 w-12 h-12 bg-white rounded-full shadow-xl border border-gray-200 flex items-center justify-center hover:border-[#FF7A1E] transition-colors"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-3 sm:-translate-x-6 z-10 w-11 h-11 bg-[#F4F5FA] rounded-full shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] border border-white/80 flex items-center justify-center hover:text-[#8B5CF6] transition-colors"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
 
             <button
               onClick={goToNext}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 w-12 h-12 bg-white rounded-full shadow-xl border border-gray-200 flex items-center justify-center hover:border-[#FF7A1E] transition-colors"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-3 sm:translate-x-6 z-10 w-11 h-11 bg-[#F4F5FA] rounded-full shadow-[4px_4px_10px_#dcdde3,-4px_-4px_10px_#ffffff] border border-white/80 flex items-center justify-center hover:text-[#8B5CF6] transition-colors"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
+              <ChevronRight className="w-5 h-5" />
             </button>
 
             {/* Main Card */}
-            <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
-              <div className="grid lg:grid-cols-2">
-                {/* Left Column - Testimonial Content */}
-                <div className="p-8 md:p-12">
-                  <div className="mb-8">
-                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-50 to-orange-100 px-4 py-2 rounded-full mb-6">
-                      <Brain className="w-4 h-4 text-[#FF7A1E]" />
-                      <span className="text-sm font-semibold text-gray-900">
-                        Crack Leap Academy Alumni
-                      </span>
+            <div className="bg-[#F4F5FA] rounded-3xl shadow-[10px_10px_24px_#dcdde3,-10px_-10px_24px_#ffffff] border border-white/80 overflow-hidden">
+              <div className="grid lg:grid-cols-12">
+                {/* Left Column */}
+                <div className="lg:col-span-7 p-6 sm:p-10 md:p-12">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center gap-2 bg-violet-100/60 px-3.5 py-1.5 rounded-full mb-6 text-xs font-bold text-violet-700">
+                      <Brain className="w-4 h-4 text-[#8B5CF6]" />
+                      <span>Verified Graduate</span>
                     </div>
 
                     <div className="flex items-center gap-4 mb-6">
                       <div className="relative">
-                        <div className="w-20 h-20 rounded-2xl overflow-hidden border-4 border-white shadow-lg">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-white shadow-md">
                           <img
                             src={activeTestimonial.image}
                             alt={activeTestimonial.name}
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-[#FF7A1E] to-[#FF9A3E] rounded-full flex items-center justify-center text-white text-xs font-bold">
+                        <div className="absolute -bottom-1 -right-1 w-7 h-7 bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] rounded-full flex items-center justify-center text-white text-xs font-bold shadow-sm">
                           ✓
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900">
+                        <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                           {activeTestimonial.name}
                         </h3>
-                        <p className="text-[#FF7A1E] font-semibold">
+                        <p className="text-[#8B5CF6] font-semibold text-sm sm:text-base">
                           {activeTestimonial.role}
                         </p>
-                        <p className="text-gray-600">
+                        <p className="text-slate-500 text-xs sm:text-sm font-medium">
                           {activeTestimonial.company}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center gap-1.5 mb-6">
                       {[...Array(activeTestimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 fill-[#FF9A3E] text-[#FF9A3E]"
+                          className="w-4 h-4 fill-amber-400 text-amber-400"
                         />
                       ))}
-                      <span className="text-sm text-gray-600 ml-2">
-                        {activeTestimonial.rating}/5 Rating
+                      <span className="text-xs font-semibold text-slate-500 ml-2">
+                        {activeTestimonial.rating}.0 / 5.0 Rating
                       </span>
                     </div>
 
                     <div className="relative mb-8">
-                      <Quote className="absolute -top-4 -left-4 w-12 h-12 text-orange-100" />
-                      <p className="text-lg text-gray-700 leading-relaxed pl-4">
+                      <Quote className="absolute -top-3 -left-3 w-8 h-8 text-violet-200" />
+                      <p className="text-base sm:text-lg text-slate-700 leading-relaxed pl-4 font-medium">
                         "{activeTestimonial.content}"
                       </p>
                     </div>
 
-                    {/* Course & Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-8">
-                      <div className="text-center p-4 bg-orange-50 rounded-xl">
-                        <div className="text-sm text-gray-600 mb-1">
-                          Course Taken
+                    {/* Metrics Grid */}
+                    <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                      <div className="text-center p-3 sm:p-4 bg-white/70 rounded-2xl border border-white/80 shadow-sm">
+                        <div className="text-xs text-slate-500 mb-1 font-medium">
+                          Program
                         </div>
-                        <div className="font-bold text-gray-900">
+                        <div className="font-bold text-xs sm:text-sm text-slate-900">
                           {activeTestimonial.course}
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-green-50 rounded-xl">
-                        <div className="text-sm text-gray-600 mb-1">
-                          Salary Increase
+                      <div className="text-center p-3 sm:p-4 bg-emerald-50 rounded-2xl border border-emerald-100 shadow-sm">
+                        <div className="text-xs text-emerald-700 mb-1 font-medium">
+                          Salary Hike
                         </div>
-                        <div className="font-bold text-green-600">
+                        <div className="font-bold text-xs sm:text-sm text-emerald-800">
                           {activeTestimonial.salaryIncrease}
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-blue-50 rounded-xl">
-                        <div className="text-sm text-gray-600 mb-1">
-                          Time to Placement
+                      <div className="text-center p-3 sm:p-4 bg-violet-50 rounded-2xl border border-violet-100 shadow-sm">
+                        <div className="text-xs text-violet-700 mb-1 font-medium">
+                          Placement
                         </div>
-                        <div className="font-bold text-blue-600">
+                        <div className="font-bold text-xs sm:text-sm text-violet-800">
                           {activeTestimonial.placementTime}
                         </div>
                       </div>
@@ -362,71 +258,55 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                {/* Right Column - Success Metrics & CTA */}
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 md:p-12 border-l border-gray-200">
-                  <div className="h-full flex flex-col">
-                    <div className="mb-8">
-                      <h4 className="text-xl font-bold text-gray-900 mb-6">
-                        Success Journey
-                      </h4>
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                            <Calendar className="w-5 h-5 text-[#FF7A1E]" />
+                {/* Right Column */}
+                <div className="lg:col-span-5 bg-gradient-to-br from-[#F4F5FA] to-[#edeef8] p-6 sm:p-10 border-t lg:border-t-0 lg:border-l border-slate-200/60 flex flex-col justify-between">
+                  <div className="mb-8">
+                    <h4 className="text-lg font-bold text-slate-900 mb-5">
+                      Career Progression Journey
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center text-[#8B5CF6] shadow-sm">
+                          <Calendar className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-sm text-slate-900">
+                            Course Enrollment & Live Labs
                           </div>
-                          <div>
-                            <div className="font-medium text-gray-900">
-                              Course Enrollment
-                            </div>
-                            <div className="text-sm text-gray-600">
-                              Joined Crack Leap Academy
-                            </div>
+                          <div className="text-xs text-slate-500">
+                            Hands-on code execution from day 1
                           </div>
                         </div>
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                            <Brain className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center text-[#8B5CF6] shadow-sm">
+                          <Brain className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-sm text-slate-900">
+                            Production Capstone Building
                           </div>
-                          <div>
-                            <div className="font-medium text-gray-900">
-                              Skill Development
-                            </div>
-                            <div className="text-sm text-gray-600">
-                              Mastered industry skills
-                            </div>
+                          <div className="text-xs text-slate-500">
+                            Real architecture and cloud deployment
                           </div>
                         </div>
-                       
                       </div>
                     </div>
+                  </div>
 
-                    {/* CTA Section */}
-                    <div className="mt-auto">
-                      <div className="mb-6">
-                        <h5 className="font-semibold text-gray-900 mb-3">
-                          Start Your Success Story
-                        </h5>
-                        <p className="text-sm text-gray-600 mb-4">
-                          Join thousands of successful graduates who transformed
-                          their careers with Crack Leap Academy.
-                        </p>
-                      </div>
-
-                      <div className="space-y-3">
-                        <a
-                          href="/contact"
-                          className="block w-full py-3.5 bg-gradient-to-r from-[#FF7A1E] to-[#FF9A3E] text-white font-semibold rounded-xl text-center hover:shadow-lg transition-shadow"
-                        >
-                          Apply Now for Next Batch
-                        </a>
-                        <a
-                          href="/contact"
-                          className="block w-full py-3.5 border-2 border-[#FF7A1E] text-[#FF7A1E] font-semibold rounded-xl text-center hover:bg-orange-50 transition-colors"
-                        >
-                          Book Free Career Consultation
-                        </a>
-                      </div>
-                    </div>
+                  <div className="mt-auto space-y-3">
+                    <Link
+                      href="/courses"
+                      className="block w-full py-3.5 bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] text-white font-bold rounded-2xl text-center shadow-[4px_6px_16px_rgba(139,92,246,0.35)] hover:shadow-[6px_10px_22px_rgba(139,92,246,0.45)] hover:-translate-y-0.5 transition-all text-sm"
+                    >
+                      Apply Now for Next Batch
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="block w-full py-3.5 bg-[#F4F5FA] border border-white/80 text-slate-800 font-bold rounded-2xl text-center shadow-[3px_3px_7px_#dcdde3,-3px_-3px_7px_#ffffff] hover:text-[#8B5CF6] hover:-translate-y-0.5 transition-all text-sm"
+                    >
+                      Book Free Career Consultation
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -434,15 +314,15 @@ const Testimonials = () => {
           </div>
 
           {/* Dots Navigation */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="flex justify-center gap-2.5 mt-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
+                className={`h-2.5 rounded-full transition-all duration-300 ${
                   index === activeIndex
-                    ? "bg-gradient-to-r from-[#FF7A1E] to-[#FF9A3E] w-10"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    ? "bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] w-8 shadow-sm"
+                    : "bg-[#d1d3dc] w-2.5"
                 }`}
                 aria-label={`View testimonial ${index + 1}`}
               />
@@ -450,37 +330,25 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-       
-
         {/* Trust Indicators */}
-        <div className="mt-16 pt-12 border-t border-gray-200">
-          <div className="text-center mb-8">
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">
-              Trusted by Students Worldwide
-            </h4>
-            <p className="text-gray-600">
-              Join our community of successful tech professionals
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-white rounded-2xl border border-gray-200">
-              <Award className="w-12 h-12 text-[#FF7A1E] mx-auto mb-4" />
-              <div className="text-2xl font-bold text-gray-900">4.9/5</div>
-              <div className="text-sm text-gray-600">Average Rating</div>
+        <div className="mt-16 pt-12 border-t border-slate-200/60">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="text-center p-6 bg-[#F4F5FA] rounded-2xl border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff]">
+              <Award className="w-10 h-10 text-[#8B5CF6] mx-auto mb-3" />
+              <div className="text-2xl font-extrabold text-slate-900">4.9 / 5.0</div>
+              <div className="text-xs font-semibold text-slate-500 mt-1">Average Graduate Rating</div>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-2xl border border-gray-200">
-              <TrendingUp className="w-12 h-12 text-[#FF7A1E] mx-auto mb-4" />
-              <div className="text-2xl font-bold text-gray-900">2.5x</div>
-              <div className="text-sm text-gray-600">Average Salary Hike</div>
+            <div className="text-center p-6 bg-[#F4F5FA] rounded-2xl border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff]">
+              <TrendingUp className="w-10 h-10 text-[#8B5CF6] mx-auto mb-3" />
+              <div className="text-2xl font-extrabold text-slate-900">2.5x</div>
+              <div className="text-xs font-semibold text-slate-500 mt-1">Average Salary Hike</div>
             </div>
-            <div className="text-center p-6 bg-white rounded-2xl border border-gray-200">
-              <Brain className="w-12 h-12 text-[#FF7A1E] mx-auto mb-4" />
-              <div className="text-2xl font-bold text-gray-900">5,000+</div>
-              {/* <div className="text-sm text-gray-600">
-                Career Transformations
-              </div> */}
+            
+            <div className="text-center p-6 bg-[#F4F5FA] rounded-2xl border border-white/80 shadow-[6px_6px_14px_#dcdde3,-6px_-6px_14px_#ffffff]">
+              <Brain className="w-10 h-10 text-[#8B5CF6] mx-auto mb-3" />
+              <div className="text-2xl font-extrabold text-slate-900">100%</div>
+              <div className="text-xs font-semibold text-slate-500 mt-1">Hands-on Project Based</div>
             </div>
           </div>
         </div>
