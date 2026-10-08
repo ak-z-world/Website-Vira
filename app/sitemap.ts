@@ -1,21 +1,36 @@
 import type { MetadataRoute } from "next";
-import { COURSE_SLUGS } from "@/data/courses";
-import { SITE } from "@/data/content";
+
+export const dynamic = "force-static";
+export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = [
-    "",
-    "/courses",
-    "/why-crackleap",
-    "/journey",
-    "/how-it-works",
-    "/contact",
-    ...COURSE_SLUGS.map((s) => `/courses/${s}`),
+  const baseUrl = "https://crackleap.vertexloop.in";
+  // ISO date string without milliseconds (e.g., 2026-10-08T10:55:00Z)
+  const lastModified = new Date().toISOString().split(".")[0] + "Z";
+
+  const routes: Array<{
+    path: string;
+    changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+    priority: number;
+  }> = [
+    { path: "", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/courses", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/why-crackleap", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/journey", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/how-it-works", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/courses/python-agentic-ai-aws", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/courses/python-django", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/courses/react-js", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/courses/aws-devops", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/courses/python-full-stack", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/courses/generative-ai", changeFrequency: "monthly", priority: 0.8 },
   ];
-  return pages.map((p) => ({
-    url: `${SITE.url}${p}`,
-    lastModified: new Date(),
-    changeFrequency: p === "" ? "weekly" : "monthly",
-    priority: p === "" ? 1 : p.startsWith("/courses/") ? 0.8 : 0.7,
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 }

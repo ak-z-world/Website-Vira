@@ -37,7 +37,17 @@ export const metadata: Metadata = {
   creator: "Vertex Loop Pvt Ltd",
   publisher: "Vertex Loop Pvt Ltd",
   alternates: { canonical: SITE.url },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     url: SITE.url,
@@ -51,6 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@LoopVertex99532",
+    creator: "@LoopVertex99532",
     title: "CrackLeap Academy | Live Online AI, Python & AWS DevOps Training",
     description:
       "Learn by building. Mentored by engineers who ship. Live online courses — enroll from anywhere in the world.",
@@ -62,14 +73,16 @@ export const metadata: Metadata = {
 function jsonLd() {
   const org = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    name: "CrackLeap",
-    alternateName: "CrackLeap Academy",
+    "@type": ["Organization", "EducationalOrganization"],
+    "@id": `${SITE.url}/#organization`,
+    name: "Crackleap",
+    alternateName: ["CrackLeap", "CrackLeap Academy", "Crack Leap"],
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
+    image: `${SITE.url}/og-cover.png`,
     slogan: "Leap Beyond Limits",
     description:
-      "Software training academy of Vertex Loop Pvt Ltd, Chennai, India — live, mentor-led programs in Python, Agentic AI, Generative AI, React and AWS & DevOps, available worldwide. Founding college MOU partnerships",
+      "Software training academy of Vertex Loop Pvt Ltd, Chennai, India — live, mentor-led programs in Python, Agentic AI, Generative AI, React and AWS & DevOps, available worldwide. Founding college MOU partnerships now open.",
     areaServed: "Worldwide",
     address: {
       "@type": "PostalAddress",
@@ -82,6 +95,7 @@ function jsonLd() {
       email: SITE.email,
       telephone: SITE.phone,
       contactType: "admissions",
+      areaServed: "Worldwide",
     },
     parentOrganization: {
       "@type": "Organization",

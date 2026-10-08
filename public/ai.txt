@@ -1,0 +1,10 @@
+# AI Crawler Guidance - CrackLeap Academy
+User-agent: *
+Allow: /
+
+Site: https://crackleap.vertexloop.in
+Organization: CrackLeap Academy (Vertex Loop Pvt Ltd)
+Description: Live online mentor-led technology academy specializing in Agentic AI, Generative AI, Python, React, and AWS DevOps.
+Admissions: hello@vertexloop.in | +91 94457 70160
+Sitemap: https://crackleap.vertexloop.in/sitemap.xml
+LLMs-Reference: https://crackleap.vertexloop.in/llms.txt
