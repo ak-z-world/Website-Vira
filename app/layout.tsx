@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FAQS, SITE } from "@/data/content";
 import { COURSES } from "@/data/courses";
+import KuralChatbotClient from "@/components/chatbot/KuralChatbotClient";
 import "./globals.css";
 
 const display = Plus_Jakarta_Sans({
@@ -158,6 +159,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <KuralChatbotClient />
       </body>
     </html>
   );

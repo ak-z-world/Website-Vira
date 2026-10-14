@@ -1,5 +1,9 @@
+@tailwind components;
+@tailwind utilities;
+
 /* CrackLeap Academy — design system
    Light theme · logo-derived violet palette · AI-era corporate academy */
+
 
 :root {
   --violet-700: #6d28d9;

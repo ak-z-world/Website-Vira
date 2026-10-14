@@ -1,0 +1,125 @@
+{
+  "brand": {
+    "name": "Kural",
+    "botTitle": "Kural",
+    "botSubtitle": "Online • Mentored by engineers who ship",
+    "academyName": "CrackLeap Academy",
+    "brandName": "CrackLeap",
+    "tagline": "Learn by building. Mentored by engineers who ship.",
+    "footerNote": "CrackLeap Academy • Learning initiative by Vertex Loop Pvt Ltd"
+  },
+  "messages": {
+    "welcome": "Hello! I'm Kural from CrackLeap 👋 We learn by building, mentored by engineers who ship. Which track interests you?",
+    "courseSelected": "Great choice! {course} is designed around real production workflows.",
+    "askBackground": "Nice! What's your background?",
+    "askName": "Got it. What's your full name?",
+    "askPhone": "Thanks {name}! Your WhatsApp number for {course} details, roadmap & fees?",
+    "askTiming": "When do you plan to start {course}?",
+    "summary": "Perfect {name}! You're interested in {course} - {shortDesc}. This is {level} level, you'll build production projects with mentor reviews and get a verifiable certificate + portfolio. Our team will contact you on {phone}. Want syllabus on WhatsApp instantly?",
+    "confirmationWhatsapp": "Awesome {name}! Your lead is recorded. Click below to chat directly with our admissions engineer on WhatsApp, or our team will reach out to {phone} shortly.",
+    "confirmationEmail": "Thank you {name}! Your request has been sent to our mentoring team. We will send the syllabus, project blueprints and roadmap to {phone}.",
+    "confirmationBoth": "Fantastic {name}! We've saved your request and queued your syllabus. Tap below to connect immediately on WhatsApp with our engineers, or expect our message on {phone}.",
+    "errorGeneric": "Something went wrong saving your details, but don't worry! You can also WhatsApp us directly.",
+    "restartGreeting": "Conversation restarted. Which track interests you today?",
+    "selectOptionPrompt": "Please select one of the quick options above to continue your path with our engineers!"
+  },
+  "validation": {
+    "nameMinLength": "Please enter your full name (at least 3 characters).",
+    "phoneInvalid": "Please enter a valid 10-digit Indian mobile number (e.g., 9876543210)."
+  },
+  "options": {
+    "viewAllCourses": "View All Courses",
+    "viewFewerCourses": "Show Less",
+    "backgrounds": [
+      "Student - CSE Background",
+      "Career Switcher - Non-CS",
+      "Graduate - React Batch",
+      "Working Professional"
+    ],
+    "timing": [
+      "Immediately",
+      "This Month",
+      "Next Month",
+      "Just Exploring"
+    ],
+    "delivery": [
+      "Yes, send on WhatsApp",
+      "Send via Email",
+      "Both"
+    ]
+  },
+  "ui": {
+    "inputPlaceholder": "Type your answer...",
+    "inputNamePlaceholder": "Enter your full name...",
+    "inputPhonePlaceholder": "10-digit mobile number...",
+    "send": "Send",
+    "openWhatsApp": "Open WhatsApp Chat",
+    "restart": "Restart Chat",
+    "close": "Close Chat",
+    "onlineStatus": "Online",
+    "flagship": "FLAGSHIP",
+    "levelLabel": "Level",
+    "tagsLabel": "Technologies",
+    "exploreAnother": "Explore Another Track",
+    "typing": "Kural is typing...",
+    "chatWithKuralTooltip": "Chat with Kural 👋",
+    "askKuralOnline": "Ask Kural • Online",
+    "aiBadge": "AI",
+    "agentHintTitle": "Agentic AI Assistant",
+    "agentHintDesc": "Ask about courses, projects & career prep",
+    "speechBubbleGreeting": "Hi! I'm Kural 👋 How can I help?",
+    "chatWithKuralPill": "Chat with Kural",
+    "openChatAria": "Open Kural Lead Chatbot",
+    "dismissTooltip": "Dismiss tooltip"
+  },
+  "courses": [
+    {
+      "id": "python-agentic-ai-aws",
+      "name": "Python + Agentic AI + AWS",
+      "badge": "FLAGSHIP",
+      "shortDesc": "Our flagship track — from Python foundations to AI agents to cloud deployment.",
+      "tags": ["Python", "Agentic AI", "AWS"],
+      "level": "Beginner to Advanced"
+    },
+    {
+      "id": "python-django",
+      "name": "Python Django Development",
+      "badge": "",
+      "shortDesc": "Backend engineering with Python and Django — APIs, databases and deployment.",
+      "tags": ["Python", "Django", "PostgreSQL", "REST APIs"],
+      "level": "Core Builder"
+    },
+    {
+      "id": "react-js",
+      "name": "React JS Development",
+      "badge": "",
+      "shortDesc": "Modern frontend engineering — React, Next.js and TypeScript, production-style.",
+      "tags": ["React", "Next.js", "TypeScript", "Tailwind"],
+      "level": "Core Builder"
+    },
+    {
+      "id": "aws-devops",
+      "name": "AWS & DevOps Engineering",
+      "badge": "",
+      "shortDesc": "Cloud infrastructure and delivery — from EC2 to CI/CD to production.",
+      "tags": ["AWS", "Docker", "CI/CD", "Linux"],
+      "level": "Advanced"
+    },
+    {
+      "id": "python-fullstack",
+      "name": "Python Full Stack Development",
+      "badge": "",
+      "shortDesc": "End-to-end product building — Python backend, React frontend, deployed live.",
+      "tags": ["Python", "Django", "React", "PostgreSQL"],
+      "level": "Advanced"
+    },
+    {
+      "id": "generative-ai",
+      "name": "Generative AI",
+      "badge": "",
+      "shortDesc": "Applied GenAI engineering — LLMs, assistants and AI-powered features.",
+      "tags": ["Python", "LLMs", "PyTorch", "MLOps"],
+      "level": "Advanced"
+    }
+  ]
+}
