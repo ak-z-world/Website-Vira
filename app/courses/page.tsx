@@ -18,13 +18,44 @@ const COURSE_ICONS: Record<string, React.ReactNode> = {
 export const metadata: Metadata = {
   title: "Courses | Live Online Agentic AI, Python, React & AWS DevOps Training",
   description:
-    "Explore CrackLeap's mentor-led courses: Python + Agentic AI + AWS, Python Django, React JS, AWS DevOps, Python Full Stack and Generative AI. Live online, worldwide.",
+    "Explore CrackLeap Academy's live, mentor-led online courses: Python + Agentic AI + AWS (flagship), Python Django, Python Full Stack, React JS, AWS & DevOps and Generative AI. Project-based, taught by working engineers from Chennai, India — join from anywhere; fees shared on enquiry.",
   alternates: { canonical: "https://crackleap.vertexloop.in/courses" },
+  openGraph: {
+    title: "Courses | CrackLeap Academy — Live Software Training",
+    description:
+      "Mentor-led, project-based courses in Python, Agentic AI, React and AWS & DevOps. Live online worldwide; fees shared on enquiry.",
+    url: "https://crackleap.vertexloop.in/courses",
+  },
+};
+
+// ItemList of Course schema for the catalog page (moved out of the root
+// layout, where it fired on every page). No prices: fees are private.
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "CrackLeap Academy Training Programs",
+  itemListElement: COURSES.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Course",
+      name: c.name,
+      description: `${c.tagline} ${c.project.title}: ${c.project.desc}`,
+      url: `https://crackleap.vertexloop.in/courses/${c.slug}`,
+      provider: {
+        "@type": "EducationalOrganization",
+        "@id": "https://crackleap.vertexloop.in/#organization",
+        name: "CrackLeap Academy",
+        url: "https://crackleap.vertexloop.in",
+      },
+    },
+  })),
 };
 
 export default function CoursesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <PageHero
         eyebrow="Course catalog"
         title={<>Courses built for <span className="grad-text">the AI era</span></>}

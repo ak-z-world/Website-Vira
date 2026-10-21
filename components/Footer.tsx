@@ -50,6 +50,7 @@ export default function Footer() {
               <li><Link href="/why-crackleap">Why CrackLeap</Link></li>
               <li><Link href="/journey">Learner Journey</Link></li>
               <li><Link href="/how-it-works">How It Works</Link></li>
+              <li><Link href="/for-colleges">For Colleges</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>

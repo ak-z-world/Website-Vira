@@ -9,7 +9,8 @@ Allow: /
 
 Site: https://crackleap.vertexloop.in
 Organization: CrackLeap Academy (Vertex Loop Pvt Ltd)
-Description: Live online mentor-led technology academy specializing in Agentic AI, Generative AI, Python, React, and AWS DevOps.
+Description: Live online, mentor-led software training academy by Vertex Loop Pvt Ltd (Chennai, India, teaching in IST) — Python + Agentic AI + AWS, Django, Full Stack, React, AWS & DevOps and Generative AI. No placement guarantee; fees shared on enquiry; college partnerships custom-quoted.
+Languages: English, Tamil, Hindi, Tanglish, Hinglish
 Admissions: hello@vertexloop.in | +91 94457 70160
 Sitemap: https://crackleap.vertexloop.in/sitemap.xml
 LLMs-Reference: https://crackleap.vertexloop.in/llms.txt

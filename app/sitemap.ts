@@ -5,8 +5,10 @@ export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://crackleap.vertexloop.in";
-  // ISO date string without milliseconds (e.g., 2026-10-08T10:55:00Z)
-  const lastModified = new Date().toISOString().split(".")[0] + "Z";
+  // Honest freshness: a fixed content-update date, NOT "now" on every
+  // request. Bump this only when page content actually changes.
+  const LAST_CONTENT_UPDATE = "2026-10-21";
+  const lastModified = LAST_CONTENT_UPDATE;
 
   const routes: Array<{
     path: string;
@@ -18,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/why-crackleap", changeFrequency: "monthly", priority: 0.7 },
     { path: "/journey", changeFrequency: "monthly", priority: 0.7 },
     { path: "/how-it-works", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/for-colleges", changeFrequency: "monthly", priority: 0.8 },
     { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
     { path: "/courses/python-agentic-ai-aws", changeFrequency: "monthly", priority: 0.8 },
     { path: "/courses/python-django", changeFrequency: "monthly", priority: 0.8 },

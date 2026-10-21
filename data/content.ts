@@ -20,6 +20,7 @@ export const NAV_LINKS = [
   { label: "Why CrackLeap", href: "/why-crackleap" },
   { label: "Journey", href: "/journey" },
   { label: "How It Works", href: "/how-it-works" },
+  { label: "For Colleges", href: "/for-colleges" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -36,7 +37,7 @@ export const TOOLS = [
 export const WHY_CARDS = [
   {
     title: "Industry-Aligned Curriculum",
-    text: "Content drawn from real client work at Vertex Loop — not outdated theory. Modern stacks, real constraints.",
+    text: "Content drawn from the real product and engineering work at Vertex Loop — not outdated theory. Modern stacks, real constraints.",
   },
   {
     title: "Hands-on Projects",
@@ -79,75 +80,6 @@ export const WHAT_YOU_GET = [
   "Resume & LinkedIn guidance to prepare for opportunities",
 ];
 
-export type Program = {
-  track: string;
-  title: string;
-  tags: string[];
-  points: string[];
-  project: string;
-  projectDesc: string;
-  focus: string;
-  featured?: boolean;
-};
-
-export const PROGRAMS: Program[] = [
-  {
-    track: "Backend",
-    title: "Python & Django Development",
-    tags: ["Python", "Django", "PostgreSQL", "REST APIs"],
-    points: ["Python fundamentals", "OOP & APIs", "Django & REST", "PostgreSQL & Deployment fundamentals"],
-    project: "Build a production SaaS dashboard",
-    projectDesc: "Build a production SaaS dashboard with authentication and deployed APIs.",
-    focus: "Backend & Python Development skills",
-  },
-  {
-    track: "Cloud",
-    title: "AWS & DevOps Engineering",
-    tags: ["AWS", "Docker", "CI/CD", "Linux"],
-    points: ["AWS Core (EC2, S3, IAM)", "CI/CD & Docker", "Infrastructure as Code", "Production Deployment Practices"],
-    project: "Ship a deployment pipeline on AWS",
-    projectDesc: "Ship an end-to-end deployment pipeline on AWS with monitoring.",
-    focus: "Cloud & DevOps engineering workflows",
-  },
-  {
-    track: "AI",
-    title: "AI & Machine Learning",
-    tags: ["Python", "PyTorch", "LLMs", "MLOps"],
-    points: ["Python for AI", "ML fundamentals & Models", "Data handling & Evaluation", "Building AI-powered features"],
-    project: "Create and deploy an AI assistant",
-    projectDesc: "Create an AI assistant, train models and deploy via API.",
-    focus: "Applied AI & ML engineering",
-  },
-  {
-    track: "Frontend",
-    title: "React & Next.js",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
-    points: ["React fundamentals & Hooks", "Next.js & TypeScript", "State management & APIs", "Production-ready frontend"],
-    project: "Craft a production SaaS app",
-    projectDesc: "Craft a production-grade SaaS app with dashboards and integrations.",
-    focus: "Modern frontend & full-stack development",
-  },
-  {
-    track: "Data",
-    title: "Data Science & ML",
-    tags: ["Python", "Pandas", "Scikit", "SQL"],
-    points: ["Data analysis with Python", "ML pipelines", "Visualization & Storytelling", "Real-world datasets & Projects"],
-    project: "Design a BI dashboard with insights",
-    projectDesc: "Design a business intelligence dashboard with predictive insights.",
-    focus: "Data analysis & ML fundamentals",
-  },
-  {
-    track: "Full Stack + AI + DevOps",
-    title: "Full Stack + AI + DevOps Combo",
-    tags: ["React", "Python", "AI", "AWS"],
-    points: ["Frontend + Backend integration", "AI feature integration", "Cloud deployment", "End-to-end product building"],
-    project: "Launch an AI product to production",
-    projectDesc: "Launch an AI-powered full-stack product to production.",
-    focus: "Product engineering end-to-end",
-    featured: true,
-  },
-];
-
 export const LEVELS = [
   { name: "Foundation", level: "Beginner Friendly", text: "Core concepts + guided projects" },
   { name: "Core Builder", level: "Intermediate", text: "Production projects + reviews" },
@@ -166,7 +98,7 @@ export const PATHS = [
     who: "Graduates",
     goal: "Build Specialization",
     level: "Core",
-    text: "Pick AI/ML, AWS & DevOps, or Data Science. Ship a capstone you can demo.",
+    text: "Pick Agentic AI, AWS & DevOps, or Full Stack. Ship a capstone you can demo.",
   },
   {
     who: "Professionals",
@@ -180,7 +112,7 @@ export const STEPS = [
   {
     n: "01",
     title: "Explore Programs",
-    text: "Choose your track — Python, AI/ML, React, AWS & DevOps, Data Science or Full Stack combo.",
+    text: "Choose your track — Python, Agentic AI, React, AWS & DevOps or Python Full Stack.",
   },
   {
     n: "02",
@@ -203,27 +135,9 @@ export const JOURNEY = ["Student", "Learner", "Builder", "Developer", "Career-Re
 
 export const ECOSYSTEM = [
   { title: "Product Development", text: "SaaS, AI tools, internal platforms" },
-  { title: "Tech Services", text: "For startups & enterprises across India & Gulf" },
+  { title: "Tech Services", text: "For startups & enterprises worldwide" },
   { title: "CrackLeap Academy", text: "Learning initiative — practical, mentor-led" },
   { title: "Active Practitioners", text: "Mentors = current Vertex Loop engineers" },
-];
-
-export const TESTIMONIALS = [
-  {
-    quote: "Mentor was a working engineer. Code reviews were strict, which helped me improve fast. I finally built projects I can demo.",
-    role: "Learner — CSE Background",
-    track: "Python & Django Track",
-  },
-  {
-    quote: "Hands-on approach made it click. Building real dashboards and APIs gave me confidence to prepare for interviews.",
-    role: "Career Switcher — Non-CS",
-    track: "Full Stack Combo",
-  },
-  {
-    quote: "The live sessions and portfolio focus helped me prepare better. Resume and LinkedIn guidance was practical and actionable.",
-    role: "Graduate — React Batch",
-    track: "React & Next.js",
-  },
 ];
 
 export const FAQS = [
@@ -237,11 +151,11 @@ export const FAQS = [
   },
   {
     q: "Who are the mentors?",
-    a: "Mentors are active engineers at Vertex Loop who ship production code daily — not full-time career trainers. You learn from people who build real systems for real clients.",
+    a: "Mentors are active engineers at Vertex Loop who ship production code — not full-time career trainers. You learn from people who design, build and deploy real software systems.",
   },
   {
     q: "What will I actually build?",
-    a: "Production-grade projects: a SaaS dashboard with authentication and deployed APIs, an end-to-end deployment pipeline on AWS, an AI assistant deployed via API, BI dashboards with predictive insights — work you can demo, not toy assignments.",
+    a: "Production-grade projects drawn from the course catalog: a SaaS dashboard backend with authentication and deployed APIs, an end-to-end deployment pipeline on AWS, an AI assistant deployed via API, and a complete full-stack product — work you can demo, not toy assignments.",
   },
   {
     q: "Do I get a certificate?",
@@ -249,7 +163,23 @@ export const FAQS = [
   },
   {
     q: "Who is CrackLeap for?",
-    a: "Students, graduates, professionals and career switchers — anyone who wants structured, mentor-led programs in Python, AI/ML, React, AWS & DevOps, and Data Science.",
+    a: "Students, graduates, professionals and career switchers — anyone who wants structured, mentor-led programs in Python, Agentic AI, React and AWS & DevOps.",
+  },
+  {
+    q: "How much do courses cost?",
+    a: "We do not publish a fixed price list: talk to us and we will share the current fee for your course and cohort on enquiry or a call. CrackLeap is designed to cost less than the big classroom academies — we teach live online, without classroom overhead — but the training is not basic: the AWS & DevOps course, for example, is designed around hands-on practice on AWS WorkSpaces for real-world simulation.",
+  },
+  {
+    q: "Where are the classes held, and in which time zone?",
+    a: "All classes are live online — you join from anywhere in the world, with no travel or relocation needed. Sessions are taught from Chennai, India, in Indian Standard Time (IST).",
+  },
+  {
+    q: "Which languages are classes taught in?",
+    a: "Trainers are fluent in English and teach learners worldwide. Teaching and support are available in English, Tamil, Hindi, Tanglish and Hinglish.",
+  },
+  {
+    q: "Can my college partner with CrackLeap?",
+    a: "Yes. Colleges can partner with CrackLeap for live, mentor-led training programs and workshops for their students, with career-preparation guidance, verifiable certificates and skill reports. College pricing is custom — it depends on the college and the package chosen — so write to hello@vertexloop.in for a proposal. Founding college MOU partnerships are now open.",
   },
   {
     q: "How do I start?",

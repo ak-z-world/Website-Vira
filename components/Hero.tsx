@@ -21,7 +21,7 @@ export default function Hero() {
           <p className="hero-lead">
             <strong>CrackLeap</strong> is a learning initiative by Vertex Loop — live, mentor-led
             programs in <strong>Python, Agentic AI, React, AWS &amp; DevOps</strong>. Learn with
-            engineers who ship production code daily, and build a portfolio that prepares you for
+            engineers who ship production code, and build a portfolio that prepares you for
             placements and internships — <strong>from anywhere in the world</strong>.
           </p>
           <div className="hero-points">
@@ -35,7 +35,7 @@ export default function Hero() {
             <Link href="/courses" className="btn btn-primary">Explore Courses</Link>
             <Link href="/how-it-works" className="btn btn-ghost">How It Works</Link>
           </div>
-          <p className="hero-note">Live Online &nbsp;·&nbsp; Cohorts Worldwide &nbsp;·&nbsp; {SITE.email}</p>
+          <p className="hero-note">Live Online &nbsp;·&nbsp; Taught from Chennai, India (IST) &nbsp;·&nbsp; Cohorts Worldwide &nbsp;·&nbsp; {SITE.email}</p>
         </Reveal>
 
         <Reveal className="hero-visual-wrap">

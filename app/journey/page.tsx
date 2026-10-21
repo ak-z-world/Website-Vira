@@ -16,7 +16,7 @@ export default function JourneyPage() {
       <PageHero
         eyebrow="Your transformation journey"
         title={<>From curiosity <span className="grad-text">to career-ready</span></>}
-        lead="A clear, honest path. No shortcuts, no inflated promises. You learn, you build, you prepare — with mentors who ship production code every day."
+        lead="A clear, honest path. No shortcuts, no inflated promises. You learn, you build, you prepare — with mentors who ship production code."
         crumb="Journey"
       />
       <div style={{ paddingTop: 72 }}>

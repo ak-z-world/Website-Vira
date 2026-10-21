@@ -20,13 +20,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const course = getCourse(slug);
   if (!course) return {};
   return {
-    title: `${course.name} | CrackLeap Academy`,
-    description: `${course.tagline} Live, mentor-led and project-based — join from anywhere in the world.`,
+    // The layout title template appends "| CrackLeap Academy" — do not
+    // include it here or it will appear twice.
+    title: `${course.name} — Live Online Course`,
+    description: `${course.tagline} A live, mentor-led, project-based online course by CrackLeap Academy (Vertex Loop, Chennai, India) — join from anywhere in the world; fees shared on enquiry.`,
     alternates: { canonical: `${SITE.url}/courses/${course.slug}` },
     openGraph: {
       title: `${course.name} | CrackLeap Academy`,
-      description: course.tagline,
+      description: `${course.tagline} Live, mentor-led and project-based — join from anywhere in the world.`,
       url: `${SITE.url}/courses/${course.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${course.name} | CrackLeap Academy`,
+      description: `${course.tagline} Live, mentor-led and project-based — join from anywhere in the world.`,
     },
   };
 }
@@ -52,9 +59,11 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
     "@type": "Course",
     name: course.name,
     description: course.overview.join(" "),
+    url: `${SITE.url}/courses/${course.slug}`,
     provider: {
       "@type": "EducationalOrganization",
-      name: "CrackLeap",
+      "@id": `${SITE.url}/#organization`,
+      name: "CrackLeap Academy",
       url: SITE.url,
       parentOrganization: { "@type": "Organization", name: "Vertex Loop Pvt Ltd", url: SITE.parentUrl },
     },
@@ -65,9 +74,20 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Courses", item: `${SITE.url}/courses` },
+      { "@type": "ListItem", position: 3, name: course.name, item: `${SITE.url}/courses/${course.slug}` },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         eyebrow={course.featured ? "Flagship course" : "Course"}
         title={course.name}

@@ -1,0 +1,66 @@
+'use client'
+
+import Script from 'next/script'
+import { usePathname, useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
+
+declare global {
+  interface Window {
+    gtag?: (
+      command: 'event' | 'config' | 'js',
+      targetId: string | Date,
+      config?: Record<string, unknown>
+    ) => void
+    dataLayer?: unknown[]
+  }
+}
+
+// GA4 for the "CrackLeap" web stream (https://crackleap.vertexloop.in).
+// Set NEXT_PUBLIC_GA_MEASUREMENT_ID in the hosting environment to
+// G-S9RXTGKL0S. The fallback keeps analytics working if the env var is
+// not set; if the property ever changes, update the env var, not the code.
+export const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-S9RXTGKL0S'
+
+export function trackGAEvent(action: string, params?: Record<string, unknown>) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', action, params)
+  }
+}
+
+export default function GoogleAnalytics() {
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    if (pathname && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '')
+      window.gtag('config', GA_MEASUREMENT_ID, {
+        page_path: url,
+      })
+    }
+  }, [pathname, searchParams])
+
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+    </>
+  )
+}

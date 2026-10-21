@@ -95,6 +95,7 @@ export const COURSES: Course[] = [
     overview: [
       "A cloud and DevOps program that takes you from AWS fundamentals to running real production infrastructure — compute, storage, containers and automated delivery.",
       "Taught with a builder's mindset: you provision, containerize and deploy, and you learn to monitor what you ship.",
+      "The course is designed around hands-on practice on AWS WorkSpaces, so learners work in real-world cloud simulation environments instead of only watching demonstrations.",
     ],
     learn: [
       "AWS core (EC2, S3, IAM)",

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Reveal from "./Reveal";
-import { ECOSYSTEM, FAQS, JOURNEY, LEVELS, PATHS, SITE, STEPS, TESTIMONIALS } from "@/data/content";
+import { ECOSYSTEM, FAQS, JOURNEY, LEVELS, PATHS, SITE, STEPS } from "@/data/content";
 import {
   ArrowRightIcon, AwardIcon, CheckIcon, ClockIcon,
   GlobeIcon, GraduationCapIcon, LayersIcon, MailIcon, RocketIcon,
@@ -118,7 +118,7 @@ export function Journey({ preview = false, bare = false }: { preview?: boolean; 
           <h2 className="section-title">From curiosity <span className="grad-text">to career-ready</span></h2>
           <p className="section-sub">
             A clear, honest path. No shortcuts, no inflated promises. You learn, you build, you
-            prepare — with mentors who ship production code every day.
+            prepare — with mentors who ship production code.
           </p>
         </Reveal>
         )}
@@ -181,8 +181,8 @@ export function Ecosystem() {
           <h2 className="section-title">CrackLeap is a learning initiative by <span className="grad-text">Vertex Loop</span></h2>
           <p className="section-sub">
             A product &amp; tech services company. You don&apos;t learn best from career trainers.
-            You learn from engineers who ship production systems daily — for real clients, under
-            real deadlines. That&apos;s the Vertex Loop edge that powers CrackLeap.
+            You learn from engineers who design, build and ship production systems. That&apos;s
+            the Vertex Loop edge that powers CrackLeap.
           </p>
         </Reveal>
         <div className="grid-4">
@@ -214,24 +214,51 @@ export function Outcomes() {
           </p>
         </Reveal>
         <div className="cert-strip" aria-label="Program highlights">
-          {["100% Practical", "Project Based", "Mentor Led", "Verifiable Certificates"].map((c) => (
+          {["Project-Based Learning", "Mentor-Led Live Sessions", "1:1 Mentorship & Code Reviews", "Verifiable Certificate + Skill Report"].map((c) => (
             <span key={c}><CheckIcon size={16} /> {c}</span>
           ))}
         </div>
+        <Reveal>
+          <h3 className="center" style={{ fontSize: "1.35rem", marginBottom: 6 }}>What you will build</h3>
+          <p className="center" style={{ color: "var(--muted)", maxWidth: "58ch", margin: "0 auto" }}>
+            Proof at CrackLeap is work you can open and demo — the capstone projects built into
+            every course in the catalog.
+          </p>
+        </Reveal>
         <div className="grid-3">
-          {TESTIMONIALS.map((t) => (
-            <Reveal key={t.role}>
-              <figure className="card testimonial" style={{ margin: 0 }}>
-                <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
-                <figcaption className="who">
-                  <strong>{t.role}</strong>
-                  <span>{t.track}</span>
-                </figcaption>
-              </figure>
+          {[
+            {
+              t: "An AI product, deployed to production",
+              d: "The flagship Python + Agentic AI + AWS capstone: agent logic, APIs and cloud infrastructure, designed, built and deployed end to end.",
+            },
+            {
+              t: "A production backend & full-stack product",
+              d: "A SaaS dashboard backend with authentication, PostgreSQL and deployed REST APIs — and a complete Django + React product shipped as one system.",
+            },
+            {
+              t: "An AWS deployment pipeline",
+              d: "The AWS & DevOps capstone: an end-to-end deployment pipeline on AWS with monitoring — the way production teams deliver software.",
+            },
+          ].map((c) => (
+            <Reveal key={c.t}>
+              <div className="card">
+                <div className="card-icon" style={{ color: "var(--violet-700)" }}><RocketIcon size={26} /></div>
+                <h3>{c.t}</h3>
+                <p>{c.d}</p>
+              </div>
             </Reveal>
           ))}
         </div>
+        <Reveal>
+          <div className="card center" style={{ marginTop: 24, background: "linear-gradient(180deg,#fff, var(--violet-50))" }}>
+            <h3 style={{ marginBottom: 8 }}>Founding cohorts are forming now</h3>
+            <p style={{ maxWidth: "62ch", margin: "0 auto 16px" }}>
+              CrackLeap is a new academy by Vertex Loop. Join an early cohort, learn live with
+              working engineers, and build the portfolio that becomes your proof.
+            </p>
+            <Link href="/contact" className="btn btn-primary">Talk to us about the next cohort <ArrowRightIcon size={17} /></Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
