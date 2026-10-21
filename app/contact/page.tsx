@@ -52,7 +52,7 @@ export default function ContactPage() {
                   </p>
                   <p style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: "0.9rem", marginTop: 12 }}>
                     <GraduationCapIcon size={20} />
-                    <span><strong style={{ color: "#fff" }}>For learners:</strong> all courses run live online — enroll from anywhere in the world.</span>
+                    <span><strong style={{ color: "#fff" }}>For learners:</strong> all courses are live and mentor-led — enroll from anywhere in the world.</span>
                   </p>
                 </div>
               </div>

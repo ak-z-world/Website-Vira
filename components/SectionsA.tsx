@@ -38,7 +38,7 @@ export function Marquee() {
 }
 
 const PART_OF = [
-  { icon: <UsersIcon size={26} />, t: "Live Online", d: "Mentor-led sessions, worldwide" },
+  { icon: <UsersIcon size={26} />, t: "Live Classes", d: "Mentor-led sessions, worldwide" },
   { icon: <ChatIcon size={26} />, t: "1:1 Mentorship", d: "By industry engineers" },
   { icon: <RocketIcon size={26} />, t: "Real Production Projects", d: "Not toy assignments" },
   { icon: <TargetIcon size={26} />, t: "Career Preparation", d: "Guidance, not promises" },

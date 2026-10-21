@@ -16,14 +16,14 @@ const COURSE_ICONS: Record<string, React.ReactNode> = {
 };
 
 export const metadata: Metadata = {
-  title: "Courses | Live Online Agentic AI, Python, React & AWS DevOps Training",
+  title: "Courses | Live Agentic AI, Python, React & AWS DevOps Training",
   description:
-    "Explore CrackLeap Academy's live, mentor-led online courses: Python + Agentic AI + AWS (flagship), Python Django, Python Full Stack, React JS, AWS & DevOps and Generative AI. Project-based, taught by working engineers from Chennai, India — join from anywhere; fees shared on enquiry.",
+    "Explore CrackLeap Academy's live, mentor-led courses: Python + Agentic AI + AWS (flagship), Python Django, Python Full Stack, React JS, AWS & DevOps and Generative AI. Project-based, taught by working engineers from Chennai, India — join from anywhere; fees shared on enquiry.",
   alternates: { canonical: "https://crackleap.vertexloop.in/courses" },
   openGraph: {
     title: "Courses | CrackLeap Academy — Live Software Training",
     description:
-      "Mentor-led, project-based courses in Python, Agentic AI, React and AWS & DevOps. Live online worldwide; fees shared on enquiry.",
+      "Mentor-led, project-based courses in Python, Agentic AI, React and AWS & DevOps. Live worldwide; fees shared on enquiry.",
     url: "https://crackleap.vertexloop.in/courses",
   },
 };
@@ -59,7 +59,7 @@ export default function CoursesPage() {
       <PageHero
         eyebrow="Course catalog"
         title={<>Courses built for <span className="grad-text">the AI era</span></>}
-        lead="Six mentor-led, project-based courses — from Python foundations to Agentic AI to cloud deployment. Join live online from anywhere in the world."
+        lead="Six mentor-led, project-based courses — from Python foundations to Agentic AI to cloud deployment. Join live from anywhere in the world."
         crumb="Courses"
       />
       <section className="section" style={{ paddingTop: 64 }}>

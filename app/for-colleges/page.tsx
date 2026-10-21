@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const COLLEGE_FAQS = [
   {
     q: "What does a CrackLeap college partnership include?",
-    a: "Live, mentor-led training programs and workshops for your students, taught online by active Vertex Loop engineers: project-based learning, 1:1 mentorship and code reviews, career-preparation guidance, and a verifiable certificate plus skill report for every participating student.",
+    a: "Live, mentor-led training programs and workshops for your students, taught by active Vertex Loop engineers: project-based learning, 1:1 mentorship and code reviews, career-preparation guidance, and a verifiable certificate plus skill report for every participating student.",
   },
   {
     q: "How is college pricing decided?",
@@ -31,7 +31,7 @@ const COLLEGE_FAQS = [
   },
   {
     q: "How is the training delivered?",
-    a: "All training is delivered live online from Chennai, India (IST), so your students join from campus or home — no classroom infrastructure is needed at your college. Workshops and cohort schedules are coordinated with your institution in advance.",
+    a: "Training is delivered live by Vertex Loop engineers, with the delivery format and cohort schedules coordinated with your institution in advance.",
   },
   {
     q: "Do you guarantee placements for our students?",
@@ -80,7 +80,7 @@ const STEPS = [
   {
     n: "03",
     title: "Live delivery",
-    text: "Vertex Loop engineers teach your students live online — projects, mentorship and code reviews throughout the program.",
+    text: "Vertex Loop engineers teach your students live — projects, mentorship and code reviews throughout the program.",
   },
   {
     n: "04",
@@ -107,7 +107,7 @@ export default function ForCollegesPage() {
             <h2 style={{ fontSize: "1.5rem", marginBottom: 14 }}>Why colleges work with CrackLeap</h2>
             <p style={{ marginBottom: 14, color: "var(--body)", maxWidth: "72ch" }}>
               Your students learn from active software engineers — not full-time trainers — in live
-              online cohorts run from Chennai, India. Every program is project-based: students
+              cohorts run from Chennai, India. Every program is project-based: students
               finish with work they can demo, a verifiable certificate and a skill report, plus
               career-preparation guidance for placements and internships. We are explicit about
               what we do not do: CrackLeap does not guarantee placements.

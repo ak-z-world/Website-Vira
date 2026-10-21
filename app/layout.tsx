@@ -25,16 +25,16 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "CrackLeap Academy | Live  Agentic AI, Python & AWS DevOps Training",
+    default: "CrackLeap Academy | Live Agentic AI, Python & AWS DevOps Training",
     template: "%s | CrackLeap Academy",
   },
   description:
     "CrackLeap Academy by Vertex Loop Pvt Ltd (Chennai, India) is a live, mentor-led software training academy — Python + Agentic AI + AWS, Django, Full Stack, React and AWS & DevOps, taught by working engineers. Join from anywhere in the world; fees shared on enquiry. Founding college MOU partnerships now open.",
   keywords: [
     "CrackLeap", "software training academy", "software training institute in India",
-    "Agentic AI course online", "Agentic AI course", "Generative AI course", "AI training",
+    "Agentic AI course", "Generative AI course", "AI training",
     "AWS DevOps training", "Python Django course", "React JS course", "Python full stack course",
-    "live online coding courses", "Vertex Loop",
+    "live coding courses", "Vertex Loop",
   ],
   authors: [{ name: "Vertex Loop Pvt Ltd" }],
   creator: "Vertex Loop Pvt Ltd",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE.url,
     siteName: "CrackLeap Academy",
-    title: "CrackLeap Academy | Agentic AI, Python & AWS DevOps Training",
+    title: "CrackLeap Academy | Live Agentic AI, Python & AWS DevOps Training",
     description:
       "Live, mentor-led software training by Vertex Loop, Chennai — Python + Agentic AI + AWS, Django, Full Stack, React, AWS & DevOps. Project-based, with 1:1 mentorship and a verifiable certificate. Join from anywhere in the world.",
     images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: "CrackLeap Academy — Leap Beyond Limits" }],
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@LoopVertex99532",
     creator: "@LoopVertex99532",
-    title: "CrackLeap Academy | Agentic AI, Python & AWS DevOps Training",
+    title: "CrackLeap Academy | Live AI, Python & AWS DevOps Training",
     description:
       "Learn by building. Mentored by engineers who ship. Live software training — enroll from anywhere in the world; fees shared on enquiry.",
     images: ["/og-cover.png"],
@@ -85,7 +85,7 @@ function jsonLd() {
     image: `${SITE.url}/og-cover.png`,
     slogan: "Leap Beyond Limits",
     description:
-      "Live, mentor-led software training academy of Vertex Loop Pvt Ltd, Chennai, India — programs in Python + Agentic AI + AWS, Python Django, Python Full Stack, React JS and AWS & DevOps, taught in IST and available worldwide. No placement guarantee: career-preparation guidance, verifiable certificates and skill reports. Founding college MOU partnerships now open.",
+      "Live, mentor-led software training academy of Vertex Loop Pvt Ltd, Chennai, India — programs in Python + Agentic AI + AWS, Python Django, Python Full Stack, React JS and AWS & DevOps, available worldwide. No placement guarantee: career-preparation guidance, verifiable certificates and skill reports. Founding college MOU partnerships now open.",
     areaServed: [
       { "@type": "Place", name: "Worldwide" },
       { "@type": "Country", name: "India" },

@@ -26,7 +26,7 @@ export const NAV_LINKS = [
 
 export const ANNOUNCEMENT = {
   colleges: "For colleges — founding MOU partnerships now open",
-  learners: "For learners — live online cohorts open worldwide",
+  learners: "For learners — live cohorts open worldwide",
 };
 
 export const TOOLS = [
@@ -167,11 +167,11 @@ export const FAQS = [
   },
   {
     q: "How much do courses cost?",
-    a: "We do not publish a fixed price list: talk to us and we will share the current fee for your course and cohort on enquiry or a call. CrackLeap is designed to cost less than the big classroom academies — we teach live online, without classroom overhead — but the training is not basic: the AWS & DevOps course, for example, is designed around hands-on practice on AWS WorkSpaces for real-world simulation.",
+    a: "We do not publish a fixed price list: talk to us and we will share the current fee for your course and cohort on enquiry or a call. CrackLeap is designed to cost less than the big classroom academies, without cutting training depth — but the training is not basic: the AWS & DevOps course, for example, is designed around hands-on practice on AWS WorkSpaces for real-world simulation.",
   },
   {
-    q: "Where are the classes held, and in which time zone?",
-    a: "All classes are live online — you join from anywhere in the world, with no travel or relocation needed. Sessions are taught from Chennai, India, in Indian Standard Time (IST).",
+    q: "Where are the classes held?",
+    a: "All classes are live and mentor-led, taught from Chennai, India — you can join from anywhere in the world, with no travel or relocation needed. Class timings are arranged to suit your time zone.",
   },
   {
     q: "Which languages are classes taught in?",

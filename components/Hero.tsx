@@ -35,7 +35,7 @@ export default function Hero() {
             <Link href="/courses" className="btn btn-primary">Explore Courses</Link>
             <Link href="/how-it-works" className="btn btn-ghost">How It Works</Link>
           </div>
-          <p className="hero-note">Live Online &nbsp;·&nbsp; Taught from Chennai, India (IST) &nbsp;·&nbsp; Cohorts Worldwide &nbsp;·&nbsp; {SITE.email}</p>
+          <p className="hero-note">Mentor-Led &nbsp;·&nbsp; Taught from Chennai, India &nbsp;·&nbsp; Cohorts Worldwide &nbsp;·&nbsp; {SITE.email}</p>
         </Reveal>
 
         <Reveal className="hero-visual-wrap">

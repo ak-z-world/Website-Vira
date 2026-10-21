@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     // The layout title template appends "| CrackLeap Academy" — do not
     // include it here or it will appear twice.
-    title: `${course.name} — Live Online Course`,
-    description: `${course.tagline} A live, mentor-led, project-based online course by CrackLeap Academy (Vertex Loop, Chennai, India) — join from anywhere in the world; fees shared on enquiry.`,
+    title: `${course.name} — Live Course`,
+    description: `${course.tagline} A live, mentor-led, project-based course by CrackLeap Academy (Vertex Loop, Chennai, India) — join from anywhere in the world; fees shared on enquiry.`,
     alternates: { canonical: `${SITE.url}/courses/${course.slug}` },
     openGraph: {
       title: `${course.name} | CrackLeap Academy`,
@@ -69,7 +69,6 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
     },
     hasCourseInstance: {
       "@type": "CourseInstance",
-      courseMode: "online",
       courseWorkload: "Mentor-led live sessions",
     },
   };
@@ -140,7 +139,7 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
                 </div>
                 <div className="info-row">
                   <ClockIcon size={19} />
-                  <span><strong>Format:</strong><br />Live online, mentor-led sessions</span>
+                  <span><strong>Format:</strong><br />Live, mentor-led sessions</span>
                 </div>
                 <div className="info-row">
                   <UsersIcon size={19} />

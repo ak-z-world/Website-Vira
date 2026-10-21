@@ -171,7 +171,7 @@ export function getCourse(slug: string): Course | undefined {
 }
 
 export const FORMAT_POINTS = [
-  "Live online, mentor-led sessions",
+  "Live, mentor-led sessions",
   "Project-based learning — build, don't just watch",
   "1:1 mentorship, code reviews & doubt support",
   "Verifiable certificate + skill report",

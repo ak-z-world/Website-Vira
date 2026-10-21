@@ -327,7 +327,7 @@ export function Cta() {
               </div>
               <div className="cta-card">
                 <h3>Talk to us</h3>
-                <p>Live online &middot; Mentor-led programs &middot; {SITE.email}</p>
+                <p>Live &middot; Mentor-led programs &middot; {SITE.email}</p>
                 <Link href="/contact" className="btn btn-ghost"><MailIcon size={17} /> Contact Us</Link>
               </div>
             </div>

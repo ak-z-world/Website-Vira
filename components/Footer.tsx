@@ -14,7 +14,7 @@ export default function Footer() {
             <h3>CrackLeap Academy</h3>
             <p>
               A learning initiative by {SITE.parent} — mentor-led, project-based technology
-              training, live online worldwide. Leap Beyond Limits.
+              training, live worldwide. Leap Beyond Limits.
             </p>
             <div className="social-row">
               {SOCIALS.map((s) => (

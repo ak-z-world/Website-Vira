@@ -5,7 +5,7 @@ export const revalidate = 3600;
 
 const LLMS_TEXT = `# CrackLeap Academy
 
-> CrackLeap Academy is a live, mentor-led software training academy by Vertex Loop Pvt Ltd, based in Chennai, India and teaching in IST. Programs in Python + Agentic AI + AWS, Python Django, Python Full Stack, React JS, AWS & DevOps and Generative AI — taught by active Vertex Loop engineers who ship production code, and open to learners worldwide.
+> CrackLeap Academy is a live, mentor-led software training academy by Vertex Loop Pvt Ltd, based in Chennai, India. Programs in Python + Agentic AI + AWS, Python Django, Python Full Stack, React JS, AWS & DevOps and Generative AI — taught by active Vertex Loop engineers who ship production code, and open to learners worldwide.
 
 CrackLeap is the education arm of Vertex Loop Pvt Ltd. Every session is live and mentor-led (never pre-recorded): learners build production-grade projects, receive 1:1 mentorship and code reviews, and earn a verifiable certificate linked to their portfolio plus a skill report. CrackLeap is honest about outcomes: there is no placement provision or placement guarantee — learners get career-preparation guidance, portfolio building and interview preparation. Founding college MOU partnerships are now open.
 
@@ -31,7 +31,7 @@ CrackLeap is the education arm of Vertex Loop Pvt Ltd. Every session is live and
 
 ## Fees & Partnerships
 
-- **Individual course fees**: not published as a fixed list — the current fee for a course and cohort is shared on enquiry or a call (hello@vertexloop.in). CrackLeap is designed to cost less than the big classroom academies because it teaches live online, without cutting training depth.
+- **Individual course fees**: not published as a fixed list — the current fee for a course and cohort is shared on enquiry or a call (hello@vertexloop.in). CrackLeap is designed to cost less than the big classroom academies, without cutting training depth.
 - **College partnerships**: pricing is custom per college and package, quoted in a written proposal. No placement guarantees are made to colleges or students.
 
 ## Institutional & Organization Details
@@ -41,7 +41,7 @@ CrackLeap is the education arm of Vertex Loop Pvt Ltd. Every session is live and
 - **Based in**: Chennai, Tamil Nadu, India
 - **Admissions Email**: hello@vertexloop.in
 - **Phone / WhatsApp**: +91 94457 70160
-- **Delivery Mode**: Live online, mentor-led cohorts worldwide, taught in IST
+- **Delivery**: Live, mentor-led training for learners worldwide and for colleges, coordinated with each learner/institution; timings arranged to suit your time zone.
 - **Teaching & Support Languages**: English (trainers are fluent), Tamil, Hindi, Tanglish, Hinglish
 - **Social Media**:
   - LinkedIn: https://www.linkedin.com/company/crack-leap

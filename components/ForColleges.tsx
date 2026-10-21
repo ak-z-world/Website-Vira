@@ -5,7 +5,7 @@ import { ArrowRightIcon, BuildingIcon, CheckIcon, UsersIcon } from "./icons";
 const POINTS = [
   {
     t: "Live programs for your students",
-    d: "Mentor-led, project-based training in Python + Agentic AI + AWS, Django, Full Stack, React and AWS & DevOps — delivered live online by Vertex Loop engineers, with 1:1 mentorship and code reviews.",
+    d: "Mentor-led, project-based training in Python + Agentic AI + AWS, Django, Full Stack, React and AWS & DevOps — delivered live by Vertex Loop engineers, with 1:1 mentorship and code reviews.",
   },
   {
     t: "Workshops & cohort programs",
@@ -44,7 +44,7 @@ export default function ForColleges() {
           <div className="card" style={{ marginTop: 24 }}>
             <div className="grid-2" style={{ marginTop: 0 }}>
               {[
-                "Live online delivery — no classroom infrastructure needed at your college",
+                "Live, engineer-led delivery, scheduled with your college",
                 "Verifiable certificate + skill report for every participating student",
                 "Career-preparation guidance — we prepare students; we do not promise placements",
                 "One point of contact at Vertex Loop for scheduling, delivery and reporting",
